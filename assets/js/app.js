@@ -50,7 +50,6 @@ function init(){
 		clone.querySelector('#votingweight').innerHTML = steward.votingweight;
 		
 		clone.querySelector('#participation_snapshot').innerHTML = steward.participation_snapshot;
-		clone.querySelector('#participation_tally').innerHTML = steward.participation_tally;
 
 		clone.querySelector('#delegate_button').href = tally_url;
 		clone.querySelector('#votingweight_url').href = tally_url;
