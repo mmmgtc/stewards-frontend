@@ -1,0 +1,33 @@
+[
+
+  {
+  "id" : "MMM",
+  "name" : "Merch, Memes, Marketing",
+  "uri" : "https://m-m-m.xyz"
+  },
+  
+  {
+  "id" : "PGF",
+  "name" : "Public Goods Funding",
+  "uri" : "https://gitcoin.notion.site/Public-Goods-80a3202a3a244c65b3fda08c0f7c7d60"
+  },
+
+  {
+  "id" : "MC",
+  "name" : "Moonshot Collective",
+  "uri" : "https://moonshotcollective.space/"
+  },
+  
+  {
+  "id" : "DG",
+  "name" : "Decentralize Gitcoin",
+  "uri" : "https://gitcoin.notion.site/dGrants-c3197f918bf640bc9809cd26d56c93f3"
+  },
+  
+  {
+  "id" : "FDD",
+  "name" : "Fraud Detection & Defense",
+  "uri" : "https://gitcoin.notion.site/dGrants-c3197f918bf640bc9809cd26d56c93f3"
+  }
+
+]

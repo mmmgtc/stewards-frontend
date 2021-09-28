@@ -1,0 +1,260 @@
+@media (min-width: 1313px) {
+  :root {
+    --device: "desktop";
+  }
+}
+@media (max-width: 1312px) {
+  :root {
+    --device: "laptop";
+  }
+}
+@media (max-width: 992px) {
+  :root {
+    --device: "tablet";
+  }
+}
+@media (max-width: 688px) {
+  :root {
+    --device: "phone";
+  }
+}
+:root {
+  --meteor: #291555;
+  --meteor_light: #321E5E;
+  --white: #FFF;
+  --grey: #9388AA;
+  --light_grey: #D1C9E3;
+  --purple: #BE59CF;
+  --teal: #42C8B0;
+  --teal: #42C8B0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  background-color: var(--meteor);
+  color: var(--light_grey);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 100%;
+  line-height: 1.6em;
+  font-weight: 300;
+  font-kerning: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: var(--black);
+}
+
+h1 {
+  font-family: "Space Mono", monospace;
+  font-size: 180%;
+  line-height: 1.6em;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: var(--blue);
+}
+
+p {
+  font-size: 100%;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--light_grey);
+}
+a:hover {
+  color: var(--white);
+}
+
+@media (min-width: 1313px) {
+  html {
+    font-size: 120%;
+  }
+}
+@media (max-width: 1312px) {
+  html {
+    font-size: 110%;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 100%;
+  }
+}
+@media (max-width: 688px) {
+  html {
+    font-size: 90%;
+  }
+
+  h1 {
+    font-size: 180%;
+  }
+}
+article {
+  margin-top: 4em;
+}
+
+section.column {
+  margin: auto;
+  padding: 0em 4em;
+  max-width: 1600px;
+}
+section.column.center {
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  section.column {
+    padding: 0em 3em;
+  }
+}
+@media (max-width: 688px) {
+  section.column {
+    padding: 0em 1.5em;
+  }
+}
+section.grid {
+  display: grid;
+  grid-gap: 2em;
+  margin: 0em 2em;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+@media (min-width: 1313px) {
+  section.grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 1312px) {
+  section.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 992px) {
+  section.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 688px) {
+  section.grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+.card {
+  background: var(--meteor_light);
+  border-radius: 1em;
+}
+
+/* HEAD */
+.card .head {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1.1fr;
+  grid-gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+.card .head figure img {
+  border-radius: 1em;
+}
+.card .head .user .name {
+  font-weight: 800;
+}
+.card .head .user .gitcoinhandle a {
+  color: var(--teal);
+  text-decoration: none;
+}
+.card .head .user .gitcoinhandle a:hover {
+  color: var(--teal);
+}
+.card .head .health {
+  margin-right: 1em;
+}
+
+/* CONTENT */
+.card .content {
+  margin-top: 1em;
+}
+.card .content .row {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr;
+  grid-gap: 1em;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em;
+}
+.card .content .property a {
+  color: var(--light_grey);
+  text-decoration: none;
+}
+.card .content .property a:hover {
+  color: var(--white);
+}
+.card .content .value {
+  text-align: right;
+}
+.card .content .value .percentage:after {
+  content: "%";
+}
+.card .content .value a {
+  text-decoration: none;
+}
+
+/* BUTTONS */
+.card .buttons {
+  margin-top: 0.5em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 0.7em 1.5em;
+  background-color: var(--purple);
+  font-weight: 800;
+  border-radius: 0.5em;
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.9;
+}
+.btn:hover {
+  color: var(--white);
+  opacity: 1;
+}
+
+.btn.teal {
+  background-color: var(--teal);
+}
+
+footer {
+  display: flex;
+  gap: 1em;
+  text-align: center;
+  margin: 4em 0em;
+  align-items: center;
+  justify-content: center;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

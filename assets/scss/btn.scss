@@ -1,0 +1,39 @@
+.btn{
+
+	padding: .7em 1.5em;
+	background-color: var(--purple);
+	font-weight: 800;
+	border-radius: .5em;
+	color: var(--white);
+	text-decoration: none;
+
+	opacity: 0.9;
+
+	&:hover{
+		color: var(--white);
+		opacity: 1;
+	}
+
+}
+
+
+.btn.teal{
+	background-color: var(--teal);
+}
+
+.btn.glow{
+
+	//box-shadow: 0px 0px 0px 0px var(--teal);
+
+	&:hover{
+		//box-shadow: 0px 0px 20px 0px var(--white);
+	}
+
+}
+
+
+
+
+
+
+
