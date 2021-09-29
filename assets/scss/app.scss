@@ -15,3 +15,23 @@
   text-overflow: ellipsis;
 }
 
+
+.ui{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input{
+    padding: 1em;
+    width: 360px;
+    background-color: var(--meteor_light);
+    border: none;
+    color: var(--white);
+    font-size: 130%;
+    
+  }
+
+  ::placeholder { color: var(--purple); }
+
+}

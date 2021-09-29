@@ -3,9 +3,11 @@ window.addEventListener('load', (event) => {
 	window.stewards = [];
 	window.workstreams = [];
 
+	cachbuster = new Date().getTime();
+
 	Promise.all([
-		fetch("assets/json/workstreams.json").then(value => value.json()),
-		fetch("assets/json/data.json").then(value => value.json())
+		fetch("assets/json/workstreams.json?"+cachbuster).then(value => value.json()),
+		fetch("assets/json/data.json?"+cachbuster).then(value => value.json())
 	])
 	.then((value) => {
 		window.workstreams = value[0];
@@ -17,6 +19,7 @@ window.addEventListener('load', (event) => {
 	});
 
 });
+
 
 
 
@@ -61,6 +64,9 @@ function init(){
 		clone.querySelector('#steward_since_url').href = statement_url;
 
 		clone.querySelector('#health').src = "assets/images/health_" + steward.health + ".svg";
+
+		// search tags
+		clone.querySelector('#card').dataset.tags = steward.name + steward.handle_gitcoin + steward.handle_forum;
 		
 		if (steward.workstream){
 			stream = window.workstreams.find(o => o.id === steward.workstream);	
@@ -74,6 +80,22 @@ function init(){
 		document.querySelector('#grid').appendChild(clone);
 
 	});
+
+
+
+	const search = document.getElementById("search") 
+	const datatags = document.querySelectorAll("[data-tags]")
+	
+	search.addEventListener("input", () => {
+		searchInput = search.value.toLowerCase()
+		datatags.forEach(item => {
+			tags = item.dataset.tags.toLowerCase()
+			if ( tags.indexOf(searchInput) !== -1 ) { item.style.display = '' }
+			else { item.style.display = 'none' }		
+		});
+	});
+
+
 
 
 }

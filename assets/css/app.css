@@ -258,3 +258,20 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.ui {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ui input {
+  padding: 1em;
+  width: 360px;
+  background-color: var(--meteor_light);
+  border: none;
+  color: var(--white);
+  font-size: 130%;
+}
+.ui ::placeholder {
+  color: var(--purple);
+}
