@@ -65,17 +65,23 @@ function init(){
 
 		clone.querySelector('#health').src = "assets/images/health_" + steward.health + ".svg";
 
-		// search tags
-		clone.querySelector('#card').dataset.tags = steward.name + steward.handle_gitcoin + steward.handle_forum;
-		
 		if (steward.workstream){
 			stream = window.workstreams.find(o => o.id === steward.workstream);	
 			clone.querySelector('#workstream_name').innerHTML = stream.name;
 			clone.querySelector('#workstream_url').href = stream.uri;
+			workstream = stream.name;
 		}
 		else{
 			clone.querySelector('#workstream_none').innerHTML = "-";
+			workstream =" ";
 		}
+
+		// search tags
+		clone.querySelector('#card').dataset.tags = 
+			steward.name + ", " +
+			+ steward.handle_gitcoin + ", " +
+			+ steward.handle_forum + ", " +
+			+ workstream;
 
 		document.querySelector('#grid').appendChild(clone);
 
