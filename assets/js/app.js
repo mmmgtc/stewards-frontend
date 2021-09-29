@@ -73,15 +73,11 @@ function init(){
 		}
 		else{
 			clone.querySelector('#workstream_none').innerHTML = "-";
-			workstream =" ";
+			workstream = " ";
 		}
 
 		// search tags
-		clone.querySelector('#card').dataset.tags = 
-			steward.name + ", " +
-			+ steward.handle_gitcoin + ", " +
-			+ steward.handle_forum + ", " +
-			+ workstream;
+		clone.querySelector('#card').dataset.tags = steward.name + steward.handle_gitcoin + steward.handle_forum + workstream;
 
 		document.querySelector('#grid').appendChild(clone);
 
