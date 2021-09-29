@@ -33,6 +33,9 @@ function init(){
 	let grid = document.querySelector('#grid');
 	let card = document.querySelector('#card');
 
+
+	// generate all steward cards
+
 	window.stewards.forEach(steward => {
 
 		let clone = document.importNode(card.content, true);
@@ -69,15 +72,15 @@ function init(){
 			stream = window.workstreams.find(o => o.id === steward.workstream);	
 			clone.querySelector('#workstream_name').innerHTML = stream.name;
 			clone.querySelector('#workstream_url').href = stream.uri;
-			workstream = stream.name;
+			workstream_tag = stream.name;
 		}
 		else{
 			clone.querySelector('#workstream_none').innerHTML = "-";
-			workstream = " ";
+			workstream_tag = " ";
 		}
 
 		// search tags
-		clone.querySelector('#card').dataset.tags = steward.name + steward.handle_gitcoin + steward.handle_forum + workstream;
+		clone.querySelector('#card').dataset.tags = steward.name + steward.handle_gitcoin + steward.handle_forum + workstream_tag;
 
 		document.querySelector('#grid').appendChild(clone);
 
@@ -85,9 +88,13 @@ function init(){
 
 
 
+
+
+	// input field search function
+
 	const search = document.getElementById("search") 
 	const datatags = document.querySelectorAll("[data-tags]")
-	
+
 	search.addEventListener("input", () => {
 		searchInput = search.value.toLowerCase()
 		datatags.forEach(item => {
@@ -95,12 +102,35 @@ function init(){
 			if ( tags.indexOf(searchInput) !== -1 ) { item.style.display = '' }
 			else { item.style.display = 'none' }		
 		});
+
+		document.location.hash = "search=" + searchInput;
+
 	});
 
 
+	// build params from locatio.hash
+
+	var hash = window.location.hash.substr(1);
+
+	var params = hash.split('&').reduce(function (res, item) {
+	    var parts = item.split('=');
+	    res[parts[0]] = parts[1];
+	    return res;
+	}, {});
+
+	// if params.search filter view & set input field
+
+	if (params.search){
+		search.value = params.search.toLowerCase()
+		searchInput = params.search.toLowerCase()
+		datatags.forEach(item => {
+			tags = item.dataset.tags.toLowerCase()
+			if ( tags.indexOf(searchInput) !== -1 ) { item.style.display = '' }
+			else { item.style.display = 'none' }		
+		});
+
+	}
 
 
 }
-
-
 
