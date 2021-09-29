@@ -103,7 +103,7 @@ function init(){
 			else { item.style.display = 'none' }		
 		});
 
-		document.location.hash = "search=" + searchInput;
+		document.location.hash = "search=" + encodeURIComponent(searchInput);
 
 	});
 
@@ -114,7 +114,7 @@ function init(){
 
 	var params = hash.split('&').reduce(function (res, item) {
 	    var parts = item.split('=');
-	    res[parts[0]] = parts[1];
+	    res[parts[0]] = decodeURIComponent(parts[1]);
 	    return res;
 	}, {});
 
