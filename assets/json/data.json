@@ -912,21 +912,6 @@
   "participation_tally" : 0
   },
   
-    {
-  "name": "Craig Anderson",
-  "image" : "cranders1.png",
-  "handle_gitcoin": "cranders1",
-  "handle_forum": "cranders1",
-  "statement_post_id": 116,
-  "steward_since": "2021-05-29",
-  "workstream" : "",
-  "address" : "0x0585B28Fd862d3bF033bE20b178BDF01262b8424",
-  "health" : 1,
-  "posts": 1,
-  "votingweight" :0,
-  "participation_snapshot" : 65,
-  "participation_tally" : 100
-  },
   
     {
   "name": "Collin Pixley",
@@ -942,6 +927,22 @@
   "votingweight" : 0,
   "participation_snapshot" : 100,
   "participation_tally" : 0
+  },
+	
+    {
+  "name": "Craig Anderson",
+  "image" : "cranders1.png",
+  "handle_gitcoin": "cranders1",
+  "handle_forum": "cranders1",
+  "statement_post_id": 116,
+  "steward_since": "2021-05-29",
+  "workstream" : "",
+  "address" : "0x0585B28Fd862d3bF033bE20b178BDF01262b8424",
+  "health" : 1,
+  "posts": 1,
+  "votingweight" :0,
+  "participation_snapshot" : 65,
+  "participation_tally" : 100
   }
   
   
