@@ -895,6 +895,22 @@
   "participation_snapshot" : 44,
   "participation_tally" : 0
   },
+	
+    {
+  "name": "David",
+  "image" : "blazingthirdeye.png",
+  "handle_gitcoin": "blazingthirdeye",
+  "handle_forum": "blazingthirdeye",
+  "statement_post_id": 148,
+  "steward_since": "2021-06-11",
+  "workstream" : "FDD",
+  "address" : "0x59AE7f21D18b2F5fDC7a99c4fd6dD9E67Cec0Bc9",
+  "health" : 2,
+  "posts": 25,
+  "votingweight" : 0,
+  "participation_snapshot" : 0,
+  "participation_tally" : 0
+  },
   
     {
   "name": "Craig Anderson",
@@ -926,22 +942,7 @@
   "votingweight" : 0,
   "participation_snapshot" : 100,
   "participation_tally" : 0
-  },
-  
-    {
-  "name": "David",
-  "image" : "blazingthirdeye.png",
-  "handle_gitcoin": "blazingthirdeye",
-  "handle_forum": "blazingthirdeye",
-  "statement_post_id": 148,
-  "steward_since": "2021-06-11",
-  "workstream" : "FDD",
-  "address" : "0x59AE7f21D18b2F5fDC7a99c4fd6dD9E67Cec0Bc9",
-  "health" : 2,
-  "posts": 25,
-  "votingweight" : 0,
-  "participation_snapshot" : 0,
-  "participation_tally" : 0
   }
+  
   
 ]
