@@ -58,7 +58,7 @@
   "workstream" : "",
   "address" : "0x839395e20bbb182fa440d08f850e6c7a8f6f0780",
   "health" : 10,
-  "posts": 43,
+  "posts": 44,
   "votingweight" : 1,
   "participation_snapshot" : 65,
   "participation_tally" : 60
@@ -170,7 +170,7 @@
   "workstream" : "PGF",
   "address" : "0x10d6d2e343281d388291a3e02f3293aaeda67178",
   "health" : 10,
-  "posts": 9,
+  "posts": 10,
   "votingweight" : 0.32,
   "participation_snapshot" : 35,
   "participation_tally" : 100
@@ -266,7 +266,7 @@
   "workstream" : "",
   "address" : "0xf503017d7baf7fbc0fff7492b751025c6a78179b",
   "health" : 10,
-  "posts": 31,
+  "posts": 32,
   "votingweight" :0.21,
   "participation_snapshot" : 50,
   "participation_tally" : 80
@@ -298,7 +298,7 @@
   "workstream" : "",
   "address" : "0xa30ab83e693ad49f3f651085dad11d049c818923",
   "health" : 1,
-  "posts": 4,
+  "posts": 5,
   "votingweight" :0.19,
   "participation_snapshot" : 25,
   "participation_tally" : 0
@@ -314,7 +314,7 @@
   "workstream" : "",
   "address" : "0x8b405dbf2f30844b608b08dad20447a6955a6c6e",
   "health" : 2,
-  "posts": 19,
+  "posts": 20,
   "votingweight" :0.19,
   "participation_snapshot" : 15,
   "participation_tally" : 0
@@ -346,7 +346,7 @@
   "workstream" : "",
   "address" : "0x6375885ce997543cc7e057fe9af3e255d52fb4f4",
   "health" : 0,
-  "posts": 4,
+  "posts": 6,
   "votingweight" :0.18,
   "participation_snapshot" : 5,
   "participation_tally" : 0
@@ -362,7 +362,7 @@
   "workstream" : "",
   "address" : "0x934b510d4c9103e6a87aef13b816fb080286d649",
   "health" : 0,
-  "posts": 1,
+  "posts": 7,
   "votingweight" :0.18,
   "participation_snapshot" : 0,
   "participation_tally" : 0
@@ -826,7 +826,7 @@
   "workstream" : "FDD",
   "address" : "0xEe0579b4C36fd52EC0A2B542fb801F136838B7f1",
   "health" : 10,
-  "posts": 55,
+  "posts": 56,
   "votingweight" :0,
   "participation_snapshot" : 65,
   "participation_tally" : 60
@@ -842,7 +842,7 @@
   "workstream" : "FDD",
   "address" : "0x521aacb43d89e1b8ffd64d9ef76b0a1074dedaf8",
   "health" : 10,
-  "posts": 44,
+  "posts": 47,
   "votingweight" :0,
   "participation_snapshot" : 60,
   "participation_tally" : 100
@@ -906,7 +906,7 @@
   "workstream" : "FDD",
   "address" : "0x59AE7f21D18b2F5fDC7a99c4fd6dD9E67Cec0Bc9",
   "health" : 2,
-  "posts": 25,
+  "posts": 28,
   "votingweight" : 0,
   "participation_snapshot" : 0,
   "participation_tally" : 0
