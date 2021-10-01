@@ -912,7 +912,22 @@
   "participation_tally" : 0
   },
   
-  
+    {
+  "name": "Paul Glavin",
+  "image" : "paulglavin.png",
+  "handle_gitcoin": "paul2",
+  "handle_forum": "paul2",
+  "statement_post_id": 107,
+  "steward_since": "2021-05-28",
+  "workstream" : "",
+  "address" : "0x809C9f8dd8CA93A41c3adca4972Fa234C28F7714",
+  "health" : 2,
+  "posts": 4,
+  "votingweight" : 0,
+  "participation_snapshot" : 40,
+  "participation_tally" : 0
+  },
+	
     {
   "name": "Collin Pixley",
   "image" : "cpix18.png",
