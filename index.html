@@ -36,7 +36,31 @@
 </section>
 
 <section class="ui">
-  <input type="text" id="search" placeholder="search">
+
+  <div class="input-wrapper">
+    <label for="search">Search</label>
+    <input type="text" id="search" placeholder="Name, Address, Workstream ... ">
+  </div>
+
+  <div class="input-wrapper">
+    <label for="orderby">Order by</label>
+    <select id="orderby" name="orderby">
+      <option value="health" selected>Health</option>
+      <option value="posts">Forum posts</option>
+      <option value="weight">Voting Weight</option>
+      <option value="participation">Vote participation</option>
+    </select>
+  </div>
+
+  <div class="input-wrapper">
+    <label for="direction">Display</label>
+    <select id="direction" name="direction">
+      <option value="descending" selected>Descending</option>
+      <option value="ascending">Ascending</option>
+    </select>
+  </div>
+
+
 </section>
 
 

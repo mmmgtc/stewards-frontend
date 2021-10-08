@@ -253,25 +253,72 @@ footer {
   justify-content: center;
 }
 
+.ui {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin: 0em 2em;
+  gap: 1em;
+}
+.ui .input-wrapper {
+  padding: 1em;
+  background-color: var(--meteor_light);
+  width: 100%;
+  border-radius: 6px;
+}
+.ui input, .ui select {
+  width: 100%;
+  border: none;
+  color: var(--white);
+  font-size: 130%;
+  background-color: transparent;
+}
+.ui input:focus, .ui select:focus {
+  outline: none;
+}
+.ui label {
+  font-size: 100%;
+  color: var(--purple);
+  margin-bottom: 0.5em;
+  display: block;
+}
+.ui ::placeholder {
+  color: var(--grey);
+}
+
+@media (max-width: 688px) {
+  .ui {
+    grid-template-columns: 1fr;
+  }
+}
 .truncate {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.ui {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.highlight {
+  padding: 0.3em 1em;
+  border: 2px solid var(--purple);
+  border-radius: 10px;
+  display: inline-block;
+  animation: blink-animation 700ms infinite;
 }
-.ui input {
-  padding: 1em;
-  width: 360px;
-  background-color: var(--meteor_light);
+
+#health.highlight {
   border: none;
-  color: var(--white);
-  font-size: 130%;
+  padding: 0em;
+  border-radius: 0px;
+  animation: none;
 }
-.ui ::placeholder {
-  color: var(--purple);
+
+@keyframes blink-animation {
+  0% {
+    border: 2px solid var(--purple);
+  }
+  50% {
+    border: 2px solid var(--teal);
+  }
+  100% {
+    border: 2px solid var(--purple);
+  }
 }

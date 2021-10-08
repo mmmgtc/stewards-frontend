@@ -7,7 +7,7 @@
 @import "card";
 @import "btn";
 @import "footer";
-
+@import "ui";
 
 .truncate{
   white-space: nowrap;
@@ -15,23 +15,33 @@
   text-overflow: ellipsis;
 }
 
-
-.ui{
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  input{
-    padding: 1em;
-    width: 360px;
-    background-color: var(--meteor_light);
-    border: none;
-    color: var(--white);
-    font-size: 130%;
-    
-  }
-
-  ::placeholder { color: var(--purple); }
-
+// visualy highlight results
+.highlight{
+  padding: 0.3em 1em;
+  border:2px solid var(--purple);
+  border-radius: 10px;
+  display: inline-block;
+  animation: blink-animation 700ms infinite;
 }
+
+#health.highlight{
+  border: none;
+  padding: 0em;
+  border-radius: 0px;
+  animation: none;
+}
+
+
+@keyframes blink-animation {
+  0% {
+    border:2px solid var(--purple);
+  }
+  50% {
+    border:2px solid var(--teal);
+  }
+  100% {
+    border:2px solid var(--purple);
+  }
+}
+
+
