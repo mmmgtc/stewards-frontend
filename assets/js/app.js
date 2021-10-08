@@ -122,7 +122,7 @@ function orderStewards() {
 		window.stewards.sort((a, b) => (a.votingweight < b.votingweight) ? 1 : -1)
 	}
 
-	if (orderby == "weight"){
+	if (orderby == "participation"){
 		window.stewards.sort((a, b) => (a.participation_snapshot < b.participation_snapshot) ? 1 : -1)
 	}	
 
