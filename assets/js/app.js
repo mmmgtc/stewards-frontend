@@ -37,13 +37,17 @@ function init(){
 	// map orderby input field to orderStewards function 
 	const orderby = document.getElementById("orderby")
 	orderby.addEventListener("input", () => {
+		resetSearch();
 		orderStewards();
+		draw();
 	});
 
 	// map direction input field to orderStewards function 
 	const direction = document.getElementById("direction")
 	direction.addEventListener("input", () => {
+		resetSearch();
 		orderStewards();
+		draw();
 	});
 
 	// reorder the stewards array on default order
@@ -84,6 +88,13 @@ function getParams(){
 
 
 
+
+
+function resetSearch(){
+	document.location.hash = ""
+	search = document.getElementById("search")
+	search.value =""
+}
 
 
 function filterStewards(){
@@ -134,8 +145,6 @@ function orderStewards() {
 	if (direction == "ascending") {
 		window.stewards.reverse();
 	}
-
-	draw();
 
 }
 
