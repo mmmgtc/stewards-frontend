@@ -57,12 +57,13 @@ function init(){
 
 	// inspect location hash ( URL#search=xxx ) and get the params
 	params = getParams();
-	if (params){
+	if (params.search){
 		// set search input field to params.search
-		search.value = params.search.toLowerCase();
+		search.value = params.search.toLowerCase()
 		// filter from all steward cards 
 		filterStewards();
 	}
+
 
 }
 
