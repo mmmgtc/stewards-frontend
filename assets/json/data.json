@@ -12,7 +12,7 @@
   "health" : 6,
   "posts": 6,
   "votingweight" : 1.35,
-  "participation_snapshot" : 55,
+  "participation_snapshot" : 52,
   "participation_tally" : 60
   },
 
@@ -25,10 +25,10 @@
   "steward_since": "2021-05-25",
   "workstream" : "MC",
   "address" : "0x34aa3f359a9d614239015126635ce7732c18fdf3",
-  "health" : 7,
+  "health" : 6,
   "posts": 6,
   "votingweight" : 1.22,
-  "participation_snapshot" : 35,
+  "participation_snapshot" : 33,
   "participation_tally" : 33
   },
 
@@ -43,8 +43,8 @@
   "address" : "0x2b888954421b424c5d3d9ce9bb67c9bd47537d12",
   "health" : 10,
   "posts": 14,
-  "votingweight" : 1.05,
-  "participation_snapshot" : 75,
+  "votingweight" : 1,
+  "participation_snapshot" : 71,
   "participation_tally" : 60
   },
 
@@ -59,8 +59,8 @@
   "address" : "0x839395e20bbb182fa440d08f850e6c7a8f6f0780",
   "health" : 10,
   "posts": 47,
-  "votingweight" : 1,
-  "participation_snapshot" : 65,
+  "votingweight" : 0.97,
+  "participation_snapshot" : 62,
   "participation_tally" : 60
   },
 
@@ -75,8 +75,8 @@
   "address" : "0x54becc7560a7be76d72ed76a1f5fee6c5a2a7ab6",
   "health" : 10,
   "posts": 7,
-  "votingweight" : 0.97,
-  "participation_snapshot" : 85,
+  "votingweight" : 0.96,
+  "participation_snapshot" : 86,
   "participation_tally" : 80
   },
   
@@ -91,8 +91,8 @@
   "address" : "0x66b1de0f14a0ce971f7f248415063d44caf19398",
   "health" : 10,
   "posts": 12,
-  "votingweight" : 0.95,
-  "participation_snapshot" : 55,
+  "votingweight" : 0.75,
+  "participation_snapshot" : 52,
   "participation_tally" : 100
   },
   
@@ -108,7 +108,7 @@
   "health" : 10,
   "posts": 61,
   "votingweight" : 0.75,
-  "participation_snapshot" : 50,
+  "participation_snapshot" : 48,
   "participation_tally" : 67
   },
 
@@ -124,7 +124,7 @@
   "health" : 2,
   "posts": 2,
   "votingweight" : 0.61,
-  "participation_snapshot" : 55,
+  "participation_snapshot" : 52,
   "participation_tally" : 80
   },
   
@@ -140,7 +140,7 @@
   "health" : 3,
   "posts": 1,
   "votingweight" : 0.33,
-  "participation_snapshot" : 35,
+  "participation_snapshot" : 33,
   "participation_tally" : 50
   },
   
@@ -155,8 +155,8 @@
   "address" : "0x31482858561725b74b5ec2a739e447bc74cdf7b9",
   "health" : 1,
   "posts": 8,
-  "votingweight" : 0.33,
-  "participation_snapshot" : 15,
+  "votingweight" : 0.32,
+  "participation_snapshot" : 14,
   "participation_tally" : 0
   },
   
@@ -172,7 +172,7 @@
   "health" : 10,
   "posts": 10,
   "votingweight" : 0.32,
-  "participation_snapshot" : 35,
+  "participation_snapshot" : 38,
   "participation_tally" : 100
   },
   
@@ -188,7 +188,7 @@
   "health" : 3,
   "posts": 3,
   "votingweight" : 0.31,
-  "participation_snapshot" : 20,
+  "participation_snapshot" : 19,
   "participation_tally" : 100
   },
   
@@ -220,7 +220,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.3,
-  "participation_snapshot" : 25,
+  "participation_snapshot" : 24,
   "participation_tally" : 0
   },
   
@@ -236,7 +236,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.22,
-  "participation_snapshot" : 25,
+  "participation_snapshot" : 24,
   "participation_tally" : 0
   },
   
@@ -251,8 +251,8 @@
   "address" : "0x86d3ee9ff0983bc33b93cc8983371a500f873446",
   "health" : 9,
   "posts": 31,
-  "votingweight" :0.22,
-  "participation_snapshot" : 55,
+  "votingweight" :0.17,
+  "participation_snapshot" : 52,
   "participation_tally" : 0
   },
   
@@ -268,7 +268,7 @@
   "health" : 10,
   "posts": 32,
   "votingweight" :0.21,
-  "participation_snapshot" : 50,
+  "participation_snapshot" : 52,
   "participation_tally" : 80
   },
   
@@ -284,7 +284,7 @@
   "health" : 2,
   "posts": 2,
   "votingweight" :0.21,
-  "participation_snapshot" : 75,
+  "participation_snapshot" : 76,
   "participation_tally" : 0
   },
   
@@ -300,7 +300,7 @@
   "health" : 1,
   "posts": 5,
   "votingweight" :0.19,
-  "participation_snapshot" : 25,
+  "participation_snapshot" : 24,
   "participation_tally" : 0
   },
   
@@ -315,8 +315,8 @@
   "address" : "0x8b405dbf2f30844b608b08dad20447a6955a6c6e",
   "health" : 2,
   "posts": 20,
-  "votingweight" :0.19,
-  "participation_snapshot" : 15,
+  "votingweight" :0.18,
+  "participation_snapshot" : 14,
   "participation_tally" : 0
   },
   
@@ -332,7 +332,7 @@
   "health" : 1,
   "posts": 1,
   "votingweight" :0.18,
-  "participation_snapshot" : 75,
+  "participation_snapshot" : 76,
   "participation_tally" : 0
   },
   
@@ -379,8 +379,8 @@
   "address" : "0x8d07d225a769b7af3a923481e1fdf49180e6a265",
   "health" : 8,
   "posts": 5,
-  "votingweight" :0.17,
-  "participation_snapshot" : 80,
+  "votingweight" :0.16,
+  "participation_snapshot" : 81,
   "participation_tally" : 100
   },
   
@@ -412,7 +412,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.16,
-  "participation_snapshot" : 20,
+  "participation_snapshot" : 19,
   "participation_tally" : 0
   },
   
@@ -428,7 +428,7 @@
   "health" : 10,
   "posts": 18,
   "votingweight" :0.15,
-  "participation_snapshot" : 55,
+  "participation_snapshot" : 57,
   "participation_tally" : 80
   },
   
@@ -441,10 +441,10 @@
   "steward_since": "2021-06-07",
   "workstream" : "",
   "address" : "0x809FA673fe2ab515FaA168259cB14E2BeDeBF68e",
-  "health" : 0,
+  "health" : 1,
   "posts": 3,
   "votingweight" :0.15,
-  "participation_snapshot" : 29,
+  "participation_snapshot" : 27,
   "participation_tally" : 0
   },
   
@@ -457,10 +457,10 @@
   "steward_since": "2021-05-25",
   "workstream" : "PGF",
   "address" : "0xc7e6bbf6dbe78b40640385e73dc1958f4428fb3e",
-  "health" : 6,
+  "health" : 5,
   "posts": 6,
   "votingweight" :0.15,
-  "participation_snapshot" : 40,
+  "participation_snapshot" : 38,
   "participation_tally" : 0
   },
   
@@ -491,7 +491,7 @@
   "address" : "0x5a384227b65fa093dec03ec34e111db80a040615",
   "health" : 2,
   "posts": 20,
-  "votingweight" :0.03,
+  "votingweight" :0.02,
   "participation_snapshot" : 10,
   "participation_tally" : 0
   },
@@ -507,8 +507,8 @@
   "address" : "0x554c5aF96E9e3c05AEC01ce18221d0DD25975aB4",
   "health" : 0,
   "posts": 2,
-  "votingweight" :0.02,
-  "participation_snapshot" : 15,
+  "votingweight" :0.01,
+  "participation_snapshot" : 14,
   "participation_tally" : 0
   },
   
@@ -524,7 +524,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.02,
-  "participation_snapshot" : 21,
+  "participation_snapshot" : 20,
   "participation_tally" : 0
   },
   
@@ -540,7 +540,7 @@
   "health" : 3,
   "posts": 3,
   "votingweight" :0.02,
-  "participation_snapshot" : 20,
+  "participation_snapshot" : 19,
   "participation_tally" : 100
   },
   
@@ -588,7 +588,7 @@
   "health" : 4,
   "posts": 16,
   "votingweight" :0.01,
-  "participation_snapshot" : 25,
+  "participation_snapshot" : 24,
   "participation_tally" : 0
   },
   
@@ -604,7 +604,7 @@
   "health" : 2,
   "posts": 11,
   "votingweight" :0.01,
-  "participation_snapshot" : 20,
+  "participation_snapshot" : 19,
   "participation_tally" : 0
   },
   
@@ -620,7 +620,7 @@
   "health" : 1,
   "posts": 1,
   "votingweight" :0.01,
-  "participation_snapshot" : 30,
+  "participation_snapshot" : 29
   "participation_tally" : 100
   },
   
@@ -668,7 +668,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.01,
-  "participation_snapshot" : 35,
+  "participation_snapshot" : 38,
   "participation_tally" : 0
   },
   
@@ -716,7 +716,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.01,
-  "participation_snapshot" : 5,
+  "participation_snapshot" : 10,
   "participation_tally" : 0
   },
   
@@ -795,8 +795,8 @@
   "address" : "0x45735683E432A5701959fc4D2e0FAB19dc7D1d58",
   "health" : 0,
   "posts": 3,
-  "votingweight" :0.95,
-  "participation_snapshot" : 0.01,
+  "votingweight" :0.01,
+  "participation_snapshot" : 0,
   "participation_tally" : 0
   },
   
@@ -811,8 +811,8 @@
   "address" : "0x224e69025A2f705C8f31EFB6694398f8Fd09ac5C",
   "health" : 10,
   "posts": 16,
-  "votingweight" :0.95,
-  "participation_snapshot" : 60,
+  "votingweight" :0,
+  "participation_snapshot" : 62,
   "participation_tally" : 100
   },
   
@@ -828,7 +828,7 @@
   "health" : 10,
   "posts": 58,
   "votingweight" :0,
-  "participation_snapshot" : 65,
+  "participation_snapshot" : 67,
   "participation_tally" : 60
   },
   
@@ -844,7 +844,7 @@
   "health" : 10,
   "posts": 47,
   "votingweight" :0,
-  "participation_snapshot" : 60,
+  "participation_snapshot" : 62,
   "participation_tally" : 100
   },
   
@@ -860,7 +860,7 @@
   "health" : 7,
   "posts": 15,
   "votingweight" :0,
-  "participation_snapshot" : 31,
+  "participation_snapshot" : 29,
   "participation_tally" : 0
   },
   
@@ -892,7 +892,7 @@
   "health" : 3,
   "posts": 3,
   "votingweight" :0,
-  "participation_snapshot" : 44,
+  "participation_snapshot" : 40,
   "participation_tally" : 0
   },
 	
@@ -956,7 +956,7 @@
   "health" : 1,
   "posts": 1,
   "votingweight" :0,
-  "participation_snapshot" : 65,
+  "participation_snapshot" : 67,
   "participation_tally" : 100
   }
   
