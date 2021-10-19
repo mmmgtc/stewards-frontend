@@ -246,13 +246,35 @@ section.grid {
 
 footer {
   display: flex;
-  gap: 1em;
+  gap: 2em;
   text-align: center;
   margin: 4em 0em;
   align-items: center;
   justify-content: center;
 }
+footer .mmm {
+  height: 60px;
+}
+footer .gitcoin {
+  height: 80px;
+}
 
+@media (max-width: 992px) {
+  footer .mmm {
+    height: 50px;
+  }
+  footer .gitcoin {
+    height: 70px;
+  }
+}
+@media (max-width: 688px) {
+  footer .mmm {
+    height: 40px;
+  }
+  footer .gitcoin {
+    height: 60px;
+  }
+}
 .ui {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
