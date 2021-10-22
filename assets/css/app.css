@@ -246,35 +246,40 @@ section.grid {
 
 footer {
   display: flex;
-  gap: 2em;
   text-align: center;
   margin: 4em 0em;
   align-items: center;
   justify-content: center;
 }
-footer .mmm {
-  height: 60px;
-}
-footer .gitcoin {
-  height: 80px;
+footer img {
+  width: 150px;
 }
 
-@media (max-width: 992px) {
-  footer .mmm {
-    height: 50px;
-  }
-  footer .gitcoin {
-    height: 70px;
-  }
+section#gitcoindao {
+  display: flex;
+  margin-top: 4em;
+  align-items: center;
+  justify-content: center;
 }
-@media (max-width: 688px) {
-  footer .mmm {
-    height: 40px;
-  }
-  footer .gitcoin {
-    height: 60px;
-  }
+section#gitcoindao a {
+  text-decoration: none;
 }
+section#gitcoindao .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+section#gitcoindao .wrapper svg {
+  width: 28px;
+}
+section#gitcoindao .wrapper svg * {
+  fill: var(--light_grey);
+}
+section#gitcoindao .wrapper:hover svg * {
+  fill: var(--white);
+}
+
 .ui {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
