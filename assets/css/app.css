@@ -257,7 +257,7 @@ footer img {
 
 section#gitcoindao {
   display: flex;
-  margin-top: 4em;
+  margin: 4em 0em;
   align-items: center;
   justify-content: center;
 }
@@ -280,6 +280,16 @@ section#gitcoindao .wrapper:hover svg * {
   fill: var(--white);
 }
 
+@media (max-width: 992px) {
+  section#gitcoindao a .wrapper svg {
+    width: 24px;
+  }
+}
+@media (max-width: 688px) {
+  section#gitcoindao a .wrapper svg {
+    width: 20px;
+  }
+}
 .ui {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;

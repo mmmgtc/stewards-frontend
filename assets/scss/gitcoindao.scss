@@ -2,7 +2,7 @@ section#gitcoindao{
 
 	display:flex;
 
-	margin-top:4em;
+	margin:4em 0em;
 	align-items: center;
 	justify-content: center;
 
@@ -32,3 +32,15 @@ section#gitcoindao{
 }
 
 
+@media #{$tablet} { 
+	section#gitcoindao a .wrapper svg{
+		width: 24px;
+	}
+}
+
+
+@media #{$phone} { 
+	section#gitcoindao a .wrapper svg{
+		width: 20px;
+	}
+}
