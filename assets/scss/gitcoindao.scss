@@ -11,36 +11,14 @@ section#gitcoindao{
 	}
 
 
-	.wrapper{
-		display:flex;
-		align-items: center;
-		justify-content: center;
-		gap: 1em;
-
-
-		svg{
-			width: 28px;
-			* { fill: var(--light_grey); }
-		}
-
-		&:hover{
-			svg{ * { fill: var(--white); } }
-		}
-
-	}
-
 }
 
 
 @media #{$tablet} { 
-	section#gitcoindao a .wrapper svg{
-		width: 24px;
-	}
+
 }
 
 
 @media #{$phone} { 
-	section#gitcoindao a .wrapper svg{
-		width: 20px;
-	}
+
 }

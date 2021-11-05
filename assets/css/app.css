@@ -264,32 +264,7 @@ section#gitcoindao {
 section#gitcoindao a {
   text-decoration: none;
 }
-section#gitcoindao .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-}
-section#gitcoindao .wrapper svg {
-  width: 28px;
-}
-section#gitcoindao .wrapper svg * {
-  fill: var(--light_grey);
-}
-section#gitcoindao .wrapper:hover svg * {
-  fill: var(--white);
-}
 
-@media (max-width: 992px) {
-  section#gitcoindao a .wrapper svg {
-    width: 24px;
-  }
-}
-@media (max-width: 688px) {
-  section#gitcoindao a .wrapper svg {
-    width: 20px;
-  }
-}
 .ui {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
