@@ -12,7 +12,7 @@
   "health" : 5,
   "posts": 7,
   "votingweight" : 1.35,
-  "participation_snapshot" : 46,
+  "participation_snapshot" : 44,
   "participation_tally" : 60
   },
 
@@ -25,11 +25,11 @@
   "steward_since": "2021-05-25",
   "workstream" : "MC",
   "address" : "0x34aa3f359a9d614239015126635ce7732c18fdf3",
-  "health" : 6,
+  "health" : 5,
   "posts": 7,
   "votingweight" : 1.06,
   "participation_snapshot" : 29,
-  "participation_tally" : 33
+  "participation_tally" : 22
   },
 
 	{
@@ -60,7 +60,7 @@
   "health" : 10,
   "posts": 50,
   "votingweight" : 1,
-  "participation_snapshot" : 67,
+  "participation_snapshot" : 75,
   "participation_tally" : 71
   },
 
@@ -76,7 +76,7 @@
   "health" : 8,
   "posts": 7,
   "votingweight" : 0.96,
-  "participation_snapshot" : 83,
+  "participation_snapshot" : 88,
   "participation_tally" : 75
   },
   
@@ -92,7 +92,7 @@
   "health" : 10,
   "posts": 12,
   "votingweight" : 0.96,
-  "participation_snapshot" : 48,
+  "participation_snapshot" : 50,
   "participation_tally" : 88
   },
   
@@ -124,7 +124,7 @@
   "health" : 2,
   "posts": 2,
   "votingweight" : 0.61,
-  "participation_snapshot" : 42,
+  "participation_snapshot" : 46,
   "participation_tally" : 71
   },
   
@@ -156,7 +156,7 @@
   "health" : 2,
   "posts": 8,
   "votingweight" : 0.32,
-  "participation_snapshot" : 13,
+  "participation_snapshot" : 17,
   "participation_tally" : 14
   },
   
@@ -169,10 +169,10 @@
   "steward_since": "2021-05-25",
   "workstream" : "PGF",
   "address" : "0x10d6d2e343281d388291a3e02f3293aaeda67178",
-  "health" : 9,
+  "health" : 10,
   "posts": 10,
-  "votingweight" : 0.62,
-  "participation_snapshot" : 38,
+  "votingweight" : 0.61,
+  "participation_snapshot" : 46,
   "participation_tally" : 71
   },
   
@@ -283,7 +283,7 @@
   "address" : "0xd9ffaf2e880df0cc7b7104e9e789d281a81824cf",
   "health" : 1,
   "posts": 2,
-  "votingweight" :0.21,
+  "votingweight" :0.2,
   "participation_snapshot" : 75,
   "participation_tally" : 0
   },
@@ -332,7 +332,7 @@
   "health" : 1,
   "posts": 1,
   "votingweight" :0.17,
-  "participation_snapshot" : 67,
+  "participation_snapshot" : 71,
   "participation_tally" : 0
   },
   
@@ -348,7 +348,7 @@
   "health" : 0,
   "posts": 7,
   "votingweight" :0.18,
-  "participation_snapshot" : 4,
+  "participation_snapshot" : 8,
   "participation_tally" : 0
   },
   
@@ -395,7 +395,7 @@
   "address" : "0x73186b2a81952c2340c4eb2e74e89869e1183df0",
   "health" : 0,
   "posts": 2,
-  "votingweight" :0.17,
+  "votingweight" :0.16,
   "participation_snapshot" : 8,
   "participation_tally" : 17
   },
@@ -428,7 +428,7 @@
   "health" : 10,
   "posts": 22,
   "votingweight" :0.15,
-  "participation_snapshot" : 54,
+  "participation_snapshot" : 63,
   "participation_tally" : 75
   },
   
@@ -444,7 +444,7 @@
   "health" : 1,
   "posts": 3,
   "votingweight" :0.15,
-  "participation_snapshot" : 22,
+  "participation_snapshot" : 21,
   "participation_tally" : 0
   },
   
@@ -524,7 +524,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.01,
-  "participation_snapshot" : 17,
+  "participation_snapshot" : 16,
   "participation_tally" : 0
   },
   
@@ -668,7 +668,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.01,
-  "participation_snapshot" : 38,
+  "participation_snapshot" : 42,
   "participation_tally" : 0
   },
   
@@ -828,7 +828,7 @@
   "health" : 10,
   "posts": 66,
   "votingweight" :0,
-  "participation_snapshot" : 67,
+  "participation_snapshot" : 75,
   "participation_tally" : 60
   },
   
@@ -857,10 +857,10 @@
   "steward_since": "2021-06-10",
   "workstream" : "MMM",
   "address" : "0x7E052Ef7B4bB7E5A45F331128AFadB1E589deaF1",
-  "health" : 8,
+  "health" : 9,
   "posts": 18,
   "votingweight" :0,
-  "participation_snapshot" : 35,
+  "participation_snapshot" : 44,
   "participation_tally" : 0
   },
   
@@ -876,7 +876,7 @@
   "health" : 5,
   "posts": 11,
   "votingweight" :0,
-  "participation_snapshot" : 18,
+  "participation_snapshot" : 22,
   "participation_tally" : 0
   },
   
@@ -956,7 +956,7 @@
   "health" : 1,
   "posts": 1,
   "votingweight" :0,
-  "participation_snapshot" : 71,
+  "participation_snapshot" : 79,
   "participation_tally" : 100
   }
   
