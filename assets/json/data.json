@@ -9,11 +9,11 @@
   "steward_since": "2021-05-25",
   "workstream" : "",
   "address" : "0x4c0a466df0628fe8699051b3ac6506653191cc21",
-  "health" : 5,
+  "health" : 4,
   "posts": 7,
   "votingweight" : 1.35,
   "participation_snapshot" : 44,
-  "participation_tally" : 60
+  "participation_tally" : 40
   },
 
 	{
@@ -25,8 +25,8 @@
   "steward_since": "2021-05-25",
   "workstream" : "MC",
   "address" : "0x34aa3f359a9d614239015126635ce7732c18fdf3",
-  "health" : 5,
-  "posts": 7,
+  "health" : 6,
+  "posts": 8,
   "votingweight" : 1.06,
   "participation_snapshot" : 29,
   "participation_tally" : 22
@@ -58,10 +58,10 @@
   "workstream" : "",
   "address" : "0x2b888954421b424c5d3d9ce9bb67c9bd47537d12",
   "health" : 10,
-  "posts": 50,
+  "posts": 58,
   "votingweight" : 1,
   "participation_snapshot" : 75,
-  "participation_tally" : 71
+  "participation_tally" : 70
   },
 
     {
@@ -74,7 +74,7 @@
   "workstream" : "",
   "address" : "0x839395e20bbb182fa440d08f850e6c7a8f6f0780",
   "health" : 8,
-  "posts": 7,
+  "posts": 8,
   "votingweight" : 0.96,
   "participation_snapshot" : 88,
   "participation_tally" : 75
@@ -93,7 +93,7 @@
   "posts": 12,
   "votingweight" : 0.96,
   "participation_snapshot" : 50,
-  "participation_tally" : 88
+  "participation_tally" : 90
   },
   
     {
@@ -121,11 +121,11 @@
   "steward_since": "2021-05-25",
   "workstream" : "",
   "address" : "0x80d63799b1e08a80f73fb7a83264b5c31600bf3a",
-  "health" : 2,
+  "health" : 1,
   "posts": 2,
   "votingweight" : 0.61,
   "participation_snapshot" : 46,
-  "participation_tally" : 71
+  "participation_tally" : 67
   },
   
     {
@@ -137,7 +137,7 @@
   "steward_since": "2021-05-25",
   "workstream" : "PGF",
   "address" : "0xa2bf1b0a7e079767b4701b5a1d9d5700eb42d1d1",
-  "health" : 3,
+  "health" : 2,
   "posts": 1,
   "votingweight" : 0.33,
   "participation_snapshot" : 29,
@@ -169,11 +169,11 @@
   "steward_since": "2021-05-25",
   "workstream" : "PGF",
   "address" : "0x10d6d2e343281d388291a3e02f3293aaeda67178",
-  "health" : 10,
+  "health" : 9,
   "posts": 10,
   "votingweight" : 0.61,
   "participation_snapshot" : 46,
-  "participation_tally" : 71
+  "participation_tally" : 67
   },
   
     {
@@ -202,7 +202,7 @@
   "workstream" : "",
   "address" : "0x68898b237823448475bd50ea0bb6e4a20b71ff63",
   "health" : 0,
-  "posts": 2,
+  "posts": 3,
   "votingweight" : 0.3,
   "participation_snapshot" : 0,
   "participation_tally" : 0
@@ -266,10 +266,10 @@
   "workstream" : "",
   "address" : "0xf503017d7baf7fbc0fff7492b751025c6a78179b",
   "health" : 10,
-  "posts": 35,
+  "posts": 38,
   "votingweight" :0.19,
   "participation_snapshot" : 50,
-  "participation_tally" : 63
+  "participation_tally" : 70
   },
   
     {
@@ -314,7 +314,7 @@
   "workstream" : "",
   "address" : "0x8b405dbf2f30844b608b08dad20447a6955a6c6e",
   "health" : 4,
-  "posts": 22,
+  "posts": 23,
   "votingweight" :0.18,
   "participation_snapshot" : 13,
   "participation_tally" : 17
@@ -377,7 +377,7 @@
   "steward_since": "2021-05-25",
   "workstream" : "",
   "address" : "0x8d07d225a769b7af3a923481e1fdf49180e6a265",
-  "health" : 6,
+  "health" : 5,
   "posts": 5,
   "votingweight" :0.16,
   "participation_snapshot" : 79,
@@ -826,10 +826,10 @@
   "workstream" : "FDD",
   "address" : "0xEe0579b4C36fd52EC0A2B542fb801F136838B7f1",
   "health" : 10,
-  "posts": 66,
+  "posts": 67,
   "votingweight" :0,
   "participation_snapshot" : 75,
-  "participation_tally" : 60
+  "participation_tally" : 40
   },
   
     {
@@ -842,7 +842,7 @@
   "workstream" : "FDD",
   "address" : "0x521aacb43d89e1b8ffd64d9ef76b0a1074dedaf8",
   "health" : 10,
-  "posts": 55,
+  "posts": 58,
   "votingweight" :0.01,
   "participation_snapshot" : 67,
   "participation_tally" : 33
@@ -857,11 +857,11 @@
   "steward_since": "2021-06-10",
   "workstream" : "MMM",
   "address" : "0x7E052Ef7B4bB7E5A45F331128AFadB1E589deaF1",
-  "health" : 9,
-  "posts": 18,
+  "health" : 10,
+  "posts": 19,
   "votingweight" :0,
   "participation_snapshot" : 44,
-  "participation_tally" : 0
+  "participation_tally" : 10
   },
   
     {
@@ -873,11 +873,11 @@
   "steward_since": "2021-06-11",
   "workstream" : "MMM",
   "address" : "0x4a5B536A613E69F43a52f6Aa7A7F3765428329ad",
-  "health" : 5,
-  "posts": 11,
+  "health" : 6,
+  "posts": 12,
   "votingweight" :0,
   "participation_snapshot" : 22,
-  "participation_tally" : 0
+  "participation_tally" : 10
   },
   
     {
@@ -906,7 +906,7 @@
   "workstream" : "FDD",
   "address" : "0x59AE7f21D18b2F5fDC7a99c4fd6dD9E67Cec0Bc9",
   "health" : 2,
-  "posts": 40,
+  "posts": 48,
   "votingweight" : 0,
   "participation_snapshot" : 0,
   "participation_tally" : 0
