@@ -1,39 +1,37 @@
 [
-
   {
-  "id" : "MMM",
-  "name" : "Merch, Memes, Marketing",
-  "uri" : "https://m-m-m.xyz"
-  },
-  
-  {
-  "id" : "PG",
-  "name" : "Public Goods Funding",
-  "uri" : "https://gitcoin.notion.site/Public-Goods-4ccd579f433c4dff9d8952314468d6e8"
+    "id": "MMM",
+    "name": "Merch, Memes, Marketing",
+    "uri": "https://m-m-m.xyz"
   },
 
   {
-  "id" : "MC",
-  "name" : "Moonshot Collective",
-  "uri" : "https://moonshotcollective.space/"
+    "id": "PG",
+    "name": "Public Goods Funding",
+    "uri": "https://gitcoin.notion.site/Public-Goods-4ccd579f433c4dff9d8952314468d6e8"
   },
-  
+
   {
-  "id" : "DG",
-  "name" : "Decentralize Gitcoin",
-  "uri" : "https://gitcoin.notion.site/Decentralize-Gitcoin-cd6d46d3784244e4ae7a68b108bb9495"
+    "id": "MC",
+    "name": "Moonshot Collective",
+    "uri": "https://moonshotcollective.space/"
   },
-  
+
   {
-  "id" : "FDD",
-  "name" : "Fraud Detection & Defense",
-  "uri" : "https://gitcoin.notion.site/Fraud-Detection-Defense-2bde13c0b8e74fda81435d94e49e2703"
+    "id": "DG",
+    "name": "Decentralize Gitcoin",
+    "uri": "https://gitcoin.notion.site/Decentralize-Gitcoin-cd6d46d3784244e4ae7a68b108bb9495"
   },
-  
+
   {
-  "id" : "DO",
-  "name" : "DAO Operations",
-  "uri" : "https://gitcoin.notion.site/DAO-Ops-84f425e281ae49579a2b4acf0bad5dd5"
+    "id": "FDD",
+    "name": "Fraud Detection & Defense",
+    "uri": "https://gitcoin.notion.site/Fraud-Detection-Defense-2bde13c0b8e74fda81435d94e49e2703"
+  },
+
+  {
+    "id": "DO",
+    "name": "DAO Operations",
+    "uri": "https://gitcoin.notion.site/DAO-Ops-84f425e281ae49579a2b4acf0bad5dd5"
   }
-
 ]

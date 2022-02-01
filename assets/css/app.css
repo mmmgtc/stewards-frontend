@@ -20,13 +20,13 @@
 }
 :root {
   --meteor: #291555;
-  --meteor_light: #321E5E;
-  --white: #FFF;
-  --grey: #9388AA;
-  --light_grey: #D1C9E3;
-  --purple: #BE59CF;
-  --teal: #42C8B0;
-  --teal: #42C8B0;
+  --meteor_light: #321e5e;
+  --white: #fff;
+  --grey: #9388aa;
+  --light_grey: #d1c9e3;
+  --purple: #be59cf;
+  --teal: #42c8b0;
+  --teal: #42c8b0;
 }
 
 * {
@@ -188,6 +188,10 @@ section.grid {
 .card .head .health {
   margin-right: 1em;
 }
+.card .head .health h2 {
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
 
 /* CONTENT */
 .card .content {
@@ -277,14 +281,16 @@ section#gitcoindao a {
   width: 100%;
   border-radius: 6px;
 }
-.ui input, .ui select {
+.ui input,
+.ui select {
   width: 100%;
   border: none;
   color: var(--white);
   font-size: 130%;
   background-color: transparent;
 }
-.ui input:focus, .ui select:focus {
+.ui input:focus,
+.ui select:focus {
   outline: none;
 }
 .ui label {
