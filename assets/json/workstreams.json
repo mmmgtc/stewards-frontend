@@ -7,9 +7,9 @@
   },
   
   {
-  "id" : "PGF",
+  "id" : "PG",
   "name" : "Public Goods Funding",
-  "uri" : "https://gitcoin.notion.site/Public-Goods-80a3202a3a244c65b3fda08c0f7c7d60"
+  "uri" : "https://gitcoin.notion.site/Public-Goods-4ccd579f433c4dff9d8952314468d6e8"
   },
 
   {
@@ -21,13 +21,19 @@
   {
   "id" : "DG",
   "name" : "Decentralize Gitcoin",
-  "uri" : "https://gitcoin.notion.site/dGrants-c3197f918bf640bc9809cd26d56c93f3"
+  "uri" : "https://gitcoin.notion.site/Decentralize-Gitcoin-cd6d46d3784244e4ae7a68b108bb9495"
   },
   
   {
   "id" : "FDD",
   "name" : "Fraud Detection & Defense",
-  "uri" : "https://www.notion.so/gitcoin/Fraud-Detection-Defense-f1a2969a9f324f57a02ef69a60b25cae"
+  "uri" : "https://gitcoin.notion.site/Fraud-Detection-Defense-2bde13c0b8e74fda81435d94e49e2703"
+  }
+  
+  {
+  "id" : "DO",
+  "name" : "DAO Operations",
+  "uri" : "https://gitcoin.notion.site/DAO-Ops-84f425e281ae49579a2b4acf0bad5dd5"
   }
 
 ]
