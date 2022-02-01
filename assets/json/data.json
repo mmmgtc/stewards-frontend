@@ -9,10 +9,10 @@
   "steward_since": "2021-05-25",
   "workstream" : "",
   "address" : "0x4c0a466df0628fe8699051b3ac6506653191cc21",
-  "health" : 5,
+  "health" : 4,
   "posts": 11,
-  "votingweight" : 1,
-  "participation_snapshot" : 41,
+  "votingweight" : 0.97,
+  "participation_snapshot" : 39,
   "participation_tally" : 40
   },
 
@@ -25,10 +25,10 @@
   "steward_since": "2021-05-25",
   "workstream" : "MC",
   "address" : "0x34aa3f359a9d614239015126635ce7732c18fdf3",
-  "health" : 6,
-  "posts": 10,
+  "health" : 7,
+  "posts": 13,
   "votingweight" : 1.64,
-  "participation_snapshot" : 36,
+  "participation_snapshot" : 43,
   "participation_tally" : 22
   },
 
@@ -42,9 +42,9 @@
   "workstream" : "PGF",
   "address" : "0x5e349eca2dc61aBCd9dD99Ce94d04136151a09Ee",
   "health" : 10,
-  "posts": 18,
+  "posts": 19,
   "votingweight" : 1.46,
-  "participation_snapshot" : 71,
+  "participation_snapshot" : 77,
   "participation_tally" : 50
   },
 
@@ -58,9 +58,9 @@
   "workstream" : "",
   "address" : "0x2b888954421b424c5d3d9ce9bb67c9bd47537d12",
   "health" : 10,
-  "posts": 60,
-  "votingweight" : 0.92,
-  "participation_snapshot" : 68,
+  "posts": 65,
+  "votingweight" : 1.04,
+  "participation_snapshot" : 67,
   "participation_tally" : 73
   },
 
@@ -73,10 +73,10 @@
   "steward_since": "2021-05-25",
   "workstream" : "",
   "address" : "0x839395e20bbb182fa440d08f850e6c7a8f6f0780",
-  "health" : 7,
-  "posts": 9,
-  "votingweight" : 1.08,
-  "participation_snapshot" : 82,
+  "health" : 8,
+  "posts": 11,
+  "votingweight" : 0.93,
+  "participation_snapshot" : 90,
   "participation_tally" : 67
   },
   
@@ -90,9 +90,9 @@
   "workstream" : "PGF",
   "address" : "0x54becc7560a7be76d72ed76a1f5fee6c5a2a7ab6",
   "health" : 10,
-  "posts": 18,
+  "posts": 31,
   "votingweight" : 1.55,
-  "participation_snapshot" : 57,
+  "participation_snapshot" : 67,
   "participation_tally" : 91
   },
   
@@ -106,9 +106,9 @@
   "workstream" : "PGF",
   "address" : "0x66b1de0f14a0ce971f7f248415063d44caf19398",
   "health" : 10,
-  "posts": 62,
+  "posts": 63,
   "votingweight" : 0.29,
-  "participation_snapshot" : 39,
+  "participation_snapshot" : 40,
   "participation_tally" : 67
   },
 
@@ -124,7 +124,7 @@
   "health" : 1,
   "posts": 2,
   "votingweight" : 0.31,
-  "participation_snapshot" : 39,
+  "participation_snapshot" : 37,
   "participation_tally" : 67
   },
   
@@ -139,8 +139,8 @@
   "address" : "0xa2bf1b0a7e079767b4701b5a1d9d5700eb42d1d1",
   "health" : 2,
   "posts": 1,
-  "votingweight" : 0.17,
-  "participation_snapshot" : 25,
+  "votingweight" : 0.15,
+  "participation_snapshot" : 23,
   "participation_tally" : 50
   },
   
@@ -154,9 +154,9 @@
   "workstream" : "",
   "address" : "0x31482858561725b74b5ec2a739e447bc74cdf7b9",
   "health" : 1,
-  "posts": 8,
+  "posts": 9,
   "votingweight" : 0.16,
-  "participation_snapshot" : 14,
+  "participation_snapshot" : 13,
   "participation_tally" : 14
   },
   
@@ -169,10 +169,10 @@
   "steward_since": "2021-05-25",
   "workstream" : "PGF",
   "address" : "0x10d6d2e343281d388291a3e02f3293aaeda67178",
-  "health" : 8,
-  "posts": 11,
+  "health" : 10,
+  "posts": 16,
   "votingweight" : 1.06,
-  "participation_snapshot" : 46,
+  "participation_snapshot" : 50,
   "participation_tally" : 67
   },
   
@@ -188,7 +188,7 @@
   "health" : 1,
   "posts": 3,
   "votingweight" : 0.16,
-  "participation_snapshot" : 14,
+  "participation_snapshot" : 13,
   "participation_tally" : 100
   },
   
@@ -203,7 +203,7 @@
   "address" : "0x68898b237823448475bd50ea0bb6e4a20b71ff63",
   "health" : 0,
   "posts": 3,
-  "votingweight" : 0.3,
+  "votingweight" : 0,
   "participation_snapshot" : 0,
   "participation_tally" : 0
   },
@@ -220,7 +220,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.15,
-  "participation_snapshot" : 18,
+  "participation_snapshot" : 17,
   "participation_tally" : 0
   },
   
@@ -235,8 +235,8 @@
   "address" : "0x4bc519f0b7b348fae780afb2dd4aa76841ba8e9e",
   "health" : 0,
   "posts": 1,
-  "votingweight" :0.06,
-  "participation_snapshot" : 29,
+  "votingweight" :0.05,
+  "participation_snapshot" : 27,
   "participation_tally" : 0
   },
   
@@ -252,7 +252,7 @@
   "health" : 6,
   "posts": 32,
   "votingweight" :0.01,
-  "participation_snapshot" : 39,
+  "participation_snapshot" : 37,
   "participation_tally" : 0
   },
   
@@ -266,9 +266,9 @@
   "workstream" : "",
   "address" : "0xf503017d7baf7fbc0fff7492b751025c6a78179b",
   "health" : 10,
-  "posts": 41,
+  "posts": 45,
   "votingweight" :0.34,
-  "participation_snapshot" : 57,
+  "participation_snapshot" : 67,
   "participation_tally" : 70
   },
   
@@ -284,7 +284,7 @@
   "health" : 1,
   "posts": 2,
   "votingweight" :0.05,
-  "participation_snapshot" : 64,
+  "participation_snapshot" : 60,
   "participation_tally" : 0
   },
   
@@ -299,8 +299,8 @@
   "address" : "0xa30ab83e693ad49f3f651085dad11d049c818923",
   "health" : 1,
   "posts": 5,
-  "votingweight" :0.04,
-  "participation_snapshot" : 21,
+  "votingweight" :0.19,
+  "participation_snapshot" : 30,
   "participation_tally" : 13
   },
   
@@ -313,10 +313,10 @@
   "steward_since": "2021-05-25",
   "workstream" : "",
   "address" : "0x8b405dbf2f30844b608b08dad20447a6955a6c6e",
-  "health" : 5,
+  "health" : 4,
   "posts": 26,
-  "votingweight" :0.33,
-  "participation_snapshot" : 21,
+  "votingweight" :0.32,
+  "participation_snapshot" : 20,
   "participation_tally" : 17
   },
   
@@ -329,10 +329,10 @@
   "steward_since": "2021-05-25",
   "workstream" : "",
   "address" : "0x88cca876eebb2a541ed87584f189319c3441aca6",
-  "health" : 1,
+  "health" : 0,
   "posts": 1,
   "votingweight" :0.02,
-  "participation_snapshot" : 61,
+  "participation_snapshot" : 60,
   "participation_tally" : 0
   },
   
@@ -348,7 +348,7 @@
   "health" : 0,
   "posts": 9,
   "votingweight" :0.02,
-  "participation_snapshot" : 7,
+  "participation_snapshot" : 60,
   "participation_tally" : 0
   },
   
@@ -377,10 +377,10 @@
   "steward_since": "2021-05-25",
   "workstream" : "",
   "address" : "0x8d07d225a769b7af3a923481e1fdf49180e6a265",
-  "health" : 5,
-  "posts": 6,
+  "health" : 6,
+  "posts": 7,
   "votingweight" :0.16,
-  "participation_snapshot" : 79,
+  "participation_snapshot" : 80
   "participation_tally" : 100
   },
   
@@ -394,9 +394,9 @@
   "workstream" : "",
   "address" : "0x73186b2a81952c2340c4eb2e74e89869e1183df0",
   "health" : 0,
-  "posts": 2,
+  "posts": 3,
   "votingweight" :0.01,
-  "participation_snapshot" : 11,
+  "participation_snapshot" : 13,
   "participation_tally" : 17
   },
   
@@ -412,7 +412,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.01,
-  "participation_snapshot" : 14,
+  "participation_snapshot" : 13,
   "participation_tally" : 0
   },
   
@@ -426,9 +426,9 @@
   "workstream" : "DG",
   "address" : "0x6bf1eba9740441d0a8822eda4e116a74f850d81b",
   "health" : 10,
-  "posts": 25,
-  "votingweight" :0,
-  "participation_snapshot" : 61,
+  "posts": 27,
+  "votingweight" :0.01,
+  "participation_snapshot" : 60,
   "participation_tally" : 75
   },
   
@@ -441,10 +441,10 @@
   "steward_since": "2021-06-07",
   "workstream" : "",
   "address" : "0x809FA673fe2ab515FaA168259cB14E2BeDeBF68e",
-  "health" : 1,
+  "health" : 0,
   "posts": 4,
   "votingweight" :1.05,
-  "participation_snapshot" : 22,
+  "participation_snapshot" : 17,
   "participation_tally" : 0
   },
   
@@ -460,7 +460,7 @@
   "health" : 6,
   "posts": 7,
   "votingweight" :0.15,
-  "participation_snapshot" : 29,
+  "participation_snapshot" : 27,
   "participation_tally" : 75
   },
   
@@ -475,7 +475,7 @@
   "address" : "0xd23aff9ad562c445bcab03321cbfe63bf4b0bcf2",
   "health" : 0,
   "posts": 4,
-  "votingweight" :0.03,
+  "votingweight" :0.19,
   "participation_snapshot" : 0,
   "participation_tally" : 0
   },
@@ -492,7 +492,7 @@
   "health" : 1,
   "posts": 20,
   "votingweight" :0.01,
-  "participation_snapshot" : 11,
+  "participation_snapshot" : 10,
   "participation_tally" : 0
   },
   
@@ -524,7 +524,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.01,
-  "participation_snapshot" : 13,
+  "participation_snapshot" : 10,
   "participation_tally" : 0
   },
   
@@ -539,8 +539,8 @@
   "address" : "0xe4b420f15d6d878dcd0df7120ac0fc1509ee9cab",
   "health" : 1,
   "posts": 3,
-  "votingweight" :0.02,
-  "participation_snapshot" : 14,
+  "votingweight" :0.15,
+  "participation_snapshot" : 13,
   "participation_tally" : 100
   },
   
@@ -588,7 +588,7 @@
   "health" : 2,
   "posts": 16,
   "votingweight" :0.01,
-  "participation_snapshot" : 21,
+  "participation_snapshot" : 20,
   "participation_tally" : 0
   },
   
@@ -617,10 +617,10 @@
   "steward_since": "2021-05-25",
   "workstream" : "",
   "address" : "0x05a1ff0a32bc24265bcb39499d0c5d9a6cb2011c",
-  "health" : 1,
+  "health" : 0,
   "posts": 1,
-  "votingweight" :0.01,
-  "participation_snapshot" : 21,
+  "votingweight" :0,
+  "participation_snapshot" : 20,
   "participation_tally" : 100
   },
   
@@ -668,7 +668,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0.01,
-  "participation_snapshot" : 36,
+  "participation_snapshot" : 40,
   "participation_tally" : 0
   },
   
@@ -716,7 +716,7 @@
   "health" : 0,
   "posts": 1,
   "votingweight" :0,
-  "participation_snapshot" : 11,
+  "participation_snapshot" : 10,
   "participation_tally" : 0
   },
   
@@ -763,7 +763,7 @@
   "address" : "0x3b067af83f540cb827825a6ee5480441a4237e77",
   "health" : 0,
   "posts": 4,
-  "votingweight" :0.01,
+  "votingweight" :0,
   "participation_snapshot" : 0,
   "participation_tally" : 0
   },
@@ -795,7 +795,7 @@
   "address" : "0x45735683E432A5701959fc4D2e0FAB19dc7D1d58",
   "health" : 0,
   "posts": 3,
-  "votingweight" :0.01,
+  "votingweight" :0,
   "participation_snapshot" : 0,
   "participation_tally" : 0
   },
@@ -812,7 +812,7 @@
   "health" : 10,
   "posts": 16,
   "votingweight" :0,
-  "participation_snapshot" : 46,
+  "participation_snapshot" : 43,
   "participation_tally" : 100
   },
   
@@ -826,9 +826,9 @@
   "workstream" : "FDD",
   "address" : "0xEe0579b4C36fd52EC0A2B542fb801F136838B7f1",
   "health" : 10,
-  "posts": 77,
+  "posts": 81,
   "votingweight" :0,
-  "participation_snapshot" : 79,
+  "participation_snapshot" : 77,
   "participation_tally" : 45
   },
   
@@ -842,9 +842,9 @@
   "workstream" : "FDD",
   "address" : "0x521aacb43d89e1b8ffd64d9ef76b0a1074dedaf8",
   "health" : 10,
-  "posts": 64,
+  "posts": 71,
   "votingweight" :0.01,
-  "participation_snapshot" : 68,
+  "participation_snapshot" : 77,
   "participation_tally" : 33
   },
   
@@ -858,9 +858,9 @@
   "workstream" : "",
   "address" : "0x7E052Ef7B4bB7E5A45F331128AFadB1E589deaF1",
   "health" : 10,
-  "posts": 26,
+  "posts": 32,
   "votingweight" :0.75,
-  "participation_snapshot" : 50,
+  "participation_snapshot" : 47,
   "participation_tally" : 25
   },
   
@@ -874,7 +874,7 @@
   "workstream" : "MMM",
   "address" : "0x4a5B536A613E69F43a52f6Aa7A7F3765428329ad",
   "health" : 7,
-  "posts": 15,
+  "posts": 19,
   "votingweight" :0,
   "participation_snapshot" : 27,
   "participation_tally" : 18
@@ -889,10 +889,10 @@
   "steward_since": "2021-07-15",
   "workstream" : "",
   "address" : "0xC714a62A4BF7ff475C8dc3E589e1388342A38BB8",
-  "health" : 1,
+  "health" : 0,
   "posts": 3,
   "votingweight" :0,
-  "participation_snapshot" : 24,
+  "participation_snapshot" : 13,
   "participation_tally" : 0
   },
 	
@@ -906,7 +906,7 @@
   "workstream" : "FDD",
   "address" : "0x59AE7f21D18b2F5fDC7a99c4fd6dD9E67Cec0Bc9",
   "health" : 2,
-  "posts": 49,
+  "posts": 52,
   "votingweight" : 0,
   "participation_snapshot" : 0,
   "participation_tally" : 0
@@ -924,7 +924,7 @@
   "health" : 1,
   "posts": 4,
   "votingweight" : 0.02,
-  "participation_snapshot" : 36,
+  "participation_snapshot" : 33,
   "participation_tally" : 17
   },
 	
@@ -956,7 +956,7 @@
   "health" : 1,
   "posts": 1,
   "votingweight" :0,
-  "participation_snapshot" : 79,
+  "participation_snapshot" : 77,
   "participation_tally" : 100
   }
   
