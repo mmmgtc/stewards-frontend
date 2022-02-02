@@ -965,7 +965,7 @@
     "handle_gitcoin": "kweiss",
     "handle_forum": "kyle",
     "statement_post_id": 200,
-    "steward_since": "2021-05-25",
+    "steward_since": "2022-01-01",
     "workstream": "DO",
     "address": "0xc2E2B715d9e302947Ec7e312fd2384b5a1296099",
     "health": 3,
@@ -982,12 +982,12 @@
     "handle_forum": "disruptionjoe",
     "statement_post_id": 201,
     "steward_since": "2021-05-25",
-    "workstream": "",
+    "workstream": "FDD",
     "address": "0x01Cf9fD2efa5Fdf178bd635c3E2adF25B2052712",
     "health": 7,
     "posts": 91,
     "votingweight": 0.08,
-    "participation_snapshot": 27,
+    "participation_snapshot": 44,
     "participation_tally": 0
   }
 ]
