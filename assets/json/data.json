@@ -989,5 +989,21 @@
     "votingweight": 0.08,
     "participation_snapshot": 44,
     "participation_tally": 0
+  },
+  
+  {
+    "name": "QZ",
+    "image": "QZ.png",
+    "handle_gitcoin": "fishbiscuit",
+    "handle_forum": "Fishbiscuit",
+    "statement_post_id": 205,
+    "steward_since": "2021-08-11",
+    "workstream": "PG",
+    "address": "0x0CF30daf2Fb962Ed1d5D19C97F5f6651F3b691c1",
+    "health": 3,
+    "posts": 4,
+    "votingweight": 0,
+    "participation_snapshot": 0,
+    "participation_tally": 0
   }
 ]
