@@ -968,10 +968,10 @@
     "steward_since": "2022-01-01",
     "workstream": "DO",
     "address": "0xc2E2B715d9e302947Ec7e312fd2384b5a1296099",
-    "health": 3,
+    "health": 5,
     "posts": 17,
     "votingweight": 0,
-    "participation_snapshot": 0,
+    "participation_snapshot": -,
     "participation_tally": 0
   },
 
