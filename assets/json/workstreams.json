@@ -1,73 +1,73 @@
 [
   {
     "id": "MMM Lead",
-    "name": "Merch, Memes, Marketing",
+    "name": "MMM Lead",
     "uri": "https://m-m-m.xyz"
   },
 
   {
     "id": "PG Lead",
-    "name": "Public Goods Funding",
+    "name": "PG Lead",
     "uri": "https://gitcoin.notion.site/Public-Goods-4ccd579f433c4dff9d8952314468d6e8"
   },
 
   {
     "id": "MC Lead",
-    "name": "Moonshot Collective",
+    "name": "MC Lead",
     "uri": "https://moonshotcollective.space/"
   },
 
   {
     "id": "DG Lead",
-    "name": "Decentralize Gitcoin",
+    "name": "DG Lead",
     "uri": "https://gitcoin.notion.site/Decentralize-Gitcoin-cd6d46d3784244e4ae7a68b108bb9495"
   },
 
   {
     "id": "FDD Lead",
-    "name": "Fraud Detection & Defense",
+    "name": "FDD Lead",
     "uri": "https://gitcoin.notion.site/Fraud-Detection-Defense-2bde13c0b8e74fda81435d94e49e2703"
   },
 
   {
     "id": "DO Lead",
-    "name": "DAO Operations",
+    "name": "DO Lead",
     "uri": "https://gitcoin.notion.site/DAO-Ops-84f425e281ae49579a2b4acf0bad5dd5"
   },
   
     {
     "id": "MMM Contributor",
-    "name": "Merch, Memes, Marketing",
+    "name": "MMM Contributor",
     "uri": "https://m-m-m.xyz"
   },
 
   {
     "id": "PG Contributor",
-    "name": "Public Goods Funding",
+    "name": "PG Contributor",
     "uri": "https://gitcoin.notion.site/Public-Goods-4ccd579f433c4dff9d8952314468d6e8"
   },
 
   {
     "id": "MC Contributor",
-    "name": "Moonshot Collective",
+    "name": "MMC Contributor",
     "uri": "https://moonshotcollective.space/"
   },
 
   {
     "id": "DG Contributor",
-    "name": "Decentralize Gitcoin",
+    "name": "DG Contributor",
     "uri": "https://gitcoin.notion.site/Decentralize-Gitcoin-cd6d46d3784244e4ae7a68b108bb9495"
   },
 
   {
     "id": "FDD Contributor",
-    "name": "Fraud Detection & Defense",
+    "name": "FDD Contributor",
     "uri": "https://gitcoin.notion.site/Fraud-Detection-Defense-2bde13c0b8e74fda81435d94e49e2703"
   },
 
   {
     "id": "DO Contributor",
-    "name": "DAO Operations",
+    "name": "DO Contributor",
     "uri": "https://gitcoin.notion.site/DAO-Ops-84f425e281ae49579a2b4acf0bad5dd5"
   }
 ]
