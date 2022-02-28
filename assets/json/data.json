@@ -170,7 +170,7 @@
     "address": "0x10d6d2e343281d388291a3e02f3293aaeda67178",
     "health": 10,
     "posts": 17,
-    "votingweight": 0,6,
+    "votingweight": 0.6,
     "participation_snapshot": 47,
     "participation_tally": 67
   },
