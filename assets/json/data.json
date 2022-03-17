@@ -41,7 +41,7 @@
     "workstream": "PG Contributor",
     "address": "0x5e349eca2dc61aBCd9dD99Ce94d04136151a09Ee",
     "health": 10,
-    "posts": 25,
+    "posts": 26,
     "votingweight": 1.45,
     "participation_snapshot": 74,
     "participation_tally": 50
@@ -57,7 +57,7 @@
     "workstream": "",
     "address": "0x2b888954421b424c5d3d9ce9bb67c9bd47537d12",
     "health": 10,
-    "posts": 71,
+    "posts": 73,
     "votingweight": 1.04,
     "participation_snapshot": 71,
     "participation_tally": 73
@@ -73,7 +73,7 @@
     "workstream": "",
     "address": "0x839395e20bbb182fa440d08f850e6c7a8f6f0780",
     "health": 9,
-    "posts": 14,
+    "posts": 15,
     "votingweight": 0.78,
     "participation_snapshot": 79,
     "participation_tally": 67
@@ -89,7 +89,7 @@
     "workstream": "DO Lead",
     "address": "0x54becc7560a7be76d72ed76a1f5fee6c5a2a7ab6",
     "health": 10,
-    "posts": 39,
+    "posts": 41,
     "votingweight": 1.4,
     "participation_snapshot": 68,
     "participation_tally": 91
@@ -105,7 +105,7 @@
     "workstream": "",
     "address": "0x66b1de0f14a0ce971f7f248415063d44caf19398",
     "health": 6,
-    "posts": 64,
+    "posts": 65,
     "votingweight": 0.29,
     "participation_snapshot": 35,
     "participation_tally": 67
@@ -265,7 +265,7 @@
     "workstream": "",
     "address": "0xf503017d7baf7fbc0fff7492b751025c6a78179b",
     "health": 10,
-    "posts": 50,
+    "posts": 53,
     "votingweight": 0.33,
     "participation_snapshot": 65,
     "participation_tally": 70
@@ -601,7 +601,7 @@
     "workstream": "",
     "address": "0xdC0046B52e2E38AEe2271B6171ebb65cCD337518",
     "health": 1,
-    "posts": 11,
+    "posts": 13,
     "votingweight": 0.01,
     "participation_snapshot": 12,
     "participation_tally": 14
@@ -617,7 +617,7 @@
     "workstream": "",
     "address": "0x05a1ff0a32bc24265bcb39499d0c5d9a6cb2011c",
     "health": 0,
-    "posts": 1,
+    "posts": 2,
     "votingweight": 0,
     "participation_snapshot": 18,
     "participation_tally": 100
@@ -841,7 +841,7 @@
     "workstream": "DO Lead",
     "address": "0x521aacb43d89e1b8ffd64d9ef76b0a1074dedaf8",
     "health": 10,
-    "posts": 79,
+    "posts": 81,
     "votingweight": 0.01,
     "participation_snapshot": 74,
     "participation_tally": 33
@@ -857,7 +857,7 @@
     "workstream": "DO Lead",
     "address": "0x7E052Ef7B4bB7E5A45F331128AFadB1E589deaF1",
     "health": 10,
-    "posts": 39,
+    "posts": 45,
     "votingweight": 1.05,
     "participation_snapshot": 52,
     "participation_tally": 25
@@ -873,7 +873,7 @@
     "workstream": "MMM Lead",
     "address": "0x4a5B536A613E69F43a52f6Aa7A7F3765428329ad",
     "health": 10,
-    "posts": 20,
+    "posts": 23,
     "votingweight": 0,
     "participation_snapshot": 28,
     "participation_tally": 18
@@ -905,7 +905,7 @@
     "workstream": "FDD Contributor",
     "address": "0x59AE7f21D18b2F5fDC7a99c4fd6dD9E67Cec0Bc9",
     "health": 3,
-    "posts": 56,
+    "posts": 67,
     "votingweight": 0,
     "participation_snapshot": 0,
     "participation_tally": 0
@@ -969,7 +969,7 @@
     "workstream": "DO Lead",
     "address": "0xc2E2B715d9e302947Ec7e312fd2384b5a1296099",
     "health": 10,
-    "posts": 50,
+    "posts": 64,
     "votingweight": 0.45,
     "participation_snapshot": 100,
     "participation_tally": 0
@@ -985,7 +985,7 @@
     "workstream": "FDD Lead",
     "address": "0x01Cf9fD2efa5Fdf178bd635c3E2adF25B2052712",
     "health": 10,
-    "posts": 123,
+    "posts": 143,
     "votingweight": 0.08,
     "participation_snapshot": 55,
     "participation_tally": 0
