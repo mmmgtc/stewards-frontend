@@ -1005,5 +1005,21 @@
     "votingweight": 0.45,
     "participation_snapshot": 100,
     "participation_tally": 0
+  },
+  
+    {
+    "name": "Sidcode",
+    "image": "sidcode.png",
+    "handle_gitcoin": "sidcode",
+    "handle_forum": "sidcode",
+    "statement_post_id": 206,
+    "steward_since": "2022-03-18",
+    "workstream": "MMM Lead",
+    "address": "0xd0ef3a2Ae7Fb496C0897400f1be46693B6183B0a",
+    "health": 1,
+    "posts": 5,
+    "votingweight": 0,
+    "participation_snapshot": 0,
+    "participation_tally": 0
   }
 ]
