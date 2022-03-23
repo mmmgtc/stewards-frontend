@@ -1,6 +1,6 @@
 # stewards
 
-Steward Report Cards
+Steward Health Cards
 
 this is a very rudimentary website to show the results 
 of the gitcoin stewards. it fetches 2 json files and 
