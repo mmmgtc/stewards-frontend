@@ -192,22 +192,6 @@
   },
 
   {
-    "name": "Pet3r",
-    "image": "pet3r-pan.png",
-    "handle_gitcoin": "pet3r-pan",
-    "handle_forum": "pet3rpan",
-    "statement_post_id": 11,
-    "steward_since": "2021-05-25",
-    "workstream": "",
-    "address": "0x68898b237823448475bd50ea0bb6e4a20b71ff63",
-    "health": 0,
-    "posts": 3,
-    "votingweight": 0,
-    "participation_snapshot": 0,
-    "participation_tally": 0
-  },
-
-  {
     "name": "Anish Agnihotri",
     "image": "anish-agnihotri.png",
     "handle_gitcoin": "anish-agnihotri",
@@ -877,22 +861,6 @@
     "votingweight": 0,
     "participation_snapshot": 28,
     "participation_tally": 18
-  },
-
-  {
-    "name": "Accelerated Capital",
-    "image": "accelerated-capital.png",
-    "handle_gitcoin": "accelerated-capital",
-    "handle_forum": "AcceleratedCapital",
-    "statement_post_id": 182,
-    "steward_since": "2021-07-15",
-    "workstream": "",
-    "address": "0xC714a62A4BF7ff475C8dc3E589e1388342A38BB8",
-    "health": 0,
-    "posts": 3,
-    "votingweight": 0,
-    "participation_snapshot": 12,
-    "participation_tally": 0
   },
 
   {
