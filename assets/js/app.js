@@ -8,7 +8,7 @@ window.addEventListener("load", (event) => {
     fetch("assets/json/workstreams.json?" + cachbuster).then((value) =>
       value.json()
     ),
-    fetch("assets/json/data.json?" + cachbuster).then((value) => value.json()),
+    fetch("assets/json/stewards_data.json?" + cachbuster).then((value) => value.json()),
   ])
     .then((value) => {
       window.workstreams = value[0];
@@ -155,25 +155,26 @@ function draw() {
       steward.statement_post_id;
 
     clone.querySelector("#name").innerHTML = steward.name;
-    clone.querySelector("#image").src = imgpath + steward.image;
+    clone.querySelector("#image").src = imgpath + steward.profile_image;
 
-    clone.querySelector("#handle_gitcoin").innerHTML = steward.handle_gitcoin;
+    clone.querySelector("#handle_gitcoin").innerHTML = steward.gitcoin_username;
     clone.querySelector("#handle_gitcoin").href =
-      gitcoinurl + steward.handle_gitcoin;
+      gitcoinurl + steward.gitcoin_username;
 
     clone.querySelector("#steward_since").innerHTML = steward.steward_since;
 
     clone.querySelector("#workstream_url").href = "TBD";
 
-    clone.querySelector("#votingweight").innerHTML = steward.votingweight;
+    clone.querySelector("#votingweight").innerHTML = steward.voting_weight;
 
+    // wrap in if condition for 30d/lifetime
     clone.querySelector("#participation_snapshot").innerHTML =
-      steward.participation_snapshot;
+      steward.vote_participation_30d;
 
     clone.querySelector("#delegate_button").href = tally_url;
     clone.querySelector("#votingweight_url").href = tally_url;
 
-    clone.querySelector("#forum_post").innerHTML = steward.posts;
+    clone.querySelector("#forum_post").innerHTML = steward.forum_activity_30d;
     clone.querySelector("#forum_uri").href =
       "https://gov.gitcoin.co/u/" + steward.handle_forum;
 
@@ -183,7 +184,7 @@ function draw() {
     clone.querySelector("#health").src =
       "assets/images/health_" + steward.health + ".svg";
 
-    clone.querySelector("#health_num").innerHTML = `${steward.health}/10`;
+    clone.querySelector("#health_num").innerHTML = `${steward.health_score_30d}/10`;
 
     console.log(steward.health);
 
