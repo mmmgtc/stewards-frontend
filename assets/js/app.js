@@ -12,7 +12,7 @@ window.addEventListener("load", (event) => {
   ])
     .then((value) => {
       window.workstreams = value[0];
-      window.stewards = value[1];
+      window.stewards = value[1].data;
       init();
     })
     .catch((err) => {
@@ -28,6 +28,14 @@ function init() {
   search.addEventListener("input", () => {
     filterStewards();
   });
+
+  const timeVal= document.getElementById("timeVal");
+  timeVal.addEventListener("input", () => {
+    // data shown based on time value selected
+    resetSearch();
+    orderStewards();
+    draw();
+  })
 
   // map orderby input field to orderStewards function
   const orderby = document.getElementById("orderby");
@@ -100,26 +108,27 @@ function filterStewards() {
 }
 
 function orderStewards() {
+  timeval = document.getElementById("timeVal").value;
   orderby = document.getElementById("orderby").value;
   direction = document.getElementById("direction").value;
   // console.log(orderby, direction)
 
   if (orderby == "health") {
-    window.stewards.sort((a, b) => (a.health < b.health ? 1 : -1));
+    window.stewards.sort((a, b) => (a.health[timeval] < b.health[timeval] ? 1 : -1));
   }
 
   if (orderby == "weight") {
     window.stewards.sort((a, b) => (a.votingweight < b.votingweight ? 1 : -1));
   }
 
-  if (orderby == "participation") {
+  if (orderby == "vote_participation") {
     window.stewards.sort((a, b) =>
-      a.participation_snapshot < b.participation_snapshot ? 1 : -1
+      a.vote_participation[timeval] < b.vote_participation[timeval] ? 1 : -1
     );
   }
 
-  if (orderby == "posts") {
-    window.stewards.sort((a, b) => (a.posts < b.posts ? 1 : -1));
+  if (orderby == "forum_activity") {
+    window.stewards.sort((a, b) => (a.forum_activity[timeval] < b.forum_activity[timeval] ? 1 : -1));
   }
 
   // ascending - from low to high
@@ -131,6 +140,7 @@ function orderStewards() {
 function draw() {
   // console.log(window.stewards)
 
+  timeval = document.getElementById("timeVal").value;
   imgpath = "assets/stewards/";
   gitcoinurl = "https://gitcoin.co/";
 
@@ -169,12 +179,12 @@ function draw() {
 
     // wrap in if condition for 30d/lifetime
     clone.querySelector("#participation_snapshot").innerHTML =
-      steward.vote_participation_30d;
+      steward.vote_participation[timeval];
 
     clone.querySelector("#delegate_button").href = tally_url;
     clone.querySelector("#votingweight_url").href = tally_url;
 
-    clone.querySelector("#forum_post").innerHTML = steward.forum_activity_30d;
+    clone.querySelector("#forum_post").innerHTML = steward.forum_activity[timeval];
     clone.querySelector("#forum_uri").href =
       "https://gov.gitcoin.co/u/" + steward.handle_forum;
 
@@ -184,9 +194,7 @@ function draw() {
     clone.querySelector("#health").src =
       "assets/images/health_" + steward.health + ".svg";
 
-    clone.querySelector("#health_num").innerHTML = `${steward.health_score_30d}/10`;
-
-    console.log(steward.health);
+    clone.querySelector("#health_num").innerHTML = `${steward.health[timeval]}/10`;
 
     if (steward.workstream) {
       stream = window.workstreams.find((o) => o.id === steward.workstream);
@@ -204,9 +212,9 @@ function draw() {
       " " +
       steward.name +
       " " +
-      steward.handle_gitcoin +
+      steward.gitcoin_username +
       " " +
-      steward.handle_forum +
+      steward.discourse_username +
       " " +
       workstream_tag;
 
