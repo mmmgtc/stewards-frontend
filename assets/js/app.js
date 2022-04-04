@@ -192,7 +192,7 @@ function draw() {
     clone.querySelector("#steward_since_url").href = statement_url;
 
     clone.querySelector("#health").src =
-      "assets/images/health_" + steward.health + ".svg";
+      "assets/images/health_" + steward.health[timeVal] + ".svg";
 
     clone.querySelector("#health_num").innerHTML = `${steward.health[timeval]}/10`;
 
