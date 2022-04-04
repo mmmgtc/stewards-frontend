@@ -108,13 +108,13 @@ function filterStewards() {
 }
 
 function orderStewards() {
-  timeval = document.getElementById("timeVal").value;
+  timeVal = document.getElementById("timeVal").value;
   orderby = document.getElementById("orderby").value;
   direction = document.getElementById("direction").value;
   // console.log(orderby, direction)
 
   if (orderby == "health") {
-    window.stewards.sort((a, b) => (a.health[timeval] < b.health[timeval] ? 1 : -1));
+    window.stewards.sort((a, b) => (a.health[timeVal] < b.health[timeVal] ? 1 : -1));
   }
 
   if (orderby == "weight") {
@@ -123,12 +123,12 @@ function orderStewards() {
 
   if (orderby == "vote_participation") {
     window.stewards.sort((a, b) =>
-      a.vote_participation[timeval] < b.vote_participation[timeval] ? 1 : -1
+      a.vote_participation[timeVal] < b.vote_participation[timeVal] ? 1 : -1
     );
   }
 
   if (orderby == "forum_activity") {
-    window.stewards.sort((a, b) => (a.forum_activity[timeval] < b.forum_activity[timeval] ? 1 : -1));
+    window.stewards.sort((a, b) => (a.forum_activity[timeVal] < b.forum_activity[timeVal] ? 1 : -1));
   }
 
   // ascending - from low to high
@@ -140,7 +140,7 @@ function orderStewards() {
 function draw() {
   // console.log(window.stewards)
 
-  timeval = document.getElementById("timeVal").value;
+  timeVal = document.getElementById("timeVal").value;
   imgpath = "assets/images/stewards/";
   gitcoinurl = "https://gitcoin.co/";
 
@@ -179,12 +179,12 @@ function draw() {
 
     // wrap in if condition for 30d/lifetime
     clone.querySelector("#participation_snapshot").innerHTML =
-      steward.vote_participation[timeval];
+      steward.vote_participation[timeVal];
 
     clone.querySelector("#delegate_button").href = tally_url;
     clone.querySelector("#votingweight_url").href = tally_url;
 
-    clone.querySelector("#forum_post").innerHTML = steward.forum_activity[timeval];
+    clone.querySelector("#forum_post").innerHTML = steward.forum_activity[timeVal];
     clone.querySelector("#forum_uri").href =
       "https://gov.gitcoin.co/u/" + steward.handle_forum;
 
@@ -192,9 +192,9 @@ function draw() {
     clone.querySelector("#steward_since_url").href = statement_url;
 
     clone.querySelector("#health").src =
-      "../assets/images/health_" + steward.health[timeVal] + ".svg";
+      `assets/images/health_${steward.health[timeVal]}.svg`;
 
-    clone.querySelector("#health_num").innerHTML = `${steward.health[timeval]}/10`;
+    clone.querySelector("#health_num").innerHTML = `${steward.health[timeVal]}/10`;
 
     if (steward.workstream) {
       stream = window.workstreams.find((o) => o.id === steward.workstream);
