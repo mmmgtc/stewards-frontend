@@ -141,7 +141,7 @@ function draw() {
   // console.log(window.stewards)
 
   timeval = document.getElementById("timeVal").value;
-  imgpath = "assets/stewards/";
+  imgpath = "assets/images/stewards/";
   gitcoinurl = "https://gitcoin.co/";
 
   grid = document.querySelector("#grid");
@@ -192,7 +192,7 @@ function draw() {
     clone.querySelector("#steward_since_url").href = statement_url;
 
     clone.querySelector("#health").src =
-      "assets/images/health_" + steward.health[timeVal] + ".svg";
+      "../assets/images/health_" + steward.health[timeVal] + ".svg";
 
     clone.querySelector("#health_num").innerHTML = `${steward.health[timeval]}/10`;
 
