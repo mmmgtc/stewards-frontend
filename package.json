@@ -1,0 +1,12 @@
+{
+    "name": "project_name",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+      "start": "serve"
+    },
+    "dependencies": {
+      "serve": "^10.0.1"
+    },
+    "author": "Pulkit Aggarwal"
+  }
