@@ -82,7 +82,7 @@
                   "steward_since": "2021-05-25",
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/4",
                   "forum_activity": {
-                        "30d": 6,
+                        "30d": 7,
                         "lifetime": 79
                   },
                   "vote_participation": {
@@ -92,7 +92,7 @@
                   "voting_weight": 1.04,
                   "snapshot_votes": 1154878,
                   "health": {
-                        "30d": 6,
+                        "30d": 7,
                         "lifetime": 10
                   }
             },
@@ -634,7 +634,7 @@
                   "steward_since": "2021-06-07",
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/140",
                   "forum_activity": {
-                        "30d": 0,
+                        "30d": 1,
                         "lifetime": 4
                   },
                   "vote_participation": {
@@ -1426,7 +1426,7 @@
                   "steward_since": "2021-05-25",
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/201",
                   "forum_activity": {
-                        "30d": 38,
+                        "30d": 40,
                         "lifetime": 158
                   },
                   "vote_participation": {
@@ -1474,7 +1474,7 @@
                   "steward_since": "2022-03-18",
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/206",
                   "forum_activity": {
-                        "30d": 0,
+                        "30d": 1,
                         "lifetime": 0
                   },
                   "vote_participation": {
@@ -1484,7 +1484,7 @@
                   "voting_weight": 0,
                   "snapshot_votes": 4432,
                   "health": {
-                        "30d": 9,
+                        "30d": 10,
                         "lifetime": 5
                   }
             }
