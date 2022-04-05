@@ -160,9 +160,7 @@ function draw() {
       "https://www.withtally.com/voter/" +
       steward.address +
       "/governance/gitcoin";
-    statement_url =
-      "https://gov.gitcoin.co/t/introducing-stewards-governance/41/" +
-      steward.statement_post_id;
+    statement_url = steward.statement_post;
 
     clone.querySelector("#name").innerHTML = steward.name;
     clone.querySelector("#image").src = imgpath + steward.profile_image;
@@ -186,7 +184,7 @@ function draw() {
 
     clone.querySelector("#forum_post").innerHTML = steward.forum_activity[timeVal];
     clone.querySelector("#forum_uri").href =
-      "https://gov.gitcoin.co/u/" + steward.handle_forum;
+      "https://gov.gitcoin.co/u/" + steward.discourse_username;
 
     clone.querySelector("#statement_button").href = statement_url;
     clone.querySelector("#steward_since_url").href = statement_url;
