@@ -227,10 +227,6 @@ function draw() {
     // apply highlights to cards based on orderby
     orderby = document.getElementById("orderby").value;
 
-    if (orderby == "health") {
-      clone.querySelector("#health_num").classList.add("highlight");
-    }
-
     if (orderby == "voting_weight") {
       clone.querySelector("#votingweight").classList.add("highlight");
     }
