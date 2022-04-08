@@ -277,7 +277,7 @@ section#gitcoindao a {
 }
 .ui .input-wrapper {
   padding: 1em;
-  background-color: var(--meteor_light);
+  background-color: var(--blue);
   width: 100%;
   border-radius: 6px;
 }
@@ -285,7 +285,7 @@ section#gitcoindao a {
 .ui select {
   width: 100%;
   border: none;
-  color: var(--white);
+  color: var(--black);
   font-size: 130%;
   background-color: transparent;
 }
