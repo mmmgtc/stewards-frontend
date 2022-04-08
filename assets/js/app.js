@@ -22,6 +22,8 @@ window.addEventListener("load", (event) => {
 
 function init() {
   console.log("init...");
+  timeVal_div= document.getElementById("timeVal_div");
+  timeVal_div.classList.add("highlight");
 
   // map search input field to filterCard function
   const search = document.getElementById("search");
@@ -117,8 +119,8 @@ function orderStewards() {
     window.stewards.sort((a, b) => (a.health[timeVal] < b.health[timeVal] ? 1 : -1));
   }
 
-  if (orderby == "weight") {
-    window.stewards.sort((a, b) => (a.votingweight < b.votingweight ? 1 : -1));
+  if (orderby == "voting_weight") {
+    window.stewards.sort((a, b) => (a.voting_weight < b.voting_weight ? 1 : -1));
   }
 
   if (orderby == "vote_participation") {
@@ -176,7 +178,7 @@ function draw() {
     clone.querySelector("#votingweight").innerHTML = steward.voting_weight;
 
     // wrap in if condition for 30d/lifetime
-    clone.querySelector("#participation_snapshot").innerHTML =
+    clone.querySelector("#vote_participation").innerHTML =
       steward.vote_participation[timeVal];
 
     clone.querySelector("#delegate_button").href = tally_url;
@@ -189,10 +191,15 @@ function draw() {
     clone.querySelector("#statement_button").href = statement_url;
     clone.querySelector("#steward_since_url").href = statement_url;
 
-    clone.querySelector("#health").src =
+    if (steward.steward_days > 30) {
+      clone.querySelector("#health").src =
       `assets/images/health_${steward.health[timeVal]}.svg`;
-
-    clone.querySelector("#health_num").innerHTML = `${steward.health[timeVal]}/10`;
+      clone.querySelector("#health_num").innerHTML = `${steward.health[timeVal]}/10`;
+    } else {
+      clone.querySelector("#health").src = "";
+      clone.querySelector("#health_num").innerHTML = "New✨";
+    }
+    
 
     if (steward.workstream) {
       stream = window.workstreams.find((o) => o.id === steward.workstream);
@@ -219,20 +226,16 @@ function draw() {
     // apply highlights to cards based on orderby
     orderby = document.getElementById("orderby").value;
 
-    if (orderby == "health") {
-      clone.querySelector("#health").classList.add("highlight");
-    }
-
-    if (orderby == "weight") {
+    if (orderby == "voting_weight") {
       clone.querySelector("#votingweight").classList.add("highlight");
     }
 
-    if (orderby == "posts") {
+    if (orderby == "forum_activity") {
       clone.querySelector("#forum_post").classList.add("highlight");
     }
 
-    if (orderby == "participation") {
-      clone.querySelector("#participation_snapshot").classList.add("highlight");
+    if (orderby == "vote_participation") {
+      clone.querySelector("#vote_participation").classList.add("highlight");
     }
 
     document.querySelector("#grid").appendChild(clone);

@@ -79,8 +79,8 @@
         <label for="orderby">Order by</label>
         <select id="orderby" name="orderby">
           <option value="health" selected>Health</option>
-          <option value="forum_activity">Forum posts</option>
-          <option value="weight">Voting Weight</option>
+          <option value="forum_activity">Forum activity</option>
+          <option value="voting_weight">Voting Weight</option>
           <option value="vote_participation">Vote participation</option>
         </select>
       </div>
@@ -92,11 +92,11 @@
           <option value="ascending">Ascending</option>
         </select>
       </div>
-      <div class="input-wrapper">
+      <div class="input-wrapper" id="timeVal_div">
         <label for="timeVal">Time</label>
         <select name="timeVal" id="timeVal">
-          <option value="30d" selected>Last 30Days</option>
-          
+          <option value="30d" selected>Last 30 days</option>
+          <option value="lifetime">Lifetime</option>
         </select>
       </div>
     </section>
@@ -211,7 +211,7 @@
               >
             </div>
             <div class="value truncate">
-              <span id="participation_snapshot" class="percentage">33</span>
+              <span id="vote_participation" class="percentage">33</span>
             </div>
           </div>
         </div>
