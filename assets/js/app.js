@@ -197,8 +197,7 @@ function draw() {
       clone.querySelector("#health_num").innerHTML = `${steward.health[timeVal]}/10`;
     } else {
       clone.querySelector("#health").src = "";
-      clone.querySelector("#health_num").innerHTML = "NEW✨";
-      clone.querySelector("#health_num").classList.add("highlight");
+      clone.querySelector("#health_num").innerHTML = "New✨";
     }
     
 
