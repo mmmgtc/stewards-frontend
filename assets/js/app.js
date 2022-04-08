@@ -22,6 +22,8 @@ window.addEventListener("load", (event) => {
 
 function init() {
   console.log("init...");
+  timeVal_div= document.getElementById("timeVal_div");
+  timeVal_div.classList.add("highlight");
 
   // map search input field to filterCard function
   const search = document.getElementById("search");
