@@ -316,10 +316,10 @@ section#gitcoindao a {
 
 .highlight {
   padding: 0.3em 1em;
-  border: 2px solid var(--purple);
+  border: 3px solid var(--purple);
   border-radius: 10px;
   display: inline-block;
-  animation: blink-animation 700ms infinite;
+  animation: blink-animation 2000ms infinite;
 }
 
 #health.highlight {
