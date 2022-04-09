@@ -185,7 +185,7 @@ function draw() {
       if (steward.vote_participation["lifetime"]!=0 && steward.vote_participation["30d"]==0) {
         clone.querySelector("#vote_participation").innerHTML = "-";
         // New health calculation :)
-        const new_health_for_edgecase= (Math.min(((steward.health["30d"] - (steward.vote_participation["30d"]*0.07)) + steward.vote_participation["lifetime"]*0.07), 10));
+        const new_health_for_edgecase= parseInt(((steward.health["30d"] - (steward.vote_participation["30d"]*0.07)) + steward.vote_participation["lifetime"]*0.07));
         clone.querySelector("#health_num").innerHTML = `${new_health_for_edgecase}/10`;
       }
     }
