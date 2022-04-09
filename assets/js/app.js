@@ -178,8 +178,17 @@ function draw() {
     clone.querySelector("#votingweight").innerHTML = steward.voting_weight;
 
     // wrap in if condition for 30d/lifetime
-    clone.querySelector("#vote_participation").innerHTML =
-      steward.vote_participation[timeVal];
+    clone.querySelector("#vote_participation").innerHTML = steward.vote_participation[timeVal]+ "%";
+    // edge case of vote_participation["lifetime"] !=0 but for ["30d"] being =0, we use lifetime value instead
+    // and show "-" for 30days for vote_participation (as feedback from Fred ser)
+    if (timeVal == "30d") {
+      if (steward.vote_participation["lifetime"]!=0 && steward.vote_participation["30d"]==0) {
+        clone.querySelector("#vote_participation").innerHTML = "-";
+        // New health calculation :)
+        const new_health_for_edgecase= (Math.min(((steward.health["30d"] - (steward.vote_participation["30d"]*0.07)) + steward.vote_participation["lifetime"]*0.07), 10));
+        clone.querySelector("#health_num").innerHTML = `${new_health_for_edgecase}/10`;
+      }
+    }
 
     clone.querySelector("#delegate_button").href = tally_url;
     clone.querySelector("#votingweight_url").href = tally_url;
