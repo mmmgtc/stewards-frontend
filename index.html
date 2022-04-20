@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link
-      href="assets/css/app.css"
+      href="static/css/app.css"
       type="text/css"
       rel="stylesheet"
       media="screen,projection"
@@ -28,7 +28,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/images/favicon.png"
+      href="static/images/favicon.png"
     />
 
     <meta name="twitter:card" content="summary" />
@@ -40,7 +40,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://stewards.eth.limo/assets/images/twitter/preview.png"
+      content="https://stewards.eth.limo/static/images/twitter/preview.png"
     />
   </head>
 
@@ -104,19 +104,7 @@
     <!-- stewards -->
     <section id="grid" class="grid"></section>
 
-    <!-- footer-->
-    <footer>
-      <a href="https://m-m-m.xyz/" target="_blank">
-        <img class="mmm" src="assets/images/mmm.svg" />
-      </a>
-    </footer>
 
-    <!-- gitcoindao-->
-    <section id="gitcoindao">
-      <a href="https://gitcoindao.com" target="_blank">
-        <img src="assets/images/gitcoindao.svg" alt="gitcoindao" />
-      </a>
-    </section>
 
     <template id="card">
       <div id="card" class="card" data-tags="">
@@ -134,7 +122,7 @@
           <div class="health">
             <h2 id="health_num">/10</h2>
             <div class="icon">
-              <img id="health" src="assets/images/health_0.svg" />
+              <img id="health" src="static/images/health_0.svg" />
             </div>
           </div>
         </div>
@@ -144,7 +132,7 @@
           <!-- steward since -->
           <div class="row">
             <div class="icon">
-              <img src="assets/images/calender.svg" />
+              <img src="static/images/calender.svg" />
             </div>
             <div class="property truncate">
               <a id="steward_since_url" target="_blank" href="#"
@@ -159,7 +147,7 @@
           <!-- forum post -->
           <div class="row">
             <div class="icon">
-              <img src="assets/images/forum.svg" />
+              <img src="static/images/forum.svg" />
             </div>
             <div class="property truncate">
               <a id="forum_uri" href="#" target="_blank">Forum activity</a>
@@ -172,7 +160,7 @@
           <!-- workstream -->
           <div class="row">
             <div class="icon">
-              <img src="assets/images/workstream.svg" />
+              <img src="static/images/workstream.svg" />
             </div>
             <div class="property truncate">
               <a href="http://gitcoindao.com" target="_blank">Workstream</a>
@@ -188,7 +176,7 @@
           <!-- voting weight -->
           <div class="row">
             <div class="icon">
-              <img src="assets/images/weight.svg" />
+              <img src="static/images/weight.svg" />
             </div>
             <div class="property truncate">
               <a id="votingweight_url" target="_blank" href="#"
@@ -203,7 +191,7 @@
           <!-- vote participation -->
           <div class="row">
             <div class="icon">
-              <img src="assets/images/participation.svg" />
+              <img src="static/images/participation.svg" />
             </div>
             <div class="property truncate">
               <a href="https://snapshot.org/#/gitcoindao.eth" target="_blank"
@@ -232,6 +220,20 @@
       </div>
     </template>
 
-    <script defer src="assets/js/app.js"></script>
+      <!-- footer-->
+      <footer>
+        <a href="https://m-m-m.xyz/" target="_blank">
+          <img class="mmm" src="static/images/mmm.svg" />
+        </a>
+      </footer>
+  
+      <!-- gitcoindao-->
+      <section id="gitcoindao">
+        <a href="https://gitcoindao.com" target="_blank">
+          <img src="static/images/gitcoindao.svg" alt="gitcoindao" />
+        </a>
+      </section>
+
+    <script defer src="static/js/app.js"></script>
   </body>
 </html>

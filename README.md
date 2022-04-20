@@ -10,6 +10,6 @@ generate cards for each steward.
 - no build process needed for now
 - no vue/react/tailwind or any else framework needed for now :)
 - done with pure vanilla js/html
-- scss is getting compiled localy into assets/css/app.css for now.
+- scss is getting compiled localy into static/css/app.css for now.
 
 
