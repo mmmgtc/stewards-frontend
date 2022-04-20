@@ -5,10 +5,10 @@ window.addEventListener("load", (event) => {
   cachbuster = new Date().getTime();
 
   Promise.all([
-    fetch("assets/json/workstreams.json?" + cachbuster).then((value) =>
+    fetch("static/json/workstreams.json?" + cachbuster).then((value) =>
       value.json()
     ),
-    fetch("assets/json/stewards_data.json?" + cachbuster).then((value) => value.json()),
+    fetch("static/json/stewards_data.json?" + cachbuster).then((value) => value.json()),
   ])
     .then((value) => {
       window.workstreams = value[0];
@@ -73,7 +73,7 @@ function init() {
 // get params from location hash
 
 function getParams() {
-  var hash = window.location.hash.substr(1);
+  var hash = window.location.hash.substring(1);
 
   var params = hash.split("&").reduce(function (res, item) {
     var parts = item.split("=");
@@ -143,7 +143,7 @@ function draw() {
   // console.log(window.stewards)
 
   timeVal = document.getElementById("timeVal").value;
-  imgpath = "assets/images/stewards/";
+  imgpath = "static/images/stewards/";
   gitcoinurl = "https://gitcoin.co/";
 
   grid = document.querySelector("#grid");
@@ -202,7 +202,7 @@ function draw() {
 
     if (steward.steward_days > 30) {
       clone.querySelector("#health").src =
-      `assets/images/health_${steward.health[timeVal]}.svg`;
+      `static/images/health_${steward.health[timeVal]}.svg`;
       clone.querySelector("#health_num").innerHTML = `${steward.health[timeVal]}/10`;
     } else {
       clone.querySelector("#health").src = "";
