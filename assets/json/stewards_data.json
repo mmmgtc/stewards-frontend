@@ -1549,6 +1549,81 @@
                         "30d": 5,
                         "lifetime": 5
                   }
+            },
+            {
+                  "name": "Dan Schlabach",
+                  "address": "0xb7bd14e2497cdc57675e896af84ecb652d294ad1",
+                  "profile_image": "schlabach.png",
+                  "workstream": "",
+                  "gitcoin_username": "dschlabach",
+                  "discourse_username": "schlabach",
+                  "steward_since": "2022-03-28",
+                  "steward_days": 30,
+                  "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/208",
+                  "forum_activity": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "vote_participation": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "voting_weight": 0,
+                  "snapshot_votes": 5917,
+                  "health": {
+                        "30d": 5,
+                        "lifetime": 5
+                  }
+            },
+            {
+                  "name": "Sean MacMannis",
+                  "address": "0xa2866d610c17e371604ff75e65a3120f493fc9e6",
+                  "profile_image": "seanmac.png",
+                  "workstream": "MMM Lead",
+                  "gitcoin_username": "smacman",
+                  "discourse_username": "seanmac",
+                  "steward_since": "2022-04-05",
+                  "steward_days": 28,
+                  "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/211",
+                  "forum_activity": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "vote_participation": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "voting_weight": 0,
+                  "snapshot_votes": 5917,
+                  "health": {
+                        "30d": 5,
+                        "lifetime": 5
+                  }
+            },
+            {
+                  "name": "Fred",
+                  "address": "0xA1E4A14363B3ba2c1D49e1eeBE5fa21e25E4ed1D",
+                  "profile_image": "fred.png",
+                  "workstream": "MMM Lead",
+                  "gitcoin_username": "freddmannen",
+                  "discourse_username": "Fred",
+                  "steward_since": "2022-05-02",
+                  "steward_days": 1,
+                  "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/212",
+                  "forum_activity": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "vote_participation": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "voting_weight": 0,
+                  "snapshot_votes": 5917,
+                  "health": {
+                        "30d": 5,
+                        "lifetime": 5
+                  }
             }
       ]
 }
