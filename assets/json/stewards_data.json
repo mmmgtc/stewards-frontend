@@ -19,6 +19,7 @@
                         "lifetime": 28
                   },
                   "voting_weight": 0.82,
+                  "snapshot_votes": 820231,
                   "health": {
                         "30d": 0,
                         "lifetime": 2
@@ -43,6 +44,7 @@
                         "lifetime": 30
                   },
                   "voting_weight": 1.78,
+                  "snapshot_votes": 1782804,
                   "health": {
                         "30d": 5,
                         "lifetime": 7
@@ -91,6 +93,7 @@
                         "lifetime": 57
                   },
                   "voting_weight": 0.96,
+                  "snapshot_votes": 960641,
                   "health": {
                         "30d": 9,
                         "lifetime": 8
@@ -115,6 +118,7 @@
                         "lifetime": 67
                   },
                   "voting_weight": 0.32,
+                  "snapshot_votes": 322968,
                   "health": {
                         "30d": 6,
                         "lifetime": 5
@@ -139,6 +143,7 @@
                         "lifetime": 57
                   },
                   "voting_weight": 1.1,
+                  "snapshot_votes": 1096645,
                   "health": {
                         "30d": 10,
                         "lifetime": 10
@@ -163,6 +168,7 @@
                         "lifetime": 26
                   },
                   "voting_weight": 0.26,
+                  "snapshot_votes": 263656,
                   "health": {
                         "30d": 0,
                         "lifetime": 5
@@ -259,6 +265,7 @@
                         "lifetime": 39
                   },
                   "voting_weight": 0.16,
+                  "snapshot_votes": 155899,
                   "health": {
                         "30d": 3,
                         "lifetime": 6
@@ -379,6 +386,7 @@
                         "lifetime": 59
                   },
                   "voting_weight": 0.48,
+                  "snapshot_votes": 476069,
                   "health": {
                         "30d": 7,
                         "lifetime": 9
@@ -618,7 +626,8 @@
                         "30d": 0,
                         "lifetime": 37
                   },
-                  "voting_weight": 0.0,
+                  "voting_weight": 0.02,
+                  "snapshot_votes": 4879,
                   "health": {
                         "30d": 5,
                         "lifetime": 8
@@ -643,6 +652,7 @@
                         "lifetime": 11
                   },
                   "voting_weight": 0.15,
+                  "snapshot_votes": 152702,
                   "health": {
                         "30d": 4,
                         "lifetime": 1
@@ -1291,6 +1301,7 @@
                         "lifetime": 26
                   },
                   "voting_weight": 0.15,
+                  "snapshot_votes": 153011,
                   "health": {
                         "30d": 5,
                         "lifetime": 7
@@ -1411,6 +1422,7 @@
                         "lifetime": 71
                   },
                   "voting_weight": 1.05,
+                  "snapshot_votes": 1050000,
                   "health": {
                         "30d": 10,
                         "lifetime": 10
@@ -1435,6 +1447,7 @@
                         "lifetime": 43
                   },
                   "voting_weight": 0.38,
+                  "snapshot_votes": 383740,
                   "health": {
                         "30d": 10,
                         "lifetime": 10
@@ -1459,6 +1472,7 @@
                         "lifetime": 43
                   },
                   "voting_weight": 0.61,
+                  "snapshot_votes": 606500,
                   "health": {
                         "30d": 10,
                         "lifetime": 9
