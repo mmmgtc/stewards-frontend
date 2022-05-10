@@ -175,7 +175,7 @@ function draw() {
 
     clone.querySelector("#workstream_url").href = "TBD";
 
-    clone.querySelector("#votingweight").innerHTML = steward.voting_weight;
+    clone.querySelector("#votingweight").innerHTML = steward.voting_weight+ "%";
 
     // wrap in if condition for 30d/lifetime
     clone.querySelector("#vote_participation").innerHTML = steward.vote_participation[timeVal]+ "%";
