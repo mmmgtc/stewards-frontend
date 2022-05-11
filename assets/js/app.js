@@ -113,7 +113,7 @@ function orderStewards() {
   timeVal = document.getElementById("timeVal").value;
   orderby = document.getElementById("orderby").value;
   direction = document.getElementById("direction").value;
-  // console.log(orderby, direction)
+  console.log(orderby, direction)
 
   if (orderby == "health") {
     window.stewards.sort((a, b) => (a.health[timeVal] < b.health[timeVal] ? 1 : -1));
@@ -211,10 +211,10 @@ function draw() {
     
 
     if (steward.workstream) {
-      stream = window.workstreams.find((o) => o.id === steward.workstream);
-      clone.querySelector("#workstream_name").innerHTML = stream.name;
+      stream = window.workstreams.find((o) => o.name.toLowerCase() === steward.workstream.toLowerCase());
+      clone.querySelector("#workstream_name").innerHTML = steward.workstream;
       clone.querySelector("#workstream_url").href = stream.uri;
-      workstream_tag = stream.name;
+      workstream_tag = steward.workstream;
     } else {
       clone.querySelector("#workstream_none").innerHTML = "-";
       workstream_tag = " ";
