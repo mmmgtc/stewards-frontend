@@ -1559,6 +1559,30 @@
                         "30d": 10,
                         "lifetime": 10
                   }
+            },
+            {
+                  "name": "Jodi",
+                  "address": "0x43a70AB0D5Beb7C09f974630FBC56E601F28aA32",
+                  "profile_image": "jodi.png",
+                  "workstream": "DO Lead",
+                  "gitcoin_username": "jodicee4pg",
+                  "discourse_username": "Jodi_GitcoinDAO",
+                  "steward_since": "2022-04-04",
+                  "steward_days": 54,
+                  "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/213",
+                  "forum_activity": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "vote_participation": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "voting_weight": 0.0,
+                  "health": {
+                        "30d": 0,
+                        "lifetime": 0
+                  }
             }
       ]
 }
