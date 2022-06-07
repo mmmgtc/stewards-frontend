@@ -29,6 +29,7 @@ function init() {
   const search = document.getElementById("search");
   search.addEventListener("input", () => {
     filterStewards();
+    console.log("search fired")
   });
 
   const timeVal= document.getElementById("timeVal");
@@ -91,12 +92,14 @@ function resetSearch() {
 }
 
 function filterStewards() {
+  console.log("filterStewards fired")
   search = document.getElementById("search");
 
   let datatags = document.querySelectorAll("[data-tags]");
-  //console.log(datatags)
+  console.log(datatags)
 
   searchInput = search.value.toLowerCase();
+  console.log(searchInput)
   datatags.forEach((item) => {
     tags = item.dataset.tags.toLowerCase();
     if (tags.indexOf(searchInput) !== -1) {
