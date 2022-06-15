@@ -8,15 +8,15 @@
                   "gitcoin_username": "tvanepps",
                   "discourse_username": "trent",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/12",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 15
                   },
                   "vote_participation": {
-                        "30d": 10,
-                        "lifetime": 24
+                        "30d": 0,
+                        "lifetime": 25
                   },
                   "voting_weight": 0.29,
                   "health": {
@@ -32,19 +32,19 @@
                   "gitcoin_username": "austintgriffith",
                   "discourse_username": "austingriffith",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/31",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 15
                   },
                   "vote_participation": {
-                        "30d": 40,
-                        "lifetime": 33
+                        "30d": 0,
+                        "lifetime": 32
                   },
                   "voting_weight": 1.48,
                   "health": {
-                        "30d": 7,
+                        "30d": 5,
                         "lifetime": 8
                   }
             },
@@ -56,19 +56,19 @@
                   "gitcoin_username": "linda-xie",
                   "discourse_username": "linda",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/6",
                   "forum_activity": {
-                        "30d": 3,
+                        "30d": 0,
                         "lifetime": 34
                   },
                   "vote_participation": {
-                        "30d": 90,
-                        "lifetime": 69
+                        "30d": 0,
+                        "lifetime": 70
                   },
                   "voting_weight": 1.3,
                   "health": {
-                        "30d": 10,
+                        "30d": 3,
                         "lifetime": 9
                   }
             },
@@ -80,19 +80,19 @@
                   "gitcoin_username": "lefterisjp",
                   "discourse_username": "lefterisjp",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/4",
                   "forum_activity": {
-                        "30d": 31,
-                        "lifetime": 115
+                        "30d": 0,
+                        "lifetime": 119
                   },
                   "vote_participation": {
-                        "30d": 90,
-                        "lifetime": 62
+                        "30d": 0,
+                        "lifetime": 63
                   },
-                  "voting_weight": 0.78,
+                  "voting_weight": 0.75,
                   "health": {
-                        "30d": 10,
+                        "30d": 0,
                         "lifetime": 10
                   }
             },
@@ -104,19 +104,19 @@
                   "gitcoin_username": "griffgreen",
                   "discourse_username": "griff",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/28",
                   "forum_activity": {
-                        "30d": 11,
-                        "lifetime": 27
+                        "30d": 0,
+                        "lifetime": 29
                   },
                   "vote_participation": {
-                        "30d": 90,
+                        "30d": 0,
                         "lifetime": 71
                   },
                   "voting_weight": 0.32,
                   "health": {
-                        "30d": 10,
+                        "30d": 0,
                         "lifetime": 6
                   }
             },
@@ -128,19 +128,19 @@
                   "gitcoin_username": "simona-pop",
                   "discourse_username": "pop",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/5",
                   "forum_activity": {
-                        "30d": 20,
-                        "lifetime": 80
+                        "30d": 0,
+                        "lifetime": 81
                   },
                   "vote_participation": {
-                        "30d": 80,
-                        "lifetime": 60
+                        "30d": 0,
+                        "lifetime": 61
                   },
                   "voting_weight": 1.46,
                   "health": {
-                        "30d": 10,
+                        "30d": 5,
                         "lifetime": 10
                   }
             },
@@ -152,7 +152,7 @@
                   "gitcoin_username": "yalormewn",
                   "discourse_username": "Yalor",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/2",
                   "forum_activity": {
                         "30d": 0,
@@ -160,7 +160,7 @@
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 22
+                        "lifetime": 21
                   },
                   "voting_weight": 0.26,
                   "health": {
@@ -176,20 +176,20 @@
                   "gitcoin_username": "souptacular",
                   "discourse_username": "souptacular",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/46",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 2
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 20
+                        "lifetime": 0
                   },
-                  "voting_weight": 0.31,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   }
             },
             {
@@ -200,17 +200,17 @@
                   "gitcoin_username": "nkennethk",
                   "discourse_username": "ken",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/14",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 13
+                        "lifetime": 0
                   },
-                  "voting_weight": 0.02,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 3,
                         "lifetime": 3
@@ -224,10 +224,10 @@
                   "gitcoin_username": "andytudhope",
                   "discourse_username": "cryptowanderer",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/18",
                   "forum_activity": {
-                        "30d": 1,
+                        "30d": 0,
                         "lifetime": 10
                   },
                   "vote_participation": {
@@ -248,19 +248,19 @@
                   "gitcoin_username": "hello-shreyas",
                   "discourse_username": "HelloShreyas",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/21",
                   "forum_activity": {
-                        "30d": 1,
+                        "30d": 0,
                         "lifetime": 18
                   },
                   "vote_participation": {
-                        "30d": 40,
-                        "lifetime": 40
+                        "30d": 0,
+                        "lifetime": 39
                   },
                   "voting_weight": 0.16,
                   "health": {
-                        "30d": 6,
+                        "30d": 3,
                         "lifetime": 6
                   }
             },
@@ -272,14 +272,14 @@
                   "gitcoin_username": "mrbrucespringsteen",
                   "discourse_username": "planckmatt",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/10",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 3
                   },
                   "vote_participation": {
-                        "30d": 10,
+                        "30d": 0,
                         "lifetime": 11
                   },
                   "voting_weight": 0.16,
@@ -296,17 +296,17 @@
                   "gitcoin_username": "anish-agnihotri",
                   "discourse_username": "anishagnihotri",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/23",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 9
+                        "lifetime": 0
                   },
-                  "voting_weight": 0.15,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
                         "lifetime": 0
@@ -320,20 +320,20 @@
                   "gitcoin_username": "muskaankalra24",
                   "discourse_username": "muskan",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/8",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 15
+                        "lifetime": 0
                   },
-                  "voting_weight": 0.04,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   }
             },
             {
@@ -344,7 +344,7 @@
                   "gitcoin_username": "androolloyd",
                   "discourse_username": "androolloyd",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/26",
                   "forum_activity": {
                         "30d": 0,
@@ -368,19 +368,19 @@
                   "gitcoin_username": "tjayrush",
                   "discourse_username": "tjayrush",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/16",
                   "forum_activity": {
-                        "30d": 9,
+                        "30d": 0,
                         "lifetime": 68
                   },
                   "vote_participation": {
-                        "30d": 90,
+                        "30d": 0,
                         "lifetime": 64
                   },
-                  "voting_weight": 0.17,
+                  "voting_weight": 0.16,
                   "health": {
-                        "30d": 10,
+                        "30d": 3,
                         "lifetime": 10
                   }
             },
@@ -392,19 +392,19 @@
                   "gitcoin_username": "ubipromoter",
                   "discourse_username": "UBIpromoter",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/15",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 2
                   },
                   "vote_participation": {
-                        "30d": 60,
-                        "lifetime": 47
+                        "30d": 0,
+                        "lifetime": 46
                   },
                   "voting_weight": 0.05,
                   "health": {
-                        "30d": 4,
+                        "30d": 0,
                         "lifetime": 3
                   }
             },
@@ -416,7 +416,7 @@
                   "gitcoin_username": "anneconnelly",
                   "discourse_username": "anneconnelly",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/13",
                   "forum_activity": {
                         "30d": 0,
@@ -424,7 +424,7 @@
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 15
+                        "lifetime": 14
                   },
                   "voting_weight": 0.17,
                   "health": {
@@ -440,7 +440,7 @@
                   "gitcoin_username": "auryn-macmillan",
                   "discourse_username": "auryn",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/22",
                   "forum_activity": {
                         "30d": 0,
@@ -464,20 +464,20 @@
                   "gitcoin_username": "cpstl",
                   "discourse_username": "cpstl",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/33",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 31
+                        "lifetime": 0
                   },
-                  "voting_weight": 0.01,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
-                        "lifetime": 2
+                        "lifetime": 0
                   }
             },
             {
@@ -488,7 +488,7 @@
                   "gitcoin_username": "ntnsndr",
                   "discourse_username": "ntnsndr",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/42",
                   "forum_activity": {
                         "30d": 0,
@@ -512,7 +512,7 @@
                   "gitcoin_username": "tedko",
                   "discourse_username": "sujiyan",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/55",
                   "forum_activity": {
                         "30d": 0,
@@ -536,15 +536,15 @@
                   "gitcoin_username": "monet-supply",
                   "discourse_username": "monet-supply",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/44",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 7
                   },
                   "vote_participation": {
-                        "30d": 10,
-                        "lifetime": 56
+                        "30d": 0,
+                        "lifetime": 57
                   },
                   "voting_weight": 0.01,
                   "health": {
@@ -560,7 +560,7 @@
                   "gitcoin_username": "amy-jung",
                   "discourse_username": "amy",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/32",
                   "forum_activity": {
                         "30d": 0,
@@ -584,15 +584,15 @@
                   "gitcoin_username": "mangorocoro",
                   "discourse_username": "dan",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/36",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 7
+                        "lifetime": 0
                   },
                   "voting_weight": 0.0,
                   "health": {
@@ -608,19 +608,19 @@
                   "gitcoin_username": "phutchins",
                   "discourse_username": "phutchins",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/41",
                   "forum_activity": {
-                        "30d": 4,
-                        "lifetime": 28
+                        "30d": 0,
+                        "lifetime": 30
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 31
+                        "lifetime": 30
                   },
                   "voting_weight": 0.0,
                   "health": {
-                        "30d": 7,
+                        "30d": 5,
                         "lifetime": 8
                   }
             },
@@ -632,7 +632,7 @@
                   "gitcoin_username": "alexvansande",
                   "discourse_username": "AvsA",
                   "steward_since": "2021-06-07",
-                  "steward_days": 365,
+                  "steward_days": 373,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/140",
                   "forum_activity": {
                         "30d": 0,
@@ -656,7 +656,7 @@
                   "gitcoin_username": "tobyshorin",
                   "discourse_username": "Toby",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/39",
                   "forum_activity": {
                         "30d": 0,
@@ -664,7 +664,7 @@
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 15
+                        "lifetime": 14
                   },
                   "voting_weight": 0.0,
                   "health": {
@@ -680,7 +680,7 @@
                   "gitcoin_username": "fireeyesxyz",
                   "discourse_username": "coopahtroopa",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/9",
                   "forum_activity": {
                         "30d": 0,
@@ -704,7 +704,7 @@
                   "gitcoin_username": "makoto",
                   "discourse_username": "makoto",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/17",
                   "forum_activity": {
                         "30d": 0,
@@ -728,17 +728,17 @@
                   "gitcoin_username": "zakcole",
                   "discourse_username": "Zscole",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/38",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 2
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 4
+                        "lifetime": 0
                   },
-                  "voting_weight": 0.01,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
                         "lifetime": 0
@@ -752,17 +752,17 @@
                   "gitcoin_username": "andrecronje",
                   "discourse_username": "andrecronje",
                   "steward_since": "2021-06-01",
-                  "steward_days": 371,
+                  "steward_days": 379,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/131",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 2
+                        "lifetime": 0
                   },
-                  "voting_weight": 0.01,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
                         "lifetime": 0
@@ -776,17 +776,17 @@
                   "gitcoin_username": "jschiarizzi",
                   "discourse_username": "cupOjoseph",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/50",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 3
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 5
+                        "lifetime": 0
                   },
-                  "voting_weight": 0.01,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
                         "lifetime": 0
@@ -800,17 +800,17 @@
                   "gitcoin_username": "niran",
                   "discourse_username": "Niran",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/30",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 2
+                        "lifetime": 0
                   },
-                  "voting_weight": 0.02,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
                         "lifetime": 0
@@ -824,11 +824,11 @@
                   "gitcoin_username": "sankar4033",
                   "discourse_username": "lakshman",
                   "steward_since": "2021-05-26",
-                  "steward_days": 377,
+                  "steward_days": 385,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/81",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
@@ -848,7 +848,7 @@
                   "gitcoin_username": "anettrolikova",
                   "discourse_username": "Anett",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/3",
                   "forum_activity": {
                         "30d": 0,
@@ -872,7 +872,7 @@
                   "gitcoin_username": "adamstallard",
                   "discourse_username": "castall",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/19",
                   "forum_activity": {
                         "30d": 0,
@@ -896,20 +896,20 @@
                   "gitcoin_username": "willyogo",
                   "discourse_username": "Willy",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/52",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 3
+                        "lifetime": 0
                   },
                   "vote_participation": {
-                        "30d": 10,
-                        "lifetime": 13
+                        "30d": 0,
+                        "lifetime": 0
                   },
                   "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   }
             },
             {
@@ -920,7 +920,7 @@
                   "gitcoin_username": "adamsc1-ddg",
                   "discourse_username": "Adamscochran",
                   "steward_since": "2021-05-26",
-                  "steward_days": 377,
+                  "steward_days": 385,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/62",
                   "forum_activity": {
                         "30d": 0,
@@ -944,11 +944,11 @@
                   "gitcoin_username": "sangbejo",
                   "discourse_username": "porobov_p",
                   "steward_since": "2021-06-04",
-                  "steward_days": 368,
+                  "steward_days": 376,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/139",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 3
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
@@ -968,20 +968,20 @@
                   "gitcoin_username": "decibels42",
                   "discourse_username": "decibels42",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/45",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 20
+                        "lifetime": 0
                   },
                   "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   }
             },
             {
@@ -992,11 +992,11 @@
                   "gitcoin_username": "peth-yursick",
                   "discourse_username": "peth",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/25",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 2
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
@@ -1016,17 +1016,17 @@
                   "gitcoin_username": "sinahab",
                   "discourse_username": "sinahab",
                   "steward_since": "2021-05-29",
-                  "steward_days": 374,
+                  "steward_days": 382,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/117",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
                         "lifetime": 0
                   },
-                  "voting_weight": 0.01,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
                         "lifetime": 0
@@ -1040,15 +1040,15 @@
                   "gitcoin_username": "jordanlyall",
                   "discourse_username": "jordanlyall",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/20",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 1
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 7
+                        "lifetime": 0
                   },
                   "voting_weight": 0.0,
                   "health": {
@@ -1064,7 +1064,7 @@
                   "gitcoin_username": "amsos",
                   "discourse_username": "amsos",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/7",
                   "forum_activity": {
                         "30d": 0,
@@ -1088,17 +1088,17 @@
                   "gitcoin_username": "typto",
                   "discourse_username": "Typto",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/49",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 4
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
-                        "lifetime": 2
+                        "lifetime": 0
                   },
-                  "voting_weight": 0.01,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
                         "lifetime": 0
@@ -1112,7 +1112,7 @@
                   "gitcoin_username": "angelakte",
                   "discourse_username": "akrtws",
                   "steward_since": "2021-05-27",
-                  "steward_days": 376,
+                  "steward_days": 384,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/100",
                   "forum_activity": {
                         "30d": 0,
@@ -1136,17 +1136,17 @@
                   "gitcoin_username": "itsencrypted",
                   "discourse_username": "itsencrypted",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/58",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 3
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
                         "lifetime": 0
                   },
-                  "voting_weight": 0.01,
+                  "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
                         "lifetime": 0
@@ -1160,11 +1160,11 @@
                   "gitcoin_username": "porobov",
                   "discourse_username": "porobov_p",
                   "steward_since": "2021-06-04",
-                  "steward_days": 368,
+                  "steward_days": 376,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/138",
                   "forum_activity": {
                         "30d": 0,
-                        "lifetime": 3
+                        "lifetime": 0
                   },
                   "vote_participation": {
                         "30d": 0,
@@ -1184,15 +1184,15 @@
                   "gitcoin_username": "martz",
                   "discourse_username": "martz",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/37",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 16
                   },
                   "vote_participation": {
-                        "30d": 10,
-                        "lifetime": 29
+                        "30d": 0,
+                        "lifetime": 30
                   },
                   "voting_weight": 0.0,
                   "health": {
@@ -1208,19 +1208,19 @@
                   "gitcoin_username": "Sirlupinwatson",
                   "discourse_username": "Sirlupinwatson",
                   "steward_since": "2021-05-29",
-                  "steward_days": 374,
+                  "steward_days": 382,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/123",
                   "forum_activity": {
-                        "30d": 16,
+                        "30d": 0,
                         "lifetime": 101
                   },
                   "vote_participation": {
-                        "30d": 70,
-                        "lifetime": 69
+                        "30d": 0,
+                        "lifetime": 67
                   },
                   "voting_weight": 0.0,
                   "health": {
-                        "30d": 10,
+                        "30d": 5,
                         "lifetime": 10
                   }
             },
@@ -1232,19 +1232,19 @@
                   "gitcoin_username": "bobjiang",
                   "discourse_username": "bobjiang",
                   "steward_since": "2021-05-28",
-                  "steward_days": 375,
+                  "steward_days": 383,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/113",
                   "forum_activity": {
-                        "30d": 12,
-                        "lifetime": 105
+                        "30d": 0,
+                        "lifetime": 107
                   },
                   "vote_participation": {
-                        "30d": 90,
-                        "lifetime": 72
+                        "30d": 0,
+                        "lifetime": 73
                   },
                   "voting_weight": 0.01,
                   "health": {
-                        "30d": 10,
+                        "30d": 5,
                         "lifetime": 10
                   }
             },
@@ -1256,19 +1256,19 @@
                   "gitcoin_username": "krrisis",
                   "discourse_username": "krrisis",
                   "steward_since": "2021-06-10",
-                  "steward_days": 362,
+                  "steward_days": 370,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/146",
                   "forum_activity": {
-                        "30d": 25,
-                        "lifetime": 73
+                        "30d": 0,
+                        "lifetime": 76
                   },
                   "vote_participation": {
-                        "30d": 80,
-                        "lifetime": 56
+                        "30d": 0,
+                        "lifetime": 57
                   },
                   "voting_weight": 1.36,
                   "health": {
-                        "30d": 10,
+                        "30d": 5,
                         "lifetime": 10
                   }
             },
@@ -1280,19 +1280,19 @@
                   "gitcoin_username": "brittneyscott",
                   "discourse_username": "seedphrase",
                   "steward_since": "2021-06-11",
-                  "steward_days": 361,
+                  "steward_days": 369,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/149",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 26
                   },
                   "vote_participation": {
-                        "30d": 70,
+                        "30d": 0,
                         "lifetime": 36
                   },
-                  "voting_weight": 0.15,
+                  "voting_weight": 0.16,
                   "health": {
-                        "30d": 9,
+                        "30d": 5,
                         "lifetime": 8
                   }
             },
@@ -1304,19 +1304,19 @@
                   "gitcoin_username": "blazingthirdeye",
                   "discourse_username": "blazingthirdeye",
                   "steward_since": "2021-06-11",
-                  "steward_days": 361,
+                  "steward_days": 369,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/148",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 0
                   },
                   "vote_participation": {
-                        "30d": 50,
+                        "30d": 0,
                         "lifetime": 0
                   },
                   "voting_weight": 0.0,
                   "health": {
-                        "30d": 6,
+                        "30d": 3,
                         "lifetime": 3
                   }
             },
@@ -1328,7 +1328,7 @@
                   "gitcoin_username": "paul2",
                   "discourse_username": "paul2",
                   "steward_since": "2021-05-28",
-                  "steward_days": 375,
+                  "steward_days": 383,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/107",
                   "forum_activity": {
                         "30d": 0,
@@ -1338,7 +1338,7 @@
                         "30d": 0,
                         "lifetime": 20
                   },
-                  "voting_weight": 0.05,
+                  "voting_weight": 0.04,
                   "health": {
                         "30d": 0,
                         "lifetime": 1
@@ -1352,15 +1352,15 @@
                   "gitcoin_username": "cpix18",
                   "discourse_username": "CPix18",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/43",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 1
                   },
                   "vote_participation": {
-                        "30d": 10,
-                        "lifetime": 62
+                        "30d": 0,
+                        "lifetime": 61
                   },
                   "voting_weight": 0.0,
                   "health": {
@@ -1376,20 +1376,20 @@
                   "gitcoin_username": "cranders1",
                   "discourse_username": "cranders1",
                   "steward_since": "2021-05-29",
-                  "steward_days": 374,
+                  "steward_days": 382,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/116",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 1
                   },
                   "vote_participation": {
-                        "30d": 10,
-                        "lifetime": 43
+                        "30d": 0,
+                        "lifetime": 42
                   },
                   "voting_weight": 0.0,
                   "health": {
                         "30d": 0,
-                        "lifetime": 3
+                        "lifetime": 2
                   }
             },
             {
@@ -1400,19 +1400,19 @@
                   "gitcoin_username": "kweiss",
                   "discourse_username": "kyle",
                   "steward_since": "2022-01-01",
-                  "steward_days": 157,
+                  "steward_days": 165,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/200",
                   "forum_activity": {
-                        "30d": 24,
-                        "lifetime": 120
+                        "30d": 0,
+                        "lifetime": 122
                   },
                   "vote_participation": {
-                        "30d": 90,
-                        "lifetime": 78
+                        "30d": 0,
+                        "lifetime": 79
                   },
                   "voting_weight": 1.65,
                   "health": {
-                        "30d": 10,
+                        "30d": 5,
                         "lifetime": 10
                   }
             },
@@ -1424,19 +1424,19 @@
                   "gitcoin_username": "disruptionjoe",
                   "discourse_username": "disruptionjoe",
                   "steward_since": "2021-05-25",
-                  "steward_days": 378,
+                  "steward_days": 386,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/201",
                   "forum_activity": {
-                        "30d": 44,
-                        "lifetime": 230
+                        "30d": 0,
+                        "lifetime": 233
                   },
                   "vote_participation": {
-                        "30d": 100,
-                        "lifetime": 53
+                        "30d": 0,
+                        "lifetime": 54
                   },
                   "voting_weight": 0.23,
                   "health": {
-                        "30d": 10,
+                        "30d": 5,
                         "lifetime": 10
                   }
             },
@@ -1448,19 +1448,19 @@
                   "gitcoin_username": "fishbiscuit",
                   "discourse_username": "Fishbiscuit",
                   "steward_since": "2021-08-11",
-                  "steward_days": 300,
+                  "steward_days": 308,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/205",
                   "forum_activity": {
-                        "30d": 6,
-                        "lifetime": 32
+                        "30d": 0,
+                        "lifetime": 33
                   },
                   "vote_participation": {
-                        "30d": 100,
-                        "lifetime": 57
+                        "30d": 0,
+                        "lifetime": 58
                   },
                   "voting_weight": 0.61,
                   "health": {
-                        "30d": 10,
+                        "30d": 5,
                         "lifetime": 10
                   }
             },
@@ -1472,19 +1472,19 @@
                   "gitcoin_username": "sidcode",
                   "discourse_username": "sidcode",
                   "steward_since": "2022-03-18",
-                  "steward_days": 81,
+                  "steward_days": 89,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/206",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 6
                   },
                   "vote_participation": {
-                        "30d": 80,
-                        "lifetime": 73
+                        "30d": 0,
+                        "lifetime": 67
                   },
                   "voting_weight": 0.01,
                   "health": {
-                        "30d": 10,
+                        "30d": 5,
                         "lifetime": 10
                   }
             },
@@ -1496,11 +1496,11 @@
                   "gitcoin_username": "dschlabach",
                   "discourse_username": "schlabach",
                   "steward_since": "2022-03-28",
-                  "steward_days": 71,
+                  "steward_days": 79,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/208",
                   "forum_activity": {
-                        "30d": 9,
-                        "lifetime": 23
+                        "30d": 0,
+                        "lifetime": 26
                   },
                   "vote_participation": {
                         "30d": 0,
@@ -1508,7 +1508,7 @@
                   },
                   "voting_weight": 0.0,
                   "health": {
-                        "30d": 7,
+                        "30d": 0,
                         "lifetime": 3
                   }
             },
@@ -1520,19 +1520,19 @@
                   "gitcoin_username": "smacman",
                   "discourse_username": "seanmac",
                   "steward_since": "2022-04-05",
-                  "steward_days": 63,
+                  "steward_days": 71,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/211",
                   "forum_activity": {
-                        "30d": 9,
+                        "30d": 0,
                         "lifetime": 43
                   },
                   "vote_participation": {
                         "30d": 0,
                         "lifetime": 0
                   },
-                  "voting_weight": 0.0,
+                  "voting_weight": 0.15,
                   "health": {
-                        "30d": 10,
+                        "30d": 5,
                         "lifetime": 9
                   }
             },
@@ -1544,19 +1544,19 @@
                   "gitcoin_username": "freddmannen",
                   "discourse_username": "Fred",
                   "steward_since": "2022-05-02",
-                  "steward_days": 36,
+                  "steward_days": 44,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/212",
                   "forum_activity": {
-                        "30d": 11,
-                        "lifetime": 51
+                        "30d": 0,
+                        "lifetime": 52
                   },
                   "vote_participation": {
-                        "30d": 80,
-                        "lifetime": 13
+                        "30d": 0,
+                        "lifetime": 14
                   },
                   "voting_weight": 0.0,
                   "health": {
-                        "30d": 10,
+                        "30d": 5,
                         "lifetime": 10
                   }
             },
@@ -1568,19 +1568,19 @@
                   "gitcoin_username": "jodicee4pg",
                   "discourse_username": "Jodi_GitcoinDAO",
                   "steward_since": "2022-04-04",
-                  "steward_days": 64,
+                  "steward_days": 72,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/213",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 11
                   },
                   "vote_participation": {
-                        "30d": 80,
-                        "lifetime": 73
+                        "30d": 0,
+                        "lifetime": 67
                   },
-                  "voting_weight": 0.45,
+                  "voting_weight": 0.3,
                   "health": {
-                        "30d": 10,
+                        "30d": 5,
                         "lifetime": 10
                   }
             }
