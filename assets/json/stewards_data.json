@@ -1583,6 +1583,55 @@
                         "30d": 5,
                         "lifetime": 10
                   }
+            },
+            {
+                  "name": "Kevin Olsen",
+                  "address": "0x4Be88f63f919324210ea3A2cCAD4ff0734425F91",
+                  "profile_image": "kevinolsen.png",
+                  "workstream": "",
+                  "gitcoin_username": "kevinrolsen",
+                  "discourse_username": "kevin.olsen",
+                  "steward_since": "2022-06-07",
+                  "steward_days": 0,
+                  "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/215",
+                  "forum_activity": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "vote_participation": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "voting_weight": 0,
+                  "health": {
+                        "30d": 0,
+                        "lifetime": 0
+                  }
+            },
+            {
+                  "name": "Lindsey Thrift",
+                  "address": "0xbe368cc284A8303Ae4C76A1870d897cfEE2B0812",
+                  "profile_image": "lthrift.png",
+                  "workstream": "",
+                  "gitcoin_username": "lthrift",
+                  "discourse_username": "lthrift",
+                  "steward_since": "2022-06-22",
+                  "steward_days": 0,
+                  "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/216",
+                  "forum_activity": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "vote_participation": {
+                        "30d": 0,
+                        "lifetime": 0
+                  },
+                  "voting_weight": 0,
+                  "health": {
+                        "30d": 0,
+                        "lifetime": 0
+                  }
             }
+            
       ]
 }
