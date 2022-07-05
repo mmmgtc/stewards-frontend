@@ -1,3 +1,10 @@
+const stewardsData = require("../json/stewards_data.json");
+
+const disclosureNames = [];
+stewardsData.data.map((data) => {
+  disclosureNames.push(data.discourse_username);
+});
+console.log("disclosureNames: ", disclosureNames);
 window.addEventListener("load", (event) => {
   window.stewards = [];
   window.workstreams = [];
@@ -8,7 +15,9 @@ window.addEventListener("load", (event) => {
     fetch("assets/json/workstreams.json?" + cachbuster).then((value) =>
       value.json()
     ),
-    fetch("assets/json/stewards_data.json?" + cachbuster).then((value) => value.json()),
+    fetch("assets/json/stewards_data.json?" + cachbuster).then((value) =>
+      value.json()
+    ),
   ])
     .then((value) => {
       window.workstreams = value[0];
@@ -22,23 +31,23 @@ window.addEventListener("load", (event) => {
 
 function init() {
   console.log("init...");
-  timeVal_div= document.getElementById("timeVal_div");
+  timeVal_div = document.getElementById("timeVal_div");
   timeVal_div.classList.add("highlight");
 
   // map search input field to filterCard function
   const search = document.getElementById("search");
   search.addEventListener("input", () => {
     filterStewards();
-    console.log("search fired")
+    console.log("search fired");
   });
 
-  const timeVal= document.getElementById("timeVal");
+  const timeVal = document.getElementById("timeVal");
   timeVal.addEventListener("input", () => {
     // data shown based on time value selected
     resetSearch();
     orderStewards();
     draw();
-  })
+  });
 
   // map orderby input field to orderStewards function
   const orderby = document.getElementById("orderby");
@@ -92,14 +101,14 @@ function resetSearch() {
 }
 
 function filterStewards() {
-  console.log("filterStewards fired")
+  console.log("filterStewards fired");
   search = document.getElementById("search");
 
   let datatags = document.querySelectorAll("[data-tags]");
-  console.log(datatags)
+  console.log(datatags);
 
   searchInput = search.value.toLowerCase();
-  console.log(searchInput)
+  console.log(searchInput);
   datatags.forEach((item) => {
     tags = item.dataset.tags.toLowerCase();
     if (tags.indexOf(searchInput) !== -1) {
@@ -116,14 +125,18 @@ function orderStewards() {
   timeVal = document.getElementById("timeVal").value;
   orderby = document.getElementById("orderby").value;
   direction = document.getElementById("direction").value;
-  console.log(orderby, direction)
+  console.log(orderby, direction);
 
   if (orderby == "health") {
-    window.stewards.sort((a, b) => (a.health[timeVal] < b.health[timeVal] ? 1 : -1));
+    window.stewards.sort((a, b) =>
+      a.health[timeVal] < b.health[timeVal] ? 1 : -1
+    );
   }
 
   if (orderby == "voting_weight") {
-    window.stewards.sort((a, b) => (a.voting_weight < b.voting_weight ? 1 : -1));
+    window.stewards.sort((a, b) =>
+      a.voting_weight < b.voting_weight ? 1 : -1
+    );
   }
 
   if (orderby == "vote_participation") {
@@ -133,7 +146,9 @@ function orderStewards() {
   }
 
   if (orderby == "forum_activity") {
-    window.stewards.sort((a, b) => (a.forum_activity[timeVal] < b.forum_activity[timeVal] ? 1 : -1));
+    window.stewards.sort((a, b) =>
+      a.forum_activity[timeVal] < b.forum_activity[timeVal] ? 1 : -1
+    );
   }
 
   // ascending - from low to high
@@ -178,25 +193,37 @@ function draw() {
 
     clone.querySelector("#workstream_url").href = "TBD";
 
-    clone.querySelector("#votingweight").innerHTML = steward.voting_weight+ "%";
+    clone.querySelector("#votingweight").innerHTML =
+      steward.voting_weight + "%";
 
     // wrap in if condition for 30d/lifetime
-    clone.querySelector("#vote_participation").innerHTML = steward.vote_participation[timeVal]+ "%";
+    clone.querySelector("#vote_participation").innerHTML =
+      steward.vote_participation[timeVal] + "%";
     // edge case of vote_participation["lifetime"] !=0 but for ["30d"] being =0, we use lifetime value instead
     // and show "-" for 30days for vote_participation (as feedback from Fred ser)
     if (timeVal == "30d") {
-      if (steward.vote_participation["lifetime"]!=0 && steward.vote_participation["30d"]==0) {
+      if (
+        steward.vote_participation["lifetime"] != 0 &&
+        steward.vote_participation["30d"] == 0
+      ) {
         clone.querySelector("#vote_participation").innerHTML = "-";
         // New health calculation :)
-        const new_health_for_edgecase= parseInt(((steward.health["30d"] - (steward.vote_participation["30d"]*0.07)) + steward.vote_participation["lifetime"]*0.07));
-        clone.querySelector("#health_num").innerHTML = `${new_health_for_edgecase}/10`;
+        const new_health_for_edgecase = parseInt(
+          steward.health["30d"] -
+            steward.vote_participation["30d"] * 0.07 +
+            steward.vote_participation["lifetime"] * 0.07
+        );
+        clone.querySelector(
+          "#health_num"
+        ).innerHTML = `${new_health_for_edgecase}/10`;
       }
     }
 
     clone.querySelector("#delegate_button").href = tally_url;
     clone.querySelector("#votingweight_url").href = tally_url;
 
-    clone.querySelector("#forum_post").innerHTML = steward.forum_activity[timeVal];
+    clone.querySelector("#forum_post").innerHTML =
+      steward.forum_activity[timeVal];
     clone.querySelector("#forum_uri").href =
       "https://gov.gitcoin.co/u/" + steward.discourse_username;
 
@@ -204,17 +231,21 @@ function draw() {
     clone.querySelector("#steward_since_url").href = statement_url;
 
     if (steward.steward_days > 30) {
-      clone.querySelector("#health").src =
-      `assets/images/health_${steward.health[timeVal]}.svg`;
-      clone.querySelector("#health_num").innerHTML = `${steward.health[timeVal]}/10`;
+      clone.querySelector(
+        "#health"
+      ).src = `assets/images/health_${steward.health[timeVal]}.svg`;
+      clone.querySelector(
+        "#health_num"
+      ).innerHTML = `${steward.health[timeVal]}/10`;
     } else {
       clone.querySelector("#health").src = "";
       clone.querySelector("#health_num").innerHTML = "New✨";
     }
-    
 
     if (steward.workstream) {
-      stream = window.workstreams.find((o) => o.name.toLowerCase() === steward.workstream.toLowerCase());
+      stream = window.workstreams.find(
+        (o) => o.name.toLowerCase() === steward.workstream.toLowerCase()
+      );
       clone.querySelector("#workstream_name").innerHTML = steward.workstream;
       clone.querySelector("#workstream_url").href = stream.uri;
       workstream_tag = steward.workstream;
