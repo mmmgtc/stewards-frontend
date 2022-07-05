@@ -1,3 +1,6 @@
+const stewardsData = require('../json/stewards_data.json');
+
+console.log("stewardsData: ", stewardsData)
 window.addEventListener("load", (event) => {
   window.stewards = [];
   window.workstreams = [];
