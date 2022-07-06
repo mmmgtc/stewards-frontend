@@ -5,7 +5,7 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({children}) => {
-  return <><VStack>{children}</VStack></>
+  return <VStack w='90vw' m={'auto'} py='4rem'>{children}</VStack>
 }
 
 export default Layout;

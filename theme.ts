@@ -27,13 +27,23 @@ export const theme = extendTheme({
     Text: {
       baseStyle: {
         color: "#d1c9e3",
+        fontSize: "1.1em",
+        fontWeight: 400,
+        lineHeight: '1.6em',
+        fontFamily: `"Poppins", sans-serif`,
       },
     },
     Heading: {
       baseStyle: {
         fontFamily: "Space Mono, monospace",
         fontWeight: 500,
-        fontSize: "180%"
+        fontSize: "2rem"
+      }
+    },
+    Box: {
+      baseStyle: {
+        borderRadius: '6px',
+        backgroundColor: '#321e5e',
       }
     }
   },
