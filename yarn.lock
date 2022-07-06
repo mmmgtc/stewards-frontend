@@ -1378,6 +1378,16 @@
     "@ethersproject/properties" "^5.6.0"
     "@ethersproject/strings" "^5.6.1"
 
+"@fontsource/poppins@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.5.8.tgz#65ce9b32f31bda5a25c23001bcebf1c66e440320"
+  integrity sha512-HE9yLDxYJEcxooVrYvvEhtyxaYU32hQIx1+npKegVefceE0l0zi0ePqKWWxYxkFpyy6WuZSQ+9rai3INnYKEJA==
+
+"@fontsource/space-mono@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/space-mono/-/space-mono-4.5.8.tgz#514a7344e706747dcace198a27f840dd104e0a06"
+  integrity sha512-qO3riZauz1yu7g8gumsmKgGitgDx7dQbwjKG+rDhF/OfNNCPyjArcNIU22nvANZ7UuDvLzo3tRprqlosaS7fKA==
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.9.5.tgz#2cbaf9a89460da24b5ca6531b8bbfc23e1df50c7"
