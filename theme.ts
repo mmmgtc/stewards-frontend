@@ -45,6 +45,28 @@ export const theme = extendTheme({
         borderRadius: '6px',
         backgroundColor: '#321e5e',
       }
+    },
+    Button: {
+      variants: {
+        statement: {
+          padding: '12.32px 26.4px',
+          background: '#be59cf',
+          color: 'white',
+          borderRadius: '0.5rem',
+          opacity: 0.9,
+          fontWeight: 800,
+          fontSize: '1.2rem'
+        },
+        delegate: {
+          padding: '12.32px 26.4px',
+          background: '#42c8b0',
+          color: 'white',
+          borderRadius: '0.5rem',
+          opacity: 0.9,
+          fontWeight: 800,
+          fontSize: '1.2rem'
+        }
+      }
     }
   },
 });

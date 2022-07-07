@@ -13,6 +13,7 @@ import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
 import InputLayout from "../components/InputLayout";
 import SelectInput from "../components/SelectInput";
+import StewardsCard from "../components/StewardsCard";
 
 const Home: NextPage = () => {
   const { address, isConnected } = useAccount();
@@ -53,7 +54,7 @@ const Home: NextPage = () => {
         Data powered by <Link href="https://www.showkarma.xyz/">Karma</Link>.
       </Text>
 
-      <Grid w="full" templateColumns="repeat(5, 1fr)" gap={6}>
+      <Grid mb='2rem' w="full" templateColumns="repeat(5, 1fr)" gap={6}>
         <GridItem colSpan={2}>
           <InputLayout label="Search">
             <Input
@@ -94,6 +95,11 @@ const Home: NextPage = () => {
             onChange={setTime}
           />
         </GridItem>
+      </Grid>
+      <Grid w='full' templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)'}} gap={'2rem'}>
+        {[0,1,2,3,4,5,6].map((i) => <GridItem key={i}>
+            <StewardsCard />
+        </GridItem>)}
       </Grid>
     </Flex>
   );
