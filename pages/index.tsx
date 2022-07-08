@@ -11,6 +11,7 @@ import type { NextPage } from "next";
 import { useState } from "react";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
+import Footer from "../components/Footer";
 import InputLayout from "../components/InputLayout";
 import SelectInput from "../components/SelectInput";
 import StewardsCard from "../components/StewardsCard";
@@ -54,8 +55,13 @@ const Home: NextPage = () => {
         Data powered by <Link href="https://www.showkarma.xyz/">Karma</Link>.
       </Text>
 
-      <Grid mb='2rem' w="full" templateColumns="repeat(5, 1fr)" gap={6}>
-        <GridItem colSpan={2}>
+      <Grid
+        mb="2rem"
+        w="full"
+        templateColumns={{ lg: "repeat(5, 1fr)", base: "repeat(1, 1fr)" }}
+        gap={6}
+      >
+        <GridItem colSpan={{ lg: 2, base: 1 }}>
           <InputLayout label="Search">
             <Input
               border="none"
@@ -71,7 +77,7 @@ const Home: NextPage = () => {
           <SelectInput
             label="Order by"
             options={[
-              { label: "health", value: "health" },
+              { label: "Health", value: "health" },
               { label: "Forum Activity", value: "forum_activity" },
               { label: "Voting Weight", value: "voting_weight" },
             ]}
@@ -96,11 +102,28 @@ const Home: NextPage = () => {
           />
         </GridItem>
       </Grid>
-      <Grid w='full' templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)'}} gap={'2rem'}>
-        {[0,1,2,3,4,5,6].map((i) => <GridItem key={i}>
-            <StewardsCard />
-        </GridItem>)}
+      <Grid
+        w="full"
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          xl: "repeat(3, 1fr)",
+        }}
+        gap={"2rem"}
+      >
+        {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+          <GridItem key={i}>
+            <StewardsCard
+              stewardsSince="2022-03-18"
+              activity={6}
+              workstream="MMM Lead"
+              voting={0.01}
+              participation={67}
+            />
+          </GridItem>
+        ))}
       </Grid>
+      <Footer />
     </Flex>
   );
 };

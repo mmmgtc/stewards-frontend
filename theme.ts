@@ -29,7 +29,7 @@ export const theme = extendTheme({
         color: "#d1c9e3",
         fontSize: "1.1em",
         fontWeight: 400,
-        lineHeight: '1.6em',
+        lineHeight: "1.6em",
         fontFamily: `"Poppins", sans-serif`,
       },
     },
@@ -37,36 +37,36 @@ export const theme = extendTheme({
       baseStyle: {
         fontFamily: "Space Mono, monospace",
         fontWeight: 500,
-        fontSize: "2rem"
-      }
+        fontSize: "2rem",
+      },
     },
     Box: {
       baseStyle: {
-        borderRadius: '6px',
-        backgroundColor: '#321e5e',
-      }
+        borderRadius: "6px",
+        backgroundColor: "#321e5e",
+      },
     },
     Button: {
       variants: {
         statement: {
-          padding: '12.32px 26.4px',
-          background: '#be59cf',
-          color: 'white',
-          borderRadius: '0.5rem',
+          padding: "1.5rem 1.75rem",
+          background: "#be59cf",
+          color: "white",
+          borderRadius: "0.5rem",
           opacity: 0.9,
           fontWeight: 800,
-          fontSize: '1.2rem'
+          fontSize: "1.2rem",
         },
         delegate: {
-          padding: '12.32px 26.4px',
-          background: '#42c8b0',
-          color: 'white',
-          borderRadius: '0.5rem',
+          padding: "1.5rem 1.75rem",
+          background: "#42c8b0",
+          color: "white",
+          borderRadius: "0.5rem",
           opacity: 0.9,
           fontWeight: 800,
-          fontSize: '1.2rem'
-        }
-      }
-    }
+          fontSize: "1.2rem",
+        },
+      },
+    },
   },
 });
