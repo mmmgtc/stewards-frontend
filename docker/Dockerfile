@@ -9,10 +9,5 @@ WORKDIR /usr/src/app
 # Copying source files
 COPY . /usr/src/app
 
-# Installing dependencies
-RUN yarn install
-
-# Building app
-# RUN npm run build
 EXPOSE 3000
 

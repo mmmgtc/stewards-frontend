@@ -9,19 +9,19 @@ import {
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { useState } from "react";
-import { useAccount, useConnect, useDisconnect } from "wagmi";
-import { InjectedConnector } from "wagmi/connectors/injected";
+// import { useAccount, useConnect, useDisconnect } from "wagmi";
+// import { InjectedConnector } from "wagmi/connectors/injected";
 import Footer from "../components/Footer";
 import InputLayout from "../components/InputLayout";
 import SelectInput from "../components/SelectInput";
 import StewardsCard from "../components/StewardsCard";
 
 const Home: NextPage = () => {
-  const { address, isConnected } = useAccount();
-  const { connect } = useConnect({
-    connector: new InjectedConnector(),
-  });
-  const { disconnect } = useDisconnect();
+  // const { address, isConnected } = useAccount();
+  // const { connect } = useConnect({
+  //   connector: new InjectedConnector(),
+  // });
+  // const { disconnect } = useDisconnect();
 
   const [orderBy, setOrderBy] = useState("");
   const [display, setDisplay] = useState("ascending");

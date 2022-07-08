@@ -23,5 +23,6 @@ cp .env.local .env
 ```
 make up
 make in
+yarn install
 yarn dev
 ```
