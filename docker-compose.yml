@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  next:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    container_name: stewards-frontend
+    image: stewards-frontend
+    volumes:
+      - "./:/usr/src/app"
+    ports:
+      - "3000:3000"
+    tty: true
+    env_file: .env
