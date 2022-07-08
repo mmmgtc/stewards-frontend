@@ -8,7 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { useAccount, useConnect, useDisconnect } from "wagmi";
 // import { InjectedConnector } from "wagmi/connectors/injected";
 import Footer from "../components/Footer";
@@ -26,6 +26,51 @@ const Home: NextPage = () => {
   const [orderBy, setOrderBy] = useState("");
   const [display, setDisplay] = useState("ascending");
   const [time, setTime] = useState("");
+
+  /**
+   * Find a steward profile by the passed in wallet address and data to search through
+   */
+function findStewardByAddress(address, data) {
+  return data.find(e => {
+    if (e.address === address) {
+//      console.log('found', e);
+    }
+    return e.address === address});
+}
+
+/**
+ * Combine steward data from stewards_data.json, which is at the time of writing manually updated, and karma data, which is coming from the karma API.
+ */
+async function getStewardsData() {
+  const success = res => res.ok ? res.json() : Promise.resolve({});
+
+  const karmaData = fetch("/api.showkarma.xyz/api/dao/delegates?name=gitcoin&pageSize=250&offset=0&workstreamId=6,4,3,7,1,2,5&period=30d").then(success);
+  const stewardsProfileData = fetch("/assets/stewards/stewards_data.json").then(success);
+
+  let ret = [];
+
+  await Promise.all([karmaData, stewardsProfileData]).then(([karmaData, stewardsProfileData]) => {
+    karmaData.data.delegates.forEach(element => {
+      element.profile = findStewardByAddress(element.publicAddress, stewardsProfileData.data);
+      console.log(element);
+      ret.push(element);
+    });
+
+}).catch(err => console.error(err));
+
+ return ret;
+}
+
+const [stewardsData, setStewardsData] = useState([]);
+
+// Get data on load
+useEffect(() => {
+  getStewardsData().then(data => {
+  setStewardsData(data);
+});
+},[]);
+
+
 
   return (
     <Flex
@@ -111,10 +156,13 @@ const Home: NextPage = () => {
         }}
         gap={"2rem"}
       >
-        {[0, 1, 2, 3, 4, 5, 6].map((i) => (
-          <GridItem key={i}>
+        {stewardsData.map((element, index) => (
+          <GridItem key={index}>
             <StewardsCard
-              stewardsSince="2022-03-18"
+              name={element.profile ? element.profile.name : 'Unknown'}
+              gitcoinUsername={element.profile ? element.profile.gitcoin_username : 'Unknown'}
+              profileImage={element.profile ? element.profile.profile_image : ''}
+              stewardsSince={element.profile ? element.profile.steward_since : ''}
               activity={6}
               workstream="MMM Lead"
               voting={0.01}
