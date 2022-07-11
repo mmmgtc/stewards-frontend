@@ -7,6 +7,6 @@
 <rect x="50" width="3" height="30" fill="#42C8B0"/>
 <rect x="60" width="3" height="30" fill="#42C8B0"/>
 <rect x="70" width="3" height="30" fill="#42C8B0"/>
-<rect x="80" width="3" height="30" fill="#42C8B0"/>
+<rect x="80" width="3" height="30" fill="#42C8B0" fill-opacity="0.33"/>
 <rect x="90" width="3" height="30" fill="#42C8B0" fill-opacity="0.33"/>
 </svg>
