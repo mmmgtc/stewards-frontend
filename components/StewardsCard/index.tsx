@@ -1,21 +1,25 @@
 import { Box, Button, Flex, Image, Link, Text, VStack } from "@chakra-ui/react";
 
 interface StewardsCardProps {
+  name?: string;
   stewardsSince?: string;
   activity?: number;
   workstream?: string;
   voting?: number;
   participation?: number;
-  profile?: string;
+  gitcoinUsername?: string;
+  profileImage?: string;
 }
 
 const StewardsCard = ({
+  name,
   stewardsSince,
   activity,
   workstream,
   voting,
   participation,
-  profile,
+  gitcoinUsername,
+  profileImage,
 }: StewardsCardProps) => {
   return (
     <VStack
@@ -31,21 +35,21 @@ const StewardsCard = ({
             borderRadius="1rem"
             w="100px"
             h="100px"
-            src={profile ? profile : `/assets/austintgriffith.png`}
-            alt="austin griffith"
+            src={profileImage ? `/assets/stewards/` + profileImage : '/assets/stewards/unknown.png'}
+            alt={name}
           />
           <Box textAlign="left">
             <Text fontSize="1.2rem" fontWeight="bold">
-              Austin Griffith
+              {name}
             </Text>
             <Link
               target="_blank"
-              href="https://gitcoin.co/austintgriffith"
+              href={'https://gitcoin.co/' + gitcoinUsername}
               color="#42c8b0"
               textDecoration="none"
               _hover={{ color: "#42c8b0" }}
             >
-              austingriffith
+              {gitcoinUsername}
             </Link>
           </Box>
         </Flex>
