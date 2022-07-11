@@ -66,10 +66,10 @@ const Home: NextPage = () => {
 
 
   function convertToNumber(val) {
-    if (parseInt(val) === 'NaN') {
+    if (parseInt(val) === NaN) {
       return 0;
     }
-    return val;
+    return parseInt(val);
   }
 
   /**
