@@ -3,12 +3,14 @@ import { Dispatch, SetStateAction } from "react";
 import InputLayout from "../InputLayout";
 
 interface SelectInputProps {
+  defaultValue: string;
   label: string;
   onChange: Dispatch<SetStateAction<string>>;
   options: { label: string; value: string }[];
 }
 
 const SelectInput: React.FC<SelectInputProps> = ({
+  defaultValue,
   label,
   options,
   onChange,
@@ -16,6 +18,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
   return (
     <InputLayout label={label}>
       <Select
+        defaultValue={defaultValue}
         size="lg"
         variant="unstyled"
         onChange={(e) => onChange(e.target.value)}
@@ -29,5 +32,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
     </InputLayout>
   );
 };
+
+// selected={value === defaultValue ? 'selected' : ''}
 
 export default SelectInput;
