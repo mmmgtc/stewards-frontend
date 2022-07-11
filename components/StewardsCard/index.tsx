@@ -6,7 +6,7 @@ interface StewardsCardProps {
   activity?: number;
   workstream?: string;
   voting?: number;
-  participation?: number;
+  participation?: string;
   gitcoinUsername?: string;
   profileImage?: string;
   statementLink?: string;

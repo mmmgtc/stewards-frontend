@@ -97,10 +97,6 @@ const Home: NextPage = () => {
     if (display === 'descending') {
       clonedData = clonedData.reverse();
     }
-
-    console.log('clonedData: ', clonedData);
-
-
     setFilteredStewardsData(clonedData);
   }
 
@@ -220,7 +216,7 @@ const Home: NextPage = () => {
               activity={element.stats[0].forumActivityScore}
               workstream={element.workstreams.map(item => { return item.name }).join(',')}
               voting={element.stats[0].delegatedVotes / 1000000}
-              participation="0"
+              participation="?"
               statementLink={element.profile ? element.profile.statement_post : ''}
               delegateLink={'https://www.withtally.com/voter/' + element.address + '/governance/gitcoin'}
               forumActivityLink={element.profile ? 'https://gov.gitcoin.co/u/' + element.profile.gitcoin_username : '/'}
