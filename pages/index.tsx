@@ -27,8 +27,8 @@ const Home: NextPage = () => {
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search") ?? '');
-  const [orderBy, setOrderBy] = useState(searchParams.get("orderBy") ?? 'forum_activity');
-  const [display, setDisplay] = useState(searchParams.get("display") ?? 'descending');
+  const [orderBy, setOrderBy] = useState(searchParams.get("orderBy") ?? 'descending');
+  const [display, setDisplay] = useState(searchParams.get("display") ?? 'health');
   const [time, setTime] = useState(searchParams.get("time") ?? '30d');
   const [stewardsData, setStewardsData] = useState([]);
   const [filteredStewardsData, setFilteredStewardsData] = useState([]);
@@ -64,11 +64,19 @@ const Home: NextPage = () => {
     return ret;
   }
 
+
+  function convertToNumber(val) {
+    if (parseInt(val) === 'NaN') {
+      return 0;
+    }
+    return val;
+  }
+
   /**
    * Apply some filtering to the stewards data
    */
-  function filterStewardsData(data) {
-    let clonedData = JSON.parse(JSON.stringify(data));
+  function filterStewardsData() {
+    let clonedData = JSON.parse(JSON.stringify(stewardsData));
 
     if (search.length > 0) {
       clonedData = clonedData.filter(element => {
@@ -78,25 +86,24 @@ const Home: NextPage = () => {
       });
     }
 
-    // TODO:::The fields on which sorting happens needs to be checked, e.g. health
-    if (orderBy === 'health') {
+    if (display === 'health') {
       clonedData.sort(function (a, b) {
-        return a.stats[0].karmaScore - b.stats[0].karmaScore;
+        return convertToNumber(a.stats[0].gitcoinHealthScore) - convertToNumber(b.stats[0].gitcoinHealthScore);
       });
-    } else if (orderBy === 'forum_activity') {
-      console.log('forum_activity');
+    } else if (display === 'forum_activity') {
       clonedData.sort(function (a, b) {
-        return a.stats[0].forumActivityScore - b.stats[0].forumActivityScore;
+        return convertToNumber(a.stats[0].forumActivityScore) - convertToNumber(b.stats[0].forumActivityScore);
       });
-    } else if (orderBy === 'voting_weight') {
+    } else if (display === 'voting_weight') {
       clonedData.sort(function (a, b) {
-        return parseInt(a.stats[0].onChainVotesPct) - parseInt(b.stats[0].onChainVotesPct);
+        return convertToNumber(a.stats[0].onChainVotesPct) - convertToNumber(b.stats[0].onChainVotesPct);
       });
     }
 
-    if (display === 'descending') {
+    if (orderBy === 'descending') {
       clonedData = clonedData.reverse();
     }
+
     setFilteredStewardsData(clonedData);
   }
 
@@ -104,17 +111,20 @@ const Home: NextPage = () => {
   useEffect(() => {
     getStewardsData().then(data => {
       setStewardsData(data);
-      filterStewardsData(data);
     });
   }, [time]);
 
-
-  // Set the query params
+  // Filter when stewardsData changes
   useEffect(() => {
-    setSearchParams({ 'search': search, 'orderBy': orderBy, 'display': display, 'time': time });
+    filterStewardsData();
+  }, [stewardsData]);
 
-    filterStewardsData(stewardsData);
-  }, [search, orderBy, display, time]);
+  // Set the query params and run the filter
+  useEffect(() => {
+    setSearchParams({ 'search': search, 'display': display, 'orderBy': orderBy, 'time': time });
+
+    filterStewardsData();
+  }, [search, orderBy, display]);
 
 
   return (
@@ -173,7 +183,7 @@ const Home: NextPage = () => {
               { label: "Forum Activity", value: "forum_activity" },
               { label: "Voting Weight", value: "voting_weight" },
             ]}
-            defaultValue={orderBy}
+            defaultValue={display}
             onChange={setDisplay}
           />
         </GridItem>
@@ -184,8 +194,8 @@ const Home: NextPage = () => {
               { label: "Descending", value: "descending" },
               { label: "Ascending", value: "ascending" },
             ]}
-            defaultValue={display}
-            onChange={setDisplay}
+            defaultValue={orderBy}
+            onChange={setOrderBy}
           />
         </GridItem>
         <GridItem>
@@ -218,7 +228,7 @@ const Home: NextPage = () => {
               voting={element.stats[0].delegatedVotes / 1000000}
               participation="?"
               statementLink={element.profile ? element.profile.statement_post : ''}
-              delegateLink={'https://www.withtally.com/voter/' + element.address + '/governance/gitcoin'}
+              delegateLink={'https://www.withtally.com/voter/' + element.publicAddress + '/governance/gitcoin'}
               forumActivityLink={element.profile ? 'https://gov.gitcoin.co/u/' + element.profile.gitcoin_username : '/'}
               healthScore={element.stats[0].gitcoinHealthScore}
             />
