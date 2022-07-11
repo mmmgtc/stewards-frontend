@@ -6,9 +6,13 @@ interface StewardsCardProps {
   activity?: number;
   workstream?: string;
   voting?: number;
-  participation?: number;
+  participation?: string;
   gitcoinUsername?: string;
   profileImage?: string;
+  statementLink?: string;
+  delegateLink?: string;
+  forumActivityLink?: string;
+  healthScore?: number;
 }
 
 const StewardsCard = ({
@@ -20,6 +24,10 @@ const StewardsCard = ({
   participation,
   gitcoinUsername,
   profileImage,
+  statementLink,
+  delegateLink,
+  forumActivityLink,
+  healthScore
 }: StewardsCardProps) => {
   return (
     <VStack
@@ -55,9 +63,9 @@ const StewardsCard = ({
         </Flex>
         <Box>
           <Text fontSize="1.75rem" fontWeight="bold">
-            10/10
+            {healthScore}
           </Text>
-          <Image src="/assets/healthSvgs/health_9.svg" alt="health_9" />
+          <Image src={'/assets/healthSvgs/health_' + (healthScore ? healthScore : 0) + '.svg'} alt={'Health score of ' + (healthScore ? healthScore : 0)} />
         </Box>
       </Flex>
       <Flex justify="space-between" alignItems="center" w="full">
@@ -65,7 +73,7 @@ const StewardsCard = ({
           <Image w="40px" h="40px" src="/assets/calender.svg" alt="calender" />
           <Link
             target="_blank"
-            href="https://gov.gitcoin.co/t/introducing-stewards-governance/41/213"
+            href={statementLink}
             textDecoration="none"
             _hover={{ color: "white" }}
             fontSize="1.2rem"
@@ -80,7 +88,7 @@ const StewardsCard = ({
           <Image w="40px" h="40px" src="/assets/forum.svg" alt="calender" />
           <Link
             target="_blank"
-            href="https://gov.gitcoin.co/t/introducing-stewards-governance/41/213"
+            href={forumActivityLink}
             textDecoration="none"
             _hover={{ color: "white" }}
             fontSize="1.2rem"
@@ -100,7 +108,7 @@ const StewardsCard = ({
           />
           <Link
             target="_blank"
-            href="https://gov.gitcoin.co/t/introducing-stewards-governance/41/213"
+            href="https://gitcoindao.com"
             textDecoration="none"
             _hover={{ color: "white" }}
             fontSize="1.2rem"
@@ -115,7 +123,7 @@ const StewardsCard = ({
           <Image w="40px" h="40px" src="/assets/weight.svg" alt="calender" />
           <Link
             target="_blank"
-            href="https://gov.gitcoin.co/t/introducing-stewards-governance/41/213"
+            href={delegateLink}
             textDecoration="none"
             _hover={{ color: "white" }}
             fontSize="1.2rem"
@@ -135,7 +143,7 @@ const StewardsCard = ({
           />
           <Link
             target="_blank"
-            href="https://gov.gitcoin.co/t/introducing-stewards-governance/41/213"
+            href="https://snapshot.org/#/gitcoindao.eth"
             textDecoration="none"
             _hover={{ color: "white" }}
             fontSize="1.2rem"
@@ -147,9 +155,11 @@ const StewardsCard = ({
       </Flex>
       <Flex alignItems="center" w="full" justify="space-between">
         <Button variant="statement" paddingX="1.5">
-          Statement
+          <Link href={statementLink}>Statement</Link>
         </Button>
-        <Button variant="delegate">Delegate</Button>
+        <Button variant="delegate">
+          <Link href={delegateLink}>Delegate</Link>
+        </Button>
       </Flex>
     </VStack>
   );
