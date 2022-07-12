@@ -38,7 +38,7 @@ const Home: NextPage = () => {
    */
   function findStewardByAddress(address, data) {
     return data.find(e => {
-      return e.address === address
+      return e.address.toLowerCase() === address.toLowerCase()
     });
   }
 
@@ -55,11 +55,17 @@ const Home: NextPage = () => {
 
     await Promise.all([karmaData, stewardsProfileData]).then(([karmaData, stewardsProfileData]) => {
       karmaData.data.delegates.forEach(element => {
+        if (element.publicAddress === '0x01Cf9fD2efa5Fdf178bd635c3E2adF25B2052712') {
+          console.log('where is jo');
+          console.log(findStewardByAddress(element.publicAddress, stewardsProfileData.data));
+
+        }
         element.profile = findStewardByAddress(element.publicAddress, stewardsProfileData.data);
         ret.push(element);
       });
 
     }).catch(err => console.error(err));
+
 
     return ret;
   }
@@ -222,8 +228,8 @@ const Home: NextPage = () => {
               stewardsSince={element.profile ? element.profile.steward_since : '-'}
               activity={element.stats[0].forumActivityScore}
               workstream={element.workstreams.map(item => { return item.name }).join(',')}
-              voting={element.stats[0].delegatedVotes / 1000000}
-              participation="?"
+              votingWeight={element.stats[0].delegatedVotes / 1000000}
+              participation={element.stats[0].offChainVotesPct}
               statementLink={element.profile ? element.profile.statement_post : ''}
               delegateLink={'https://www.withtally.com/voter/' + element.publicAddress + '/governance/gitcoin'}
               forumActivityLink={element.profile ? 'https://gov.gitcoin.co/u/' + element.profile.gitcoin_username : '/'}
