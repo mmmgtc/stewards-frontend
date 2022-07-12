@@ -228,7 +228,7 @@ const Home: NextPage = () => {
               stewardsSince={element.profile ? element.profile.steward_since : '-'}
               activity={element.stats[0].forumActivityScore}
               workstream={element.workstreams.map(item => { return item.name }).join(',')}
-              voting={element.stats[0].delegatedVotes}
+              votingWeight={element.stats[0].delegatedVotes / 1000000}
               participation={element.stats[0].offChainVotesPct}
               statementLink={element.profile ? element.profile.statement_post : ''}
               delegateLink={'https://www.withtally.com/voter/' + element.publicAddress + '/governance/gitcoin'}
