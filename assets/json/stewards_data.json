@@ -1297,15 +1297,15 @@
                   }
             },
             {
-                  "name": "David",
+                  "name": "David DYOR",
                   "address": "0x59AE7f21D18b2F5fDC7a99c4fd6dD9E67Cec0Bc9",
                   "profile_image": "blazingthirdeye.png",
                   "workstream": "FDD Contributor",
                   "gitcoin_username": "blazingthirdeye",
-                  "discourse_username": "blazingthirdeye",
-                  "steward_since": "2021-06-11",
+                  "discourse_username": "david_dyor",
+                  "steward_since": "2022-04-04",
                   "steward_days": 372,
-                  "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/148",
+                  "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/210",
                   "forum_activity": {
                         "30d": 0,
                         "lifetime": 0
