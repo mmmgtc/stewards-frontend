@@ -1307,8 +1307,8 @@
                   "steward_days": 372,
                   "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/210",
                   "forum_activity": {
-                        "30d": 0,
-                        "lifetime": 0
+                        "30d": 5,
+                        "lifetime": 105
                   },
                   "vote_participation": {
                         "30d": 0,
