@@ -5,7 +5,7 @@ interface StewardsCardProps {
   stewardsSince?: string;
   activity?: number;
   workstream?: string;
-  voting?: number;
+  votingWeight?: number;
   participation?: string;
   gitcoinUsername?: string;
   profileImage?: string;
@@ -20,7 +20,7 @@ const StewardsCard = ({
   stewardsSince,
   activity,
   workstream,
-  voting,
+  votingWeight,
   participation,
   gitcoinUsername,
   profileImage,
@@ -51,7 +51,7 @@ const StewardsCard = ({
               {name}
             </Text>
             <Link
-              target="_blank"
+              isExternal
               href={'https://gitcoin.co/' + gitcoinUsername}
               color="#42c8b0"
               textDecoration="none"
@@ -72,7 +72,7 @@ const StewardsCard = ({
         <Flex gap="1rem" alignItems="center">
           <Image w="40px" h="40px" src="/assets/calender.svg" alt="calender" />
           <Link
-            target="_blank"
+            isExternal
             href={statementLink}
             textDecoration="none"
             _hover={{ color: "white" }}
@@ -87,7 +87,7 @@ const StewardsCard = ({
         <Flex gap="1rem" alignItems="center">
           <Image w="40px" h="40px" src="/assets/forum.svg" alt="calender" />
           <Link
-            target="_blank"
+            isExternal
             href={forumActivityLink}
             textDecoration="none"
             _hover={{ color: "white" }}
@@ -107,7 +107,7 @@ const StewardsCard = ({
             alt="calender"
           />
           <Link
-            target="_blank"
+            isExternal
             href="https://gitcoindao.com"
             textDecoration="none"
             _hover={{ color: "white" }}
@@ -122,7 +122,7 @@ const StewardsCard = ({
         <Flex gap="1rem" alignItems="center">
           <Image w="40px" h="40px" src="/assets/weight.svg" alt="calender" />
           <Link
-            target="_blank"
+            isExternal
             href={delegateLink}
             textDecoration="none"
             _hover={{ color: "white" }}
@@ -131,7 +131,7 @@ const StewardsCard = ({
             Voting weight
           </Link>
         </Flex>
-        <Text>{voting}%</Text>
+        <Text>{votingWeight}%</Text>
       </Flex>
       <Flex justify="space-between" alignItems="center" w="full">
         <Flex gap="1rem" alignItems="center">
@@ -142,7 +142,7 @@ const StewardsCard = ({
             alt="calender"
           />
           <Link
-            target="_blank"
+            isExternal
             href="https://snapshot.org/#/gitcoindao.eth"
             textDecoration="none"
             _hover={{ color: "white" }}
@@ -155,11 +155,11 @@ const StewardsCard = ({
       </Flex>
       <Flex alignItems="center" w="full" justify="space-between">
         <Button variant="statement" paddingX="1.5">
-          <Link color="white" href={statementLink} textDecoration="none"
+          <Link isExternal color="white" href={statementLink} textDecoration="none"
           >Statement</Link>
         </Button>
         <Button variant="delegate">
-          <Link color="white" href={delegateLink} textDecoration="none"
+          <Link isExternal color="white" href={delegateLink} textDecoration="none"
           >Delegate</Link>
         </Button>
       </Flex>
