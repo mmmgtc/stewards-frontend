@@ -155,10 +155,12 @@ const StewardsCard = ({
       </Flex>
       <Flex alignItems="center" w="full" justify="space-between">
         <Button variant="statement" paddingX="1.5">
-          <Link href={statementLink}>Statement</Link>
+          <Link color="white" href={statementLink} textDecoration="none"
+          >Statement</Link>
         </Button>
         <Button variant="delegate">
-          <Link href={delegateLink}>Delegate</Link>
+          <Link color="white" href={delegateLink} textDecoration="none"
+          >Delegate</Link>
         </Button>
       </Flex>
     </VStack>
