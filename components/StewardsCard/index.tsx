@@ -15,6 +15,11 @@ interface StewardsCardProps {
   healthScore?: number;
 }
 
+// Ensure healh scores between 1 - 10, or '-' are returned
+function getHealthcore(healthScore) {
+  return healthScore > 0 ? (healthScore > 10 ? 10 : healthScore) : '-';
+}
+
 const StewardsCard = ({
   name,
   stewardsSince,
@@ -62,10 +67,9 @@ const StewardsCard = ({
           </Box>
         </Flex>
         <Box>
-          <Text fontSize="1.75rem" fontWeight="bold">
-            {healthScore > 0 ? (healthScore > 10 ? 10 : healthScore) : '-'}
+          <Text fontSize="1.75rem" fontWeight="bold">{getHealthcore(healthScore)}
           </Text>
-          <Image src={'/assets/healthSvgs/health_' + (healthScore ? healthScore : 0) + '.svg'} alt={'Health score of ' + (healthScore ? healthScore : 0)} />
+          <Image src={'/assets/healthSvgs/health_' + getHealthcore(healthScore) + '.svg'} alt={'Health score of ' + getHealthcore(healthScore)} />
         </Box>
       </Flex>
       <Flex justify="space-between" alignItems="center" w="full">
