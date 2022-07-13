@@ -27,13 +27,13 @@ const StewardsCard = ({
   statementLink,
   delegateLink,
   forumActivityLink,
-  healthScore
+  healthScore,
 }: StewardsCardProps) => {
   return (
     <VStack
       background="#321e5e"
       borderRadius="6px"
-      p="0.8rem"
+      // p="0.8rem"
       w={"full"}
       gap="0.8rem"
     >
@@ -43,7 +43,11 @@ const StewardsCard = ({
             borderRadius="1rem"
             w="100px"
             h="100px"
-            src={profileImage ? `/assets/stewards/` + profileImage : '/assets/stewards/unknown.png'}
+            src={
+              profileImage
+                ? `/assets/stewards/` + profileImage
+                : "/assets/stewards/unknown.png"
+            }
             alt={name}
           />
           <Box textAlign="left">
@@ -52,23 +56,36 @@ const StewardsCard = ({
             </Text>
             <Link
               isExternal
-              href={'https://gitcoin.co/' + gitcoinUsername}
+              href={"https://gitcoin.co/" + gitcoinUsername}
               color="#42c8b0"
               textDecoration="none"
               _hover={{ color: "#42c8b0" }}
+              fontSize="1.2rem"
             >
               {gitcoinUsername}
             </Link>
           </Box>
         </Flex>
-        <Box>
-          <Text fontSize="1.75rem" fontWeight="bold">
+        <Box marginRight="1rem">
+          <Text fontSize="1.8rem" fontWeight="bold">
             {healthScore}
           </Text>
-          <Image src={'/assets/healthSvgs/health_' + (healthScore ? healthScore : 0) + '.svg'} alt={'Health score of ' + (healthScore ? healthScore : 0)} />
+          <Image
+            src={
+              "/assets/healthSvgs/health_" +
+              (healthScore ? healthScore : 0) +
+              ".svg"
+            }
+            alt={"Health score of " + (healthScore ? healthScore : 0)}
+          />
         </Box>
       </Flex>
-      <Flex justify="space-between" alignItems="center" w="full">
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
         <Flex gap="1rem" alignItems="center">
           <Image w="40px" h="40px" src="/assets/calender.svg" alt="calender" />
           <Link
@@ -83,7 +100,12 @@ const StewardsCard = ({
         </Flex>
         <Text>{stewardsSince}</Text>
       </Flex>
-      <Flex justify="space-between" alignItems="center" w="full">
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
         <Flex gap="1rem" alignItems="center">
           <Image w="40px" h="40px" src="/assets/forum.svg" alt="calender" />
           <Link
@@ -98,7 +120,12 @@ const StewardsCard = ({
         </Flex>
         <Text>{activity}</Text>
       </Flex>
-      <Flex justify="space-between" alignItems="center" w="full">
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
         <Flex gap="1rem" alignItems="center">
           <Image
             w="40px"
@@ -118,7 +145,12 @@ const StewardsCard = ({
         </Flex>
         <Text>{workstream}</Text>
       </Flex>
-      <Flex justify="space-between" alignItems="center" w="full">
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
         <Flex gap="1rem" alignItems="center">
           <Image w="40px" h="40px" src="/assets/weight.svg" alt="calender" />
           <Link
@@ -133,7 +165,12 @@ const StewardsCard = ({
         </Flex>
         <Text>{votingWeight}%</Text>
       </Flex>
-      <Flex justify="space-between" alignItems="center" w="full">
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
         <Flex gap="1rem" alignItems="center">
           <Image
             w="40px"
@@ -153,14 +190,32 @@ const StewardsCard = ({
         </Flex>
         <Text>{participation}%</Text>
       </Flex>
-      <Flex alignItems="center" w="full" justify="space-between">
+      <Flex
+        alignItems="center"
+        w="full"
+        justify="space-between"
+        paddingX={"1rem"}
+        paddingY={"1rem"}
+      >
         <Button variant="statement" paddingX="1.5">
-          <Link isExternal color="white" href={statementLink} textDecoration="none"
-          >Statement</Link>
+          <Link
+            isExternal
+            color="white"
+            href={statementLink}
+            textDecoration="none"
+          >
+            Statement
+          </Link>
         </Button>
         <Button variant="delegate">
-          <Link isExternal color="white" href={delegateLink} textDecoration="none"
-          >Delegate</Link>
+          <Link
+            isExternal
+            color="white"
+            href={delegateLink}
+            textDecoration="none"
+          >
+            Delegate
+          </Link>
         </Button>
       </Flex>
     </VStack>

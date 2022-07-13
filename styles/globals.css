@@ -14,3 +14,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.highlight {
+  padding: 0.3em 1em;
+  border: 3px solid var(--purple);
+  border-radius: 10px;
+  display: inline-block;
+  animation: blink-animation 2000ms infinite;
+}
+
+@keyframes blink-animation {
+  0% {
+    border: 2px solid var(--purple);
+  }
+  50% {
+    border: 2px solid var(--teal);
+  }
+  100% {
+    border: 2px solid var(--purple);
+  }
+}
