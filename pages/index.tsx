@@ -182,7 +182,7 @@ const Home: NextPage = () => {
     });
 
     filterStewardsData();
-  }, [search, orderBy, display]);
+  }, [search, orderBy, display, time]);
 
   return (
     <Flex
