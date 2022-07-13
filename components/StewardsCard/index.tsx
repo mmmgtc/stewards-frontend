@@ -32,13 +32,13 @@ const StewardsCard = ({
   statementLink,
   delegateLink,
   forumActivityLink,
-  healthScore
+  healthScore,
 }: StewardsCardProps) => {
   return (
     <VStack
       background="#321e5e"
       borderRadius="6px"
-      p="0.8rem"
+      // p="0.8rem"
       w={"full"}
       gap="0.8rem"
     >
@@ -46,67 +46,102 @@ const StewardsCard = ({
         <Flex gap="1rem" alignItems="center">
           <Image
             borderRadius="1rem"
-            w="100px"
-            h="100px"
+w={{ sm: "100px", base: "70px" }}
+            h={{ sm: "100px", base: "70px" }}
             src={profileImage ? `/assets/stewards/` + profileImage : '/assets/stewards/unknown.png'}
             alt={name ? name : '-'}
           />
           <Box textAlign="left">
-            <Text fontSize="1.2rem" fontWeight="bold">
+            <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }} fontWeight="bold">
               {name.length > 0 ? name : '-'}
             </Text>
             <Link
               isExternal
-              href={'https://gitcoin.co/' + gitcoinUsername}
+              href={"https://gitcoin.co/" + gitcoinUsername}
               color="#42c8b0"
               textDecoration="none"
               _hover={{ color: "#42c8b0" }}
+              fontSize={{ sm: "1.2rem", base: "0.9rem" }}
             >
               {gitcoinUsername}
             </Link>
           </Box>
         </Flex>
-        <Box>
-          <Text fontSize="1.75rem" fontWeight="bold">{getHealthcore(healthScore)}
+        <Box marginRight="1rem">
+          <Text fontSize={{ sm: "1.8rem", base: "1.2rem" }} fontWeight="bold">
+            {healthScore}
           </Text>
-          <Image src={'/assets/healthSvgs/health_' + getHealthcore(healthScore) + '.svg'} alt={'Health score of ' + getHealthcore(healthScore)} />
+          <Image
+            src={
+              "/assets/healthSvgs/health_" +
+              (healthScore ? healthScore : 0) +
+              ".svg"
+            }
+            width={{ sm: "full", base: "5rem" }}
+            alt={"Health score of " + (healthScore ? healthScore : 0)}
+          />
         </Box>
       </Flex>
-      <Flex justify="space-between" alignItems="center" w="full">
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
         <Flex gap="1rem" alignItems="center">
-          <Image w="40px" h="40px" src="/assets/calender.svg" alt="calender" />
+          <Image
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
+            src="/assets/calender.svg"
+            alt="calender"
+          />
           <Link
             isExternal
             href={statementLink}
             textDecoration="none"
             _hover={{ color: "white" }}
-            fontSize="1.2rem"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
           >
             Stewards since
           </Link>
         </Flex>
-        <Text>{stewardsSince}</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{stewardsSince}</Text>
       </Flex>
-      <Flex justify="space-between" alignItems="center" w="full">
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
         <Flex gap="1rem" alignItems="center">
-          <Image w="40px" h="40px" src="/assets/forum.svg" alt="calender" />
+          <Image
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
+            src="/assets/forum.svg"
+            alt="calender"
+          />
           <Link
             isExternal
             href={forumActivityLink}
             textDecoration="none"
             _hover={{ color: "white" }}
-            fontSize="1.2rem"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
           >
             Forum activity
           </Link>
         </Flex>
-        <Text>{forumActivity > 0 ? forumActivity : '-'}</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{forumActivity > 0 ? forumActivity : '-'}</Text>
       </Flex>
-      <Flex justify="space-between" alignItems="center" w="full">
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
         <Flex gap="1rem" alignItems="center">
           <Image
-            w="40px"
-            h="40px"
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
             src="/assets/workstream.svg"
             alt="calender"
           />
@@ -115,33 +150,50 @@ const StewardsCard = ({
             href="https://gitcoindao.com"
             textDecoration="none"
             _hover={{ color: "white" }}
-            fontSize="1.2rem"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
           >
             Workstream
           </Link>
         </Flex>
-        <Text>{workstream.length > 0 ? workstream : '-'}</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
+          {workstream ? workstream.length > 20 ? workstream.slice(0, 9) + "..." : workstream: '-'}
+        </Text>
       </Flex>
-      <Flex justify="space-between" alignItems="center" w="full">
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
         <Flex gap="1rem" alignItems="center">
-          <Image w="40px" h="40px" src="/assets/weight.svg" alt="calender" />
+          <Image
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
+            src="/assets/weight.svg"
+            alt="calender"
+          />
           <Link
             isExternal
             href={delegateLink}
             textDecoration="none"
             _hover={{ color: "white" }}
-            fontSize="1.2rem"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
           >
             Voting weight
           </Link>
         </Flex>
-        <Text>{votingWeight > 0 ? votingWeight + '%' : '-'}</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{votingWeight > 0 ? votingWeight + '%' : '-'}</Text>
       </Flex>
-      <Flex justify="space-between" alignItems="center" w="full">
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
         <Flex gap="1rem" alignItems="center">
           <Image
-            w="40px"
-            h="40px"
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
             src="/assets/participation.svg"
             alt="calender"
           />
@@ -150,21 +202,43 @@ const StewardsCard = ({
             href="https://snapshot.org/#/gitcoindao.eth"
             textDecoration="none"
             _hover={{ color: "white" }}
-            fontSize="1.2rem"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
           >
             Vote participation
           </Link>
         </Flex>
-        <Text>{votingParticipation > 0 ? votingParticipation + '%' : '-'}</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
+        {votingParticipation > 0 ? votingParticipation + '%' : '-'}
+        </Text>
       </Flex>
-      <Flex alignItems="center" w="full" justify="space-between">
+      <Flex
+        alignItems="center"
+        w="full"
+        justify="space-between"
+        paddingX={"1rem"}
+        paddingY={"1rem"}
+      >
         <Button variant="statement" paddingX="1.5">
-          <Link isExternal color="white" href={statementLink} textDecoration="none"
-          >Statement</Link>
+          <Link
+            isExternal
+            color="white"
+            href={statementLink}
+            textDecoration="none"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
+          >
+            Statement
+          </Link>
         </Button>
         <Button variant="delegate">
-          <Link isExternal color="white" href={delegateLink} textDecoration="none"
-          >Delegate</Link>
+          <Link
+            isExternal
+            color="white"
+            href={delegateLink}
+            textDecoration="none"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
+          >
+            Delegate
+          </Link>
         </Button>
       </Flex>
     </VStack>

@@ -6,10 +6,12 @@ import {
   Input,
   Link,
   Text,
+  keyframes,
+  usePrefersReducedMotion,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { useState, useEffect } from "react";
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from "react-router-dom";
 
 // import { useAccount, useConnect, useDisconnect } from "wagmi";
 // import { InjectedConnector } from "wagmi/connectors/injected";
@@ -17,6 +19,18 @@ import Footer from "../components/Footer";
 import InputLayout from "../components/InputLayout";
 import SelectInput from "../components/SelectInput";
 import StewardsCard from "../components/StewardsCard";
+
+const blink = keyframes`
+  0%{
+    border: 2px solid #be59cf;
+  }
+  50% {
+    border: 2px solid #42c8b0;
+  }
+  100% {
+    border: 2px solid #be59cf;
+  }
+  `;
 
 const Home: NextPage = () => {
   // const { address, isConnected } = useAccount();
@@ -26,19 +40,29 @@ const Home: NextPage = () => {
   // const { disconnect } = useDisconnect();
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const [search, setSearch] = useState(searchParams.get("search") ?? '');
-  const [orderBy, setOrderBy] = useState(searchParams.get("orderBy") ?? 'descending');
-  const [display, setDisplay] = useState(searchParams.get("display") ?? 'health');
-  const [time, setTime] = useState(searchParams.get("time") ?? '30d');
+  const [search, setSearch] = useState(searchParams.get("search") ?? "");
+  const [orderBy, setOrderBy] = useState(
+    searchParams.get("orderBy") ?? "descending"
+  );
+  const [display, setDisplay] = useState(
+    searchParams.get("display") ?? "health"
+  );
+  const [time, setTime] = useState(searchParams.get("time") ?? "30d");
   const [stewardsData, setStewardsData] = useState([]);
   const [filteredStewardsData, setFilteredStewardsData] = useState([]);
+
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  const animation = prefersReducedMotion
+    ? undefined
+    : `${blink} infinite 5s linear`;
 
   /**
    * Find a steward profile by the passed in wallet address and data to search through
    */
   function findStewardByAddress(address, data) {
-    return data.find(e => {
-      return e.address.toLowerCase() === address.toLowerCase()
+    return data.find((e) => {
+      return e.address.toLowerCase() === address.toLowerCase();
     });
   }
 
@@ -46,30 +70,44 @@ const Home: NextPage = () => {
    * Combine steward data from stewards_data.json, which is at the time of writing manually updated, and karma data, which is coming from the karma API.
    */
   async function getStewardsData() {
-    const success = res => res.ok ? res.json() : Promise.resolve({});
+    const success = (res) => (res.ok ? res.json() : Promise.resolve({}));
 
-    const karmaData = fetch("/api.showkarma.xyz/api/dao/delegates?name=gitcoin&pageSize=250&offset=0&workstreamId=6,4,3,7,1,2,5&period=" + time).then(success);
-    const stewardsProfileData = fetch("/assets/stewards/stewards_data.json").then(success);
+    const karmaData = fetch(
+      "/api.showkarma.xyz/api/dao/delegates?name=gitcoin&pageSize=250&offset=0&workstreamId=6,4,3,7,1,2,5&period=" +
+        time
+    ).then(success);
+    const stewardsProfileData = fetch(
+      "/assets/stewards/stewards_data.json"
+    ).then(success);
 
     let ret = [];
 
-    await Promise.all([karmaData, stewardsProfileData]).then(([karmaData, stewardsProfileData]) => {
-      karmaData.data.delegates.forEach(element => {
-        if (element.publicAddress === '0x01Cf9fD2efa5Fdf178bd635c3E2adF25B2052712') {
-          console.log('where is jo');
-          console.log(findStewardByAddress(element.publicAddress, stewardsProfileData.data));
-
-        }
-        element.profile = findStewardByAddress(element.publicAddress, stewardsProfileData.data);
-        ret.push(element);
-      });
-
-    }).catch(err => console.error(err));
-
+    await Promise.all([karmaData, stewardsProfileData])
+      .then(([karmaData, stewardsProfileData]) => {
+        karmaData.data.delegates.forEach((element) => {
+          if (
+            element.publicAddress ===
+            "0x01Cf9fD2efa5Fdf178bd635c3E2adF25B2052712"
+          ) {
+            console.log("where is jo");
+            console.log(
+              findStewardByAddress(
+                element.publicAddress,
+                stewardsProfileData.data
+              )
+            );
+          }
+          element.profile = findStewardByAddress(
+            element.publicAddress,
+            stewardsProfileData.data
+          );
+          ret.push(element);
+        });
+      })
+      .catch((err) => console.error(err));
 
     return ret;
   }
-
 
   function convertToNumber(val) {
     return Number(val);
@@ -82,28 +120,40 @@ const Home: NextPage = () => {
     let clonedData = JSON.parse(JSON.stringify(stewardsData));
 
     if (search.length > 0) {
-      clonedData = clonedData.filter(element => {
+      clonedData = clonedData.filter((element) => {
         if (element.profile) {
-          return element.profile.name.toLowerCase().indexOf(search.toLowerCase()) >= 0;
+          return (
+            element.profile.name.toLowerCase().indexOf(search.toLowerCase()) >=
+            0
+          );
         }
       });
     }
 
-    if (display === 'health') {
+    if (display === "health") {
       clonedData.sort(function (a, b) {
-        return convertToNumber(a.stats[0].gitcoinHealthScore) - convertToNumber(b.stats[0].gitcoinHealthScore);
+        return (
+          convertToNumber(a.stats[0].gitcoinHealthScore) -
+          convertToNumber(b.stats[0].gitcoinHealthScore)
+        );
       });
-    } else if (display === 'forum_activity') {
+    } else if (display === "forum_activity") {
       clonedData.sort(function (a, b) {
-        return convertToNumber(a.stats[0].forumActivityScore) - convertToNumber(b.stats[0].forumActivityScore);
+        return (
+          convertToNumber(a.stats[0].forumActivityScore) -
+          convertToNumber(b.stats[0].forumActivityScore)
+        );
       });
-    } else if (display === 'voting_weight') {
+    } else if (display === "voting_weight") {
       clonedData.sort(function (a, b) {
-        return convertToNumber(a.stats[0].onChainVotesPct) - convertToNumber(b.stats[0].onChainVotesPct);
+        return (
+          convertToNumber(a.stats[0].onChainVotesPct) -
+          convertToNumber(b.stats[0].onChainVotesPct)
+        );
       });
     }
 
-    if (orderBy === 'descending') {
+    if (orderBy === "descending") {
       clonedData = clonedData.reverse();
     }
 
@@ -112,7 +162,7 @@ const Home: NextPage = () => {
 
   // Get data on load, as well as if the time changes
   useEffect(() => {
-    getStewardsData().then(data => {
+    getStewardsData().then((data) => {
       setStewardsData(data);
     });
   }, [time]);
@@ -124,11 +174,15 @@ const Home: NextPage = () => {
 
   // Set the query params and run the filter
   useEffect(() => {
-    setSearchParams({ 'search': search, 'display': display, 'orderBy': orderBy, 'time': time });
+    setSearchParams({
+      search: search,
+      display: display,
+      orderBy: orderBy,
+      time: time,
+    });
 
     filterStewardsData();
-  }, [search, orderBy, display]);
-
+  }, [search, orderBy, display, time]);
 
   return (
     <Flex
@@ -159,7 +213,7 @@ const Home: NextPage = () => {
       </Text>
 
       <Grid
-        mb="2rem"
+        mb="5rem"
         w="full"
         templateColumns={{ lg: "repeat(5, 1fr)", base: "repeat(1, 1fr)" }}
         gap={6}
@@ -174,7 +228,7 @@ const Home: NextPage = () => {
               focusBorderColor="none"
               color="white"
               fontSize="1.3rem"
-              placeholder="Name, Address, WorkStream ..."
+              placeholder="Name, Address, Workstream ..."
             />
           </InputLayout>
         </GridItem>
@@ -201,10 +255,13 @@ const Home: NextPage = () => {
             onChange={setOrderBy}
           />
         </GridItem>
-        <GridItem>
+        <GridItem animation={animation} borderRadius={"lg"}>
           <SelectInput
             label="Time"
-            options={[{ label: "30 Days", value: "30d" }, { label: "Lifetime", value: "lifetime" }]}
+            options={[
+              { label: "30 Days", value: "30d" },
+              { label: "Lifetime", value: "lifetime" },
+            ]}
             defaultValue={time}
             onChange={setTime}
           />

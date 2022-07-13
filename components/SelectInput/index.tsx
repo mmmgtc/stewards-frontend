@@ -22,6 +22,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
         size="lg"
         variant="unstyled"
         onChange={(e) => onChange(e.target.value)}
+        fontSize="1.5rem"
       >
         {options.map(({ value, label }) => (
           <option key={value} value={value}>
