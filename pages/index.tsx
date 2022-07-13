@@ -228,7 +228,7 @@ const Home: NextPage = () => {
               focusBorderColor="none"
               color="white"
               fontSize="1.3rem"
-              placeholder="Name, Address, WorkStream ..."
+              placeholder="Name, Address, Workstream ..."
             />
           </InputLayout>
         </GridItem>
