@@ -3,14 +3,14 @@ import { Box, Button, Flex, Image, Link, Text, VStack } from "@chakra-ui/react";
 interface StewardsCardProps {
   name?: string;
   stewardsSince?: string;
-  activity?: number;
   workstream?: string;
   votingWeight?: number;
-  participation?: string;
+  votingParticipation?: number;
   gitcoinUsername?: string;
   profileImage?: string;
   statementLink?: string;
   delegateLink?: string;
+  forumActivity?: number;
   forumActivityLink?: string;
   healthScore?: number;
 }
@@ -18,10 +18,10 @@ interface StewardsCardProps {
 const StewardsCard = ({
   name,
   stewardsSince,
-  activity,
+  forumActivity,
   workstream,
   votingWeight,
-  participation,
+  votingParticipation,
   gitcoinUsername,
   profileImage,
   statementLink,
@@ -44,11 +44,11 @@ const StewardsCard = ({
             w="100px"
             h="100px"
             src={profileImage ? `/assets/stewards/` + profileImage : '/assets/stewards/unknown.png'}
-            alt={name}
+            alt={name ? name : '-'}
           />
           <Box textAlign="left">
             <Text fontSize="1.2rem" fontWeight="bold">
-              {name}
+              {name.length > 0 ? name : '-'}
             </Text>
             <Link
               isExternal
@@ -63,7 +63,7 @@ const StewardsCard = ({
         </Flex>
         <Box>
           <Text fontSize="1.75rem" fontWeight="bold">
-            {healthScore}
+            {healthScore > 0 ? (healthScore > 10 ? 10 : healthScore) : '-'}
           </Text>
           <Image src={'/assets/healthSvgs/health_' + (healthScore ? healthScore : 0) + '.svg'} alt={'Health score of ' + (healthScore ? healthScore : 0)} />
         </Box>
@@ -96,7 +96,7 @@ const StewardsCard = ({
             Forum activity
           </Link>
         </Flex>
-        <Text>{activity}</Text>
+        <Text>{forumActivity > 0 ? forumActivity : '-'}</Text>
       </Flex>
       <Flex justify="space-between" alignItems="center" w="full">
         <Flex gap="1rem" alignItems="center">
@@ -116,7 +116,7 @@ const StewardsCard = ({
             Workstream
           </Link>
         </Flex>
-        <Text>{workstream}</Text>
+        <Text>{workstream.length > 0 ? workstream : '-'}</Text>
       </Flex>
       <Flex justify="space-between" alignItems="center" w="full">
         <Flex gap="1rem" alignItems="center">
@@ -131,7 +131,7 @@ const StewardsCard = ({
             Voting weight
           </Link>
         </Flex>
-        <Text>{votingWeight}%</Text>
+        <Text>{votingWeight > 0 ? votingWeight + '%' : '-'}</Text>
       </Flex>
       <Flex justify="space-between" alignItems="center" w="full">
         <Flex gap="1rem" alignItems="center">
@@ -151,7 +151,7 @@ const StewardsCard = ({
             Vote participation
           </Link>
         </Flex>
-        <Text>{participation}%</Text>
+        <Text>{votingParticipation > 0 ? votingParticipation + '%' : '-'}</Text>
       </Flex>
       <Flex alignItems="center" w="full" justify="space-between">
         <Button variant="statement" paddingX="1.5">
