@@ -222,14 +222,14 @@ const Home: NextPage = () => {
         {filteredStewardsData.map((element, index) => (
           <GridItem key={index}>
             <StewardsCard
-              name={element.profile ? element.profile.name : '-'}
+              name={element.profile ? element.profile.name : ''}
               gitcoinUsername={element.profile ? element.profile.gitcoin_username : '-'}
               profileImage={element.profile ? element.profile.profile_image : ''}
               stewardsSince={element.profile ? element.profile.steward_since : '-'}
-              activity={element.stats[0].forumActivityScore}
-              workstream={element.workstreams.map(item => { return item.name }).join(',')}
+              forumActivity={element.stats[0].forumTopicCount + element.stats[0].forumPostCount}
+              workstream={element.profile ? element.profile.workstream : ''}
               votingWeight={element.stats[0].delegatedVotes / 1000000}
-              participation={element.stats[0].offChainVotesPct}
+              votingParticipation={element.stats[0].offChainVotesPct}
               statementLink={element.profile ? element.profile.statement_post : ''}
               delegateLink={'https://www.withtally.com/voter/' + element.publicAddress + '/governance/gitcoin'}
               forumActivityLink={element.profile ? 'https://gov.gitcoin.co/u/' + element.profile.gitcoin_username : '/'}
