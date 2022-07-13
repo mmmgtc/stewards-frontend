@@ -41,8 +41,8 @@ const StewardsCard = ({
         <Flex gap="1rem" alignItems="center">
           <Image
             borderRadius="1rem"
-            w="100px"
-            h="100px"
+            w={{ sm: "100px", base: "70px" }}
+            h={{ sm: "100px", base: "70px" }}
             src={
               profileImage
                 ? `/assets/stewards/` + profileImage
@@ -51,7 +51,7 @@ const StewardsCard = ({
             alt={name}
           />
           <Box textAlign="left">
-            <Text fontSize="1.2rem" fontWeight="bold">
+            <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }} fontWeight="bold">
               {name}
             </Text>
             <Link
@@ -60,14 +60,14 @@ const StewardsCard = ({
               color="#42c8b0"
               textDecoration="none"
               _hover={{ color: "#42c8b0" }}
-              fontSize="1.2rem"
+              fontSize={{ sm: "1.2rem", base: "0.9rem" }}
             >
               {gitcoinUsername}
             </Link>
           </Box>
         </Flex>
         <Box marginRight="1rem">
-          <Text fontSize="1.8rem" fontWeight="bold">
+          <Text fontSize={{ sm: "1.8rem", base: "1.2rem" }} fontWeight="bold">
             {healthScore}
           </Text>
           <Image
@@ -76,6 +76,7 @@ const StewardsCard = ({
               (healthScore ? healthScore : 0) +
               ".svg"
             }
+            width={{ sm: "full", base: "5rem" }}
             alt={"Health score of " + (healthScore ? healthScore : 0)}
           />
         </Box>
@@ -87,38 +88,23 @@ const StewardsCard = ({
         paddingX={"1rem"}
       >
         <Flex gap="1rem" alignItems="center">
-          <Image w="40px" h="40px" src="/assets/calender.svg" alt="calender" />
+          <Image
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
+            src="/assets/calender.svg"
+            alt="calender"
+          />
           <Link
             isExternal
             href={statementLink}
             textDecoration="none"
             _hover={{ color: "white" }}
-            fontSize="1.2rem"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
           >
             Stewards since
           </Link>
         </Flex>
-        <Text>{stewardsSince}</Text>
-      </Flex>
-      <Flex
-        justify="space-between"
-        alignItems="center"
-        w="full"
-        paddingX={"1rem"}
-      >
-        <Flex gap="1rem" alignItems="center">
-          <Image w="40px" h="40px" src="/assets/forum.svg" alt="calender" />
-          <Link
-            isExternal
-            href={forumActivityLink}
-            textDecoration="none"
-            _hover={{ color: "white" }}
-            fontSize="1.2rem"
-          >
-            Forum activity
-          </Link>
-        </Flex>
-        <Text>{activity}</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{stewardsSince}</Text>
       </Flex>
       <Flex
         justify="space-between"
@@ -128,8 +114,33 @@ const StewardsCard = ({
       >
         <Flex gap="1rem" alignItems="center">
           <Image
-            w="40px"
-            h="40px"
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
+            src="/assets/forum.svg"
+            alt="calender"
+          />
+          <Link
+            isExternal
+            href={forumActivityLink}
+            textDecoration="none"
+            _hover={{ color: "white" }}
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
+          >
+            Forum activity
+          </Link>
+        </Flex>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{activity}</Text>
+      </Flex>
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
+        <Flex gap="1rem" alignItems="center">
+          <Image
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
             src="/assets/workstream.svg"
             alt="calender"
           />
@@ -138,32 +149,14 @@ const StewardsCard = ({
             href="https://gitcoindao.com"
             textDecoration="none"
             _hover={{ color: "white" }}
-            fontSize="1.2rem"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
           >
             Workstream
           </Link>
         </Flex>
-        <Text>{workstream}</Text>
-      </Flex>
-      <Flex
-        justify="space-between"
-        alignItems="center"
-        w="full"
-        paddingX={"1rem"}
-      >
-        <Flex gap="1rem" alignItems="center">
-          <Image w="40px" h="40px" src="/assets/weight.svg" alt="calender" />
-          <Link
-            isExternal
-            href={delegateLink}
-            textDecoration="none"
-            _hover={{ color: "white" }}
-            fontSize="1.2rem"
-          >
-            Voting weight
-          </Link>
-        </Flex>
-        <Text>{votingWeight}%</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
+          {workstream.length > 20 ? workstream.slice(0, 9) + "..." : workstream}
+        </Text>
       </Flex>
       <Flex
         justify="space-between"
@@ -173,8 +166,33 @@ const StewardsCard = ({
       >
         <Flex gap="1rem" alignItems="center">
           <Image
-            w="40px"
-            h="40px"
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
+            src="/assets/weight.svg"
+            alt="calender"
+          />
+          <Link
+            isExternal
+            href={delegateLink}
+            textDecoration="none"
+            _hover={{ color: "white" }}
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
+          >
+            Voting weight
+          </Link>
+        </Flex>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{votingWeight}%</Text>
+      </Flex>
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
+        <Flex gap="1rem" alignItems="center">
+          <Image
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
             src="/assets/participation.svg"
             alt="calender"
           />
@@ -183,12 +201,14 @@ const StewardsCard = ({
             href="https://snapshot.org/#/gitcoindao.eth"
             textDecoration="none"
             _hover={{ color: "white" }}
-            fontSize="1.2rem"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
           >
             Vote participation
           </Link>
         </Flex>
-        <Text>{participation}%</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
+          {participation}%
+        </Text>
       </Flex>
       <Flex
         alignItems="center"
@@ -203,6 +223,7 @@ const StewardsCard = ({
             color="white"
             href={statementLink}
             textDecoration="none"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
           >
             Statement
           </Link>
@@ -213,6 +234,7 @@ const StewardsCard = ({
             color="white"
             href={delegateLink}
             textDecoration="none"
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
           >
             Delegate
           </Link>
