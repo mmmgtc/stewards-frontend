@@ -12,7 +12,7 @@ generate cards for each steward.
 - done with pure vanilla js/html
 - scss is getting compiled localy into assets/css/app.css for now.
 
-## Local development environment
+### Local development environment
 
 Using docker, run the following to boot up a local environment at http://localhost:3000.
 
