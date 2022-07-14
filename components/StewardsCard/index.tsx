@@ -46,7 +46,7 @@ const StewardsCard = ({
         <Flex gap="1rem" alignItems="center">
           <Image
             borderRadius="1rem"
-w={{ sm: "100px", base: "70px" }}
+            w={{ sm: "100px", base: "70px" }}
             h={{ sm: "100px", base: "70px" }}
             src={profileImage ? `/assets/stewards/` + profileImage : '/assets/stewards/unknown.png'}
             alt={name ? name : '-'}
@@ -69,16 +69,16 @@ w={{ sm: "100px", base: "70px" }}
         </Flex>
         <Box marginRight="1rem">
           <Text fontSize={{ sm: "1.8rem", base: "1.2rem" }} fontWeight="bold">
-            {healthScore}
+            {getHealthcore(healthScore)}
           </Text>
           <Image
             src={
               "/assets/healthSvgs/health_" +
-              (healthScore ? healthScore : 0) +
+              getHealthcore(healthScore) +
               ".svg"
             }
             width={{ sm: "full", base: "5rem" }}
-            alt={"Health score of " + (healthScore ? healthScore : 0)}
+            alt={"Health score of " + getHealthcore(healthScore)}
           />
         </Box>
       </Flex>
@@ -156,7 +156,7 @@ w={{ sm: "100px", base: "70px" }}
           </Link>
         </Flex>
         <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
-          {workstream ? workstream.length > 20 ? workstream.slice(0, 9) + "..." : workstream: '-'}
+          {workstream ? workstream.length > 20 ? workstream.slice(0, 9) + "..." : workstream : '-'}
         </Text>
       </Flex>
       <Flex
@@ -208,7 +208,7 @@ w={{ sm: "100px", base: "70px" }}
           </Link>
         </Flex>
         <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
-        {votingParticipation > 0 ? votingParticipation + '%' : '-'}
+          {votingParticipation > 0 ? votingParticipation + '%' : '-'}
         </Text>
       </Flex>
       <Flex
