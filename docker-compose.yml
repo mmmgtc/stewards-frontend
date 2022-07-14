@@ -1,11 +1,14 @@
 version: "3.8"
 services:
-  #Nginx Service
-  webserver:
-    image: nginx:alpine
-    container_name: gitcoin-stewards
-    restart: unless-stopped
-    ports:
-      - "3000:80"
+  next:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    container_name: stewards-frontend
+    image: stewards-frontend
     volumes:
-      - "./:/usr/share/nginx/html"
+      - "./:/usr/src/app"
+    ports:
+      - "3000:3000"
+    tty: true
+    env_file: .env
