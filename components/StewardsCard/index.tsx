@@ -17,7 +17,18 @@ interface StewardsCardProps {
 
 // Ensure healh scores between 1 - 10, or '-' are returned
 function getHealthcore(healthScore) {
-  return healthScore > 0 ? (healthScore > 10 ? 10 : healthScore) : '-';
+  return healthScore > 0 ? (healthScore > 10 ? 10 : healthScore) : 0;
+}
+
+// Ensure healh scores between 1 - 10, or '-' are returned
+function getVotingWeight(votingWeight) {
+  if (votingWeight > 0.05) {
+    return votingWeight.toFixed(2) + '%';
+  } else if (votingWeight >= 0.005) {
+    return votingWeight.toFixed(3) + '%';
+  } else {
+    return 0;
+  }
 }
 
 const StewardsCard = ({
@@ -69,7 +80,7 @@ const StewardsCard = ({
         </Flex>
         <Box marginRight="1rem">
           <Text fontSize={{ sm: "1.8rem", base: "1.2rem" }} fontWeight="bold">
-            {getHealthcore(healthScore)}
+            {getHealthcore(healthScore) > 0 ? getHealthcore(healthScore) + '/10' : '-/10'}
           </Text>
           <Image
             src={
@@ -182,7 +193,7 @@ const StewardsCard = ({
             Voting weight
           </Link>
         </Flex>
-        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{votingWeight > 0 ? votingWeight + '%' : '-'}</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{getVotingWeight(votingWeight)}</Text>
       </Flex>
       <Flex
         justify="space-between"

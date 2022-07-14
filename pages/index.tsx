@@ -67,6 +67,20 @@ const Home: NextPage = () => {
   }
 
   /**
+   * Calculate the forum activity
+   */
+  function getForumActivity(element) {
+    return element.stats[0].forumTopicCount + element.stats[0].forumPostCount;
+  }
+
+  /**
+   * Calculate the voting weight
+   */
+  function getVotingWeight(element) {
+    return element.delegatedVotes / 1000000;
+  }
+
+  /**
    * Combine steward data from stewards_data.json, which is at the time of writing manually updated, and karma data, which is coming from the karma API.
    */
   async function getStewardsData() {
@@ -74,7 +88,7 @@ const Home: NextPage = () => {
 
     const karmaData = fetch(
       "/api.showkarma.xyz/api/dao/delegates?name=gitcoin&pageSize=250&offset=0&workstreamId=6,4,3,7,1,2,5&period=" +
-        time
+      time
     ).then(success);
     const stewardsProfileData = fetch(
       "/assets/stewards/stewards_data.json"
@@ -85,18 +99,6 @@ const Home: NextPage = () => {
     await Promise.all([karmaData, stewardsProfileData])
       .then(([karmaData, stewardsProfileData]) => {
         karmaData.data.delegates.forEach((element) => {
-          if (
-            element.publicAddress ===
-            "0x01Cf9fD2efa5Fdf178bd635c3E2adF25B2052712"
-          ) {
-            console.log("where is jo");
-            console.log(
-              findStewardByAddress(
-                element.publicAddress,
-                stewardsProfileData.data
-              )
-            );
-          }
           element.profile = findStewardByAddress(
             element.publicAddress,
             stewardsProfileData.data
@@ -133,22 +135,26 @@ const Home: NextPage = () => {
     if (display === "health") {
       clonedData.sort(function (a, b) {
         return (
-          convertToNumber(a.stats[0].gitcoinHealthScore) -
-          convertToNumber(b.stats[0].gitcoinHealthScore)
+          (
+            convertToNumber(a.stats[0].gitcoinHealthScore) -
+            convertToNumber(b.stats[0].gitcoinHealthScore)
+          ) ||
+          convertToNumber(a.stats[0].offChainVotesPct) -
+          convertToNumber(b.stats[0].offChainVotesPct)
         );
       });
     } else if (display === "forum_activity") {
       clonedData.sort(function (a, b) {
         return (
-          convertToNumber(a.stats[0].forumActivityScore) -
-          convertToNumber(b.stats[0].forumActivityScore)
+          convertToNumber(getForumActivity(a)) -
+          convertToNumber(getForumActivity(b))
         );
       });
     } else if (display === "voting_weight") {
       clonedData.sort(function (a, b) {
         return (
-          convertToNumber(a.stats[0].onChainVotesPct) -
-          convertToNumber(b.stats[0].onChainVotesPct)
+          convertToNumber(getVotingWeight(a)) -
+          convertToNumber(getVotingWeight(b))
         );
       });
     }
@@ -283,13 +289,13 @@ const Home: NextPage = () => {
               gitcoinUsername={element.profile ? element.profile.gitcoin_username : '-'}
               profileImage={element.profile ? element.profile.profile_image : ''}
               stewardsSince={element.profile ? element.profile.steward_since : '-'}
-              forumActivity={element.stats[0].forumTopicCount + element.stats[0].forumPostCount}
+              forumActivity={getForumActivity(element)}
               workstream={element.profile ? element.profile.workstream : ''}
-              votingWeight={element.delegatedVotes / 1000000}
+              votingWeight={getVotingWeight(element)}
               votingParticipation={element.stats[0].offChainVotesPct}
               statementLink={element.profile ? element.profile.statement_post : ''}
               delegateLink={'https://www.withtally.com/voter/' + element.publicAddress + '/governance/gitcoin'}
-              forumActivityLink={element.profile ? 'https://gov.gitcoin.co/u/' + element.profile.gitcoin_username : '/'}
+              forumActivityLink={element.profile ? 'https://gov.gitcoin.co/u/' + element.profile.discourse_username : '/'}
               healthScore={element.stats[0].gitcoinHealthScore}
             />
           </GridItem>
