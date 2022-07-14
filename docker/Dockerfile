@@ -1,24 +1,13 @@
-FROM ubuntu:20.04
+FROM node:16
 
-RUN \
-  apt-get update && \
-  apt-get install -y software-properties-common && \
-  apt-get install -y wget make curl git 
+ENV PORT 3000
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt install -y nodejs
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-RUN curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-RUN apt-get update && apt-get install -y yarn
-
-VOLUME /var/www
-
-WORKDIR /var/www/html
+# Copying source files
+COPY . /usr/src/app
 
 EXPOSE 3000
-
-
-ADD ./package.json ./yarn.*
-RUN yarn install
 

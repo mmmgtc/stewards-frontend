@@ -8,4 +8,4 @@ down:
 
 .PHONY: in
 in:
-	docker exec -ti gitcoin-stewards /bin/sh
+	docker exec -ti stewards-frontend /bin/bash
