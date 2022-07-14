@@ -3,7 +3,7 @@
     {
       "name": "Trenton Van Epps",
       "address": "0x4c0a466df0628fe8699051b3ac6506653191cc21",
-      "profile_image": "tvanepps.png",
+      "profile_image": "tvanepps.webp",
       "workstream": "",
       "gitcoin_username": "tvanepps",
       "discourse_username": "trent",
@@ -14,7 +14,7 @@
     {
       "name": "Austin Griffith",
       "address": "0x34aa3f359a9d614239015126635ce7732c18fdf3",
-      "profile_image": "austintgriffith.png",
+      "profile_image": "austintgriffith.webp",
       "workstream": "",
       "gitcoin_username": "austintgriffith",
       "discourse_username": "austingriffith",
@@ -25,7 +25,7 @@
     {
       "name": "Linda Xie",
       "address": "0x5e349eca2dc61aBCd9dD99Ce94d04136151a09Ee",
-      "profile_image": "linda-xie.png",
+      "profile_image": "linda-xie.webp",
       "workstream": "PG Contributor",
       "gitcoin_username": "linda-xie",
       "discourse_username": "linda",
@@ -36,7 +36,7 @@
     {
       "name": "Lefteris Karapetsas",
       "address": "0x2b888954421b424c5d3d9ce9bb67c9bd47537d12",
-      "profile_image": "lefterisjp.png",
+      "profile_image": "lefterisjp.webp",
       "workstream": "",
       "gitcoin_username": "lefterisjp",
       "discourse_username": "lefterisjp",
@@ -47,7 +47,7 @@
     {
       "name": "Griff Green",
       "address": "0x839395e20bbb182fa440d08f850e6c7a8f6f0780",
-      "profile_image": "griffgreen.png",
+      "profile_image": "griffgreen.webp",
       "workstream": "",
       "gitcoin_username": "griffgreen",
       "discourse_username": "griff",
@@ -58,7 +58,7 @@
     {
       "name": "Simona Pop",
       "address": "0x54becc7560a7be76d72ed76a1f5fee6c5a2a7ab6",
-      "profile_image": "simona-pop.png",
+      "profile_image": "simona-pop.webp",
       "workstream": "DO Lead",
       "gitcoin_username": "simona-pop",
       "discourse_username": "pop",
@@ -69,7 +69,7 @@
     {
       "name": "Yalor Arnold",
       "address": "0x66b1de0f14a0ce971f7f248415063d44caf19398",
-      "profile_image": "yalormewn.png",
+      "profile_image": "yalormewn.webp",
       "workstream": "",
       "gitcoin_username": "yalormewn",
       "discourse_username": "Yalor",
@@ -80,7 +80,7 @@
     {
       "name": "Hudson Jameson",
       "address": "0x80d63799b1e08a80f73fb7a83264b5c31600bf3a",
-      "profile_image": "souptacular.png",
+      "profile_image": "souptacular.webp",
       "workstream": "",
       "gitcoin_username": "souptacular",
       "discourse_username": "souptacular",
@@ -91,7 +91,7 @@
     {
       "name": "Kenneth Ng",
       "address": "0xa2bf1b0a7e079767b4701b5a1d9d5700eb42d1d1",
-      "profile_image": "nkennethk.png",
+      "profile_image": "nkennethk.webp",
       "workstream": "PG Contributor",
       "gitcoin_username": "nkennethk",
       "discourse_username": "ken",
@@ -102,7 +102,7 @@
     {
       "name": "Andy Tudhope",
       "address": "0x31482858561725b74b5ec2a739e447bc74cdf7b9",
-      "profile_image": "andytudhope.png",
+      "profile_image": "andytudhope.webp",
       "workstream": "",
       "gitcoin_username": "andytudhope",
       "discourse_username": "cryptowanderer",
@@ -113,7 +113,7 @@
     {
       "name": "Shreyas Hariharan",
       "address": "0x10d6d2e343281d388291a3e02f3293aaeda67178",
-      "profile_image": "hello-shreyas.png",
+      "profile_image": "hello-shreyas.webp",
       "workstream": "PG Contributor",
       "gitcoin_username": "hello-shreyas",
       "discourse_username": "HelloShreyas",
@@ -124,7 +124,7 @@
     {
       "name": "Matt Stephenson",
       "address": "0x5ba02f4ff6af1d9d2af8774d10fd32eb57d4e2e6",
-      "profile_image": "mrbrucespringsteen.png",
+      "profile_image": "mrbrucespringsteen.webp",
       "workstream": "",
       "gitcoin_username": "mrbrucespringsteen",
       "discourse_username": "planckmatt",
@@ -135,7 +135,7 @@
     {
       "name": "Anish Agnihotri",
       "address": "0x016C8780e5ccB32E5CAA342a926794cE64d9C364",
-      "profile_image": "anish-agnihotri.png",
+      "profile_image": "anish-agnihotri.webp",
       "workstream": "",
       "gitcoin_username": "anish-agnihotri",
       "discourse_username": "anishagnihotri",
@@ -146,7 +146,7 @@
     {
       "name": "Muskan Kalra",
       "address": "0x4bc519f0b7b348fae780afb2dd4aa76841ba8e9e",
-      "profile_image": "muskaankalra24.png",
+      "profile_image": "muskaankalra24.webp",
       "workstream": "",
       "gitcoin_username": "muskaankalra24",
       "discourse_username": "muskan",
@@ -157,7 +157,7 @@
     {
       "name": "Andrew Lloyd",
       "address": "0x86d3ee9ff0983bc33b93cc8983371a500f873446",
-      "profile_image": "androolloyd.png",
+      "profile_image": "androolloyd.webp",
       "workstream": "",
       "gitcoin_username": "androolloyd",
       "discourse_username": "androolloyd",
@@ -168,7 +168,7 @@
     {
       "name": "Thomas Jay Rush",
       "address": "0xf503017d7baf7fbc0fff7492b751025c6a78179b",
-      "profile_image": "tjayrush.png",
+      "profile_image": "tjayrush.webp",
       "workstream": "FDD Contributor",
       "gitcoin_username": "tjayrush",
       "discourse_username": "tjayrush",
@@ -179,7 +179,7 @@
     {
       "name": "Philip Silva",
       "address": "0xd9ffaf2e880df0cc7b7104e9e789d281a81824cf",
-      "profile_image": "ubipromoter.png",
+      "profile_image": "ubipromoter.webp",
       "workstream": "",
       "gitcoin_username": "ubipromoter",
       "discourse_username": "UBIpromoter",
@@ -190,7 +190,7 @@
     {
       "name": "Anne Connelly",
       "address": "0xa30ab83e693ad49f3f651085dad11d049c818923",
-      "profile_image": "anneconnelly.png",
+      "profile_image": "anneconnelly.webp",
       "workstream": "",
       "gitcoin_username": "anneconnelly",
       "discourse_username": "anneconnelly",
@@ -201,7 +201,7 @@
     {
       "name": "Auryn Macmillan",
       "address": "0x8b405dbf2f30844b608b08dad20447a6955a6c6e",
-      "profile_image": "auryn-macmillan.png",
+      "profile_image": "auryn-macmillan.webp",
       "workstream": "",
       "gitcoin_username": "auryn-macmillan",
       "discourse_username": "auryn",
@@ -212,7 +212,7 @@
     {
       "name": "Charles St.Louis",
       "address": "0x88cca876eebb2a541ed87584f189319c3441aca6",
-      "profile_image": "cpstl.png",
+      "profile_image": "cpstl.webp",
       "workstream": "",
       "gitcoin_username": "cpstl",
       "discourse_username": "cpstl",
@@ -223,7 +223,7 @@
     {
       "name": "Nathan Schneider",
       "address": "0x6375885ce997543cc7e057fe9af3e255d52fb4f4",
-      "profile_image": "ntnsndr.png",
+      "profile_image": "ntnsndr.webp",
       "workstream": "",
       "gitcoin_username": "ntnsndr",
       "discourse_username": "ntnsndr",
@@ -234,7 +234,7 @@
     {
       "name": "Suji Yan",
       "address": "0x934b510d4c9103e6a87aef13b816fb080286d649",
-      "profile_image": "tedko.png",
+      "profile_image": "tedko.webp",
       "workstream": "",
       "gitcoin_username": "tedko",
       "discourse_username": "sujiyan",
@@ -245,7 +245,7 @@
     {
       "name": "Monet Supply",
       "address": "0x8d07d225a769b7af3a923481e1fdf49180e6a265",
-      "profile_image": "monet-supply.png",
+      "profile_image": "monet-supply.webp",
       "workstream": "",
       "gitcoin_username": "monet-supply",
       "discourse_username": "monet-supply",
@@ -256,7 +256,7 @@
     {
       "name": "Amy Jung",
       "address": "0x73186b2a81952c2340c4eb2e74e89869e1183df0",
-      "profile_image": "amy-jung.png",
+      "profile_image": "amy-jung.webp",
       "workstream": "",
       "gitcoin_username": "amy-jung",
       "discourse_username": "amy",
@@ -267,7 +267,7 @@
     {
       "name": "Daniel Hwang",
       "address": "0xc3fab4228ce462653dbf0bb3e4f3fdd81697fec4",
-      "profile_image": "mangorocoro.png",
+      "profile_image": "mangorocoro.webp",
       "workstream": "",
       "gitcoin_username": "mangorocoro",
       "discourse_username": "dan",
@@ -278,7 +278,7 @@
     {
       "name": "Philip Hutchins",
       "address": "0x6bf1eba9740441d0a8822eda4e116a74f850d81b",
-      "profile_image": "phutchins.png",
+      "profile_image": "phutchins.webp",
       "workstream": "DG Lead",
       "gitcoin_username": "phutchins",
       "discourse_username": "phutchins",
@@ -289,7 +289,7 @@
     {
       "name": "Alex Van de Sande",
       "address": "0x809FA673fe2ab515FaA168259cB14E2BeDeBF68e",
-      "profile_image": "alexvansande.png",
+      "profile_image": "alexvansande.webp",
       "workstream": "",
       "gitcoin_username": "alexvansande",
       "discourse_username": "AvsA",
@@ -300,7 +300,7 @@
     {
       "name": "Toby Shorin",
       "address": "0xc7e6bbf6dbe78b40640385e73dc1958f4428fb3e",
-      "profile_image": "tobyshorin.png",
+      "profile_image": "tobyshorin.webp",
       "workstream": "PG Contributor",
       "gitcoin_username": "tobyshorin",
       "discourse_username": "Toby",
@@ -311,7 +311,7 @@
     {
       "name": "Cooper Turley",
       "address": "0xd23aff9ad562c445bcab03321cbfe63bf4b0bcf2",
-      "profile_image": "fireeyesxyz.png",
+      "profile_image": "fireeyesxyz.webp",
       "workstream": "",
       "gitcoin_username": "fireeyesxyz",
       "discourse_username": "coopahtroopa",
@@ -322,7 +322,7 @@
     {
       "name": "Makoto Inoue",
       "address": "0x5a384227b65fa093dec03ec34e111db80a040615",
-      "profile_image": "makoto.png",
+      "profile_image": "makoto.webp",
       "workstream": "",
       "gitcoin_username": "makoto",
       "discourse_username": "makoto",
@@ -333,7 +333,7 @@
     {
       "name": "Zak Cole",
       "address": "0x554c5aF96E9e3c05AEC01ce18221d0DD25975aB4",
-      "profile_image": "zakcole.png",
+      "profile_image": "zakcole.webp",
       "workstream": "",
       "gitcoin_username": "zakcole",
       "discourse_username": "Zscole",
@@ -344,7 +344,7 @@
     {
       "name": "Andre Cronje",
       "address": "0x2d407ddb06311396fe14d4b49da5f0471447d45c",
-      "profile_image": "andrecronje.png",
+      "profile_image": "andrecronje.webp",
       "workstream": "",
       "gitcoin_username": "andrecronje",
       "discourse_username": "andrecronje",
@@ -355,7 +355,7 @@
     {
       "name": "Joseph Schiarizzi ",
       "address": "0xe4b420f15d6d878dcd0df7120ac0fc1509ee9cab",
-      "profile_image": "jschiarizzi.png",
+      "profile_image": "jschiarizzi.webp",
       "workstream": "",
       "gitcoin_username": "jschiarizzi",
       "discourse_username": "cupOjoseph",
@@ -366,7 +366,7 @@
     {
       "name": "Niran Babalola",
       "address": "0x02Eb89D2ff910989024e19673f8302a695bBD979",
-      "profile_image": "niran.png",
+      "profile_image": "niran.webp",
       "workstream": "",
       "gitcoin_username": "niran",
       "discourse_username": "Niran",
@@ -377,7 +377,7 @@
     {
       "name": "Lakshman Sankar",
       "address": "0xed625c9ABa1245Fa8e22eb1f1825881517A9DCE7",
-      "profile_image": "sankar4033.png",
+      "profile_image": "sankar4033.webp",
       "workstream": "",
       "gitcoin_username": "sankar4033",
       "discourse_username": "lakshman",
@@ -388,7 +388,7 @@
     {
       "name": "Anett Rolikova",
       "address": "0x16d2ad8cc04888b537bb7b631715335a901b57ca",
-      "profile_image": "anettrolikova.png",
+      "profile_image": "anettrolikova.webp",
       "workstream": "",
       "gitcoin_username": "anettrolikova",
       "discourse_username": "Anett",
@@ -399,7 +399,7 @@
     {
       "name": "Adam Stallard",
       "address": "0xdC0046B52e2E38AEe2271B6171ebb65cCD337518",
-      "profile_image": "adamstallard.png",
+      "profile_image": "adamstallard.webp",
       "workstream": "",
       "gitcoin_username": "adamstallard",
       "discourse_username": "castall",
@@ -410,7 +410,7 @@
     {
       "name": "Willy Ogorzaly",
       "address": "0x05a1ff0a32bc24265bcb39499d0c5d9a6cb2011c",
-      "profile_image": "willyogo.png",
+      "profile_image": "willyogo.webp",
       "workstream": "",
       "gitcoin_username": "willyogo",
       "discourse_username": "Willy",
@@ -421,7 +421,7 @@
     {
       "name": "Adam Cohran",
       "address": "0xf07A2439296e07Bc4320AF924E655a01fb69D89C",
-      "profile_image": "adamsc1-ddg.png",
+      "profile_image": "adamsc1-ddg.webp",
       "workstream": "",
       "gitcoin_username": "adamsc1-ddg",
       "discourse_username": "Adamscochran",
@@ -432,7 +432,7 @@
     {
       "name": "Sangbejo",
       "address": "0x45735683E432A5701959fc4D2e0FAB19dc7D1d58",
-      "profile_image": "sangbejo.png",
+      "profile_image": "sangbejo.webp",
       "workstream": "",
       "gitcoin_username": "sangbejo",
       "discourse_username": "porobov_p",
@@ -443,7 +443,7 @@
     {
       "name": "Decibels",
       "address": "0xf4c7E772f24c10E3Ce60CE549059a021F60c911E",
-      "profile_image": "decibels42.png",
+      "profile_image": "decibels42.webp",
       "workstream": "",
       "gitcoin_username": "decibels42",
       "discourse_username": "decibels42",
@@ -454,7 +454,7 @@
     {
       "name": "Peth",
       "address": "0xb53b0255895c4f9e3a185e484e5b674bccfbc076",
-      "profile_image": "peth-yursick.png",
+      "profile_image": "peth-yursick.webp",
       "workstream": "",
       "gitcoin_username": "peth-yursick",
       "discourse_username": "peth",
@@ -465,7 +465,7 @@
     {
       "name": "Sina Habibian",
       "address": "0x03B79C0C1487a68AeabD9AA4ce779DaD77855F52",
-      "profile_image": "sinahab.png",
+      "profile_image": "sinahab.webp",
       "workstream": "",
       "gitcoin_username": "sinahab",
       "discourse_username": "sinahab",
@@ -476,7 +476,7 @@
     {
       "name": "Jordan Lyall",
       "address": "0xcf88fa6ee6d111b04be9b06ef6fad6bd6691b88c",
-      "profile_image": "jordanlyall.png",
+      "profile_image": "jordanlyall.webp",
       "workstream": "",
       "gitcoin_username": "jordanlyall",
       "discourse_username": "jordanlyall",
@@ -487,7 +487,7 @@
     {
       "name": "Aaron",
       "address": "0x58f123BD4261EA25955B362Be57D89F4B6E7110a",
-      "profile_image": "amsos.png",
+      "profile_image": "amsos.webp",
       "workstream": "",
       "gitcoin_username": "amsos",
       "discourse_username": "amsos",
@@ -498,7 +498,7 @@
     {
       "name": "Typto",
       "address": "0x9ac9c636404C8d46D9eb966d7179983Ba5a3941A",
-      "profile_image": "typto.png",
+      "profile_image": "typto.webp",
       "workstream": "",
       "gitcoin_username": "typto",
       "discourse_username": "Typto",
@@ -509,7 +509,7 @@
     {
       "name": "Angela",
       "address": "0x3b067af83f540cb827825a6ee5480441a4237e77",
-      "profile_image": "angelakte.png",
+      "profile_image": "angelakte.webp",
       "workstream": "FDD Contributor",
       "gitcoin_username": "angelakte",
       "discourse_username": "akrtws",
@@ -520,7 +520,7 @@
     {
       "name": "Juliana",
       "address": "0x4f0a1940De411285ad0455a7F40C81B5E0BC8492",
-      "profile_image": "itsencrypted.png",
+      "profile_image": "itsencrypted.webp",
       "workstream": "",
       "gitcoin_username": "itsencrypted",
       "discourse_username": "itsencrypted",
@@ -531,7 +531,7 @@
     {
       "name": "Petr Porobov",
       "address": "0x45735683E432A5701959fc4D2e0FAB19dc7D1d58",
-      "profile_image": "porobov.png",
+      "profile_image": "porobov.webp",
       "workstream": "",
       "gitcoin_username": "porobov",
       "discourse_username": "porobov_p",
@@ -542,7 +542,7 @@
     {
       "name": "Chris Martz",
       "address": "0x224e69025A2f705C8f31EFB6694398f8Fd09ac5C",
-      "profile_image": "martz.png",
+      "profile_image": "martz.webp",
       "workstream": "",
       "gitcoin_username": "martz",
       "discourse_username": "martz",
@@ -553,7 +553,7 @@
     {
       "name": "Armand Brunelle",
       "address": "0xEe0579b4C36fd52EC0A2B542fb801F136838B7f1",
-      "profile_image": "sirlupsonwatson1.png",
+      "profile_image": "sirlupsonwatson1.webp",
       "workstream": "FDD Lead",
       "gitcoin_username": "Sirlupinwatson",
       "discourse_username": "Sirlupinwatson",
@@ -564,7 +564,7 @@
     {
       "name": "Bob Jiang",
       "address": "0x521aacb43d89e1b8ffd64d9ef76b0a1074dedaf8",
-      "profile_image": "bobjiang.png",
+      "profile_image": "bobjiang.webp",
       "workstream": "DO Lead",
       "gitcoin_username": "bobjiang",
       "discourse_username": "bobjiang",
@@ -575,7 +575,7 @@
     {
       "name": "Kris Is",
       "address": "0x7E052Ef7B4bB7E5A45F331128AFadB1E589deaF1",
-      "profile_image": "krrisis.png",
+      "profile_image": "krrisis.webp",
       "workstream": "DO Lead",
       "gitcoin_username": "krrisis",
       "discourse_username": "krrisis",
@@ -586,7 +586,7 @@
     {
       "name": "Brittney Scott",
       "address": "0x4a5B536A613E69F43a52f6Aa7A7F3765428329ad",
-      "profile_image": "brittneyscott.png",
+      "profile_image": "brittneyscott.webp",
       "workstream": "MMM Contributor",
       "gitcoin_username": "brittneyscott",
       "discourse_username": "seedphrase",
@@ -597,7 +597,7 @@
     {
       "name": "David Dyor",
       "address": "0x59AE7f21D18b2F5fDC7a99c4fd6dD9E67Cec0Bc9",
-      "profile_image": "david_dyor.png",
+      "profile_image": "david_dyor.webp",
       "workstream": "FDD Contributor",
       "gitcoin_username": "blazingthirdeye",
       "discourse_username": "david_dyor",
@@ -608,7 +608,7 @@
     {
       "name": "Paul Glavin",
       "address": "0x809C9f8dd8CA93A41c3adca4972Fa234C28F7714",
-      "profile_image": "paulglavin.png",
+      "profile_image": "paulglavin.webp",
       "workstream": "",
       "gitcoin_username": "paul2",
       "discourse_username": "paul2",
@@ -619,7 +619,7 @@
     {
       "name": "Collin Pixley",
       "address": "0x3ec44a823e07555b5f889d8d954eec736eb5865b",
-      "profile_image": "cpix18.png",
+      "profile_image": "cpix18.webp",
       "workstream": "",
       "gitcoin_username": "cpix18",
       "discourse_username": "CPix18",
@@ -630,7 +630,7 @@
     {
       "name": "Craig Anderson",
       "address": "0x0585B28Fd862d3bF033bE20b178BDF01262b8424",
-      "profile_image": "cranders1.png",
+      "profile_image": "cranders1.webp",
       "workstream": "",
       "gitcoin_username": "cranders1",
       "discourse_username": "cranders1",
@@ -641,7 +641,7 @@
     {
       "name": "Kyle Weiss",
       "address": "0xc2E2B715d9e302947Ec7e312fd2384b5a1296099",
-      "profile_image": "kweiss.png",
+      "profile_image": "kweiss.webp",
       "workstream": "DO Lead",
       "gitcoin_username": "kweiss",
       "discourse_username": "kyle",
@@ -652,7 +652,7 @@
     {
       "name": "Distruption Joe",
       "address": "0x01Cf9fD2efa5Fdf178bd635c3E2adF25B2052712",
-      "profile_image": "disruptionjoe.png",
+      "profile_image": "disruptionjoe.webp",
       "workstream": "FDD Lead",
       "gitcoin_username": "disruptionjoe",
       "discourse_username": "disruptionjoe",
@@ -663,7 +663,7 @@
     {
       "name": "QZ",
       "address": "0x0CF30daf2Fb962Ed1d5D19C97F5f6651F3b691c1",
-      "profile_image": "QZ.png",
+      "profile_image": "QZ.webp",
       "workstream": "PG Lead",
       "gitcoin_username": "fishbiscuit",
       "discourse_username": "Fishbiscuit",
@@ -674,7 +674,7 @@
     {
       "name": "Sidcode",
       "address": "0xd0ef3a2Ae7Fb496C0897400f1be46693B6183B0a",
-      "profile_image": "sidcode.png",
+      "profile_image": "sidcode.webp",
       "workstream": "MMM Lead",
       "gitcoin_username": "sidcode",
       "discourse_username": "sidcode",
@@ -685,7 +685,7 @@
     {
       "name": "Dan Schlabach",
       "address": "0xb7bd14e2497cdc57675e896af84ecb652d294ad1",
-      "profile_image": "schlabach.png",
+      "profile_image": "schlabach.webp",
       "workstream": "",
       "gitcoin_username": "dschlabach",
       "discourse_username": "schlabach",
@@ -696,7 +696,7 @@
     {
       "name": "Sean MacMannis",
       "address": "0xa2866d610c17e371604ff75e65a3120f493fc9e6",
-      "profile_image": "seanmac.png",
+      "profile_image": "seanmac.webp",
       "workstream": "MMM Lead",
       "gitcoin_username": "smacman",
       "discourse_username": "seanmac",
@@ -707,7 +707,7 @@
     {
       "name": "Fred",
       "address": "0xA1E4A14363B3ba2c1D49e1eeBE5fa21e25E4ed1D",
-      "profile_image": "fred.png",
+      "profile_image": "fred.webp",
       "workstream": "MMM Lead",
       "gitcoin_username": "freddmannen",
       "discourse_username": "Fred",
@@ -729,7 +729,7 @@
     {
       "name": "Kevin Olsen",
       "address": "0x4Be88f63f919324210ea3A2cCAD4ff0734425F91",
-      "profile_image": "kevinolsen.png",
+      "profile_image": "kevinolsen.webp",
       "workstream": "",
       "gitcoin_username": "kevinrolsen",
       "discourse_username": "kevin.olsen",
@@ -740,7 +740,7 @@
     {
       "name": "Lindsey Thrift",
       "address": "0xbe368cc284A8303Ae4C76A1870d897cfEE2B0812",
-      "profile_image": "lthrift.png",
+      "profile_image": "lthrift.webp",
       "workstream": "MC Lead",
       "gitcoin_username": "lthrift",
       "discourse_username": "lthrift",

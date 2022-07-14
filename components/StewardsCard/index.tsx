@@ -59,7 +59,7 @@ const StewardsCard = ({
             borderRadius="1rem"
             w={{ sm: "100px", base: "70px" }}
             h={{ sm: "100px", base: "70px" }}
-            src={profileImage ? `/assets/stewards/` + profileImage : '/assets/stewards/unknown.png'}
+            src={profileImage ? `/assets/stewards/webp/` + profileImage : '/assets/stewards/unknown.webp'}
             alt={name ? name : '-'}
           />
           <Box textAlign="left">
