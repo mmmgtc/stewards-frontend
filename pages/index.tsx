@@ -129,7 +129,7 @@ const Home: NextPage = () => {
         if (element.profile) {
           return (
             element.profile.name.toLowerCase().indexOf(search.toLowerCase()) >=
-            0
+            0 || element.profile.workstream.toLowerCase().indexOf(search.toLowerCase()) >= 0 || element.profile.gitcoin_username.toLowerCase().indexOf(search.toLowerCase()) >= 0
           );
         }
       });
@@ -197,6 +197,12 @@ const Home: NextPage = () => {
     <Head>
       <title>Steward Report Cards</title>
       <meta name='description' content='Report cards for Gitcoin stewards, including their participation weighting, streams they work in and their activity in forums.' />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="assets/favicon.png"
+      />
     </Head>
     <Flex
       justifyContent="center"
