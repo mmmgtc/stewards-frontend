@@ -9,7 +9,10 @@ import {
   keyframes,
   usePrefersReducedMotion,
 } from "@chakra-ui/react";
+
 import type { NextPage } from "next";
+import Head from 'next/head';
+
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
@@ -190,7 +193,11 @@ const Home: NextPage = () => {
     filterStewardsData();
   }, [search, orderBy, display, time]);
 
-  return (
+  return <>
+    <Head>
+      <title>Steward Report Cards</title>
+      <meta name='description' content='Report cards for Gitcoin stewards, including their participation weighting, streams they work in and their activity in forums.' />
+    </Head>
     <Flex
       justifyContent="center"
       alignItems="center"
@@ -303,7 +310,7 @@ const Home: NextPage = () => {
       </Grid>
       <Footer />
     </Flex>
-  );
+  </>
 };
 
 export default Home;
