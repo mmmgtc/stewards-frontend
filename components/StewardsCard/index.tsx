@@ -79,7 +79,7 @@ const StewardsCard = ({
           </Box>
         </Flex>
         <Box marginRight="1rem">
-          <Text fontSize={{ sm: "1.8rem", base: "1.2rem" }} fontWeight="bold">
+          <Text fontSize={{ sm: "1.8rem", base: "1.2rem" }} fontWeight="bold" align="right">
             {getHealthcore(healthScore) > 0 ? getHealthcore(healthScore) + '/10' : '-/10'}
           </Text>
           <Image
