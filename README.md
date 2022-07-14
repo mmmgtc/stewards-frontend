@@ -15,7 +15,7 @@ node scripts/sample-script.js
 npx hardhat help
 ```
 
-## Local development environment
+### Local development environment
 
 Using docker, run the following to boot up a local environment at http://localhost:3000.
 
