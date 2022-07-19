@@ -747,6 +747,28 @@
       "steward_since": "2022-06-22",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/216"
+    },
+    {
+      "name": "Ben West",
+      "address": "0x41105A64A7Ae18Bd6c31363ef5FD99dD574f7874",
+      "profile_image": "m0nkeyfl0wer.webp",
+      "workstream": "",
+      "gitcoin_username": "M0nkeyFl0wer",
+      "discourse_username": "M0nkeyFl0wer",
+      "steward_since": "2022-07-14",
+      "steward_days": 6,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/222"
+    },
+    {
+      "name": "Nate Gosselin",
+      "address": "0xB41077b88Ff9E42355FC2FfeAA1810560aC5f192",
+      "profile_image": "nategosselin.webp",
+      "workstream": "",
+      "gitcoin_username": "nfrgosselin",
+      "discourse_username": "nategosselin",
+      "steward_since": "2022-07-18",
+      "steward_days": 1,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/225"
     }
   ]
 }
