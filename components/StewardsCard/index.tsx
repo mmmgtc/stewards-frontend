@@ -23,9 +23,9 @@ function getHealthcore(healthScore) {
 // Ensure healh scores between 1 - 10, or '-' are returned
 function getVotingWeight(votingWeight) {
   if (votingWeight > 0.05) {
-    return votingWeight.toFixed(2) + '%';
+    return votingWeight.toFixed(2) + "%";
   } else if (votingWeight >= 0.005) {
-    return votingWeight.toFixed(3) + '%';
+    return votingWeight.toFixed(3) + "%";
   } else {
     return 0;
   }
@@ -59,12 +59,16 @@ const StewardsCard = ({
             borderRadius="1rem"
             w={{ sm: "100px", base: "70px" }}
             h={{ sm: "100px", base: "70px" }}
-            src={profileImage ? `/assets/stewards/webp/` + profileImage : '/assets/stewards/unknown.webp'}
-            alt={name ? name : '-'}
+            src={
+              profileImage
+                ? `/assets/stewards/webp/` + profileImage
+                : "/assets/stewards/unknown.webp"
+            }
+            alt={name ? name : "-"}
           />
           <Box textAlign="left">
             <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }} fontWeight="bold">
-              {name.length > 0 ? name : '-'}
+              {name.length > 0 ? name : "-"}
             </Text>
             <Link
               isExternal
@@ -79,14 +83,18 @@ const StewardsCard = ({
           </Box>
         </Flex>
         <Box marginRight="1rem">
-          <Text fontSize={{ sm: "1.8rem", base: "1.2rem" }} fontWeight="bold" align="right">
-            {getHealthcore(healthScore) > 0 ? getHealthcore(healthScore) + '/10' : '-/10'}
+          <Text
+            fontSize={{ sm: "1.8rem", base: "1.2rem" }}
+            fontWeight="bold"
+            align="right"
+          >
+            {getHealthcore(healthScore) > 0
+              ? getHealthcore(healthScore) + "/10"
+              : "-/10"}
           </Text>
           <Image
             src={
-              "/assets/healthSvgs/health_" +
-              getHealthcore(healthScore) +
-              ".svg"
+              "/assets/healthSvgs/health_" + getHealthcore(healthScore) + ".svg"
             }
             width={{ sm: "full", base: "5rem" }}
             alt={"Health score of " + getHealthcore(healthScore)}
@@ -141,7 +149,9 @@ const StewardsCard = ({
             Forum activity
           </Link>
         </Flex>
-        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{forumActivity > 0 ? forumActivity : '-'}</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
+          {forumActivity > 0 ? forumActivity : "-"}
+        </Text>
       </Flex>
       <Flex
         justify="space-between"
@@ -166,8 +176,16 @@ const StewardsCard = ({
             Workstream
           </Link>
         </Flex>
-        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
-          {workstream ? workstream.length > 20 ? workstream.slice(0, 9) + "..." : workstream : '-'}
+        <Text
+          fontSize={{ sm: "1.2rem", base: "0.9rem" }}
+          cursor="pointer"
+          _hover={{ color: "white" }}
+        >
+          {workstream
+            ? workstream.length > 20
+              ? workstream.slice(0, 9) + "..."
+              : workstream
+            : "-"}
         </Text>
       </Flex>
       <Flex
@@ -193,7 +211,9 @@ const StewardsCard = ({
             Voting weight
           </Link>
         </Flex>
-        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{getVotingWeight(votingWeight)}</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
+          {getVotingWeight(votingWeight)}
+        </Text>
       </Flex>
       <Flex
         justify="space-between"
@@ -219,7 +239,7 @@ const StewardsCard = ({
           </Link>
         </Flex>
         <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
-          {votingParticipation > 0 ? votingParticipation + '%' : '-'}
+          {votingParticipation > 0 ? votingParticipation + "%" : "-"}
         </Text>
       </Flex>
       <Flex
