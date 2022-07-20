@@ -10,13 +10,10 @@ import {
   usePrefersReducedMotion,
   Spinner,
 } from "@chakra-ui/react";
-
 import type { NextPage } from "next";
 import Head from "next/head";
-
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-
 // import { useAccount, useConnect, useDisconnect } from "wagmi";
 // import { InjectedConnector } from "wagmi/connectors/injected";
 import Footer from "../components/Footer";
@@ -55,7 +52,7 @@ const Home: NextPage = () => {
   const [stewardsData, setStewardsData] = useState([]);
   const [filteredStewardsData, setFilteredStewardsData] = useState([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-
+  const [lastUpdatedAt, setLastUpdatedAt] = useState<Date | null>(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const animation = prefersReducedMotion
@@ -185,7 +182,21 @@ const Home: NextPage = () => {
   }, [time]);
 
   useEffect(() => {
+    console.log("lastUpdatedAt: ", lastUpdatedAt);
+  }, [lastUpdatedAt]);
+
+  useEffect(() => {
     console.log("stewardsData", stewardsData);
+    if (stewardsData.length > 0) {
+      let lastUpdated = stewardsData[0].stats[0].updatedAt;
+
+      stewardsData.map((data) => {
+        if (data.stats[0].updatedAt.valueOf() > lastUpdated.valueOf()) {
+          lastUpdated = data.stats[0].updatedAt;
+        }
+      });
+      setLastUpdatedAt(lastUpdated);
+    }
   }, [stewardsData]);
 
   // Filter when stewardsData changes
@@ -243,9 +254,14 @@ const Home: NextPage = () => {
           , to learn more and get involved - visit{" "}
           <Link href="https://gitcoindao.com/">GitcoinDAO.com</Link>
         </Text>
-        <Text mb="2rem">
+        <Text mb="1rem">
           Data powered by <Link href="https://www.showkarma.xyz/">Karma</Link>.
         </Text>
+        {lastUpdatedAt && (
+          <Text mb="2rem">
+            Data Last Updated on {lastUpdatedAt.toString().slice(0, 10)}
+          </Text>
+        )}
 
         <Grid
           mb="5rem"
@@ -302,6 +318,7 @@ const Home: NextPage = () => {
             />
           </GridItem>
         </Grid>
+
         {isLoading ? (
           <Spinner color="purple.500" size="xl" />
         ) : (
