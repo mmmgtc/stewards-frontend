@@ -49,6 +49,8 @@ const Home: NextPage = () => {
     searchParams.get("display") ?? "health"
   );
   const [time, setTime] = useState(searchParams.get("time") ?? "30d");
+  const [dataLastUpdated, setDataLastUpdated] = useState([]);
+  const [workstreamData, setWorkstreamData] = useState([]);
   const [stewardsData, setStewardsData] = useState([]);
   const [filteredStewardsData, setFilteredStewardsData] = useState([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -83,6 +85,33 @@ const Home: NextPage = () => {
   }
 
   /**
+   * Take a user profile, look for workstreamsLead and workstreamsContributor and return details on the workstreams
+   */
+  function getProfileWorkstreams(profile) {
+    let workstreams = [];
+    const allWorkstreams = (
+      profile.workstreamsLead + profile.workstreamsContributor
+    )
+      .split(",")
+      .filter((element) => element);
+
+    if (allWorkstreams.length === 0) {
+      return workstreams;
+    }
+
+    allWorkstreams.forEach((workstream) => {
+      const element = workstreamData.find(
+        (element) => element.slug === workstream
+      );
+      if (element) {
+        workstreams.push({ title: element.title, uri: element.uri });
+      }
+    });
+
+    return workstreams;
+  }
+
+  /**
    * Combine steward data from stewards_data.json, which is at the time of writing manually updated, and karma data, which is coming from the karma API.
    */
   async function getStewardsData() {
@@ -113,8 +142,24 @@ const Home: NextPage = () => {
     return ret;
   }
 
+  async function getWorkstreamData() {
+    const success = (res) => (res.ok ? res.json() : Promise.resolve({}));
+
+    return fetch("/assets/workstreams/workstreams.json").then(success);
+  }
+
   function convertToNumber(val) {
     return Number(val);
+  }
+
+  /**
+   * Format as the number of hours after the last update
+   */
+  function formatDataLastUpdated(lastUpdated) {
+    const updated = new Date(lastUpdated);
+    const diff = Math.abs(new Date().getTime() - updated.getTime()) / 3600000;
+
+    return "Last updated " + parseInt(diff.toString()) + " hours ago.";
   }
 
   /**
@@ -122,6 +167,12 @@ const Home: NextPage = () => {
    */
   function filterStewardsData() {
     let clonedData = JSON.parse(JSON.stringify(stewardsData));
+
+    if (clonedData.length === 0) {
+      return;
+    }
+
+    setDataLastUpdated(clonedData[0].stats[0].updatedAt);
 
     if (search.length > 0) {
       clonedData = clonedData.filter((element) => {
@@ -216,6 +267,13 @@ const Home: NextPage = () => {
     filterStewardsData();
   }, [search, orderBy, display, time]);
 
+  // Load the workstream data
+  useEffect(() => {
+    getWorkstreamData().then((data) => {
+      setWorkstreamData(data);
+    });
+  }, []);
+
   return (
     <>
       <Head>
@@ -254,14 +312,11 @@ const Home: NextPage = () => {
           , to learn more and get involved - visit{" "}
           <Link href="https://gitcoindao.com/">GitcoinDAO.com</Link>
         </Text>
-        <Text mb="1rem">
-          Data powered by <Link href="https://www.showkarma.xyz/">Karma</Link>.
+        <Text mb="2rem">
+          Data powered by <Link href="https://www.showkarma.xyz/">Karma</Link>
+          .&nbsp;&nbsp;
+          {formatDataLastUpdated(dataLastUpdated)}
         </Text>
-        {lastUpdatedAt && (
-          <Text mb="2rem">
-            Data Last Updated on {lastUpdatedAt.toString().slice(0, 10)}
-          </Text>
-        )}
 
         <Grid
           mb="5rem"
@@ -318,57 +373,53 @@ const Home: NextPage = () => {
             />
           </GridItem>
         </Grid>
-
-        {isLoading ? (
-          <Spinner color="purple.500" size="xl" />
-        ) : (
-          <Grid
-            w="full"
-            templateColumns={{
-              base: "repeat(1, 1fr)",
-              md: "repeat(2, 1fr)",
-              xl: "repeat(3, 1fr)",
-              "2xl": "repeat(4, 1fr)",
-            }}
-            gap={"2rem"}
-          >
-            {filteredStewardsData.map((element, index) => (
-              <GridItem key={index}>
-                <StewardsCard
-                  name={element.profile ? element.profile.name : ""}
-                  gitcoinUsername={
-                    element.profile ? element.profile.gitcoin_username : "-"
-                  }
-                  profileImage={
-                    element.profile ? element.profile.profile_image : ""
-                  }
-                  stewardsSince={
-                    element.profile ? element.profile.steward_since : "-"
-                  }
-                  forumActivity={getForumActivity(element)}
-                  workstream={element.profile ? element.profile.workstream : ""}
-                  votingWeight={getVotingWeight(element)}
-                  votingParticipation={element.stats[0].offChainVotesPct}
-                  statementLink={
-                    element.profile ? element.profile.statement_post : ""
-                  }
-                  delegateLink={
-                    "https://www.withtally.com/voter/" +
-                    element.publicAddress +
-                    "/governance/gitcoin"
-                  }
-                  forumActivityLink={
-                    element.profile
-                      ? "https://gov.gitcoin.co/u/" +
-                        element.profile.discourse_username
-                      : "/"
-                  }
-                  healthScore={element.stats[0].gitcoinHealthScore}
-                />
-              </GridItem>
-            ))}
-          </Grid>
-        )}
+        <Grid
+          w="full"
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            md: "repeat(2, 1fr)",
+            xl: "repeat(3, 1fr)",
+          }}
+          gap={"2rem"}
+        >
+          {filteredStewardsData.map((element, index) => (
+            <GridItem key={index}>
+              <StewardsCard
+                name={element.profile ? element.profile.name : ""}
+                gitcoinUsername={
+                  element.profile ? element.profile.gitcoin_username : "-"
+                }
+                profileImage={
+                  element.profile ? element.profile.profile_image : ""
+                }
+                stewardsSince={
+                  element.profile ? element.profile.steward_since : "-"
+                }
+                forumActivity={getForumActivity(element)}
+                workstreams={
+                  element.profile ? getProfileWorkstreams(element.profile) : []
+                }
+                votingWeight={getVotingWeight(element)}
+                votingParticipation={element.stats[0].offChainVotesPct}
+                statementLink={
+                  element.profile ? element.profile.statement_post : ""
+                }
+                delegateLink={
+                  "https://www.withtally.com/voter/" +
+                  element.publicAddress +
+                  "/governance/gitcoin"
+                }
+                forumActivityLink={
+                  element.profile
+                    ? "https://gov.gitcoin.co/u/" +
+                      element.profile.discourse_username
+                    : "/"
+                }
+                healthScore={element.stats[0].gitcoinHealthScore}
+              />
+            </GridItem>
+          ))}
+        </Grid>
         <Footer />
       </Flex>
     </>

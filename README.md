@@ -4,7 +4,8 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 
 Try running some of the following tasks:
 
-```shell
+```
+shell
 npx hardhat accounts
 npx hardhat compile
 npx hardhat clean
@@ -14,7 +15,9 @@ node scripts/sample-script.js
 npx hardhat help
 ```
 
-## Local development setup, using Docker
+### Local development environment
+
+Using docker, run the following to boot up a local environment at http://localhost:3000.
 
 ```
 cp .env.local .env
