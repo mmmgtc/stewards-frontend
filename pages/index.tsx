@@ -157,7 +157,10 @@ const Home: NextPage = () => {
    */
   function formatDataLastUpdated(lastUpdated) {
     const updated = new Date(lastUpdated);
-    const diff = Math.abs(new Date().getTime() - updated.getTime()) / 3600000;
+    let diff = Math.abs(new Date().getTime() - updated.getTime()) / 3600000;
+    if (diff < 1) {
+      diff = 1;
+    }
 
     return "Last updated " + parseInt(diff.toString()) + " hours ago.";
   }
@@ -231,24 +234,6 @@ const Home: NextPage = () => {
       setIsLoading(false);
     });
   }, [time]);
-
-  useEffect(() => {
-    console.log("lastUpdatedAt: ", lastUpdatedAt);
-  }, [lastUpdatedAt]);
-
-  useEffect(() => {
-    console.log("stewardsData", stewardsData);
-    if (stewardsData.length > 0) {
-      let lastUpdated = stewardsData[0].stats[0].updatedAt;
-
-      stewardsData.map((data) => {
-        if (data.stats[0].updatedAt.valueOf() > lastUpdated.valueOf()) {
-          lastUpdated = data.stats[0].updatedAt;
-        }
-      });
-      setLastUpdatedAt(lastUpdated);
-    }
-  }, [stewardsData]);
 
   // Filter when stewardsData changes
   useEffect(() => {
