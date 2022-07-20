@@ -8,14 +8,12 @@ import {
   Text,
   keyframes,
   usePrefersReducedMotion,
+  Spinner,
 } from "@chakra-ui/react";
-
 import type { NextPage } from "next";
 import Head from "next/head";
-
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-
 // import { useAccount, useConnect, useDisconnect } from "wagmi";
 // import { InjectedConnector } from "wagmi/connectors/injected";
 import Footer from "../components/Footer";
@@ -55,7 +53,8 @@ const Home: NextPage = () => {
   const [workstreamData, setWorkstreamData] = useState([]);
   const [stewardsData, setStewardsData] = useState([]);
   const [filteredStewardsData, setFilteredStewardsData] = useState([]);
-
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [lastUpdatedAt, setLastUpdatedAt] = useState<Date | null>(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const animation = prefersReducedMotion
@@ -227,9 +226,29 @@ const Home: NextPage = () => {
   // Get data on load, as well as if the time changes
   useEffect(() => {
     getStewardsData().then((data) => {
+      setIsLoading(true);
       setStewardsData(data);
+      setIsLoading(false);
     });
   }, [time]);
+
+  useEffect(() => {
+    console.log("lastUpdatedAt: ", lastUpdatedAt);
+  }, [lastUpdatedAt]);
+
+  useEffect(() => {
+    console.log("stewardsData", stewardsData);
+    if (stewardsData.length > 0) {
+      let lastUpdated = stewardsData[0].stats[0].updatedAt;
+
+      stewardsData.map((data) => {
+        if (data.stats[0].updatedAt.valueOf() > lastUpdated.valueOf()) {
+          lastUpdated = data.stats[0].updatedAt;
+        }
+      });
+      setLastUpdatedAt(lastUpdated);
+    }
+  }, [stewardsData]);
 
   // Filter when stewardsData changes
   useEffect(() => {

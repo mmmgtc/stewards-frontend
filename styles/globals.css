@@ -34,3 +34,8 @@ a {
     border: 2px solid var(--purple);
   }
 }
+
+.css-52mmuy > option {
+  background-color: #321e5e !important;
+  color: white !important;
+}
