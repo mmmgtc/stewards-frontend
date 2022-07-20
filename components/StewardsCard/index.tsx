@@ -3,7 +3,7 @@ import { Box, Button, Flex, Image, Link, Text, VStack } from "@chakra-ui/react";
 interface StewardsCardProps {
   name?: string;
   stewardsSince?: string;
-  workstream?: string;
+  workstreams?: Array<WorkstreamProps>;
   votingWeight?: number;
   votingParticipation?: number;
   gitcoinUsername?: string;
@@ -15,6 +15,11 @@ interface StewardsCardProps {
   healthScore?: number;
 }
 
+interface WorkstreamProps {
+  title?: string;
+  uri?: string;
+}
+
 // Ensure healh scores between 1 - 10, or '-' are returned
 function getHealthcore(healthScore) {
   return healthScore > 0 ? (healthScore > 10 ? 10 : healthScore) : 0;
@@ -23,11 +28,28 @@ function getHealthcore(healthScore) {
 // Ensure healh scores between 1 - 10, or '-' are returned
 function getVotingWeight(votingWeight) {
   if (votingWeight > 0.05) {
-    return votingWeight.toFixed(2) + '%';
+    return votingWeight.toFixed(2) + "%";
   } else if (votingWeight >= 0.005) {
-    return votingWeight.toFixed(3) + '%';
+    return votingWeight.toFixed(3) + "%";
   } else {
     return 0;
+  }
+}
+
+function getWorkstreams(workstreams) {
+  let ret = "";
+  if (workstreams.length > 0) {
+    workstreams.forEach((element) => {
+      ret +=
+        '<a href="' +
+        element.uri +
+        '" class="workstream" target="_blank">' +
+        element.title +
+        "</a>";
+    });
+    return ret;
+  } else {
+    return "-";
   }
 }
 
@@ -35,7 +57,7 @@ const StewardsCard = ({
   name,
   stewardsSince,
   forumActivity,
-  workstream,
+  workstreams,
   votingWeight,
   votingParticipation,
   gitcoinUsername,
@@ -59,12 +81,16 @@ const StewardsCard = ({
             borderRadius="1rem"
             w={{ sm: "100px", base: "70px" }}
             h={{ sm: "100px", base: "70px" }}
-            src={profileImage ? `/assets/stewards/webp/` + profileImage : '/assets/stewards/unknown.webp'}
-            alt={name ? name : '-'}
+            src={
+              profileImage
+                ? `/assets/stewards/webp/` + profileImage
+                : "/assets/stewards/unknown.webp"
+            }
+            alt={name ? name : "-"}
           />
           <Box textAlign="left">
             <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }} fontWeight="bold">
-              {name.length > 0 ? name : '-'}
+              {name.length > 0 ? name : "-"}
             </Text>
             <Link
               isExternal
@@ -79,14 +105,18 @@ const StewardsCard = ({
           </Box>
         </Flex>
         <Box marginRight="1rem">
-          <Text fontSize={{ sm: "1.8rem", base: "1.2rem" }} fontWeight="bold" align="right">
-            {getHealthcore(healthScore) > 0 ? getHealthcore(healthScore) + '/10' : '-/10'}
+          <Text
+            fontSize={{ sm: "1.8rem", base: "1.2rem" }}
+            fontWeight="bold"
+            align="right"
+          >
+            {getHealthcore(healthScore) > 0
+              ? getHealthcore(healthScore) + "/10"
+              : "-/10"}
           </Text>
           <Image
             src={
-              "/assets/healthSvgs/health_" +
-              getHealthcore(healthScore) +
-              ".svg"
+              "/assets/healthSvgs/health_" + getHealthcore(healthScore) + ".svg"
             }
             width={{ sm: "full", base: "5rem" }}
             alt={"Health score of " + getHealthcore(healthScore)}
@@ -141,7 +171,9 @@ const StewardsCard = ({
             Forum activity
           </Link>
         </Flex>
-        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{forumActivity > 0 ? forumActivity : '-'}</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
+          {forumActivity > 0 ? forumActivity : "-"}
+        </Text>
       </Flex>
       <Flex
         justify="space-between"
@@ -167,7 +199,9 @@ const StewardsCard = ({
           </Link>
         </Flex>
         <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
-          {workstream ? workstream.length > 20 ? workstream.slice(0, 9) + "..." : workstream : '-'}
+          <span
+            dangerouslySetInnerHTML={{ __html: getWorkstreams(workstreams) }}
+          />
         </Text>
       </Flex>
       <Flex
@@ -193,7 +227,9 @@ const StewardsCard = ({
             Voting weight
           </Link>
         </Flex>
-        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{getVotingWeight(votingWeight)}</Text>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
+          {getVotingWeight(votingWeight)}
+        </Text>
       </Flex>
       <Flex
         justify="space-between"
@@ -219,7 +255,7 @@ const StewardsCard = ({
           </Link>
         </Flex>
         <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
-          {votingParticipation > 0 ? votingParticipation + '%' : '-'}
+          {votingParticipation > 0 ? votingParticipation + "%" : "-"}
         </Text>
       </Flex>
       <Flex
