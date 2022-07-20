@@ -769,6 +769,17 @@
       "steward_since": "2022-07-18",
       "steward_days": 1,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/225"
+    },
+    {
+      "name": "ZER8",
+      "address": "0xb62E762Af637b49Eb4870BCe8fE21bffF189e495",
+      "profile_image": "zer8.webp",
+      "workstream": "FDD Contributor",
+      "gitcoin_username": "zer8",
+      "discourse_username": "zer8",
+      "steward_since": "2021-09-29",
+      "steward_days": 293,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/199"
     }
   ]
 }
