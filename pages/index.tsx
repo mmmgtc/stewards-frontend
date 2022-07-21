@@ -21,8 +21,6 @@ import InputLayout from "../components/InputLayout";
 import SelectInput from "../components/SelectInput";
 import StewardsCard from "../components/StewardsCard";
 
-import useMountedRef from "../scripts/use-mounted-ref";
-
 const blink = keyframes`
   0%{
     border: 2px solid #be59cf;
