@@ -21,6 +21,8 @@ import InputLayout from "../components/InputLayout";
 import SelectInput from "../components/SelectInput";
 import StewardsCard from "../components/StewardsCard";
 
+import useMountedRef from "../scripts/use-mounted-ref";
+
 const blink = keyframes`
   0%{
     border: 2px solid #be59cf;
@@ -40,6 +42,7 @@ const Home: NextPage = () => {
   // });
   // const { disconnect } = useDisconnect();
 
+  const [firstLoadDone, setFirstLoadDone] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search") ?? "");
   const [orderBy, setOrderBy] = useState(
@@ -157,7 +160,11 @@ const Home: NextPage = () => {
    */
   function formatDataLastUpdated(lastUpdated) {
     const updated = new Date(lastUpdated);
+    if (!updated || updated.toString().toLowerCase() === "invalid date") {
+      return;
+    }
     let diff = Math.abs(new Date().getTime() - updated.getTime()) / 3600000;
+
     if (diff < 1) {
       diff = 1;
     }
@@ -183,7 +190,11 @@ const Home: NextPage = () => {
           return (
             element.profile.name.toLowerCase().indexOf(search.toLowerCase()) >=
               0 ||
-            element.profile.workstream
+            (
+              element.profile.workstreamsContributor +
+              " " +
+              element.profile.workstreamsLead
+            )
               .toLowerCase()
               .indexOf(search.toLowerCase()) >= 0 ||
             element.profile.gitcoin_username
@@ -228,8 +239,8 @@ const Home: NextPage = () => {
 
   // Get data on load, as well as if the time changes
   useEffect(() => {
+    setIsLoading(true);
     getStewardsData().then((data) => {
-      setIsLoading(true);
       setStewardsData(data);
       setIsLoading(false);
     });
@@ -242,14 +253,18 @@ const Home: NextPage = () => {
 
   // Set the query params and run the filter
   useEffect(() => {
-    setSearchParams({
-      search: search,
-      display: display,
-      orderBy: orderBy,
-      time: time,
-    });
+    if (firstLoadDone) {
+      // Only tweak the URL parameters after the first load
+      setSearchParams({
+        search: search,
+        display: display,
+        orderBy: orderBy,
+        time: time,
+      });
+    }
 
     filterStewardsData();
+    setFirstLoadDone(true);
   }, [search, orderBy, display, time]);
 
   // Load the workstream data
@@ -358,53 +373,59 @@ const Home: NextPage = () => {
             />
           </GridItem>
         </Grid>
-        <Grid
-          w="full"
-          templateColumns={{
-            base: "repeat(1, 1fr)",
-            md: "repeat(2, 1fr)",
-            xl: "repeat(3, 1fr)",
-          }}
-          gap={"2rem"}
-        >
-          {filteredStewardsData.map((element, index) => (
-            <GridItem key={index}>
-              <StewardsCard
-                name={element.profile ? element.profile.name : ""}
-                gitcoinUsername={
-                  element.profile ? element.profile.gitcoin_username : "-"
-                }
-                profileImage={
-                  element.profile ? element.profile.profile_image : ""
-                }
-                stewardsSince={
-                  element.profile ? element.profile.steward_since : "-"
-                }
-                forumActivity={getForumActivity(element)}
-                workstreams={
-                  element.profile ? getProfileWorkstreams(element.profile) : []
-                }
-                votingWeight={getVotingWeight(element)}
-                votingParticipation={element.stats[0].offChainVotesPct}
-                statementLink={
-                  element.profile ? element.profile.statement_post : ""
-                }
-                delegateLink={
-                  "https://www.withtally.com/voter/" +
-                  element.publicAddress +
-                  "/governance/gitcoin"
-                }
-                forumActivityLink={
-                  element.profile
-                    ? "https://gov.gitcoin.co/u/" +
-                      element.profile.discourse_username
-                    : "/"
-                }
-                healthScore={element.stats[0].gitcoinHealthScore}
-              />
-            </GridItem>
-          ))}
-        </Grid>
+        {isLoading ? (
+          <Spinner color="purple.500" size="xl" />
+        ) : (
+          <Grid
+            w="full"
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+              xl: "repeat(3, 1fr)",
+            }}
+            gap={"2rem"}
+          >
+            {filteredStewardsData.map((element, index) => (
+              <GridItem key={index}>
+                <StewardsCard
+                  name={element.profile ? element.profile.name : ""}
+                  gitcoinUsername={
+                    element.profile ? element.profile.gitcoin_username : "-"
+                  }
+                  profileImage={
+                    element.profile ? element.profile.profile_image : ""
+                  }
+                  stewardsSince={
+                    element.profile ? element.profile.steward_since : "-"
+                  }
+                  forumActivity={getForumActivity(element)}
+                  workstreams={
+                    element.profile
+                      ? getProfileWorkstreams(element.profile)
+                      : []
+                  }
+                  votingWeight={getVotingWeight(element)}
+                  votingParticipation={element.stats[0].offChainVotesPct}
+                  statementLink={
+                    element.profile ? element.profile.statement_post : ""
+                  }
+                  delegateLink={
+                    "https://www.withtally.com/voter/" +
+                    element.publicAddress +
+                    "/governance/gitcoin"
+                  }
+                  forumActivityLink={
+                    element.profile
+                      ? "https://gov.gitcoin.co/u/" +
+                        element.profile.discourse_username
+                      : "/"
+                  }
+                  healthScore={element.stats[0].gitcoinHealthScore}
+                />
+              </GridItem>
+            ))}
+          </Grid>
+        )}
         <Footer />
       </Flex>
     </>
