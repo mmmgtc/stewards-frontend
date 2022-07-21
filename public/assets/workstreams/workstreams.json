@@ -1,0 +1,60 @@
+[
+  {
+    "slug": "mmm",
+    "name": "MMM",
+    "title": "Merch, Memes & Marketing",
+    "description": "Generate curiosity, hype and engagement around GitcoinDAO and our core mission.",
+    "logo": "/",
+    "objectives": [
+      { "title": "Objective 1" },
+      { "title": "Objective 2" },
+      { "title": "Objective 3" }
+    ],
+    "duneEmbeds": {
+      "gtcCurrentTotal": "/",
+      "stableCoinCurrentTotal": "/",
+      "gtcBalanceOverTime": "https://dune.com/embeds/1069131/1835584/64b0a151-8c91-4384-be1f-9edeac4d30e4",
+      "stableCoinBalanceOverTime": "https://dune.com/embeds/1071517/1838877/b15225c9-eec0-48c3-8082-0b6d5e0dc9a5",
+      "allTimeContributors": "/"
+    },
+    "budgetProposals": [
+      {
+        "title": "Season 14 - 346.1k GTC",
+        "link": "/"
+      },
+      {
+        "title": "Season 13 - 40k GTC",
+        "link": "/"
+      },
+      {
+        "title": "Season 12 - 20.1k GTC",
+        "link": "/"
+      }
+    ],
+    "uri": "https://m-m-m.xyz"
+  },
+  {
+    "slug": "do",
+    "name": "DAO Operations",
+    "title": "DAO Operations",
+    "uri": "https://m-m-m.xyz"
+  },
+  {
+    "slug": "pg",
+    "name": "Public Goods Funding",
+    "title": "Public Goods Funding",
+    "uri": "https://m-m-m.xyz"
+  },
+  {
+    "slug": "mc",
+    "name": "Moonshot Collective",
+    "title": "Moonshot Collective",
+    "uri": "https://m-m-m.xyz"
+  },
+  {
+    "slug": "fdd",
+    "name": "Fraud Defence & Detection ",
+    "title": "Fraud Defence & Detection ",
+    "uri": "https://m-m-m.xyz"
+  }
+]

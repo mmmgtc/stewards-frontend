@@ -3,7 +3,7 @@ import { Box, Button, Flex, Image, Link, Text, VStack } from "@chakra-ui/react";
 interface StewardsCardProps {
   name?: string;
   stewardsSince?: string;
-  workstream?: string;
+  workstreams?: Array<WorkstreamProps>;
   votingWeight?: number;
   votingParticipation?: number;
   gitcoinUsername?: string;
@@ -13,6 +13,11 @@ interface StewardsCardProps {
   forumActivity?: number;
   forumActivityLink?: string;
   healthScore?: number;
+}
+
+interface WorkstreamProps {
+  title?: string;
+  uri?: string;
 }
 
 // Ensure healh scores between 1 - 10, or '-' are returned
@@ -31,11 +36,28 @@ function getVotingWeight(votingWeight) {
   }
 }
 
+function getWorkstreams(workstreams) {
+  let ret = "";
+  if (workstreams.length > 0) {
+    workstreams.forEach((element) => {
+      ret +=
+        '<a href="' +
+        element.uri +
+        '" class="workstream" target="_blank">' +
+        element.title +
+        "</a>";
+    });
+    return ret;
+  } else {
+    return "-";
+  }
+}
+
 const StewardsCard = ({
   name,
   stewardsSince,
   forumActivity,
-  workstream,
+  workstreams,
   votingWeight,
   votingParticipation,
   gitcoinUsername,
@@ -176,16 +198,10 @@ const StewardsCard = ({
             Workstream
           </Link>
         </Flex>
-        <Text
-          fontSize={{ sm: "1.2rem", base: "0.9rem" }}
-          cursor="pointer"
-          _hover={{ color: "white" }}
-        >
-          {workstream
-            ? workstream.length > 20
-              ? workstream.slice(0, 9) + "..."
-              : workstream
-            : "-"}
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }} align="right">
+          <span
+            dangerouslySetInnerHTML={{ __html: getWorkstreams(workstreams) }}
+          />
         </Text>
       </Flex>
       <Flex
