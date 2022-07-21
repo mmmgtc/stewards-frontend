@@ -239,10 +239,29 @@ const Home: NextPage = () => {
   useEffect(() => {
     setIsLoading(true);
     getStewardsData().then((data) => {
+      setIsLoading(true);
       setStewardsData(data);
       setIsLoading(false);
     });
   }, [time]);
+
+  useEffect(() => {
+    console.log("lastUpdatedAt: ", lastUpdatedAt);
+  }, [lastUpdatedAt]);
+
+  useEffect(() => {
+    console.log("stewardsData", stewardsData);
+    if (stewardsData.length > 0) {
+      let lastUpdated = stewardsData[0].stats[0].updatedAt;
+
+      stewardsData.map((data) => {
+        if (data.stats[0].updatedAt.valueOf() > lastUpdated.valueOf()) {
+          lastUpdated = data.stats[0].updatedAt;
+        }
+      });
+      setLastUpdatedAt(lastUpdated);
+    }
+  }, [stewardsData]);
 
   // Filter when stewardsData changes
   useEffect(() => {
@@ -380,6 +399,7 @@ const Home: NextPage = () => {
               base: "repeat(1, 1fr)",
               md: "repeat(2, 1fr)",
               xl: "repeat(3, 1fr)",
+              "2xl": "repeat(4, 1fr)",
             }}
             gap={"2rem"}
           >
