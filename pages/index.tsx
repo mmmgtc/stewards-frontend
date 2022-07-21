@@ -21,6 +21,8 @@ import InputLayout from "../components/InputLayout";
 import SelectInput from "../components/SelectInput";
 import StewardsCard from "../components/StewardsCard";
 
+import useMountedRef from "../scripts/use-mounted-ref";
+
 const blink = keyframes`
   0%{
     border: 2px solid #be59cf;
@@ -40,6 +42,7 @@ const Home: NextPage = () => {
   // });
   // const { disconnect } = useDisconnect();
 
+  const [firstLoadDone, setFirstLoadDone] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search") ?? "");
   const [orderBy, setOrderBy] = useState(
@@ -250,14 +253,18 @@ const Home: NextPage = () => {
 
   // Set the query params and run the filter
   useEffect(() => {
-    // setSearchParams({
-    //   search: search,
-    //   display: display,
-    //   orderBy: orderBy,
-    //   time: time,
-    // });
+    if (firstLoadDone) {
+      // Only tweak the URL parameters after the first load
+      setSearchParams({
+        search: search,
+        display: display,
+        orderBy: orderBy,
+        time: time,
+      });
+    }
 
     filterStewardsData();
+    setFirstLoadDone(true);
   }, [search, orderBy, display, time]);
 
   // Load the workstream data
