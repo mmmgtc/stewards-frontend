@@ -157,7 +157,11 @@ const Home: NextPage = () => {
    */
   function formatDataLastUpdated(lastUpdated) {
     const updated = new Date(lastUpdated);
+    if (updated.toString().toLocaleLowerCase() === "invalid date") {
+      return;
+    }
     let diff = Math.abs(new Date().getTime() - updated.getTime()) / 3600000;
+
     if (diff < 1) {
       diff = 1;
     }
