@@ -198,7 +198,7 @@ const StewardsCard = ({
             Workstream
           </Link>
         </Flex>
-        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }} align="right">
           <span
             dangerouslySetInnerHTML={{ __html: getWorkstreams(workstreams) }}
           />
