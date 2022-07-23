@@ -35,25 +35,25 @@
   },
   {
     "slug": "do",
-    "name": "DAO Operations",
+    "name": "DAO Ops",
     "title": "DAO Operations",
     "uri": "https://m-m-m.xyz"
   },
   {
     "slug": "pg",
-    "name": "Public Goods Funding",
+    "name": "PGF",
     "title": "Public Goods Funding",
     "uri": "https://m-m-m.xyz"
   },
   {
     "slug": "mc",
-    "name": "Moonshot Collective",
+    "name": "MC",
     "title": "Moonshot Collective",
     "uri": "https://m-m-m.xyz"
   },
   {
     "slug": "fdd",
-    "name": "Fraud Defence & Detection ",
+    "name": "FDD",
     "title": "Fraud Defence & Detection ",
     "uri": "https://m-m-m.xyz"
   }
