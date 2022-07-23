@@ -89,23 +89,26 @@ const Home: NextPage = () => {
    * Take a user profile, look for workstreamsLead and workstreamsContributor and return details on the workstreams
    */
   function getProfileWorkstreams(profile) {
-    let workstreams = [];
-    const allWorkstreams = (
-      profile.workstreamsLead + profile.workstreamsContributor
-    )
-      .split(",")
-      .filter((element) => element);
+    let workstreams = { lead: [], contributor: [] };
 
-    if (allWorkstreams.length === 0) {
-      return workstreams;
-    }
-
-    allWorkstreams.forEach((workstream) => {
+    profile.workstreamsLead.split(",").forEach((workstream) => {
       const element = workstreamData.find(
         (element) => element.slug === workstream
       );
       if (element) {
-        workstreams.push({ title: element.title, uri: element.uri });
+        workstreams.lead.push({ name: element.name, uri: element.uri });
+      }
+    });
+
+    profile.workstreamsContributor.split(",").forEach((workstream) => {
+      const element = workstreamData.find(
+        (element) => element.slug === workstream
+      );
+      if (element) {
+        workstreams.contributor.push({
+          name: element.name,
+          uri: element.uri,
+        });
       }
     });
 
