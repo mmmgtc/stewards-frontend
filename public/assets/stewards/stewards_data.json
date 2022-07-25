@@ -851,6 +851,18 @@
       "steward_since": "2021-09-29",
       "steward_days": 293,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/199"
+    },
+    {
+      "name": "Safder Raza",
+      "address": "0xb9570e18268375D6D57cda77ed63224f459D6384",
+      "profile_image": "saf.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "daoops",
+      "gitcoin_username": "safderr",
+      "discourse_username": "safder",
+      "steward_since": "2022-07-25",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/226"
     }
   ]
 }
