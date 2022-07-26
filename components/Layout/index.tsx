@@ -8,9 +8,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <Router>
-      <VStack w="95vw" m={"auto"} py="4rem">
-        {children}
-      </VStack>
+      <VStack py="4rem">{children}</VStack>
     </Router>
   );
 };
