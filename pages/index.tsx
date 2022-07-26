@@ -41,6 +41,7 @@ const Home: NextPage = () => {
   // });
   // const { disconnect } = useDisconnect();
 
+  const [firstLoadDone, setFirstLoadDone] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search") ?? "");
   const [orderBy, setOrderBy] = useState(
@@ -51,6 +52,8 @@ const Home: NextPage = () => {
   );
   const [toogleTab, setToogleTab] = useState(1);
   const [time, setTime] = useState(searchParams.get("time") ?? "30d");
+  const [dataLastUpdated, setDataLastUpdated] = useState([]);
+  const [workstreamData, setWorkstreamData] = useState([]);
   const [stewardsData, setStewardsData] = useState([]);
   const [filteredStewardsData, setFilteredStewardsData] = useState([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -85,6 +88,36 @@ const Home: NextPage = () => {
   }
 
   /**
+   * Take a user profile, look for workstreamsLead and workstreamsContributor and return details on the workstreams
+   */
+  function getProfileWorkstreams(profile) {
+    let workstreams = { lead: [], contributor: [] };
+
+    profile.workstreamsLead.split(",").forEach((workstream) => {
+      const element = workstreamData.find(
+        (element) => element.slug === workstream
+      );
+      if (element) {
+        workstreams.lead.push({ name: element.name, uri: element.uri });
+      }
+    });
+
+    profile.workstreamsContributor.split(",").forEach((workstream) => {
+      const element = workstreamData.find(
+        (element) => element.slug === workstream
+      );
+      if (element) {
+        workstreams.contributor.push({
+          name: element.name,
+          uri: element.uri,
+        });
+      }
+    });
+
+    return workstreams;
+  }
+
+  /**
    * Combine steward data from stewards_data.json, which is at the time of writing manually updated, and karma data, which is coming from the karma API.
    */
   async function getStewardsData() {
@@ -115,8 +148,31 @@ const Home: NextPage = () => {
     return ret;
   }
 
+  async function getWorkstreamData() {
+    const success = (res) => (res.ok ? res.json() : Promise.resolve({}));
+
+    return fetch("/assets/workstreams/workstreams.json").then(success);
+  }
+
   function convertToNumber(val) {
     return Number(val);
+  }
+
+  /**
+   * Format as the number of hours after the last update
+   */
+  function formatDataLastUpdated(lastUpdated) {
+    const updated = new Date(lastUpdated);
+    if (!updated || updated.toString().toLowerCase() === "invalid date") {
+      return;
+    }
+    let diff = Math.abs(new Date().getTime() - updated.getTime()) / 3600000;
+
+    if (diff < 1) {
+      diff = 1;
+    }
+
+    return "Last updated " + parseInt(diff.toString()) + " hours ago.";
   }
 
   /**
@@ -125,13 +181,23 @@ const Home: NextPage = () => {
   function filterStewardsData() {
     let clonedData = JSON.parse(JSON.stringify(stewardsData));
 
+    if (clonedData.length === 0) {
+      return;
+    }
+
+    setDataLastUpdated(clonedData[0].stats[0].updatedAt);
+
     if (search.length > 0) {
       clonedData = clonedData.filter((element) => {
         if (element.profile) {
           return (
             element.profile.name.toLowerCase().indexOf(search.toLowerCase()) >=
               0 ||
-            element.profile.workstream
+            (
+              element.profile.workstreamsContributor +
+              " " +
+              element.profile.workstreamsLead
+            )
               .toLowerCase()
               .indexOf(search.toLowerCase()) >= 0 ||
             element.profile.gitcoin_username
@@ -176,6 +242,7 @@ const Home: NextPage = () => {
 
   // Get data on load, as well as if the time changes
   useEffect(() => {
+    setIsLoading(true);
     getStewardsData().then((data) => {
       setIsLoading(true);
       setStewardsData(data);
@@ -203,15 +270,26 @@ const Home: NextPage = () => {
 
   // Set the query params and run the filter
   useEffect(() => {
-    setSearchParams({
-      search: search,
-      display: display,
-      orderBy: orderBy,
-      time: time,
-    });
+    if (firstLoadDone) {
+      // Only tweak the URL parameters after the first load
+      setSearchParams({
+        search: search,
+        display: display,
+        orderBy: orderBy,
+        time: time,
+      });
+    }
 
     filterStewardsData();
+    setFirstLoadDone(true);
   }, [search, orderBy, display, time]);
+
+  // Load the workstream data
+  useEffect(() => {
+    getWorkstreamData().then((data) => {
+      setWorkstreamData(data);
+    });
+  }, []);
 
   return (
     <>
@@ -253,14 +331,11 @@ const Home: NextPage = () => {
           , to learn more and get involved - visit{" "}
           <Link href="https://gitcoindao.com/">GitcoinDAO.com</Link>
         </Text>
-        <Text mb="1rem">
-          Data powered by <Link href="https://www.showkarma.xyz/">Karma</Link>.
+        <Text mb="2rem">
+          Data powered by <Link href="https://www.showkarma.xyz/">Karma</Link>
+          .&nbsp;&nbsp;
+          {formatDataLastUpdated(dataLastUpdated)}
         </Text>
-        {lastUpdatedAt && (
-          <Text mb="2rem">
-            Data Last Updated on {lastUpdatedAt.toString().slice(0, 10)}
-          </Text>
-        )}
 
         <Grid
           mb="5rem"
@@ -317,7 +392,6 @@ const Home: NextPage = () => {
             />
           </GridItem>
         </Grid>
-
         {isLoading ? (
           <Spinner color="purple.500" size="xl" />
         ) : (
@@ -345,7 +419,11 @@ const Home: NextPage = () => {
                     element.profile ? element.profile.steward_since : "-"
                   }
                   forumActivity={getForumActivity(element)}
-                  workstream={element.profile ? element.profile.workstream : ""}
+                  workstreams={
+                    element.profile
+                      ? getProfileWorkstreams(element.profile)
+                      : []
+                  }
                   votingWeight={getVotingWeight(element)}
                   votingParticipation={element.stats[0].offChainVotesPct}
                   statementLink={
