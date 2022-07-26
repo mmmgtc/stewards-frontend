@@ -863,6 +863,18 @@
       "steward_since": "2022-07-25",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/226"
+    },
+    {
+      "name": "Connor O'Day",
+      "address": "0x7A45E23cbb7765900f02c54757498beF01C2b18F",
+      "profile_image": "connor.webp",
+      "workstreamsLead": "pgf",
+      "workstreamsContributor": "",
+      "gitcoin_username": "connoroday",
+      "discourse_username": "connor",
+      "steward_since": "2022-07-26",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/227"
     }
   ]
 }
