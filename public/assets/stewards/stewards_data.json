@@ -875,6 +875,18 @@
       "steward_since": "2022-07-26",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/227"
+    },
+    {
+      "name": "Chay-z",
+      "address": "0x748dF7c92687A7acA7c1ac81b1cDC2A3995581b9",
+      "profile_image": "chase.webp",
+      "workstreamsLead": "mc",
+      "workstreamsContributor": "",
+      "gitcoin_username": "GTChase",
+      "discourse_username": "GTChase",
+      "steward_since": "2022-07-26",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/228"
     }
   ]
 }
