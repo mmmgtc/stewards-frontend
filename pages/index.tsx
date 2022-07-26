@@ -311,7 +311,7 @@ const Home: NextPage = () => {
           bg={toogleTab === 1 ? "#291555" : "#190C35"}
           paddingX="5"
           paddingY="2"
-          textColor={toogleTab === 1 ? "#BE59CF" : "#9C14B2"}
+          textColor={toogleTab === 1 ? "#BE59CF" : "#612a6b"}
           fontWeight="semibold"
           fontSize="xl"
           borderTopRightRadius="10px"
@@ -326,7 +326,7 @@ const Home: NextPage = () => {
           bg={toogleTab === 2 ? "#291555" : "#190C35"}
           paddingX="5"
           paddingY="2"
-          textColor={toogleTab === 2 ? "#BE59CF" : "#9C14B2"}
+          textColor={toogleTab === 2 ? "#BE59CF" : "#612a6b"}
           fontWeight="semibold"
           fontSize="xl"
           borderTopRightRadius="10px"
