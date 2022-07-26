@@ -306,148 +306,199 @@ const Home: NextPage = () => {
           href="assets/favicon.png"
         />
       </Head>
-      <Flex
-        bg="#291555"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-        gap="2"
-        textAlign="center"
-        paddingTop="10"
-      >
-        <Heading mb="2rem" textAlign="center">
-          Steward Health Cards
-        </Heading>
-        <Text mb="2rem">
-          The Stewards of Gitcoin DAO play a vital role in driving the Gitcoin
-          ecosystem forward through their work in governance and workstreams. In
-          an effort to boost transparency the MMM-Workstream have created this
-          site with health cards for each Steward that display metrics and links
-          on their involvement and engagement in the DAO. Details and discussion
-          can be found on the{" "}
-          <Link href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712">
-            governance forum
-          </Link>
-          , to learn more and get involved - visit{" "}
-          <Link href="https://gitcoindao.com/">GitcoinDAO.com</Link>
-        </Text>
-        <Text mb="2rem">
-          Data powered by <Link href="https://www.showkarma.xyz/">Karma</Link>
-          .&nbsp;&nbsp;
-          {formatDataLastUpdated(dataLastUpdated)}
-        </Text>
-
-        <Grid
-          mb="5rem"
-          w="full"
-          templateColumns={{ lg: "repeat(5, 1fr)", base: "repeat(1, 1fr)" }}
-          gap={6}
+      <Flex mr={"auto"}>
+        <Box
+          bg={toogleTab === 1 ? "#291555" : "#190C35"}
+          paddingX="5"
+          paddingY="2"
+          textColor={toogleTab === 1 ? "#BE59CF" : "#9C14B2"}
+          fontWeight="semibold"
+          fontSize="xl"
+          borderTopRightRadius="10px"
+          borderTopLeftRadius="10px"
+          cursor="pointer"
+          onClick={() => setToogleTab(1)}
+          zIndex={toogleTab === 1 ? "1" : "0"}
         >
-          <GridItem colSpan={{ lg: 2, base: 1 }}>
-            <InputLayout label="Search">
-              <Input
-                onChange={(e) => setSearch(e.target.value)}
-                value={search}
-                border="none"
-                p={0}
-                focusBorderColor="none"
-                color="white"
-                fontSize="1.3rem"
-                placeholder="Name, Address, Workstream ..."
-              />
-            </InputLayout>
-          </GridItem>
-          <GridItem>
-            <SelectInput
-              label="Order by"
-              options={[
-                { label: "Health", value: "health" },
-                { label: "Forum Activity", value: "forum_activity" },
-                { label: "Voting Weight", value: "voting_weight" },
-              ]}
-              defaultValue={display}
-              onChange={setDisplay}
-            />
-          </GridItem>
-          <GridItem>
-            <SelectInput
-              label="Display"
-              options={[
-                { label: "Descending", value: "descending" },
-                { label: "Ascending", value: "ascending" },
-              ]}
-              defaultValue={orderBy}
-              onChange={setOrderBy}
-            />
-          </GridItem>
-          <GridItem animation={animation} borderRadius={"lg"}>
-            <SelectInput
-              label="Time"
-              options={[
-                { label: "30 Days", value: "30d" },
-                { label: "Lifetime", value: "lifetime" },
-              ]}
-              defaultValue={time}
-              onChange={setTime}
-            />
-          </GridItem>
-        </Grid>
-        {isLoading ? (
-          <Spinner color="purple.500" size="xl" />
-        ) : (
-          <Grid
-            w="full"
-            templateColumns={{
-              base: "repeat(1, 1fr)",
-              md: "repeat(2, 1fr)",
-              xl: "repeat(3, 1fr)",
-              "2xl": "repeat(4, 1fr)",
-            }}
-            gap={"2rem"}
-          >
-            {filteredStewardsData.map((element, index) => (
-              <GridItem key={index}>
-                <StewardsCard
-                  name={element.profile ? element.profile.name : ""}
-                  gitcoinUsername={
-                    element.profile ? element.profile.gitcoin_username : "-"
-                  }
-                  profileImage={
-                    element.profile ? element.profile.profile_image : ""
-                  }
-                  stewardsSince={
-                    element.profile ? element.profile.steward_since : "-"
-                  }
-                  forumActivity={getForumActivity(element)}
-                  workstreams={
-                    element.profile
-                      ? getProfileWorkstreams(element.profile)
-                      : []
-                  }
-                  votingWeight={getVotingWeight(element)}
-                  votingParticipation={element.stats[0].offChainVotesPct}
-                  statementLink={
-                    element.profile ? element.profile.statement_post : ""
-                  }
-                  delegateLink={
-                    "https://www.withtally.com/voter/" +
-                    element.publicAddress +
-                    "/governance/gitcoin"
-                  }
-                  forumActivityLink={
-                    element.profile
-                      ? "https://gov.gitcoin.co/u/" +
-                        element.profile.discourse_username
-                      : "/"
-                  }
-                  healthScore={element.stats[0].gitcoinHealthScore}
-                />
-              </GridItem>
-            ))}
-          </Grid>
-        )}
-        <Footer />
+          Stewards
+        </Box>
+        <Box
+          bg={toogleTab === 2 ? "#291555" : "#190C35"}
+          paddingX="5"
+          paddingY="2"
+          textColor={toogleTab === 2 ? "#BE59CF" : "#9C14B2"}
+          fontWeight="semibold"
+          fontSize="xl"
+          borderTopRightRadius="10px"
+          borderTopLeftRadius="10px"
+          cursor="pointer"
+          onClick={() => setToogleTab(2)}
+          zIndex={toogleTab === 2 ? "1" : "0"}
+          marginLeft="-.5rem"
+        >
+          Workstreams
+        </Box>
       </Flex>
+      {toogleTab === 1 && (
+        <Flex
+          bg="#291555"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+          gap="2"
+          textAlign="center"
+          paddingTop="10"
+        >
+          <Heading mb="2rem" textAlign="center">
+            Steward Health Cards
+          </Heading>
+          <Text mb="2rem">
+            The Stewards of Gitcoin DAO play a vital role in driving the Gitcoin
+            ecosystem forward through their work in governance and workstreams.
+            In an effort to boost transparency the MMM-Workstream have created
+            this site with health cards for each Steward that display metrics
+            and links on their involvement and engagement in the DAO. Details
+            and discussion can be found on the{" "}
+            <Link href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712">
+              governance forum
+            </Link>
+            , to learn more and get involved - visit{" "}
+            <Link href="https://gitcoindao.com/">GitcoinDAO.com</Link>
+          </Text>
+          <Text mb="2rem">
+            Data powered by <Link href="https://www.showkarma.xyz/">Karma</Link>
+            .&nbsp;&nbsp;
+            {formatDataLastUpdated(dataLastUpdated)}
+          </Text>
+
+          <Grid
+            mb="5rem"
+            w="full"
+            templateColumns={{ lg: "repeat(5, 1fr)", base: "repeat(1, 1fr)" }}
+            gap={6}
+          >
+            <GridItem colSpan={{ lg: 2, base: 1 }}>
+              <InputLayout label="Search">
+                <Input
+                  onChange={(e) => setSearch(e.target.value)}
+                  value={search}
+                  border="none"
+                  p={0}
+                  focusBorderColor="none"
+                  color="white"
+                  fontSize="1.3rem"
+                  placeholder="Name, Address, Workstream ..."
+                />
+              </InputLayout>
+            </GridItem>
+            <GridItem>
+              <SelectInput
+                label="Order by"
+                options={[
+                  { label: "Health", value: "health" },
+                  { label: "Forum Activity", value: "forum_activity" },
+                  { label: "Voting Weight", value: "voting_weight" },
+                ]}
+                defaultValue={display}
+                onChange={setDisplay}
+              />
+            </GridItem>
+            <GridItem>
+              <SelectInput
+                label="Display"
+                options={[
+                  { label: "Descending", value: "descending" },
+                  { label: "Ascending", value: "ascending" },
+                ]}
+                defaultValue={orderBy}
+                onChange={setOrderBy}
+              />
+            </GridItem>
+            <GridItem animation={animation} borderRadius={"lg"}>
+              <SelectInput
+                label="Time"
+                options={[
+                  { label: "30 Days", value: "30d" },
+                  { label: "Lifetime", value: "lifetime" },
+                ]}
+                defaultValue={time}
+                onChange={setTime}
+              />
+            </GridItem>
+          </Grid>
+          {isLoading ? (
+            <Spinner color="purple.500" size="xl" />
+          ) : (
+            <Grid
+              w="full"
+              templateColumns={{
+                base: "repeat(1, 1fr)",
+                md: "repeat(2, 1fr)",
+                xl: "repeat(3, 1fr)",
+                "2xl": "repeat(4, 1fr)",
+              }}
+              gap={"2rem"}
+            >
+              {filteredStewardsData.map((element, index) => (
+                <GridItem key={index}>
+                  <StewardsCard
+                    name={element.profile ? element.profile.name : ""}
+                    gitcoinUsername={
+                      element.profile ? element.profile.gitcoin_username : "-"
+                    }
+                    profileImage={
+                      element.profile ? element.profile.profile_image : ""
+                    }
+                    stewardsSince={
+                      element.profile ? element.profile.steward_since : "-"
+                    }
+                    forumActivity={getForumActivity(element)}
+                    workstreams={
+                      element.profile
+                        ? getProfileWorkstreams(element.profile)
+                        : []
+                    }
+                    votingWeight={getVotingWeight(element)}
+                    votingParticipation={element.stats[0].offChainVotesPct}
+                    statementLink={
+                      element.profile ? element.profile.statement_post : ""
+                    }
+                    delegateLink={
+                      "https://www.withtally.com/voter/" +
+                      element.publicAddress +
+                      "/governance/gitcoin"
+                    }
+                    forumActivityLink={
+                      element.profile
+                        ? "https://gov.gitcoin.co/u/" +
+                          element.profile.discourse_username
+                        : "/"
+                    }
+                    healthScore={element.stats[0].gitcoinHealthScore}
+                  />
+                </GridItem>
+              ))}
+            </Grid>
+          )}
+          <Footer />
+        </Flex>
+      )}
+      {toogleTab === 2 && (
+        <Flex
+          bg="#291555"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+          gap="2"
+          textAlign="center"
+          paddingTop="10"
+          width="100%"
+        >
+          <Heading mb="2rem" textAlign="center">
+            Workstreams
+          </Heading>
+        </Flex>
+      )}
     </>
   );
 };
