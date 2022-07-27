@@ -25,7 +25,7 @@ const AreaChartComp = ({ data }) => {
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+        <Area type="monotone" dataKey="uv" stroke="rgba(242, 229, 166, 1)" fill="rgba(242, 229, 166, 1)" />
       </AreaChart>
     </ResponsiveContainer>
   );
