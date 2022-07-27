@@ -8,6 +8,8 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import AreaChartComp from "../Charts/AreaChart";
+import BarChartComp from "../Charts/BarChartComp";
 
 const WorkstreamCard = ({}) => {
   const objectives = [
@@ -36,6 +38,53 @@ const WorkstreamCard = ({}) => {
   const stewards = ["adamsc1-ddg", "adamstallard", "amsos", "chase"];
 
   const proposals = ["proposal 1", "proposal 2", "proposal 3", "proposal 4"];
+
+  const data = [
+    {
+      name: 'Page A',
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: 'Page B',
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+    },
+    {
+      name: 'Page C',
+      uv: 2000,
+      pv: 9800,
+      amt: 2290,
+    },
+    {
+      name: 'Page D',
+      uv: 2780,
+      pv: 3908,
+      amt: 2000,
+    },
+    {
+      name: 'Page E',
+      uv: 1890,
+      pv: 4800,
+      amt: 2181,
+    },
+    {
+      name: 'Page F',
+      uv: 2390,
+      pv: 3800,
+      amt: 2500,
+    },
+    {
+      name: 'Page G',
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+  ];
+
+
   return (
     <Box bg="#452885" rounded="1rem" p={2}>
       <VStack>
@@ -87,11 +136,11 @@ const WorkstreamCard = ({}) => {
         >
           <GridItem p={3} bg="rgba(76, 54, 123, 1)" rounded="0.8rem">
             <Text fontSize={"1.1rem"}>53.2k GTC</Text>
-            <Box>Graphs</Box>
+            <Box w='full' h='10rem'><AreaChartComp data={data} /></Box>
           </GridItem>
           <GridItem p={3} bg="rgba(76, 54, 123, 1)" rounded="0.8rem">
             <Text fontSize={"1.1rem"}>53.2k GTC</Text>
-            <Box>Graphs</Box>
+            <Box w='full' h='10rem'><AreaChartComp data={data} /></Box>
           </GridItem>
           <GridItem
             textAlign="left"
@@ -108,7 +157,7 @@ const WorkstreamCard = ({}) => {
             ))}
           </GridItem>
           <GridItem p={3} bg="rgba(76, 54, 123, 1)" rounded="0.8rem">
-            <Box>Graphs</Box>
+            <Box w='full' h='full'><BarChartComp data={data} /></Box>
           </GridItem>
         </Grid>
         <Flex w="full" alignItems={"center"} justify="space-between">
