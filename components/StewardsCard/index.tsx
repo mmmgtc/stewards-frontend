@@ -10,6 +10,7 @@ interface StewardsCardProps {
   profileImage?: string;
   statementLink?: string;
   delegateLink?: string;
+  delegatorCount?: number;
   forumActivity?: number;
   forumActivityLink?: string;
   healthScore?: number;
@@ -75,6 +76,7 @@ const StewardsCard = ({
   profileImage,
   statementLink,
   delegateLink,
+  delegatorCount,
   forumActivityLink,
   healthScore,
 }: StewardsCardProps) => {
@@ -240,6 +242,25 @@ const StewardsCard = ({
         </Flex>
         <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
           {getVotingWeight(votingWeight)}
+        </Text>
+      </Flex>
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
+        <Flex gap="1rem" alignItems="center">
+          <Image
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
+            src="/assets/person.svg"
+            alt="calender"
+          />
+          <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>Delegators</Text>
+        </Flex>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
+          {delegatorCount}
         </Text>
       </Flex>
       <Flex

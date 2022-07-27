@@ -415,6 +415,7 @@ const Home: NextPage = () => {
                     element.publicAddress +
                     "/governance/gitcoin"
                   }
+                  delegatorCount={element.delegatorCount}
                   forumActivityLink={
                     element.profile
                       ? "https://gov.gitcoin.co/u/" +
