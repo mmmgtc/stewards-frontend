@@ -3,6 +3,7 @@ import {
   Flex,
   Grid,
   GridItem,
+  Image,
   Link,
   Text,
   VStack,
@@ -31,6 +32,8 @@ const WorkstreamCard = ({}) => {
         " Lorem ipsum is placeholder text commonly used in the graphic, print,and publishing industries for previewing layouts and visual mockups.",
     },
   ];
+
+  const stewards = ["adamsc1-ddg", "adamstallard", "amsos", "chase"];
 
   const proposals = ["proposal 1", "proposal 2", "proposal 3", "proposal 4"];
   return (
@@ -90,17 +93,65 @@ const WorkstreamCard = ({}) => {
             <Text fontSize={"1.1rem"}>53.2k GTC</Text>
             <Box>Graphs</Box>
           </GridItem>
-          <GridItem textAlign='left' p={3} bg="rgba(76, 54, 123, 1)" rounded="0.8rem">
+          <GridItem
+            textAlign="left"
+            p={3}
+            bg="rgba(76, 54, 123, 1)"
+            rounded="0.8rem"
+          >
             <Text fontSize={"1.1rem"}>Budget Proposals</Text>
 
             {proposals.map((proposal, index) => (
-              <Link display='block' key={index}>{proposal}</Link>
+              <Link display="block" key={index}>
+                {proposal}
+              </Link>
             ))}
           </GridItem>
           <GridItem p={3} bg="rgba(76, 54, 123, 1)" rounded="0.8rem">
             <Box>Graphs</Box>
           </GridItem>
         </Grid>
+        <Flex w="full" alignItems={"center"} justify="space-between">
+          <Box>
+            <Text
+              fontWeight={400}
+              fontFamily="inter"
+              fontSize={"1.1rem"}
+              color="rgba(255, 255, 255, 1)"
+            >
+              Stewards
+            </Text>
+            <Flex gap={1}>
+              {stewards.map((steward, index) => (
+                <Image
+                  w="1.75rem"
+                  rounded="full"
+                  src={`/assets/stewards/webp/${steward}.webp`}
+                  alt={steward}
+                  key={index}
+                />
+              ))}
+            </Flex>
+          </Box>
+          <Box>
+            <Text
+              fontWeight={400}
+              fontFamily="inter"
+              fontSize={"1.1rem"}
+              color="rgba(255, 255, 255, 1)"
+            >
+              All time contributors
+            </Text>
+            <Text
+              fontWeight={400}
+              fontFamily="inter"
+              fontSize={"1.3rem"}
+              color="rgba(255, 255, 255, 1)"
+            >
+              65
+            </Text>
+          </Box>
+        </Flex>
       </VStack>
     </Box>
   );
