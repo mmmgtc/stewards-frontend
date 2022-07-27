@@ -1,4 +1,5 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
+import WorkstreamCard from "../components/WorkstreamCard";
 
 const Workstream = () => {
   return   <Flex
@@ -10,10 +11,16 @@ const Workstream = () => {
   textAlign="center"
   paddingTop="10"
   width="100%"
+  p={3}
 >
   <Heading mb="2rem" textAlign="center">
     Workstreams
   </Heading>
+  <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)', xl: 'repeat(4, 1fr)'}}>
+    <GridItem>
+    <WorkstreamCard />
+    </GridItem>
+  </Grid>
 </Flex>
 
 }

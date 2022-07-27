@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@fontsource/inter": "^4.5.11",
     "@fontsource/poppins": "^4.5.8",
     "@fontsource/space-mono": "^4.5.8",
     "framer-motion": "^6.3.15",

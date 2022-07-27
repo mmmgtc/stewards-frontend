@@ -24,6 +24,7 @@ export const theme = extendTheme({
   fonts: {
     heading: `"Space Mono", monospace`,
     body: `"Poppins", sans-serif`,
+    inter: `"Inter", sans-serif`,
   },
   components: {
     Link: {

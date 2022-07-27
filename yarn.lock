@@ -750,6 +750,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/inter@^4.5.11":
+  version "4.5.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.11.tgz#3c45014821e8c82b247a291f1944dd2764a2d1ed"
+  integrity sha512-toizzQkfXL8YJcG/f8j3EYXYGQe4OxiDEItThSigvHU+cYNDw8HPp3wLYQX745hddsnHqOGCM4exitFSBOU8+w==
+
 "@fontsource/poppins@^4.5.8":
   version "4.5.8"
   resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.5.8.tgz#65ce9b32f31bda5a25c23001bcebf1c66e440320"
