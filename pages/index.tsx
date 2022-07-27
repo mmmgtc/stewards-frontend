@@ -86,6 +86,13 @@ const Home: NextPage = () => {
   }
 
   /**
+   * Calculate the delegator count
+   */
+  function getDelegatorCount(element) {
+    return element.delegatorCount;
+  }
+
+  /**
    * Take a user profile, look for workstreamsLead and workstreamsContributor and return details on the workstreams
    */
   function getProfileWorkstreams(profile) {
@@ -229,6 +236,13 @@ const Home: NextPage = () => {
           convertToNumber(getVotingWeight(b))
         );
       });
+    } else if (display === "delegator_count") {
+      clonedData.sort(function (a, b) {
+        return (
+          convertToNumber(getDelegatorCount(a)) -
+          convertToNumber(getDelegatorCount(b))
+        );
+      });
     }
 
     if (orderBy === "descending") {
@@ -346,6 +360,7 @@ const Home: NextPage = () => {
                 { label: "Health", value: "health" },
                 { label: "Forum Activity", value: "forum_activity" },
                 { label: "Voting Weight", value: "voting_weight" },
+                { label: "Delegators", value: "delegator_count" },
               ]}
               defaultValue={display}
               onChange={setDisplay}
