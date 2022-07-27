@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 // import { useAccount, useConnect, useDisconnect } from "wagmi";
@@ -50,7 +51,6 @@ const Home: NextPage = () => {
   const [display, setDisplay] = useState(
     searchParams.get("display") ?? "health"
   );
-  const [toogleTab, setToogleTab] = useState(1);
   const [time, setTime] = useState(searchParams.get("time") ?? "30d");
   const [dataLastUpdated, setDataLastUpdated] = useState([]);
   const [workstreamData, setWorkstreamData] = useState([]);
@@ -59,6 +59,7 @@ const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [lastUpdatedAt, setLastUpdatedAt] = useState<Date | null>(null);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const router = useRouter()
 
   const animation = prefersReducedMotion
     ? undefined
@@ -132,6 +133,7 @@ const Home: NextPage = () => {
     ).then(success);
 
     let ret = [];
+
 
     await Promise.all([karmaData, stewardsProfileData])
       .then(([karmaData, stewardsProfileData]) => {
@@ -306,40 +308,6 @@ const Home: NextPage = () => {
           href="assets/favicon.png"
         />
       </Head>
-      <Flex mr={"auto"}>
-        <Box
-          bg={toogleTab === 1 ? "#291555" : "#190C35"}
-          paddingX="5"
-          paddingY="2"
-          textColor={toogleTab === 1 ? "#BE59CF" : "#612a6b"}
-          fontWeight="semibold"
-          fontSize="xl"
-          borderTopRightRadius="10px"
-          borderTopLeftRadius="10px"
-          cursor="pointer"
-          onClick={() => setToogleTab(1)}
-          zIndex={toogleTab === 1 ? "1" : "0"}
-        >
-          Stewards
-        </Box>
-        <Box
-          bg={toogleTab === 2 ? "#291555" : "#190C35"}
-          paddingX="5"
-          paddingY="2"
-          textColor={toogleTab === 2 ? "#BE59CF" : "#612a6b"}
-          fontWeight="semibold"
-          fontSize="xl"
-          borderTopRightRadius="10px"
-          borderTopLeftRadius="10px"
-          cursor="pointer"
-          onClick={() => setToogleTab(2)}
-          zIndex={toogleTab === 2 ? "1" : "0"}
-          marginLeft="-.5rem"
-        >
-          Workstreams
-        </Box>
-      </Flex>
-      {toogleTab === 1 && (
         <Flex
           bg="#291555"
           justifyContent="center"
@@ -482,23 +450,6 @@ const Home: NextPage = () => {
           )}
           <Footer />
         </Flex>
-      )}
-      {toogleTab === 2 && (
-        <Flex
-          bg="#291555"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
-          gap="2"
-          textAlign="center"
-          paddingTop="10"
-          width="100%"
-        >
-          <Heading mb="2rem" textAlign="center">
-            Workstreams
-          </Heading>
-        </Flex>
-      )}
     </>
   );
 };
