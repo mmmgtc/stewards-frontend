@@ -90,17 +90,26 @@ const StewardsCard = ({
     >
       <Flex alignItems="center" w="full" justify="space-between">
         <Flex gap="1rem" alignItems="center">
-          <Image
-            borderRadius="1rem"
-            w={{ sm: "100px", base: "70px" }}
-            h={{ sm: "100px", base: "70px" }}
-            src={
-              profileImage && profileImage.length > 0
-                ? `/assets/stewards/webp/` + profileImage
-                : "/assets/stewards/webp/unknown.webp"
-            }
-            alt={name ? name : "-"}
-          />
+          <Link
+            isExternal
+            href={"https://gitcoin.co/" + gitcoinUsername}
+            color="#42c8b0"
+            textDecoration="none"
+            _hover={{ color: "#42c8b0" }}
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
+          >
+            <Image
+              borderRadius="1rem"
+              w={{ sm: "100px", base: "70px" }}
+              h={{ sm: "100px", base: "70px" }}
+              src={
+                profileImage && profileImage.length > 0
+                  ? `/assets/stewards/webp/` + profileImage
+                  : "/assets/stewards/webp/unknown.webp"
+              }
+              alt={name ? name : "-"}
+            />
+          </Link>
           <Box textAlign="left">
             <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }} fontWeight="bold">
               {name.length > 0 ? name : "-"}
@@ -257,7 +266,15 @@ const StewardsCard = ({
             src="/assets/person.svg"
             alt="calender"
           />
-          <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>Delegators</Text>
+          <Link
+            isExternal
+            href={delegateLink}
+            textDecoration="none"
+            _hover={{ color: "white" }}
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
+          >
+            Delegators
+          </Link>
         </Flex>
         <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
           {delegatorCount}
