@@ -10,6 +10,7 @@ interface StewardsCardProps {
   profileImage?: string;
   statementLink?: string;
   delegateLink?: string;
+  delegatorCount?: number;
   forumActivity?: number;
   forumActivityLink?: string;
   healthScore?: number;
@@ -75,6 +76,7 @@ const StewardsCard = ({
   profileImage,
   statementLink,
   delegateLink,
+  delegatorCount,
   forumActivityLink,
   healthScore,
 }: StewardsCardProps) => {
@@ -88,17 +90,26 @@ const StewardsCard = ({
     >
       <Flex alignItems="center" w="full" justify="space-between">
         <Flex gap="1rem" alignItems="center">
-          <Image
-            borderRadius="1rem"
-            w={{ sm: "100px", base: "70px" }}
-            h={{ sm: "100px", base: "70px" }}
-            src={
-              profileImage && profileImage.length > 0
-                ? `/assets/stewards/webp/` + profileImage
-                : "/assets/stewards/webp/unknown.webp"
-            }
-            alt={name ? name : "-"}
-          />
+          <Link
+            isExternal
+            href={"https://gitcoin.co/" + gitcoinUsername}
+            color="#42c8b0"
+            textDecoration="none"
+            _hover={{ color: "#42c8b0" }}
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
+          >
+            <Image
+              borderRadius="1rem"
+              w={{ sm: "100px", base: "70px" }}
+              h={{ sm: "100px", base: "70px" }}
+              src={
+                profileImage && profileImage.length > 0
+                  ? `/assets/stewards/webp/` + profileImage
+                  : "/assets/stewards/webp/unknown.webp"
+              }
+              alt={name ? name : "-"}
+            />
+          </Link>
           <Box textAlign="left">
             <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }} fontWeight="bold">
               {name.length > 0 ? name : "-"}
@@ -240,6 +251,33 @@ const StewardsCard = ({
         </Flex>
         <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
           {getVotingWeight(votingWeight)}
+        </Text>
+      </Flex>
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        w="full"
+        paddingX={"1rem"}
+      >
+        <Flex gap="1rem" alignItems="center">
+          <Image
+            w={{ sm: "40px", base: "30px" }}
+            h={{ sm: "40px", base: "30px" }}
+            src="/assets/person.svg"
+            alt="calender"
+          />
+          <Link
+            isExternal
+            href={delegateLink}
+            textDecoration="none"
+            _hover={{ color: "white" }}
+            fontSize={{ sm: "1.2rem", base: "0.9rem" }}
+          >
+            Delegators
+          </Link>
+        </Flex>
+        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>
+          {delegatorCount}
         </Text>
       </Flex>
       <Flex

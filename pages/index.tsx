@@ -89,6 +89,13 @@ const Home: NextPage = () => {
   }
 
   /**
+   * Calculate the delegator count
+   */
+  function getDelegatorCount(element) {
+    return element.delegatorCount;
+  }
+
+  /**
    * Take a user profile, look for workstreamsLead and workstreamsContributor and return details on the workstreams
    */
   function getProfileWorkstreams(profile) {
@@ -231,6 +238,13 @@ const Home: NextPage = () => {
         return (
           convertToNumber(getVotingWeight(a)) -
           convertToNumber(getVotingWeight(b))
+        );
+      });
+    } else if (display === "delegator_count") {
+      clonedData.sort(function (a, b) {
+        return (
+          convertToNumber(getDelegatorCount(a)) -
+          convertToNumber(getDelegatorCount(b))
         );
       });
     }
