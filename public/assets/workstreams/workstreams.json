@@ -5,9 +5,9 @@
     "title": "Public Goods Funding",
     "description": "Raise awareness and funding for digital public goods and Gitcoin grants",
     "objectives": [
-      { "title": "Objective 1" },
-      { "title": "Objective 2" },
-      { "title": "Objective 3" }
+      { "title": "Objective1" },
+      { "title": "Objective2" },
+      { "title": "Objective3" }
     ],
     "duneEmbeds": {
       "gtcBalanceOverTime": "https://dune.com/embeds/1069229/1835703/e2750ae5-1f9a-453d-b30e-5ea00408b439",
@@ -38,9 +38,9 @@
     "title": "Fraud Detection & Defense",
     "description": "Defend Gitcoin from threats to its legitimacy, credible neutrality, and sustainability",
     "objectives": [
-      { "title": "Objective 1" },
-      { "title": "Objective 2" },
-      { "title": "Objective 3" }
+      { "title": "Objective1" },
+      { "title": "Objective2" },
+      { "title": "Objective3" }
     ],
     "duneEmbeds": {
       "gtcBalanceOverTime": "https://dune.com/embeds/1069368/1835915/55ea8810-decd-4754-88ec-f9521ca4d80f",
@@ -75,9 +75,9 @@
     "title": "Moonshot Collective",
     "description": "Build and experiment with innovative solutions that add value to Gitcoin’s vision and essential intents",
     "objectives": [
-      { "title": "Objective 1" },
-      { "title": "Objective 2" },
-      { "title": "Objective 3" }
+      { "title": "Objective1" },
+      { "title": "Objective2" },
+      { "title": "Objective3" }
     ],
     "duneEmbeds": {
       "gtcBalanceOverTime": "https://dune.com/embeds/1069447/1836005/27308b69-1b22-4abe-9242-0e68b022ba2c",
@@ -112,9 +112,9 @@
     "title": "Merch, Memes & Marketing",
     "description": "Generate curiosity, hype and engagement around GitcoinDAO and our core mission.",
     "objectives": [
-      { "title": "Objective 1" },
-      { "title": "Objective 2" },
-      { "title": "Objective 3" }
+      { "title": "Objective1" },
+      { "title": "Objective2" },
+      { "title": "Objective3" }
     ],
     "duneEmbeds": {
       "gtcBalanceOverTime": "https://dune.com/embeds/1069131/1835584/64b0a151-8c91-4384-be1f-9edeac4d30e4",
@@ -145,9 +145,9 @@
     "title": "DAO Operations",
     "description": "Operationalize the DAO including legal, accounting, people operations, support and governance",
     "objectives": [
-      { "title": "Objective 1" },
-      { "title": "Objective 2" },
-      { "title": "Objective 3" }
+      { "title": "Objective1" },
+      { "title": "Objective2" },
+      { "title": "Objective3" }
     ],
     "duneEmbeds": {
       "gtcBalanceOverTime": "https://dune.com/embeds/1069350/1835872/17bc017d-36e2-4a4b-a5f2-288931cbb5aa",
@@ -174,9 +174,9 @@
     "title": "Gitcoin Product Collective",
     "description": "Open-source technology to scale plural capital provision",
     "objectives": [
-      { "title": "Objective 1" },
-      { "title": "Objective 2" },
-      { "title": "Objective 3" }
+      { "title": "Objective1" },
+      { "title": "Objective2" },
+      { "title": "Objective3" }
     ],
     "duneEmbeds": {
       "gtcBalanceOverTime": "-",
