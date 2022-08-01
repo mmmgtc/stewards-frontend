@@ -9,9 +9,11 @@ import {
   keyframes,
   usePrefersReducedMotion,
   Spinner,
+  Box,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 // import { useAccount, useConnect, useDisconnect } from "wagmi";
@@ -57,6 +59,7 @@ const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [lastUpdatedAt, setLastUpdatedAt] = useState<Date | null>(null);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const router = useRouter();
 
   const animation = prefersReducedMotion
     ? undefined
@@ -263,11 +266,6 @@ const Home: NextPage = () => {
   }, [time]);
 
   useEffect(() => {
-    console.log("lastUpdatedAt: ", lastUpdatedAt);
-  }, [lastUpdatedAt]);
-
-  useEffect(() => {
-    console.log("stewardsData", stewardsData);
     if (stewardsData.length > 0) {
       let lastUpdated = stewardsData[0].stats[0].updatedAt;
 
@@ -324,15 +322,14 @@ const Home: NextPage = () => {
         />
       </Head>
       <Flex
+        bg="#291555"
         justifyContent="center"
         alignItems="center"
         flexDirection="column"
         gap="2"
         textAlign="center"
+        paddingTop="10"
       >
-        <Heading mb="2rem" textAlign="center">
-          Steward Health Cards
-        </Heading>
         <Text mb="2rem">
           The Stewards of Gitcoin DAO play a vital role in driving the Gitcoin
           ecosystem forward through their work in governance and workstreams. In
@@ -379,7 +376,6 @@ const Home: NextPage = () => {
                 { label: "Health", value: "health" },
                 { label: "Forum Activity", value: "forum_activity" },
                 { label: "Voting Weight", value: "voting_weight" },
-                { label: "Delegators", value: "delegator_count" },
               ]}
               defaultValue={display}
               onChange={setDisplay}
@@ -450,7 +446,6 @@ const Home: NextPage = () => {
                     element.publicAddress +
                     "/governance/gitcoin"
                   }
-                  delegatorCount={element.delegatorCount}
                   forumActivityLink={
                     element.profile
                       ? "https://gov.gitcoin.co/u/" +
