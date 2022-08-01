@@ -1,11 +1,25 @@
 import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 import WorkstreamCard from "../components/WorkstreamCard";
 import workstreamData from "../public/assets/workstreams/workstreams.json";
+import stewardsProfileData from "../public/assets/stewards/stewards_data.json";
+
+/**
+ * Return stewards for a specific workstream
+ */
+function getStewards(workstream) {
+  let ret = stewardsProfileData.data.filter((element) => {
+    return (
+      element.workstreamsContributor.search(workstream.slug) >= 0 ||
+      element.workstreamsLead.search(workstream.slug) >= 0
+    );
+  });
+
+  return ret;
+}
 
 const Workstream = () => {
   return (
     <Flex
-      bg="#291555"
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
@@ -13,18 +27,13 @@ const Workstream = () => {
       textAlign="center"
       paddingTop="10"
       width="100%"
-      p={3}
     >
-      <Heading mb="2rem" textAlign="center">
-        Workstreams
-      </Heading>
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
           "2xl": "repeat(3, 1fr)",
         }}
-        w="full"
         gap={5}
         justifyItems="center"
       >
@@ -43,6 +52,7 @@ const Workstream = () => {
               contributors={workstream.duneEmbeds.allTimeContributors}
               gtcBalance={workstream.duneEmbeds.gtcBalance}
               stableBalance={workstream.duneEmbeds.stableCoinBalance}
+              stewards={getStewards(workstream)}
             />
           </GridItem>
         ))}
