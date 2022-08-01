@@ -24,6 +24,7 @@ interface WorkstreamCardProps {
   contributors: string;
   gtcBalance: string;
   stableBalance: string;
+  stewards: any[];
 }
 
 const WorkstreamCard = ({
@@ -37,6 +38,7 @@ const WorkstreamCard = ({
   contributors,
   gtcBalance,
   stableBalance,
+  stewards,
 }: WorkstreamCardProps) => {
   // const objectives = [
   //   {
@@ -60,8 +62,6 @@ const WorkstreamCard = ({
   //       " Lorem ipsum is placeholder text commonly used in the graphic, print,and publishing industries for previewing layouts and visual mockups.",
   //   },
   // ];
-
-  const stewards = ["adamsc1-ddg", "adamstallard", "amsos", "chase"];
 
   // const proposals = ["proposal 1", "proposal 2", "proposal 3", "proposal 4"];
 
@@ -126,38 +126,36 @@ const WorkstreamCard = ({
         <Text fontSize={15} color="rgba(201, 184, 255, 1)" fontStyle="italic">
           {discrpition}
         </Text>
-        <Box
-          overflowY={"auto"}
-          height="10rem"
-          w="full"
-          bg="rgba(76, 54, 123, 1)"
-          rounded="0.8rem"
-          p={2}
-        >
-          <Text
-            fontWeight={400}
-            fontFamily="inter"
-            fontSize={"1.1rem"}
-            textDecoration="underline"
-            color="rgba(255, 255, 255, 1)"
+        {objectives.length > 0 && (
+          <Box
+            overflowY={"auto"}
+            height="10rem"
+            w="full"
+            bg="rgba(76, 54, 123, 1)"
+            rounded="0.8rem"
+            p={2}
           >
-            Objectives
-          </Text>
-          <VStack textAlign="left" spacing={2}>
-            {objectives.map((obj, index) => (
-              <Flex fontSize={12} gap={2} align="flex-start" key={index}>
-                <Text color="rgba(255, 255, 255, 1)" w="fit-content">
-                  {obj.title}:
-                </Text>
-                <Text color="rgba(209, 196, 196, 1)">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                  perspiciatis tempora corporis fugiat alias magni qui,
-                  recusandae ut unde a!
-                </Text>
-              </Flex>
-            ))}
-          </VStack>
-        </Box>
+            <Text
+              fontWeight={400}
+              fontFamily="inter"
+              fontSize={"1.1rem"}
+              textDecoration="underline"
+              color="rgba(255, 255, 255, 1)"
+            >
+              Objectives
+            </Text>
+            <VStack textAlign="left" spacing={2}>
+              {objectives.map((obj, index) => (
+                <Flex fontSize={12} gap={2} align="flex-start" key={index}>
+                  <Text color="rgba(255, 255, 255, 1)" w="fit-content">
+                    {obj.title}:
+                  </Text>
+                  <Text color="rgba(209, 196, 196, 1)">{obj.description}</Text>
+                </Flex>
+              ))}
+            </VStack>
+          </Box>
+        )}
         <Grid
           w="full"
           color="rgba(255, 255, 255, 1)"
@@ -173,9 +171,8 @@ const WorkstreamCard = ({
               src={gtcBalance}
               style={{
                 position: "relative",
-                top: "-30px",
-                left: "-30px",
                 height: "100px",
+                width: "100%",
               }}
             />
             <Box w="full" h="10rem" overflow="hidden">
@@ -185,7 +182,6 @@ const WorkstreamCard = ({
                   src={gtcBalanceOvertime}
                   style={{
                     position: "relative",
-                    top: "-50px",
                     height: "230px",
                     width: "100%",
                     color: "white",
@@ -207,9 +203,8 @@ const WorkstreamCard = ({
               src={stableBalance}
               style={{
                 position: "relative",
-                top: "-70px",
-                left: "-30px",
                 height: "150px",
+                width: "100%",
               }}
             />
             <Box w="full" h="10rem" overflow="hidden">
@@ -219,7 +214,6 @@ const WorkstreamCard = ({
                   src={stableCoinBalanceOvertime}
                   style={{
                     position: "relative",
-                    top: "-50px",
                     height: "230px",
                     width: "100%",
                     color: "white",
@@ -267,13 +261,18 @@ const WorkstreamCard = ({
             </Text>
             <Flex gap={1}>
               {stewards.map((steward, index) => (
-                <Image
-                  w="1.75rem"
-                  rounded="full"
-                  src={`/assets/stewards/webp/${steward}.webp`}
-                  alt={steward}
-                  key={index}
-                />
+                <Link
+                  isExternal
+                  href={"https://gitcoin.co/" + steward.gitcoin_username}
+                >
+                  <Image
+                    w="1.75rem"
+                    rounded="full"
+                    src={`/assets/stewards/webp/${steward.profile_image}`}
+                    alt={steward.name}
+                    key={index}
+                  />
+                </Link>
               ))}
             </Flex>
           </Box>
@@ -296,7 +295,7 @@ const WorkstreamCard = ({
             </Text> */}
             <iframe
               src={contributors}
-              style={{ position: "relative", top: "-110px", height: "300px" }}
+              style={{ position: "relative", height: "300px" }}
             />
           </Box>
         </Flex>
