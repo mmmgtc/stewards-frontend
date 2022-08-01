@@ -13,8 +13,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <Router>
-      <VStack py="2rem">
-        <Flex mr={"auto"} ml="1rem">
+      <VStack pb="2rem">
+        <Flex mr={"auto"}>
           <Box
             bg={homeRoute ? "#291555" : "#190C35"}
             paddingX="5"
@@ -27,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             cursor="pointer"
             onClick={() => router.push("/")}
             zIndex={homeRoute ? "1" : "0"}
-            mr="0.5rem"
+
           >
             Stewards
           </Box>
