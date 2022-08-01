@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import AreaChartComp from "../Charts/AreaChart";
 import BarChartComp from "../Charts/BarChartComp";
-import Iframe from "react-iframe";
 import { relative } from "path";
 
 interface WorkstreamCardProps {
@@ -40,76 +39,6 @@ const WorkstreamCard = ({
   stableBalance,
   stewards,
 }: WorkstreamCardProps) => {
-  // const objectives = [
-  //   {
-  //     label: "Objective",
-  //     description:
-  //       " Lorem ipsum is placeholder text commonly used in the graphic, print,and publishing industries for previewing layouts and visual mockups.",
-  //   },
-  //   {
-  //     label: "Objective",
-  //     description:
-  //       " Lorem ipsum is placeholder text commonly used in the graphic, print,and publishing industries for previewing layouts and visual mockups.",
-  //   },
-  //   {
-  //     label: "Objective",
-  //     description:
-  //       " Lorem ipsum is placeholder text commonly used in the graphic, print,and publishing industries for previewing layouts and visual mockups.",
-  //   },
-  //   {
-  //     label: "Objective",
-  //     description:
-  //       " Lorem ipsum is placeholder text commonly used in the graphic, print,and publishing industries for previewing layouts and visual mockups.",
-  //   },
-  // ];
-
-  // const proposals = ["proposal 1", "proposal 2", "proposal 3", "proposal 4"];
-
-  const data = [
-    {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-    {
-      name: "Page C",
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
-    },
-    {
-      name: "Page D",
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
-    },
-    {
-      name: "Page E",
-      uv: 1890,
-      pv: 4800,
-      amt: 2181,
-    },
-    {
-      name: "Page F",
-      uv: 2390,
-      pv: 3800,
-      amt: 2500,
-    },
-    {
-      name: "Page G",
-      uv: 3490,
-      pv: 4300,
-      amt: 2100,
-    },
-  ];
-
   return (
     <Box bg="#452885" rounded="1rem" p={2}>
       <VStack>
@@ -162,11 +91,7 @@ const WorkstreamCard = ({
           gap={5}
           templateColumns="repeat(2, 1fr)"
         >
-          <GridItem
-            bg="rgba(76, 54, 123, 1)"
-            rounded="0.8rem"
-            overflow="hidden"
-          >
+          <GridItem rounded="0.8rem" overflow="hidden" bg="#a593cb">
             <iframe
               src={gtcBalance}
               style={{
@@ -175,7 +100,7 @@ const WorkstreamCard = ({
                 width: "100%",
               }}
             />
-            <Box w="full" h="10rem" overflow="hidden">
+            <Box w="full" h="10rem" overflow="hidden" bg="#a593cb">
               {/* <iframe src={gtcBalanceOvertime} /> */}
               {gtcBalanceOvertime !== "-" ? (
                 <iframe
@@ -192,12 +117,7 @@ const WorkstreamCard = ({
               )}
             </Box>
           </GridItem>
-          <GridItem
-            p={3}
-            bg="rgba(76, 54, 123, 1)"
-            rounded="0.8rem"
-            overflow="hidden"
-          >
+          <GridItem p={3} bg="#a593cb" rounded="0.8rem" overflow="hidden">
             {/* <Text fontSize={"1.1rem"}>53.2k GTC</Text> */}
             <iframe
               src={stableBalance}
@@ -224,12 +144,7 @@ const WorkstreamCard = ({
               )}
             </Box>
           </GridItem>
-          <GridItem
-            textAlign="left"
-            p={3}
-            bg="rgba(76, 54, 123, 1)"
-            rounded="0.8rem"
-          >
+          <GridItem textAlign="left" p={3} rounded="0.8rem" bg="#a593cb">
             <Text fontSize={"1.1rem"}>Budget Proposals</Text>
 
             {proposals.map((proposal, index) => (
@@ -237,68 +152,49 @@ const WorkstreamCard = ({
                 href={proposal.link}
                 target="_blank"
                 display="block"
-                key={index}
+                key={"budgetproposal-" + index}
               >
                 {proposal.title}
               </Link>
             ))}
           </GridItem>
-          <GridItem p={3} bg="rgba(76, 54, 123, 1)" rounded="0.8rem">
+          <GridItem p={3} rounded="0.8rem" bg="#a593cb">
             <Box w="full" h="full">
-              {/* <BarChartComp data={data} /> */}
+              <iframe src={contributors} style={{ position: "relative" }} />
             </Box>
           </GridItem>
         </Grid>
-        <Flex w="full" alignItems={"center"} justify="space-between">
-          <Box>
-            <Text
-              fontWeight={400}
-              fontFamily="inter"
-              fontSize={"1.1rem"}
-              color="rgba(255, 255, 255, 1)"
-            >
-              Stewards
-            </Text>
-            <Flex gap={1}>
-              {stewards.map((steward, index) => (
-                <Link
-                  isExternal
-                  href={"https://gitcoin.co/" + steward.gitcoin_username}
-                >
-                  <Image
-                    w="1.75rem"
-                    rounded="full"
-                    src={`/assets/stewards/webp/${steward.profile_image}`}
-                    alt={steward.name}
-                    key={index}
-                  />
-                </Link>
-              ))}
-            </Flex>
-          </Box>
-          <Box height={"5rem"} overflow="hidden">
-            <Text
-              fontWeight={400}
-              fontFamily="inter"
-              fontSize={"1.1rem"}
-              color="rgba(255, 255, 255, 1)"
-            >
-              All time contributors
-            </Text>
-            {/* <Text
-              fontWeight={400}
-              fontFamily="inter"
-              fontSize={"1.3rem"}
-              color="rgba(255, 255, 255, 1)"
-            >
-              65
-            </Text> */}
-            <iframe
-              src={contributors}
-              style={{ position: "relative", height: "300px" }}
-            />
-          </Box>
-        </Flex>
+        {stewards.length > 0 && (
+          <Flex justify="space-between">
+            <Box>
+              <Text
+                fontWeight={400}
+                fontFamily="inter"
+                fontSize={"1.1rem"}
+                color="rgba(255, 255, 255, 1)"
+              >
+                Stewards
+              </Text>
+              <Flex gap={1}>
+                {stewards.map((steward, index) => (
+                  <Link
+                    isExternal
+                    href={"https://gitcoin.co/" + steward.gitcoin_username}
+                    key={"steward-" + index}
+                  >
+                    <Image
+                      w="1.75rem"
+                      rounded="full"
+                      src={`/assets/stewards/webp/${steward.profile_image}`}
+                      alt={steward.name}
+                      key={index}
+                    />
+                  </Link>
+                ))}
+              </Flex>
+            </Box>
+          </Flex>
+        )}
       </VStack>
     </Box>
   );
