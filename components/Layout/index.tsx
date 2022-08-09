@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <Router>
       <VStack pb="2rem">
-        <Box bg="#291555">
+        <Box bg="#291555" width="full">
           <Flex mr={"auto"}>
             <Box
               bg={homeRoute ? "#452885" : "#190C35"}
@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             >
               Stewards
             </Box>
-            <Box
+            {/* <Box
               bg={!homeRoute ? "#452885" : "#190C35"}
               paddingX="5"
               paddingY="2"
@@ -45,7 +45,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               zIndex={!homeRoute ? "1" : "0"}
             >
               Workstreams
-            </Box>
+            </Box> */}
           </Flex>
           {children}
         </Box>

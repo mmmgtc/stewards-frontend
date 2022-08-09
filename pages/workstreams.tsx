@@ -29,7 +29,7 @@ const Workstream = () => {
       gap="2"
       textAlign="center"
       paddingTop="10"
-      width="100%"
+      width="full"
     >
       <Grid
         templateColumns={{
