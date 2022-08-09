@@ -2,6 +2,9 @@ import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 import WorkstreamCard from "../components/WorkstreamCard";
 import workstreamData from "../public/assets/workstreams/workstreams.json";
 import stewardsProfileData from "../public/assets/stewards/stewards_data.json";
+import { useEffect } from "react";
+import axios from "axios";
+import * as cheerio from "cheerio";
 
 /**
  * Return stewards for a specific workstream
@@ -60,5 +63,19 @@ const Workstream = () => {
     </Flex>
   );
 };
+
+// export const getStaticProps = async () => {
+//   const { data } = await axios.get(
+//     "https://dune.com/embeds/1074330/1843176/e6a89acd-1ff1-49a2-ba76-cfb90f4869ad"
+//   );
+//   const $ = cheerio.load(data);
+//   console.log($.html());
+
+//   return {
+//     props: {
+//       hello: "hello",
+//     },
+//   };
+// };
 
 export default Workstream;
