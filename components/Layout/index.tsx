@@ -27,11 +27,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             cursor="pointer"
             onClick={() => router.push("/")}
             zIndex={homeRoute ? "1" : "0"}
-
           >
             Stewards
           </Box>
-          <Box
+          {/* <Box
             bg={!homeRoute ? "#291555" : "#190C35"}
             paddingX="5"
             paddingY="2"
@@ -45,7 +44,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             zIndex={!homeRoute ? "1" : "0"}
           >
             Workstreams
-          </Box>
+          </Box> */}
         </Flex>
         <Box padding="5" bg="#291555">
           {children}
