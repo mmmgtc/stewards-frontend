@@ -9,7 +9,7 @@ interface StewardsCardProps {
   gitcoinUsername?: string;
   profileImage?: string;
   statementLink?: string;
-  delegateLink?: string;
+  publicAddress?: string;
   delegatorCount?: number;
   forumActivity?: number;
   forumActivityLink?: string;
@@ -75,7 +75,7 @@ const StewardsCard = ({
   gitcoinUsername,
   profileImage,
   statementLink,
-  delegateLink,
+  publicAddress,
   delegatorCount,
   forumActivityLink,
   healthScore,
@@ -241,7 +241,11 @@ const StewardsCard = ({
           />
           <Link
             isExternal
-            href={delegateLink}
+            href={
+              "https://www.withtally.com/voter/" +
+              publicAddress +
+              "/governance/gitcoin"
+            }
             textDecoration="none"
             _hover={{ color: "white" }}
             fontSize={{ sm: "1.2rem", base: "0.9rem" }}
@@ -268,7 +272,11 @@ const StewardsCard = ({
           />
           <Link
             isExternal
-            href={delegateLink}
+            href={
+              "https://www.withtally.com/voter/" +
+              publicAddress +
+              "/governance/gitcoin"
+            }
             textDecoration="none"
             _hover={{ color: "white" }}
             fontSize={{ sm: "1.2rem", base: "0.9rem" }}
@@ -295,7 +303,7 @@ const StewardsCard = ({
           />
           <Link
             isExternal
-            href="https://snapshot.org/#/gitcoindao.eth"
+            href={"https://snapshot.org/#/profile/" + publicAddress}
             textDecoration="none"
             _hover={{ color: "white" }}
             fontSize={{ sm: "1.2rem", base: "0.9rem" }}
@@ -329,7 +337,11 @@ const StewardsCard = ({
           <Link
             isExternal
             color="white"
-            href={delegateLink}
+            href={
+              "https://www.withtally.com/voter/" +
+              publicAddress +
+              "/governance/gitcoin"
+            }
             textDecoration="none"
             fontSize={{ sm: "1.2rem", base: "0.9rem" }}
           >
