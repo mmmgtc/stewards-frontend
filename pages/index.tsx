@@ -441,11 +441,6 @@ const Home: NextPage = () => {
                   statementLink={
                     element.profile ? element.profile.statement_post : ""
                   }
-                  delegateLink={
-                    "https://www.withtally.com/voter/" +
-                    element.publicAddress +
-                    "/governance/gitcoin"
-                  }
                   forumActivityLink={
                     element.profile
                       ? "https://gov.gitcoin.co/u/" +
@@ -453,6 +448,8 @@ const Home: NextPage = () => {
                       : "/"
                   }
                   healthScore={element.stats[0].gitcoinHealthScore}
+                  publicAddress={element.publicAddress}
+                  delegatorCount={getDelegatorCount(element)}
                 />
               </GridItem>
             ))}
