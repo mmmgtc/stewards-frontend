@@ -641,7 +641,7 @@
       "address": "0x4a5B536A613E69F43a52f6Aa7A7F3765428329ad",
       "profile_image": "brittneyscott.webp",
       "workstreamsLead": "",
-      "workstreamsContributor": "mmm",
+      "workstreamsContributor": "",
       "gitcoin_username": "brittneyscott",
       "discourse_username": "seedphrase",
       "steward_since": "2021-06-11",
@@ -772,7 +772,7 @@
       "name": "Fred",
       "address": "0xA1E4A14363B3ba2c1D49e1eeBE5fa21e25E4ed1D",
       "profile_image": "fred.webp",
-      "workstreamsLead": "mmm",
+      "workstreamsLead": "",
       "workstreamsContributor": "",
       "gitcoin_username": "freddmannen",
       "discourse_username": "Fred",
@@ -846,7 +846,7 @@
       "profile_image": "zer8.webp",
       "workstreamsLead": "",
       "workstreamsContributor": "fdd",
-      "gitcoin_username": "zer8",
+      "gitcoin_username": "razga",
       "discourse_username": "zer8",
       "steward_since": "2021-09-29",
       "steward_days": 293,
@@ -899,6 +899,18 @@
       "steward_since": "2022-07-28",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/229"
-    }
+    },
+    {
+      "name": "Evan Powell",
+      "address": "0xcf7c21ded40f2df85a564207a89b3379780d9ce3",
+      "profile_image": "epowell101.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "epowell101",
+      "discourse_username": "epowell101",
+      "steward_since": "2022-08-09",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/231"
+    }    
   ]
 }

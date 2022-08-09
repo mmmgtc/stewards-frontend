@@ -4,7 +4,8 @@ export const theme = extendTheme({
   styles: {
     global: {
       "html, body": {
-        backgroundColor: "#291555",
+        // backgroundColor: "#291555",
+        backgroundColor: "#452885",
         lineHeight: "1.6em",
         color: "#d1c9e3",
       },
@@ -23,6 +24,7 @@ export const theme = extendTheme({
   fonts: {
     heading: `"Space Mono", monospace`,
     body: `"Poppins", sans-serif`,
+    inter: `"Inter", sans-serif`,
   },
   components: {
     Link: {
