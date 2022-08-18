@@ -911,6 +911,18 @@
       "steward_since": "2022-08-09",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/231"
-    }    
+    },
+    {
+      "name": "Mike Kriak",
+      "address": "0x0Ff4bCaF4D736EDB8EBa11dD66A4921e9f8b8B50",
+      "profile_image": "mike-kriak.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "kriak-eth",
+      "discourse_username": "Mike Kriak#1516",
+      "steward_since": "2022-08-12",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/234"
+    }
   ]
 }
