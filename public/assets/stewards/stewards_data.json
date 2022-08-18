@@ -935,6 +935,18 @@
       "steward_since": "2022-08-16",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/235"
+    },
+    {
+      "name": "Shawn",
+      "address": "0x4e0891913F88780d69574db834A2fa79Ad02357e",
+      "profile_image": "shawn.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "shawn16400",
+      "discourse_username": "shawn16400#5507",
+      "steward_since": "2022-08-17",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/236"
     }
   ]
 }
