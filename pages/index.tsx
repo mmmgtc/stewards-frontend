@@ -337,11 +337,16 @@ const Home: NextPage = () => {
           site with health cards for each Steward that display metrics and links
           on their involvement and engagement in the DAO. Details and discussion
           can be found on the{" "}
-          <Link href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712">
+          <Link
+            href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418"
+            isExternal
+          >
             governance forum
           </Link>
           , to learn more and get involved - visit{" "}
-          <Link href="https://gitcoindao.com/">GitcoinDAO.com</Link>
+          <Link href="https://gitcoindao.com/" isExternal>
+            GitcoinDAO.com
+          </Link>
         </Text>
         <Text mb="2rem">
           Data powered by <Link href="https://www.showkarma.xyz/">Karma</Link>
