@@ -923,6 +923,18 @@
       "steward_since": "2022-08-12",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/234"
+    },
+    {
+      "name": "Thomas Rush",
+      "address": "0xEeaA36420519d85EfaB3b7120ac5Afa5a5825bFB",
+      "profile_image": "thomas-rush.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "thomas_rush",
+      "discourse_username": "Thomas_R#7011",
+      "steward_since": "2022-08-16",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/235"
     }
   ]
 }
