@@ -911,6 +911,42 @@
       "steward_since": "2022-08-09",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/231"
-    }    
+    },
+    {
+      "name": "Mike Kriak",
+      "address": "0x0Ff4bCaF4D736EDB8EBa11dD66A4921e9f8b8B50",
+      "profile_image": "mike-kriak.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "kriak-eth",
+      "discourse_username": "Mike Kriak#1516",
+      "steward_since": "2022-08-12",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/234"
+    },
+    {
+      "name": "Thomas Rush",
+      "address": "0xEeaA36420519d85EfaB3b7120ac5Afa5a5825bFB",
+      "profile_image": "thomas-rush.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "thomas_rush",
+      "discourse_username": "Thomas_R#7011",
+      "steward_since": "2022-08-16",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/235"
+    },
+    {
+      "name": "Shawn",
+      "address": "0x4e0891913F88780d69574db834A2fa79Ad02357e",
+      "profile_image": "shawn.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "shawn16400",
+      "discourse_username": "shawn16400#5507",
+      "steward_since": "2022-08-17",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/236"
+    }
   ]
 }
