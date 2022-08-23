@@ -83,7 +83,7 @@ const StewardsCard = ({
   return (
     <VStack
       background="#321e5e"
-      borderRadius="6px"
+      borderRadius="1rem"
       // p="0.8rem"
       w={"full"}
       gap="0.8rem"

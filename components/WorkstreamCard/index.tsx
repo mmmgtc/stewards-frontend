@@ -91,7 +91,7 @@ const WorkstreamCard = ({
           gap={5}
           templateColumns="repeat(2, 1fr)"
         >
-          <GridItem rounded="0.8rem" overflow="hidden" bg="#a593cb">
+          <GridItem rounded="0.8rem" overflow="hidden" bg="#291555">
             <iframe
               src={gtcBalance}
               style={{
@@ -100,7 +100,7 @@ const WorkstreamCard = ({
                 width: "100%",
               }}
             />
-            <Box w="full" h="10rem" overflow="hidden" bg="#a593cb">
+            <Box w="full" h="10rem" overflow="hidden" bg="#291555">
               {/* <iframe src={gtcBalanceOvertime} /> */}
               {gtcBalanceOvertime !== "-" ? (
                 <iframe
@@ -117,7 +117,7 @@ const WorkstreamCard = ({
               )}
             </Box>
           </GridItem>
-          <GridItem p={3} bg="#a593cb" rounded="0.8rem" overflow="hidden">
+          <GridItem p={3} bg="#291555" rounded="0.8rem" overflow="hidden">
             {/* <Text fontSize={"1.1rem"}>53.2k GTC</Text> */}
             <iframe
               src={stableBalance}
@@ -144,7 +144,7 @@ const WorkstreamCard = ({
               )}
             </Box>
           </GridItem>
-          <GridItem textAlign="left" p={3} rounded="0.8rem" bg="#a593cb">
+          <GridItem textAlign="left" p={3} rounded="0.8rem" bg="#291555">
             <Text fontSize={"1.1rem"}>Budget Proposals</Text>
 
             {proposals.map((proposal, index) => (
@@ -158,43 +158,45 @@ const WorkstreamCard = ({
               </Link>
             ))}
           </GridItem>
-          <GridItem p={3} rounded="0.8rem" bg="#a593cb">
+          <GridItem p={3} rounded="0.8rem" bg="#291555">
             <Box w="full" h="full">
               <iframe src={contributors} style={{ position: "relative" }} />
+              {stewards.length > 0 && (
+                <Flex justify="space-between">
+                  <Box>
+                    <Text
+                      fontWeight={400}
+                      fontFamily="inter"
+                      fontSize={"1.1rem"}
+                      color="rgba(255, 255, 255, 1)"
+                    >
+                      Stewards
+                    </Text>
+                    <Flex gap={1}>
+                      {stewards.map((steward, index) => (
+                        <Link
+                          isExternal
+                          href={
+                            "https://gitcoin.co/" + steward.gitcoin_username
+                          }
+                          key={"steward-" + index}
+                        >
+                          <Image
+                            w="3rem"
+                            rounded="full"
+                            src={`/assets/stewards/webp/${steward.profile_image}`}
+                            alt={steward.name}
+                            key={index}
+                          />
+                        </Link>
+                      ))}
+                    </Flex>
+                  </Box>
+                </Flex>
+              )}
             </Box>
           </GridItem>
         </Grid>
-        {stewards.length > 0 && (
-          <Flex justify="space-between">
-            <Box>
-              <Text
-                fontWeight={400}
-                fontFamily="inter"
-                fontSize={"1.1rem"}
-                color="rgba(255, 255, 255, 1)"
-              >
-                Stewards
-              </Text>
-              <Flex gap={1}>
-                {stewards.map((steward, index) => (
-                  <Link
-                    isExternal
-                    href={"https://gitcoin.co/" + steward.gitcoin_username}
-                    key={"steward-" + index}
-                  >
-                    <Image
-                      w="1.75rem"
-                      rounded="full"
-                      src={`/assets/stewards/webp/${steward.profile_image}`}
-                      alt={steward.name}
-                      key={index}
-                    />
-                  </Link>
-                ))}
-              </Flex>
-            </Box>
-          </Flex>
-        )}
       </VStack>
     </Box>
   );
