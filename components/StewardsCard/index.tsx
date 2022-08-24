@@ -1,4 +1,5 @@
 import { Box, Button, Flex, Image, Link, Text, VStack } from "@chakra-ui/react";
+import Newbadge from "../NewBadge";
 
 interface StewardsCardProps {
   name?: string;
@@ -80,6 +81,10 @@ const StewardsCard = ({
   forumActivityLink,
   healthScore,
 }: StewardsCardProps) => {
+
+  const timeDiff = new Date().getTime() - new Date(stewardsSince).getTime();
+  const days = Math.floor(timeDiff / (1000 * 3600 * 24));
+
   return (
     <VStack
       background="#321e5e"
@@ -125,6 +130,7 @@ const StewardsCard = ({
               {gitcoinUsername}
             </Link>
           </Box>
+          {days < 30 && <Newbadge />}
         </Flex>
         <Box marginRight="1rem">
           <Text
@@ -168,7 +174,9 @@ const StewardsCard = ({
             Stewards since
           </Link>
         </Flex>
-        <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{stewardsSince}</Text>
+      <Flex alignItems='center'>
+      <Text fontSize={{ sm: "1.2rem", base: "0.9rem" }}>{stewardsSince}</Text>
+      </Flex>
       </Flex>
       <Flex
         justify="space-between"
