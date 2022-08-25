@@ -935,6 +935,18 @@
       "steward_since": "2022-08-17",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/236"
+    },
+    {
+      "name": "Rachel-Mesh",
+      "address": "0x5626EF4869E2CFAFD38Ad3D1de6f71a811b1c5d5",
+      "profile_image": "rachel-mesh.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "rachel-mesh",
+      "discourse_username": "rachelk#5081",
+      "steward_since": "2022-08-18",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/237"
     }
   ]
 }
