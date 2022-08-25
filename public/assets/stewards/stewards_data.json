@@ -947,6 +947,54 @@
       "steward_since": "2022-08-18",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/237"
+    },
+    {
+      "name": "Diana Richter",
+      "address": "0xC994F1424EB35E2D194CDd2419498846bABA6931",
+      "profile_image": "diana-richter.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "dianarichter",
+      "discourse_username": "dianaRH#7515",
+      "steward_since": "2022-08-18",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/238"
+    },
+    {
+      "name": "Sabrina Lane",
+      "address": "0x5f1E118D5DaC79786b0932eFF805ABBA478349E8",
+      "profile_image": "sabrina-lane.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "",
+      "discourse_username": "",
+      "steward_since": "2022-08-18",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/239"
+    },
+    {
+      "name": "Abigail Carlson",
+      "address": "0x10668b3bA8350EF7862514AB10F87eCbc8ceBdab",
+      "profile_image": "abigail-carlson.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "abigailcarlson",
+      "discourse_username": "habibi #6410",
+      "steward_since": "2022-08-19",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/240"
+    },
+    {
+      "name": "Ali",
+      "address": "0x1EdD2D2B6968B432b04aF01c348AB20DEAEBA9Ee",
+      "profile_image": "ali.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "alismith.eth",
+      "discourse_username": "",
+      "steward_since": "2022-08-19",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/241"
     }
   ]
 }
