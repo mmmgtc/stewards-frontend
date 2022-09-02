@@ -18,7 +18,6 @@ interface WorkstreamCardProps {
   objectives: any[];
   gtcBalanceOvertime: string;
   stableCoinBalanceOvertime: string;
-  proposals: any[];
   notionPage: string;
   contributors: string;
   gtcBalance: string;
@@ -32,21 +31,20 @@ const WorkstreamCard = ({
   objectives,
   gtcBalanceOvertime,
   stableCoinBalanceOvertime,
-  proposals,
   notionPage,
   contributors,
   gtcBalance,
   stableBalance,
   stewards,
 }: WorkstreamCardProps) => {
-  console.log(title)
-  console.log(discrpition)
-  console.log(gtcBalanceOvertime)
-  console.log(stableCoinBalanceOvertime)
-  console.log(contributors)
-  console.log(gtcBalance)
-  console.log(stableBalance)
-  console.log(stewards)
+  console.log(title);
+  console.log(discrpition);
+  console.log(gtcBalanceOvertime);
+  console.log(stableCoinBalanceOvertime);
+  console.log(contributors);
+  console.log(gtcBalance);
+  console.log(stableBalance);
+  console.log(stewards);
   return (
     <Box bg="#452885" rounded="1rem" p={2}>
       <VStack>
@@ -100,48 +98,64 @@ const WorkstreamCard = ({
           templateColumns="repeat(2, 1fr)"
         >
           <GridItem rounded="0.8rem" overflow="hidden" bg="#291555">
-            <Text width='100%'>
-              {gtcBalance}
+            <Text width="100%" height={"10"} zIndex={20}>
+              {gtcBalance} GTC
             </Text>
             <Box w="full" h="10rem" overflow="hidden" bg="#291555">
               {gtcBalanceOvertime !== "-" ? (
-                <Text color='white'>{gtcBalanceOvertime}</Text>
+                <iframe
+                  src={gtcBalanceOvertime}
+                  style={{
+                    position: "relative",
+                    height: "230px",
+                    width: "100%",
+                    color: "white",
+                  }}
+                />
               ) : (
                 <p>No data found</p>
               )}
             </Box>
           </GridItem>
           <GridItem p={3} bg="#291555" rounded="0.8rem" overflow="hidden">
-            <Text fontSize={"1.1rem"}>{stableBalance}</Text>
-            
+            <Text fontSize={"1.1rem"}>{stableBalance} USDC</Text>
+
             <Box w="full" h="10rem" overflow="hidden">
               {/* {stableCoinBalanceOvertime !== "-" ? (
                 <Text fontSize={"1.1rem"}>{stableCoinBalanceOvertime}</Text>
               ) : (
                 <p>No data found</p>
               )} */}
+              {stableCoinBalanceOvertime !== "-" ? (
+                <iframe
+                  src={stableCoinBalanceOvertime}
+                  style={{
+                    position: "relative",
+                    height: "230px",
+                    width: "100%",
+                    color: "white",
+                  }}
+                />
+              ) : (
+                <p>No data found</p>
+              )}
             </Box>
           </GridItem>
-          <GridItem textAlign="left" p={3} rounded="0.8rem" bg="#291555">
-            <Text fontSize={"1.1rem"}>Budget Proposals</Text>
-
-            {proposals.map((proposal, index) => (
-              <Link
-                href={proposal.link}
-                target="_blank"
-                display="block"
-                key={"budgetproposal-" + index}
-              >
-                {proposal.title}
-              </Link>
-            ))}
-          </GridItem>
-          <GridItem p={3} rounded="0.8rem" bg="#291555">
+        </Grid>
+        <Grid
+          w="full"
+          color="rgba(255, 255, 255, 1)"
+          gap={5}
+          templateColumns="1fr"
+        >
+          <GridItem textAlign="center" p={3} rounded="0.8rem" bg="#291555">
             <Box w="full" h="full">
-              
               {stewards.length > 0 && (
                 <Flex justify="space-between">
                   <Box>
+                    <Text w="full" textAlign="center">
+                      Total Contributors: {contributors}
+                    </Text>
                     <Text
                       fontWeight={400}
                       fontFamily="inter"
@@ -175,6 +189,7 @@ const WorkstreamCard = ({
             </Box>
           </GridItem>
         </Grid>
+        {/* <GridItem p={3} rounded="0.8rem" bg="#291555"></GridItem> */}
       </VStack>
     </Box>
   );

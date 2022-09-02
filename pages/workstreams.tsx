@@ -1,6 +1,6 @@
 import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 import WorkstreamCard from "../components/WorkstreamCard";
-import workstreamData from "../public/assets/workstreams/workstreams.json";
+import workstreamDataJson from "../public/assets/workstreams/workstreams.json";
 import stewardsProfileData from "../public/assets/stewards/stewards_data.json";
 import { useEffect } from "react";
 import axios from "axios";
@@ -9,19 +9,37 @@ import axios from "axios";
  * Return stewards for a specific workstream
  */
 function getStewards(workstream) {
-  let ret = stewardsProfileData.data.filter((element) => {
+  let ret = stewardsProfileData.data.splice(0, 3).filter((element) => {
     return (
-      element.workstreamsContributor.search(workstream.slug) >= 0 ||
-      element.workstreamsLead.search(workstream.slug) >= 0
+      element.workstreamsContributor.search(
+        workstream.short_name.toLowerCase()
+      ) >= 0 ||
+      element.workstreamsLead.search(workstream.short_name.toLowerCase()) >= 0
     );
   });
 
   return ret;
 }
 
-const Workstream = ({workstreamData}) => {
+function getGtcBalanceGraph(workstream) {
+  let ret = workstreamDataJson.filter((e) => {
+    return e.slug === workstream.short_name.toLowerCase();
+  });
 
+  return ret[0].duneEmbeds.gtcBalanceOverTime;
+}
+
+function getStableBalanceGraph(workstream) {
+  let ret = workstreamDataJson.filter((e) => {
+    return e.slug === workstream.short_name.toLowerCase();
+  });
+
+  return ret[0].duneEmbeds.stableCoinBalanceOverTime;
+}
+
+const Workstream = ({ workstreamData }) => {
   // console.log('workstream Data: ', workstreamData);
+
   return (
     <Flex
       justifyContent="center"
@@ -42,30 +60,33 @@ const Workstream = ({workstreamData}) => {
         justifyItems="center"
       >
         {workstreamData.map((workstream, index) => {
-          if(index === 0 ) {
-            return
+          if (index === 0) {
+            return;
           }
 
           // console.log('workstream: ', workstream)
-          return(
-          <GridItem key={index}>
-            <WorkstreamCard
-              title={workstream.name}
-              discrpition={workstream.description}
-              objectives={[]}
-              gtcBalanceOvertime={workstream.stats.gtc_balance.rows[0].amount}
-              stableCoinBalanceOvertime={
-                workstream.stats.stable_coin_balance.value
-              }
-              proposals={[]}
-              notionPage={workstream.uri}
-              contributors={workstream.stats.all_time_contributors.rows[0].count}
-              gtcBalance={workstream.stats.gtc_balance.rows[0].Stablecoins}
-              stableBalance={workstream.stats.stable_coin_balance.rows[0].Stablecoins}
-              stewards={getStewards(workstream)}
-            />
-          </GridItem>
-        )})}
+
+          return (
+            <GridItem key={index}>
+              <WorkstreamCard
+                title={workstream.name}
+                discrpition={workstream.description}
+                objectives={[]}
+                gtcBalanceOvertime={getGtcBalanceGraph(workstream)}
+                stableCoinBalanceOvertime={getStableBalanceGraph(workstream)}
+                notionPage={workstream.uri}
+                contributors={
+                  workstream.stats.all_time_contributors.rows[0].count
+                }
+                gtcBalance={workstream.stats.gtc_balance.rows[0].Stablecoins}
+                stableBalance={
+                  workstream.stats.stable_coin_balance.rows[0].Stablecoins
+                }
+                stewards={getStewards(workstream)}
+              />
+            </GridItem>
+          );
+        })}
       </Grid>
     </Flex>
   );
