@@ -21,7 +21,7 @@ function getStewards(workstream) {
 
 const Workstream = ({workstreamData}) => {
 
-  console.log('workstream Data: ', workstreamData);
+  // console.log('workstream Data: ', workstreamData);
   return (
     <Flex
       justifyContent="center"
@@ -45,6 +45,8 @@ const Workstream = ({workstreamData}) => {
           if(index === 0 ) {
             return
           }
+
+          // console.log('workstream: ', workstream)
           return(
           <GridItem key={index}>
             <WorkstreamCard
@@ -57,9 +59,9 @@ const Workstream = ({workstreamData}) => {
               }
               proposals={[]}
               notionPage={workstream.uri}
-              contributors={workstream.stats.all_time_contributors}
-              gtcBalance={workstream.stats.gtc_balance}
-              stableBalance={workstream.stats.stable_coin_balance}
+              contributors={workstream.stats.all_time_contributors.rows[0].count}
+              gtcBalance={workstream.stats.gtc_balance.rows[0].Stablecoins}
+              stableBalance={workstream.stats.stable_coin_balance.rows[0].Stablecoins}
               stewards={getStewards(workstream)}
             />
           </GridItem>

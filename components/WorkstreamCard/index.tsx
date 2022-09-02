@@ -39,6 +39,14 @@ const WorkstreamCard = ({
   stableBalance,
   stewards,
 }: WorkstreamCardProps) => {
+  console.log(title)
+  console.log(discrpition)
+  console.log(gtcBalanceOvertime)
+  console.log(stableCoinBalanceOvertime)
+  console.log(contributors)
+  console.log(gtcBalance)
+  console.log(stableBalance)
+  console.log(stewards)
   return (
     <Box bg="#452885" rounded="1rem" p={2}>
       <VStack>
@@ -92,56 +100,28 @@ const WorkstreamCard = ({
           templateColumns="repeat(2, 1fr)"
         >
           <GridItem rounded="0.8rem" overflow="hidden" bg="#291555">
-            <iframe
-              src={gtcBalance}
-              style={{
-                position: "relative",
-                height: "100px",
-                width: "100%",
-              }}
-            />
+            <Text width='100%'>
+              {gtcBalance}
+            </Text>
             <Box w="full" h="10rem" overflow="hidden" bg="#291555">
               {/* <iframe src={gtcBalanceOvertime} /> */}
               {gtcBalanceOvertime !== "-" ? (
-                <iframe
-                  src={gtcBalanceOvertime}
-                  style={{
-                    position: "relative",
-                    height: "230px",
-                    width: "100%",
-                    color: "white",
-                  }}
-                />
+                <Text color='white'>{gtcBalanceOvertime}</Text>
               ) : (
                 <p>No data found</p>
               )}
             </Box>
           </GridItem>
           <GridItem p={3} bg="#291555" rounded="0.8rem" overflow="hidden">
-            {/* <Text fontSize={"1.1rem"}>53.2k GTC</Text> */}
-            <iframe
-              src={stableBalance}
-              style={{
-                position: "relative",
-                height: "150px",
-                width: "100%",
-              }}
-            />
+            <Text fontSize={"1.1rem"}>{stableBalance}</Text>
+            
             <Box w="full" h="10rem" overflow="hidden">
               {/* <iframe src={stableCoinBalanceOvertime} /> */}
-              {stableCoinBalanceOvertime !== "-" ? (
-                <iframe
-                  src={stableCoinBalanceOvertime}
-                  style={{
-                    position: "relative",
-                    height: "230px",
-                    width: "100%",
-                    color: "white",
-                  }}
-                />
+              {/* {stableCoinBalanceOvertime !== "-" ? (
+                <Text fontSize={"1.1rem"}>{stableCoinBalanceOvertime}</Text>
               ) : (
                 <p>No data found</p>
-              )}
+              )} */}
             </Box>
           </GridItem>
           <GridItem textAlign="left" p={3} rounded="0.8rem" bg="#291555">
@@ -160,7 +140,7 @@ const WorkstreamCard = ({
           </GridItem>
           <GridItem p={3} rounded="0.8rem" bg="#291555">
             <Box w="full" h="full">
-              <iframe src={contributors} style={{ position: "relative" }} />
+              
               {stewards.length > 0 && (
                 <Flex justify="space-between">
                   <Box>
