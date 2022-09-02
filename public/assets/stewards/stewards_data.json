@@ -995,6 +995,30 @@
       "steward_since": "2022-08-19",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/241"
+    },
+    {
+      "name": "Maialepine",
+      "address": "0x844f21f8cc5324ce3eccc4fd9bc11ae5fc784c9a",
+      "profile_image": "maialepine.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@maialepine",
+      "discourse_username": "Maia#1161",
+      "steward_since": "2022-08-19",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/242"
+    },
+    {
+      "name": "ShawnC",
+      "address": "0x0314cc74e461d881ba3b5c93bba34cc81e4f7004",
+      "profile_image": "shawnc.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@shawnyetothe",
+      "discourse_username": "shacheng#2843",
+      "steward_since": "2022-08-19",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/243"
     }
   ]
 }
