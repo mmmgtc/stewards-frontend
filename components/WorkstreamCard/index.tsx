@@ -104,7 +104,6 @@ const WorkstreamCard = ({
               {gtcBalance}
             </Text>
             <Box w="full" h="10rem" overflow="hidden" bg="#291555">
-              {/* <iframe src={gtcBalanceOvertime} /> */}
               {gtcBalanceOvertime !== "-" ? (
                 <Text color='white'>{gtcBalanceOvertime}</Text>
               ) : (
@@ -116,7 +115,6 @@ const WorkstreamCard = ({
             <Text fontSize={"1.1rem"}>{stableBalance}</Text>
             
             <Box w="full" h="10rem" overflow="hidden">
-              {/* <iframe src={stableCoinBalanceOvertime} /> */}
               {/* {stableCoinBalanceOvertime !== "-" ? (
                 <Text fontSize={"1.1rem"}>{stableCoinBalanceOvertime}</Text>
               ) : (
