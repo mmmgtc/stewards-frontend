@@ -18,7 +18,6 @@ interface WorkstreamCardProps {
   objectives: any[];
   gtcBalanceOvertime: string;
   stableCoinBalanceOvertime: string;
-  proposals: any[];
   notionPage: string;
   contributors: string;
   gtcBalance: string;
@@ -32,13 +31,20 @@ const WorkstreamCard = ({
   objectives,
   gtcBalanceOvertime,
   stableCoinBalanceOvertime,
-  proposals,
   notionPage,
   contributors,
   gtcBalance,
   stableBalance,
   stewards,
 }: WorkstreamCardProps) => {
+  console.log(title);
+  console.log(discrpition);
+  console.log(gtcBalanceOvertime);
+  console.log(stableCoinBalanceOvertime);
+  console.log(contributors);
+  console.log(gtcBalance);
+  console.log(stableBalance);
+  console.log(stewards);
   return (
     <Box bg="#452885" rounded="1rem" p={2}>
       <VStack>
@@ -91,17 +97,11 @@ const WorkstreamCard = ({
           gap={5}
           templateColumns="repeat(2, 1fr)"
         >
-          <GridItem rounded="0.8rem" overflow="hidden" bg="#a593cb">
-            <iframe
-              src={gtcBalance}
-              style={{
-                position: "relative",
-                height: "100px",
-                width: "100%",
-              }}
-            />
-            <Box w="full" h="10rem" overflow="hidden" bg="#a593cb">
-              {/* <iframe src={gtcBalanceOvertime} /> */}
+          <GridItem rounded="0.8rem" overflow="hidden" bg="#291555">
+            <Text width="100%" height={"10"} zIndex={20}>
+              {gtcBalance} GTC
+            </Text>
+            <Box w="full" h="10rem" overflow="hidden" bg="#291555">
               {gtcBalanceOvertime !== "-" ? (
                 <iframe
                   src={gtcBalanceOvertime}
@@ -117,18 +117,15 @@ const WorkstreamCard = ({
               )}
             </Box>
           </GridItem>
-          <GridItem p={3} bg="#a593cb" rounded="0.8rem" overflow="hidden">
-            {/* <Text fontSize={"1.1rem"}>53.2k GTC</Text> */}
-            <iframe
-              src={stableBalance}
-              style={{
-                position: "relative",
-                height: "150px",
-                width: "100%",
-              }}
-            />
+          <GridItem p={3} bg="#291555" rounded="0.8rem" overflow="hidden">
+            <Text fontSize={"1.1rem"}>{stableBalance} USDC</Text>
+
             <Box w="full" h="10rem" overflow="hidden">
-              {/* <iframe src={stableCoinBalanceOvertime} /> */}
+              {/* {stableCoinBalanceOvertime !== "-" ? (
+                <Text fontSize={"1.1rem"}>{stableCoinBalanceOvertime}</Text>
+              ) : (
+                <p>No data found</p>
+              )} */}
               {stableCoinBalanceOvertime !== "-" ? (
                 <iframe
                   src={stableCoinBalanceOvertime}
@@ -144,57 +141,55 @@ const WorkstreamCard = ({
               )}
             </Box>
           </GridItem>
-          <GridItem textAlign="left" p={3} rounded="0.8rem" bg="#a593cb">
-            <Text fontSize={"1.1rem"}>Budget Proposals</Text>
-
-            {proposals.map((proposal, index) => (
-              <Link
-                href={proposal.link}
-                target="_blank"
-                display="block"
-                key={"budgetproposal-" + index}
-              >
-                {proposal.title}
-              </Link>
-            ))}
-          </GridItem>
-          <GridItem p={3} rounded="0.8rem" bg="#a593cb">
+        </Grid>
+        <Grid
+          w="full"
+          color="rgba(255, 255, 255, 1)"
+          gap={5}
+          templateColumns="1fr"
+        >
+          <GridItem textAlign="center" p={3} rounded="0.8rem" bg="#291555">
             <Box w="full" h="full">
-              <iframe src={contributors} style={{ position: "relative" }} />
+              {stewards.length > 0 && (
+                <Flex justify="space-between">
+                  <Box>
+                    <Text w="full" textAlign="center">
+                      Total Contributors: {contributors}
+                    </Text>
+                    <Text
+                      fontWeight={400}
+                      fontFamily="inter"
+                      fontSize={"1.1rem"}
+                      color="rgba(255, 255, 255, 1)"
+                    >
+                      Stewards
+                    </Text>
+                    <Flex gap={1}>
+                      {stewards.map((steward, index) => (
+                        <Link
+                          isExternal
+                          href={
+                            "https://gitcoin.co/" + steward.gitcoin_username
+                          }
+                          key={"steward-" + index}
+                        >
+                          <Image
+                            w="3rem"
+                            rounded="full"
+                            src={`/assets/stewards/webp/${steward.profile_image}`}
+                            alt={steward.name}
+                            key={index}
+                          />
+                        </Link>
+                      ))}
+                    </Flex>
+                  </Box>
+                </Flex>
+              )}
             </Box>
           </GridItem>
         </Grid>
-        {stewards.length > 0 && (
-          <Flex justify="space-between">
-            <Box>
-              <Text
-                fontWeight={400}
-                fontFamily="inter"
-                fontSize={"1.1rem"}
-                color="rgba(255, 255, 255, 1)"
-              >
-                Stewards
-              </Text>
-              <Flex gap={1}>
-                {stewards.map((steward, index) => (
-                  <Link
-                    isExternal
-                    href={"https://gitcoin.co/" + steward.gitcoin_username}
-                    key={"steward-" + index}
-                  >
-                    <Image
-                      w="1.75rem"
-                      rounded="full"
-                      src={`/assets/stewards/webp/${steward.profile_image}`}
-                      alt={steward.name}
-                      key={index}
-                    />
-                  </Link>
-                ))}
-              </Flex>
-            </Box>
-          </Flex>
-        )}
+        {/* <GridItem p={3} rounded="0.8rem" bg="#291555"></GridItem> */}
       </VStack>
     </Box>
   );
