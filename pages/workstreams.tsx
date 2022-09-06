@@ -64,7 +64,10 @@ const Workstream = ({ workstreamData }) => {
             return;
           }
 
-          // console.log('workstream: ', workstream)
+          console.log(
+            "workstream: ",
+            workstream.stats.stable_coin_balance.rows[0].Stablecoins
+          );
 
           return (
             <GridItem key={index}>
@@ -78,9 +81,15 @@ const Workstream = ({ workstreamData }) => {
                 contributors={
                   workstream.stats.all_time_contributors.rows[0].count
                 }
-                gtcBalance={workstream.stats.gtc_balance.rows[0].Stablecoins}
+                gtcBalance={workstream.stats.gtc_balance.rows[0].amount.toFixed(
+                  2
+                )}
                 stableBalance={
                   workstream.stats.stable_coin_balance.rows[0].Stablecoins
+                    ? workstream.stats.stable_coin_balance.rows[0].Stablecoins.toFixed(
+                        2
+                      )
+                    : "-"
                 }
                 stewards={getStewards(workstream)}
               />
