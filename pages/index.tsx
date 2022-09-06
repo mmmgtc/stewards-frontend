@@ -402,6 +402,7 @@ const Home: NextPage = () => {
               label="Time"
               options={[
                 { label: "30 Days", value: "30d" },
+                { label: "180 Days", value: "180d" },
                 { label: "Lifetime", value: "lifetime" },
               ]}
               defaultValue={time}
