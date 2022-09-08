@@ -41,12 +41,12 @@ const WorkstreamCard = ({
   console.log(discrpition);
   console.log(gtcBalanceOvertime);
   console.log(stableCoinBalanceOvertime);
-  console.log(contributors);
+  console.log("contributors:====", contributors);
   console.log(gtcBalance);
   console.log(stableBalance);
   console.log(stewards);
   return (
-    <Box bg="#452885" rounded="1rem" p={2}>
+    <Box bg="#452885" rounded="1rem" p={2} minHeight="400px">
       <VStack>
         <Text
           fontWeight={400}
@@ -107,7 +107,7 @@ const WorkstreamCard = ({
                   src={gtcBalanceOvertime}
                   style={{
                     position: "relative",
-                    height: "230px",
+                    height: "190px",
                     width: "100%",
                     color: "white",
                   }}
@@ -117,7 +117,7 @@ const WorkstreamCard = ({
               )}
             </Box>
           </GridItem>
-          <GridItem p={3} bg="#291555" rounded="0.8rem" overflow="hidden">
+          <GridItem p={0} bg="#291555" rounded="0.8rem" overflow="hidden">
             <Text fontSize={"1.1rem"}>{stableBalance} USDC</Text>
 
             <Box w="full" h="10rem" overflow="hidden">
@@ -131,7 +131,7 @@ const WorkstreamCard = ({
                   src={stableCoinBalanceOvertime}
                   style={{
                     position: "relative",
-                    height: "230px",
+                    height: "190px",
                     width: "100%",
                     color: "white",
                   }}
@@ -150,22 +150,22 @@ const WorkstreamCard = ({
         >
           <GridItem textAlign="center" p={3} rounded="0.8rem" bg="#291555">
             <Box w="full" h="full">
-              {stewards.length > 0 && (
-                <Flex justify="space-between">
-                  <Box>
-                    <Text w="full" textAlign="center">
-                      Total Contributors: {contributors}
-                    </Text>
-                    <Text
-                      fontWeight={400}
-                      fontFamily="inter"
-                      fontSize={"1.1rem"}
-                      color="rgba(255, 255, 255, 1)"
-                    >
-                      Stewards
-                    </Text>
-                    <Flex gap={1}>
-                      {stewards.map((steward, index) => (
+              <Flex justify="space-between">
+                <Box>
+                  <Text w="full" textAlign="center">
+                    Total Contributors: {contributors}
+                  </Text>
+                  <Text
+                    fontWeight={400}
+                    fontFamily="inter"
+                    fontSize={"1.1rem"}
+                    color="rgba(255, 255, 255, 1)"
+                  >
+                    Stewards
+                  </Text>
+                  <Flex gap={1}>
+                    {stewards.length > 0 &&
+                      stewards.map((steward, index) => (
                         <Link
                           isExternal
                           href={
@@ -182,10 +182,9 @@ const WorkstreamCard = ({
                           />
                         </Link>
                       ))}
-                    </Flex>
-                  </Box>
-                </Flex>
-              )}
+                  </Flex>
+                </Box>
+              </Flex>
             </Box>
           </GridItem>
         </Grid>

@@ -14,7 +14,9 @@ function getStewards(workstream) {
       element.workstreamsContributor.search(
         workstream.short_name.toLowerCase()
       ) >= 0 ||
-      element.workstreamsLead.search(workstream.short_name.toLowerCase()) >= 0
+      element.workstreamsContributor.search(
+        workstream.short_name.toLowerCase()
+      ) >= 0
     );
   });
 
@@ -38,7 +40,7 @@ function getStableBalanceGraph(workstream) {
 }
 
 const Workstream = ({ workstreamData }) => {
-  // console.log('workstream Data: ', workstreamData);
+  console.log("workstream Data: ", workstreamData);
 
   return (
     <Flex
