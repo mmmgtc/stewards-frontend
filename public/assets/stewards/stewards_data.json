@@ -1003,7 +1003,7 @@
       "workstreamsLead": "",
       "workstreamsContributor": "",
       "gitcoin_username": "@maialepine",
-      "discourse_username": "Maia#1161",
+      "discourse_username": "maialepine",
       "steward_since": "2022-08-19",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/242"
@@ -1015,10 +1015,22 @@
       "workstreamsLead": "",
       "workstreamsContributor": "",
       "gitcoin_username": "@shawnyetothe",
-      "discourse_username": "shacheng#2843",
+      "discourse_username": "shawn",
       "steward_since": "2022-08-19",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/243"
+    },
+    {
+      "name": "Eugyal",
+      "address": "0x85E69D4872CD61B570a7098922d38F2E2FdE64fc",
+      "profile_image": "eugyal.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@eugyal",
+      "discourse_username": "eugyal",
+      "steward_since": "2022-09-04",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/244"
     }
   ]
 }
