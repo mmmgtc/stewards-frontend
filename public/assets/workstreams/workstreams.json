@@ -1,6 +1,6 @@
 [
   {
-    "slug": "pgf",
+    "slug": "PGF",
     "name": "PGF",
     "title": "Public Goods Funding",
     "description": "Raise awareness and funding for digital public goods and Gitcoin grants",
@@ -29,7 +29,7 @@
     "uri": "https://gitcoin.notion.site/Public-Goods-4ccd579f433c4dff9d8952314468d6e8"
   },
   {
-    "slug": "fdd",
+    "slug": "FDD",
     "name": "FDD",
     "title": "Fraud Detection & Defense",
     "description": "Defend Gitcoin from threats to its legitimacy, credible neutrality, and sustainability",
@@ -62,7 +62,7 @@
     "uri": "https://gitcoin.notion.site/Fraud-Detection-Defense-2bde13c0b8e74fda81435d94e49e2703"
   },
   {
-    "slug": "mc",
+    "slug": "MC",
     "name": "MC",
     "title": "Moonshot Collective",
     "description": "Build and experiment with innovative solutions that add value to Gitcoin’s vision and essential intents",
@@ -95,7 +95,7 @@
     "uri": "https://moonshotcollective.space/"
   },
   {
-    "slug": "mmm",
+    "slug": "MMM",
     "name": "MMM",
     "title": "Merch, Memes & Marketing",
     "description": "Generate curiosity, hype and engagement around GitcoinDAO and our core mission.",
@@ -124,7 +124,7 @@
     "uri": "https://m-m-m.xyz"
   },
   {
-    "slug": "daoops",
+    "slug": "DAOOPS",
     "name": "DAO Ops",
     "title": "DAO Operations",
     "description": "Operationalize the DAO including legal, accounting, people operations, support and governance",
@@ -149,7 +149,7 @@
     "uri": "https://gitcoin.notion.site/DAO-Ops-84f425e281ae49579a2b4acf0bad5dd5"
   },
   {
-    "slug": "gpc",
+    "slug": "GPC",
     "name": "GPC",
     "title": "Gitcoin Product Collective",
     "description": "Open-source technology to scale plural capital provision",
