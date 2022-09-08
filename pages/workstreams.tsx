@@ -1,26 +1,45 @@
 import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 import WorkstreamCard from "../components/WorkstreamCard";
-import workstreamData from "../public/assets/workstreams/workstreams.json";
+import workstreamDataJson from "../public/assets/workstreams/workstreams.json";
 import stewardsProfileData from "../public/assets/stewards/stewards_data.json";
 import { useEffect } from "react";
 import axios from "axios";
-import * as cheerio from "cheerio";
 
 /**
  * Return stewards for a specific workstream
  */
 function getStewards(workstream) {
-  let ret = stewardsProfileData.data.filter((element) => {
+  let ret = stewardsProfileData.data.splice(0, 3).filter((element) => {
     return (
-      element.workstreamsContributor.search(workstream.slug) >= 0 ||
-      element.workstreamsLead.search(workstream.slug) >= 0
+      element.workstreamsContributor.search(
+        workstream.short_name.toLowerCase()
+      ) >= 0 ||
+      element.workstreamsLead.search(workstream.short_name.toLowerCase()) >= 0
     );
   });
 
   return ret;
 }
 
-const Workstream = () => {
+function getGtcBalanceGraph(workstream) {
+  let ret = workstreamDataJson.filter((e) => {
+    return e.slug === workstream.short_name.toLowerCase();
+  });
+
+  return ret[0].duneEmbeds.gtcBalanceOverTime;
+}
+
+function getStableBalanceGraph(workstream) {
+  let ret = workstreamDataJson.filter((e) => {
+    return e.slug === workstream.short_name.toLowerCase();
+  });
+
+  return ret[0].duneEmbeds.stableCoinBalanceOverTime;
+}
+
+const Workstream = ({ workstreamData }) => {
+  // console.log('workstream Data: ', workstreamData);
+
   return (
     <Flex
       justifyContent="center"
@@ -40,42 +59,58 @@ const Workstream = () => {
         gap={5}
         justifyItems="center"
       >
-        {workstreamData.map((workstream, index) => (
-          <GridItem key={index}>
-            <WorkstreamCard
-              title={workstream.title}
-              discrpition={workstream.description}
-              objectives={workstream.objectives}
-              gtcBalanceOvertime={workstream.duneEmbeds.gtcBalanceOverTime}
-              stableCoinBalanceOvertime={
-                workstream.duneEmbeds.stableCoinBalanceOverTime
-              }
-              proposals={workstream.budgetProposals}
-              notionPage={workstream.uri}
-              contributors={workstream.duneEmbeds.allTimeContributors}
-              gtcBalance={workstream.duneEmbeds.gtcBalance}
-              stableBalance={workstream.duneEmbeds.stableCoinBalance}
-              stewards={getStewards(workstream)}
-            />
-          </GridItem>
-        ))}
+        {workstreamData.map((workstream, index) => {
+          if (index === 0) {
+            return;
+          }
+
+          console.log(
+            "workstream: ",
+            workstream.stats.stable_coin_balance.rows[0].Stablecoins
+          );
+
+          return (
+            <GridItem key={index}>
+              <WorkstreamCard
+                title={workstream.name}
+                discrpition={workstream.description}
+                objectives={[]}
+                gtcBalanceOvertime={getGtcBalanceGraph(workstream)}
+                stableCoinBalanceOvertime={getStableBalanceGraph(workstream)}
+                notionPage={workstream.uri}
+                contributors={
+                  workstream.stats.all_time_contributors.rows[0].count
+                }
+                gtcBalance={workstream.stats.gtc_balance.rows[0].amount.toFixed(
+                  2
+                )}
+                stableBalance={
+                  workstream.stats.stable_coin_balance.rows[0].Stablecoins
+                    ? workstream.stats.stable_coin_balance.rows[0].Stablecoins.toFixed(
+                        2
+                      )
+                    : "-"
+                }
+                stewards={getStewards(workstream)}
+              />
+            </GridItem>
+          );
+        })}
       </Grid>
     </Flex>
   );
 };
 
-// export const getStaticProps = async () => {
-//   const { data } = await axios.get(
-//     "https://dune.com/embeds/1074330/1843176/e6a89acd-1ff1-49a2-ba76-cfb90f4869ad"
-//   );
-//   const $ = cheerio.load(data);
-//   console.log($.html());
+export const getStaticProps = async () => {
+  const { data } = await axios.get(
+    "https://staging.api.daostewards.xyz/api/workstreams/?format=json"
+  );
 
-//   return {
-//     props: {
-//       hello: "hello",
-//     },
-//   };
-// };
+  return {
+    props: {
+      workstreamData: data,
+    },
+  };
+};
 
 export default Workstream;
