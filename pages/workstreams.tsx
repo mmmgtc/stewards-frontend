@@ -38,7 +38,7 @@ function getStableBalanceGraph(workstream) {
 }
 
 const Workstream = ({ workstreamData }) => {
-  // console.log('workstream Data: ', workstreamData);
+  console.log("workstream Data: ", workstreamData);
 
   return (
     <Flex
