@@ -12,11 +12,9 @@ function getStewards(workstream) {
   let ret = stewardsProfileData.data.splice(0, 3).filter((element) => {
     return (
       element.workstreamsContributor.search(
-        workstream.short_name.toLowerCase()
+        workstream.short_name.toUpperCase()
       ) >= 0 ||
-      element.workstreamsContributor.search(
-        workstream.short_name.toLowerCase()
-      ) >= 0
+      element.workstreamsLead.search(workstream.short_name.toUpperCase()) >= 0
     );
   });
 
@@ -25,7 +23,7 @@ function getStewards(workstream) {
 
 function getGtcBalanceGraph(workstream) {
   let ret = workstreamDataJson.filter((e) => {
-    return e.slug === workstream.short_name.toLowerCase();
+    return e.slug === workstream.short_name.toUpperCase();
   });
 
   return ret[0].duneEmbeds.gtcBalanceOverTime;
@@ -33,7 +31,7 @@ function getGtcBalanceGraph(workstream) {
 
 function getStableBalanceGraph(workstream) {
   let ret = workstreamDataJson.filter((e) => {
-    return e.slug === workstream.short_name.toLowerCase();
+    return e.slug === workstream.short_name.toUpperCase();
   });
 
   return ret[0].duneEmbeds.stableCoinBalanceOverTime;
@@ -105,7 +103,7 @@ const Workstream = ({ workstreamData }) => {
 
 export const getStaticProps = async () => {
   const { data } = await axios.get(
-    "https://staging.api.daostewards.xyz/api/workstreams/?format=json"
+    process.env.BACKEND_API + "/api/workstreams/?format=json"
   );
 
   return {
