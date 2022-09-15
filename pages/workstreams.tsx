@@ -91,7 +91,7 @@ const Workstream = ({ workstreamData }) => {
                     ? workstream.stats.stable_coin_balance.rows[0].Stablecoins.toFixed(
                         2
                       )
-                    : "-"
+                    : "unavailable"
                 }
                 stewards={getStewards(workstream)}
               />
