@@ -9,7 +9,7 @@ import axios from "axios";
  * Return stewards for a specific workstream
  */
 function getStewards(workstream) {
-  let ret = stewardsProfileData.data.splice(0, 3).filter((element) => {
+  let ret = stewardsProfileData.data.filter((element) => {
     return (
       element.workstreamsContributor.search(
         workstream.short_name.toUpperCase()
@@ -47,7 +47,9 @@ const Workstream = ({ workstreamData }) => {
       flexDirection="column"
       gap="2"
       textAlign="center"
+      paddingX="10"
       paddingTop="10"
+      paddingBottom="10"
       width="full"
     >
       <Grid
@@ -64,16 +66,14 @@ const Workstream = ({ workstreamData }) => {
             return;
           }
 
-          console.log(
-            "workstream: ",
-            workstream.stats.stable_coin_balance.rows[0].Stablecoins
-          );
+          console.log("workstream: ", workstream);
+          console.log("getStewards(workstream)", getStewards(workstream));
 
           return (
             <GridItem key={index}>
               <WorkstreamCard
                 title={workstream.name}
-                discrpition={workstream.description}
+                description={workstream.description}
                 objectives={[]}
                 gtcBalanceOvertime={getGtcBalanceGraph(workstream)}
                 stableCoinBalanceOvertime={getStableBalanceGraph(workstream)}
@@ -89,7 +89,7 @@ const Workstream = ({ workstreamData }) => {
                     ? workstream.stats.stable_coin_balance.rows[0].Stablecoins.toFixed(
                         2
                       )
-                    : "-"
+                    : "unavailable"
                 }
                 stewards={getStewards(workstream)}
               />

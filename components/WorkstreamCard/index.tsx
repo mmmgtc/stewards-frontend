@@ -14,7 +14,7 @@ import { relative } from "path";
 
 interface WorkstreamCardProps {
   title: string;
-  discrpition: string;
+  description: string;
   objectives: any[];
   gtcBalanceOvertime: string;
   stableCoinBalanceOvertime: string;
@@ -27,7 +27,7 @@ interface WorkstreamCardProps {
 
 const WorkstreamCard = ({
   title,
-  discrpition,
+  description,
   objectives,
   gtcBalanceOvertime,
   stableCoinBalanceOvertime,
@@ -38,7 +38,7 @@ const WorkstreamCard = ({
   stewards,
 }: WorkstreamCardProps) => {
   console.log(title);
-  console.log(discrpition);
+  console.log(description);
   console.log(gtcBalanceOvertime);
   console.log(stableCoinBalanceOvertime);
   console.log("contributors:====", contributors);
@@ -54,12 +54,20 @@ const WorkstreamCard = ({
           fontSize={"1.3rem"}
           color="rgba(255, 255, 255, 1)"
         >
-          <Link target="_blank" href={notionPage}>
-            {title}
-          </Link>
+          {notionPage && (
+            <Link target="_blank" href={notionPage}>
+              {title}
+            </Link>
+          )}
+          {!notionPage && <Text>{title}</Text>}
         </Text>
-        <Text fontSize={15} color="rgba(201, 184, 255, 1)" fontStyle="italic">
-          {discrpition}
+        <Text
+          fontSize={15}
+          color="rgba(201, 184, 255, 1)"
+          width={{ lg: "35rem" }}
+          fontStyle="italic"
+        >
+          {description}
         </Text>
         {objectives.length > 0 && (
           <Box
@@ -98,9 +106,7 @@ const WorkstreamCard = ({
           templateColumns="repeat(2, 1fr)"
         >
           <GridItem rounded="0.8rem" overflow="hidden" bg="#291555">
-            <Text width="100%" height={"10"} zIndex={20}>
-              {gtcBalance} GTC
-            </Text>
+            <Text fontSize={"1.1rem"}>{gtcBalance} GTC</Text>
             <Box w="full" h="10rem" overflow="hidden" bg="#291555">
               {gtcBalanceOvertime !== "-" ? (
                 <iframe
@@ -148,45 +154,49 @@ const WorkstreamCard = ({
           gap={5}
           templateColumns="1fr"
         >
-          <GridItem textAlign="center" p={3} rounded="0.8rem" bg="#291555">
-            <Box w="full" h="full">
-              <Flex justify="space-between">
-                <Box>
-                  <Text w="full" textAlign="center">
-                    Total Contributors: {contributors}
-                  </Text>
+          {stewards.length > 0 && (
+            <GridItem textAlign="center" p={3} rounded="0.8rem" bg="#291555">
+              <Box w="full" h="full">
+                <Flex justify="space-between">
                   <Text
                     fontWeight={400}
                     fontFamily="inter"
                     fontSize={"1.1rem"}
                     color="rgba(255, 255, 255, 1)"
                   >
-                    Stewards
+                    Current Stewards
                   </Text>
-                  <Flex gap={1}>
-                    {stewards.length > 0 &&
-                      stewards.map((steward, index) => (
-                        <Link
-                          isExternal
-                          href={
-                            "https://gitcoin.co/" + steward.gitcoin_username
-                          }
-                          key={"steward-" + index}
-                        >
-                          <Image
-                            w="3rem"
-                            rounded="full"
-                            src={`/assets/stewards/webp/${steward.profile_image}`}
-                            alt={steward.name}
-                            key={index}
-                          />
-                        </Link>
-                      ))}
-                  </Flex>
-                </Box>
-              </Flex>
-            </Box>
-          </GridItem>
+                  <Text textAlign="right">
+                    Total Contributors: {contributors}
+                  </Text>
+                </Flex>
+                <Flex>
+                  <Box>
+                    <Flex gap={1}>
+                      {stewards.length > 0 &&
+                        stewards.map((steward, index) => (
+                          <Link
+                            isExternal
+                            href={
+                              "https://gitcoin.co/" + steward.gitcoin_username
+                            }
+                            key={"steward-" + index}
+                          >
+                            <Image
+                              w="3rem"
+                              rounded="full"
+                              src={`/assets/stewards/webp/${steward.profile_image}`}
+                              alt={steward.name}
+                              key={index}
+                            />
+                          </Link>
+                        ))}
+                    </Flex>
+                  </Box>
+                </Flex>
+              </Box>
+            </GridItem>
+          )}
         </Grid>
         {/* <GridItem p={3} rounded="0.8rem" bg="#291555"></GridItem> */}
       </VStack>
