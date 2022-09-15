@@ -58,7 +58,12 @@ const WorkstreamCard = ({
             {title}
           </Link>
         </Text>
-        <Text fontSize={15} color="rgba(201, 184, 255, 1)" fontStyle="italic">
+        <Text
+          fontSize={15}
+          color="rgba(201, 184, 255, 1)"
+          width={{ lg: "35rem" }}
+          fontStyle="italic"
+        >
           {discrpition}
         </Text>
         {objectives.length > 0 && (
@@ -148,45 +153,47 @@ const WorkstreamCard = ({
           gap={5}
           templateColumns="1fr"
         >
-          <GridItem textAlign="center" p={3} rounded="0.8rem" bg="#291555">
-            <Box w="full" h="full">
-              <Flex justify="space-between">
-                <Box>
-                  <Text w="full" textAlign="center">
-                    Total Contributors: {contributors}
-                  </Text>
-                  <Text
-                    fontWeight={400}
-                    fontFamily="inter"
-                    fontSize={"1.1rem"}
-                    color="rgba(255, 255, 255, 1)"
-                  >
-                    Stewards
-                  </Text>
-                  <Flex gap={1}>
-                    {stewards.length > 0 &&
-                      stewards.map((steward, index) => (
-                        <Link
-                          isExternal
-                          href={
-                            "https://gitcoin.co/" + steward.gitcoin_username
-                          }
-                          key={"steward-" + index}
-                        >
-                          <Image
-                            w="3rem"
-                            rounded="full"
-                            src={`/assets/stewards/webp/${steward.profile_image}`}
-                            alt={steward.name}
-                            key={index}
-                          />
-                        </Link>
-                      ))}
-                  </Flex>
-                </Box>
-              </Flex>
-            </Box>
-          </GridItem>
+          {stewards.length > 0 && (
+            <GridItem textAlign="center" p={3} rounded="0.8rem" bg="#291555">
+              <Box w="full" h="full">
+                <Flex justify="space-between">
+                  <Box>
+                    <Text w="full" textAlign="center">
+                      Total Contributors: {contributors}
+                    </Text>
+                    <Text
+                      fontWeight={400}
+                      fontFamily="inter"
+                      fontSize={"1.1rem"}
+                      color="rgba(255, 255, 255, 1)"
+                    >
+                      Stewards
+                    </Text>
+                    <Flex gap={1}>
+                      {stewards.length > 0 &&
+                        stewards.map((steward, index) => (
+                          <Link
+                            isExternal
+                            href={
+                              "https://gitcoin.co/" + steward.gitcoin_username
+                            }
+                            key={"steward-" + index}
+                          >
+                            <Image
+                              w="3rem"
+                              rounded="full"
+                              src={`/assets/stewards/webp/${steward.profile_image}`}
+                              alt={steward.name}
+                              key={index}
+                            />
+                          </Link>
+                        ))}
+                    </Flex>
+                  </Box>
+                </Flex>
+              </Box>
+            </GridItem>
+          )}
         </Grid>
         {/* <GridItem p={3} rounded="0.8rem" bg="#291555"></GridItem> */}
       </VStack>

@@ -47,7 +47,9 @@ const Workstream = ({ workstreamData }) => {
       flexDirection="column"
       gap="2"
       textAlign="center"
+      paddingX="10"
       paddingTop="10"
+      paddingBottom="10"
       width="full"
     >
       <Grid
@@ -89,7 +91,7 @@ const Workstream = ({ workstreamData }) => {
                     ? workstream.stats.stable_coin_balance.rows[0].Stablecoins.toFixed(
                         2
                       )
-                    : "-"
+                    : "unavailable"
                 }
                 stewards={getStewards(workstream)}
               />

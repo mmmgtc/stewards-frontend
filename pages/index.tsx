@@ -329,6 +329,7 @@ const Home: NextPage = () => {
         gap="2"
         textAlign="center"
         paddingTop="10"
+        paddingX="10"
       >
         <Text mb="2rem">
           The Stewards of Gitcoin DAO play a vital role in driving the Gitcoin
