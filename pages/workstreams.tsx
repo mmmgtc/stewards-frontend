@@ -9,7 +9,7 @@ import axios from "axios";
  * Return stewards for a specific workstream
  */
 function getStewards(workstream) {
-  let ret = stewardsProfileData.data.splice(0, 3).filter((element) => {
+  let ret = stewardsProfileData.data.filter((element) => {
     return (
       element.workstreamsContributor.search(
         workstream.short_name.toUpperCase()
@@ -66,10 +66,8 @@ const Workstream = ({ workstreamData }) => {
             return;
           }
 
-          console.log(
-            "workstream: ",
-            workstream.stats.stable_coin_balance.rows[0].Stablecoins
-          );
+          console.log("workstream: ", workstream);
+          console.log("getStewards(workstream)", getStewards(workstream));
 
           return (
             <GridItem key={index}>
