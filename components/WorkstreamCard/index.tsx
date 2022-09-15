@@ -14,7 +14,7 @@ import { relative } from "path";
 
 interface WorkstreamCardProps {
   title: string;
-  discrpition: string;
+  description: string;
   objectives: any[];
   gtcBalanceOvertime: string;
   stableCoinBalanceOvertime: string;
@@ -27,7 +27,7 @@ interface WorkstreamCardProps {
 
 const WorkstreamCard = ({
   title,
-  discrpition,
+  description,
   objectives,
   gtcBalanceOvertime,
   stableCoinBalanceOvertime,
@@ -38,7 +38,7 @@ const WorkstreamCard = ({
   stewards,
 }: WorkstreamCardProps) => {
   console.log(title);
-  console.log(discrpition);
+  console.log(description);
   console.log(gtcBalanceOvertime);
   console.log(stableCoinBalanceOvertime);
   console.log("contributors:====", contributors);
@@ -64,7 +64,7 @@ const WorkstreamCard = ({
           width={{ lg: "35rem" }}
           fontStyle="italic"
         >
-          {discrpition}
+          {description}
         </Text>
         {objectives.length > 0 && (
           <Box

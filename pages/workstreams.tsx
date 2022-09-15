@@ -73,7 +73,7 @@ const Workstream = ({ workstreamData }) => {
             <GridItem key={index}>
               <WorkstreamCard
                 title={workstream.name}
-                discrpition={workstream.description}
+                description={workstream.description}
                 objectives={[]}
                 gtcBalanceOvertime={getGtcBalanceGraph(workstream)}
                 stableCoinBalanceOvertime={getStableBalanceGraph(workstream)}
