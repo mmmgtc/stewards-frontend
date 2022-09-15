@@ -47,7 +47,9 @@ const Workstream = ({ workstreamData }) => {
       flexDirection="column"
       gap="2"
       textAlign="center"
+      paddingX="10"
       paddingTop="10"
+      paddingBottom="10"
       width="full"
     >
       <Grid
