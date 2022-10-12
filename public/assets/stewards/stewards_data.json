@@ -1031,6 +1031,66 @@
       "steward_since": "2022-09-04",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/244"
+    },
+    {
+      "name": "Azeem",
+      "address": "0x9600e2eE6377DAdad7299B120026661c336A5e6d",
+      "profile_image": "azeem.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@azeem",
+      "discourse_username": "azeem",
+      "steward_since": "2022-09-27",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/248"
+    },
+ 	  {
+      "name": "CoachJonathan",
+      "address": "0x8F48282e50B0210bd7c7DD69C54205E98b9Ef5D9",
+      "profile_image": "CoachJonathan.webp",
+      "workstreamsLead": "MMM",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@CoachJonathan",
+      "discourse_username": "CoachJonathan",
+      "steward_since": "2022-09-28",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/250"
+    },
+ 	  {
+      "name": "Viriya",
+      "address": "0xf93F0b770784602fC3079eb1D2fB1Ff488Bb02B0",
+      "profile_image": "Viriya.webp",
+      "workstreamsLead": "MMM",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@Viriya",
+      "discourse_username": "Viriya",
+      "steward_since": "2022-09-30",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/251"
+    },
+ 	  {
+      "name": "collinenke",
+      "address": "0x915d906523E6fC4e928b15313FEcCD78ff432B4D",
+      "profile_image": "collinenke.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@collinenke",
+      "discourse_username": "collinenke",
+      "steward_since": "2022-10-06",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/252"
+    },
+ 	  {
+      "name": "MichaelRR",
+      "address": "0x57017dc0270bb96125aa4abf0b6779a3b20be073",
+      "profile_image": "MichaelRR.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@MichaelRR",
+      "discourse_username": "MichaelRR",
+      "steward_since": "2022-10-11",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/253"
     }
   ]
 }
