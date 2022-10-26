@@ -1091,6 +1091,18 @@
       "steward_since": "2022-10-11",
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/253"
-    }
+    },
+    	{
+      "name": "ccerv1",
+      "address": "0x5a5D9aB7b1bD978F80909503EBb828879daCa9C3",
+      "profile_image": "ccerv1.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "FDD",
+      "gitcoin_username": "@ccerv1",
+      "discourse_username": "cerv1#9695",
+      "steward_since": "2022-10-23",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/254"	
+	}
   ]
 }
