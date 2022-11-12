@@ -1104,5 +1104,53 @@
       "steward_days": 0,
       "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/254"	
 	}
+     {
+      "name": "llllvvuu",
+      "address": "0xCac66811f65DeF7F6EdEc327AF877Bb6ccaE4984",
+      "profile_image": "llllvvuu.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@llllvvuu",
+      "discourse_username": "llllvvuu",
+      "steward_since": "2022-10-23",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/255"
+    },
+    {
+      "name": "JamesB",
+      "address": "jamesbeck.eth",
+      "profile_image": "JamesB.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@jamesjohnbeck",
+      "discourse_username": "JamesB",
+      "steward_since": "2022-11-08",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/257"
+    },
+    {
+      "name": "dabit3",
+      "address": "0xB2Ebc9b3a788aFB1E942eD65B59E9E49A1eE500D",
+      "profile_image": "dabit3.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@dabit3",
+      "discourse_username": "dabit3",
+      "steward_since": "2022-11-11",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/259"
+    },
+    {
+      "name": "GClayMiller",
+      "address": "0xD1B5Ad78E657f3390ae0dE4a3305367d5a9220CF",
+      "profile_image": "GClayMiller.webp",
+      "workstreamsLead": "",
+      "workstreamsContributor": "",
+      "gitcoin_username": "@GClayMiller",
+      "discourse_username": "GClayMiller",
+      "steward_since": "2022-11-11",
+      "steward_days": 0,
+      "statement_post": "https://gov.gitcoin.co/t/introducing-stewards-governance/41/260"
+    }  
   ]
 }
