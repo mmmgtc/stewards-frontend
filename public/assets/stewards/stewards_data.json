@@ -1037,7 +1037,7 @@
          "address":"0x9600e2eE6377DAdad7299B120026661c336A5e6d",
          "profile_image":"azeem.webp",
          "workstreamsLead":"",
-         "workstreamsContributor":"",
+         "workstreamsContributor":"PGF",
          "gitcoin_username":"@azeem",
          "discourse_username":"azeem",
          "steward_since":"2022-09-27",
@@ -1178,7 +1178,7 @@
       },
       {
          "name":"j-pepper",
-         "address":"juliapepper.eth",
+         "address":"0x12e5aa8269844911118a5063462f62507a328A9f",
          "profile_image":"j-pepper.webp",
          "workstreamsLead":"",
          "workstreamsContributor":"",
@@ -1190,7 +1190,7 @@
       },
       {
          "name":"drnicka",
-         "address":"drnick.eth",
+         "address":"0x85670c918fd6A80bdc92202C59D20b6E0c01C7E9",
          "profile_image":"drnicka.webp",
          "workstreamsLead":"",
          "workstreamsContributor":"",
@@ -1202,7 +1202,7 @@
       },
       {
          "name":"0x_sam",
-         "address":"saideira.eth",
+         "address":"0xFfD7Fd0B03B42f12C2079D2717f504fAE5597e56",
          "profile_image":"0x_sam.webp",
          "workstreamsLead":"",
          "workstreamsContributor":"",
@@ -1235,6 +1235,90 @@
          "steward_since":"2022-11-22",
          "steward_days":0,
          "statement_post":"https://gov.gitcoin.co/t/introducing-stewards-governance/41/269"
-      }   
+      },
+      {
+         "name":"J9leger",
+         "address":"0x2df9a188fBE231B0DC36D14AcEb65dEFbB049479",
+         "profile_image":"J9leger.webp",
+         "workstreamsLead":"PGF",
+         "workstreamsContributor":"",
+         "gitcoin_username":"@J9leger",
+         "discourse_username":"J9leger",
+         "steward_since":"2022-07-22",
+         "steward_days":0,
+         "statement_post":"https://gov.gitcoin.co/t/introducing-stewards-governance/41/221"
+      },
+      {
+         "name":"alexdwagner",
+         "address":"0x0B1f9e300e6E4B4C25cC73C53C8AA700e552f99F",
+         "profile_image":"alexdw5.webp",
+         "workstreamsLead":"",
+         "workstreamsContributor":"MMM",
+         "gitcoin_username":"@alexdw5",
+         "discourse_username":"alexdwagner",
+         "steward_since":"2022-11-29",
+         "steward_days":0,
+         "statement_post":"https://gov.gitcoin.co/t/introducing-stewards-governance/41/271"
+      },
+      {    
+         "name":"kylejensen",
+         "address":"0x82Bac30Ece2279650724B6B69cCB10Cd0865Dd70",
+         "profile_image":"kylejensen.webp",
+         "workstreamsLead":"",
+         "workstreamsContributor":"DAOops",
+         "gitcoin_username":"@kylejensen",
+         "discourse_username":"kylejensen",
+         "steward_since":"2022-10-08",
+         "steward_days":0,
+         "statement_post":"https://gov.gitcoin.co/t/introducing-stewards-governance/41/272"
+      },
+      {    
+         "name":"JR-OKX",
+         "address":"0x59170d55bba35af1f1f9c3d6b1f678fbb68a760e",
+         "profile_image":"JR-OKX.webp",
+         "workstreamsLead":"",
+         "workstreamsContributor":"",
+         "gitcoin_username":"@JR-OKX",
+         "discourse_username":"JR-OKX",
+         "steward_since":"2022-10-16",
+         "steward_days":0,
+         "statement_post":"https://gov.gitcoin.co/t/introducing-stewards-governance/41/273"
+      },
+      {    
+         "name":"SS-OKXwallet",
+         "address":"0x02b0687Aa4f46F4D2Cbe510Ab0E65f03a4bf3e5d",
+         "profile_image":"SS-OKXwallet.webp",
+         "workstreamsLead":"",
+         "workstreamsContributor":"",
+         "gitcoin_username":"@SS-OKXwallet",
+         "discourse_username":"SS-OKXwallet",
+         "steward_since":"2022-10-17",
+         "steward_days":0,
+         "statement_post":"https://gov.gitcoin.co/t/introducing-stewards-governance/41/276"
+      },
+      {    
+         "name":"L2C_OKC",
+         "address":"0xdbCA7180eaC31e05418896C204410062aB8500a1",
+         "profile_image":"L2C_OKC.webp",
+         "workstreamsLead":"",
+         "workstreamsContributor":"",
+         "gitcoin_username":"@L2C_OKC",
+         "discourse_username":"L2C_OKC",
+         "steward_since":"2022-10-31",
+         "steward_days":0,
+         "statement_post":"https://gov.gitcoin.co/t/introducing-stewards-governance/41/278"
+     },
+      {    
+         "name":"PaigeDAO",
+         "address":"0x4A35674727c44cf4375d80C6171281Ba2f764213",
+         "profile_image":"PaigeDAO.webp",
+         "workstreamsLead":"",
+         "workstreamsContributor":"",
+         "gitcoin_username":"@PaigeDAO",
+         "discourse_username":"PaigeDAO",
+         "steward_since":"2023-01-03",
+         "steward_days":0,
+         "statement_post":"https://gov.gitcoin.co/t/introducing-stewards-governance/41/279"    
+      }
    ]
 }
